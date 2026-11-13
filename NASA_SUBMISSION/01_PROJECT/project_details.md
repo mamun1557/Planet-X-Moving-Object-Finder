@@ -95,3 +95,4 @@ Rather than acting as a black-box discovery algorithm, SPECTRA-X enforces human 
 - **SPHEREx Launch Ingestion:** Ready to ingest public SPHEREx data releases via NASA IPAC API endpoints upon satellite commissioning.
 - **Orbital Arc Integration:** Planned integration of OpenOrb and NASA JPL Horizons API for automated initial orbit determination (IOD) from 3+ epoch detections.
 - **Citizen Science Crowdsourcing:** Modular architecture permits seamless deployment as a public Zooniverse or NASA Citizen Science challenge node.
+

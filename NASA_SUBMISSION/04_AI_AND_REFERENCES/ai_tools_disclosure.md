@@ -44,3 +44,4 @@ During the engineering, coding, and documentation process, the development team 
 - All scientific logic, mathematical formulas, coordinate transformations, and astronomical safeguards were designed, verified, and audited by human team members.
 - Every automated test (362 unit and integration tests) and end-to-end browser regression was executed and validated to ensure scientific integrity and functional correctness.
 - No generative AI was used to fabricate scientific discoveries, synthetic moving objects, or astronomical claims.
+

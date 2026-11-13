@@ -24,3 +24,4 @@
 ### Data Access
 - **Endpoint:** ESA Gaia Archive (`https://gea.esac.esa.int/archive/`) and CDS VizieR (`I/355/gaiadr3`).
 - **Format:** Ingested via standard IVOA Cone Search and cached tabular parquet/CSV structures.
+

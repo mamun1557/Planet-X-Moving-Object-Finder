@@ -40,3 +40,4 @@ NASA_SUBMISSION/
 3. Review `02_PROJECT_LINKS/project_links.md` and ensure your video link and repository URL match your submission.
 4. Paste relevant sections from `03_DATA_USED/` into the "Space Agency Data" section.
 5. Review and complete the verification items in `05_DECLARATIONS/submission_checklist.md`.
+

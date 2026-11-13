@@ -58,3 +58,4 @@ The scientific architecture and methodology of SPECTRA-X are grounded in peer-re
    *The Two Micron All Sky Survey (2MASS).*  
    *The Astronomical Journal*, 131(2), 1163–1183.  
    *Near-infrared photometric calibration standards in the J, H, and Ks bands.*
+

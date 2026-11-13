@@ -39,3 +39,4 @@ SPECTRA-X is built entirely upon established, open-source scientific software li
   Utility-first CSS framework for responsive design, custom palettes, and cosmic theme consistency.
 - **Lucide React:**  
   Clean, consistent astronomical and interface icon library.
+
