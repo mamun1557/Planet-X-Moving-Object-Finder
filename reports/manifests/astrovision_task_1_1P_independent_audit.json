@@ -1,0 +1,123 @@
+{
+  "audit_metadata": {
+    "task_id": "SPECTRA-X_PHASE3_TASK_1.1P",
+    "audit_type": "INDEPENDENT_SCIENTIFIC_AUDIT",
+    "timestamp_utc": "2026-11-06T17:31:00Z",
+    "role": "Independent Principal Scientific Auditor, Astronomical Catalogue Validation Specialist, Astrometric Cross-Matching Auditor, Statistical Benchmark Integrity Reviewer",
+    "verdict": "PASS — PILOT PREPARATION SCIENTIFICALLY ACCEPTED; READY FOR SEPARATE CAMPAIGN AUTHORIZATION REVIEW",
+    "astrovision_status": "FAIL — NOT CERTIFIED",
+    "campaign_status": "STRICTLY BLOCKED"
+  },
+  "audit_a_dataset_integrity": {
+    "target_pointings": ["0001", "0002", "0008", "0009", "0010"],
+    "total_fits_products": 120,
+    "detectors_per_pointing": 6,
+    "dithers_per_pointing": 4,
+    "pipeline_build": "l2b-v27-2026-222",
+    "planning_period": "2026W30_1B",
+    "fits_integrity_status": "VERIFIED_IDENTICAL",
+    "protected_assets_verified": 16,
+    "protected_assets_mutation": false
+  },
+  "audit_b_gaia_crossmatch": {
+    "catalogue_release": "Gaia DR3",
+    "query_endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+    "focal_plane_field_pairs": ["D1/D4", "D2/D5", "D3/D6"],
+    "cone_search_radius_deg": 2.50,
+    "query_limit_per_field": 2500,
+    "nature_of_7500_per_pointing": "CAPPED_SUBSET",
+    "observation_epoch_range_mjd": [61241.004784, 61241.060513],
+    "observation_epoch_span_hours": 1.337,
+    "common_reference_epoch": 2026.5496,
+    "max_epoch_mismatch_days": 0.042,
+    "max_induced_astrometric_error_arcsec": 1.15e-5,
+    "independent_pm_propagation_discrepancy_mas": 0.0,
+    "parallax_perspective_treatment": "VALID_NEGLIGIBLE_AT_SPHEREX_RESOLUTION"
+  },
+  "audit_c_2mass_crossmatch": {
+    "catalogue_release": "2MASS Point Source & Extended Source Catalog (PSC/XSC)",
+    "crossmatch_threshold_arcsec": 2.0,
+    "angular_separation_formula": "SPHERICAL_CHORD_TO_ARCSEC",
+    "max_matched_separation_arcsec": 1.8523,
+    "median_matched_separation_arcsec": 0.1261,
+    "counterpart_recovery_rates": {
+      "0001": 64.04,
+      "0002": 62.20,
+      "0008": 81.88,
+      "0009": 69.52,
+      "0010": 74.87
+    },
+    "unmatched_nature": "CONFIRMED_FAINT_STARS_BELOW_2MASS_SENSITIVITY",
+    "many_to_one_blends_per_pointing": [12, 15, 35, 39, 42]
+  },
+  "audit_d_source_masks": {
+    "detector_border_margin_px": 50,
+    "isolated_point_source_radius_px": 3,
+    "crowded_blended_radius_px": 6,
+    "extended_source_radius_px": 15,
+    "saturated_source_radius_px": 30,
+    "recomputed_usable_area_fraction_range": [0.8465, 0.9029],
+    "mean_usable_area_fraction": 0.8768,
+    "max_discrepancy_vs_task_1_1o": 4.88e-5,
+    "excess_noise_statistic": "GAIA_ASTROMETRIC_EXCESS_NOISE_MAS",
+    "saturation_proxy": "PHOT_G_MEAN_MAG_LT_11.5"
+  },
+  "audit_e_manifest_reconciliation": {
+    "manifest_file": "reports/manifests/astrovision_five_partition_pilot_manifest.csv",
+    "sha256": "c1d83662b311f3f89efbe90f3c0ebd702c0ee58bcfae880dcd5d25e42eee0c0b",
+    "total_records": 2500,
+    "records_per_partition": 500,
+    "unique_coordinates": 2500,
+    "duplicate_trials": 0,
+    "cross_boundary_pointing_leakage": 0,
+    "cross_boundary_fits_leakage": 0,
+    "cal_control_reconciliation": {
+      "total_trials": 500,
+      "pointings": ["0001", "0008"],
+      "detectors": 6,
+      "pointing_detector_pairs": 12,
+      "mean_trials_per_pointing_detector_pair": 41.67,
+      "reported_description": "Approximately 42 null control cutouts per detector-pointing pair"
+    },
+    "cal_injection_reconciliation": {
+      "total_trials": 500,
+      "detectors": 6,
+      "mean_trials_per_detector": 83.33,
+      "reported_description": "Approximately 83 calibration injection trials per detector"
+    },
+    "nature_of_records": "PLANNED_TRIAL_SPECIFICATIONS (ZERO EXECUTED INJECTIONS)"
+  },
+  "audit_f_calibration_protocol": {
+    "protocol_file": "reports/ASTROVISION_CONTROLLED_PILOT_PROTOCOL_V3.md",
+    "sha256": "25a39d99e3206bb425035316ec99b09856204cb36cffc63b577fd97d9dde5db8",
+    "historical_threshold_169_10_deprecated": true,
+    "null_threshold_source_partition": "CALIBRATION_CONTROL",
+    "transfer_curve_source_partition": "CALIBRATION_INJECTION",
+    "evaluation_scoring_source_partitions": [
+      "EVALUATION_CONTROL",
+      "EVALUATION_POINT_SOURCE_INJECTION",
+      "EVALUATION_EXTENDED_SOURCE_INJECTION"
+    ]
+  },
+  "audit_g_statistical_limitations": {
+    "P_cal_clusters": 2,
+    "P_eval_clusters": 3,
+    "G_eval_clusters": 3,
+    "unique_cluster_bootstrap_multisets": 10,
+    "narrow_ci_guarantee_prohibited": true,
+    "pilot_exploratory_status_confirmed": true
+  },
+  "audit_h_regression_suite": {
+    "total_repository_tests": 74,
+    "tests_passed": 74,
+    "tests_failed": 0,
+    "non_mutation_verified": true
+  },
+  "strict_governance_audit": {
+    "model_forward_passes": 0,
+    "injection_trials_executed": 0,
+    "campaign_execution": 0,
+    "model_retraining": 0
+  }
+}
+

@@ -1,0 +1,286 @@
+{
+  "task": "4.28F-CLEANUP-C",
+  "timestamp": "2026-11-13T05:34:35.390Z",
+  "environment": {
+    "os": "Windows 11",
+    "node": "v26.8.1",
+    "chrome": "Chrome 157.0.8103.78",
+    "python": "Python 3.12.10 (.venv_demo)",
+    "pipeline_build": "l2b-v27-2026-222"
+  },
+  "viewports": [
+    "1440x900",
+    "1280x720",
+    "390x844"
+  ],
+  "testCases": [
+    {
+      "id": "TC-EXPLORE-1440",
+      "name": "Explore Page 5-Div Stack Verification (1440x900)",
+      "passed": true,
+      "details": {
+        "title": "Planet X | Moving Object Finder (SPECTRA-X Engine) — NASA Space Apps Challenge",
+        "headerExists": true,
+        "skyViewExists": true,
+        "transientSummaryExists": true,
+        "blinkViewerExists": true,
+        "sedExists": true,
+        "methodologyExists": true
+      }
+    },
+    {
+      "id": "TC-EXPLORE-1280",
+      "name": "Explore Viewport 1280x720 Header Wrapping & Layout Audit",
+      "passed": true,
+      "details": {
+        "headerOverflow1280": false
+      }
+    },
+    {
+      "id": "TC-EXPLORE-390",
+      "name": "Explore Mobile Responsive Layout (390x844)",
+      "passed": true,
+      "details": {
+        "mobileMenuBtnExists": true
+      }
+    },
+    {
+      "id": "TC-OBJECTS-CATALOG",
+      "name": "Objects Catalogue Table & Pagination Loading",
+      "passed": true,
+      "details": {
+        "tableRowsCount": 25
+      }
+    },
+    {
+      "id": "TC-DETAIL-SUBTABS",
+      "name": "Inspector Subtabs Verification (Blink, Diff, SED, Evidence, Review, Export)",
+      "passed": true,
+      "details": {
+        "exportStationBtnExists": true
+      }
+    },
+    {
+      "id": "TC-COORD-SEARCH-VALID",
+      "name": "Coordinate Search: Valid Survey Target (SPX-J163.6309-69.4422)",
+      "passed": true,
+      "details": {
+        "validMatchFound": true
+      }
+    },
+    {
+      "id": "TC-COORD-SEARCH-OUT-OF-BOUNDS",
+      "name": "Coordinate Search: Fail-Closed Survey Footprint Boundary Rejection",
+      "passed": true,
+      "details": {
+        "boundaryRejectedFailClosed": true
+      }
+    },
+    {
+      "id": "TC-FILE-VALIDATE-FITS",
+      "name": "FITS File Ingestion & HDU/WCS Compatibility Evaluation",
+      "passed": true,
+      "details": {
+        "status": "VALID",
+        "format": "FITS",
+        "filename": "aurora_template_D1_spx.fits",
+        "size_bytes": 48960,
+        "hdus_count": 2,
+        "hdus": [
+          {
+            "index": 0,
+            "name": "PRIMARY",
+            "type": "PrimaryHDU",
+            "shape": null,
+            "dtype": null
+          },
+          {
+            "index": 1,
+            "name": "IMAGE",
+            "type": "ImageHDU",
+            "shape": [
+              102,
+              102
+            ],
+            "dtype": ">f4"
+          }
+        ],
+        "wcs": null,
+        "compatibility": {
+          "astrovision": {
+            "status": "COMPATIBLE",
+            "notes": "2D spatial image array detected; suitable for ASTROVISION residual analysis"
+          },
+          "spectra": {
+            "status": "INCOMPATIBLE",
+            "notes": "FITS image contains spatial data only. 102-channel SED vector required for SPECTRA V2."
+          },
+          "chronos_x": {
+            "status": "EVALUATED_FAIL_CLOSED",
+            "notes": "Single FITS observation file contains 1 epoch. Multi-epoch pair required for temporal confirmation."
+          },
+          "motion_x": {
+            "status": "REQUIRES_MULTI_EPOCH",
+            "notes": "Motion detection requires at least 2 registered observation epochs."
+          },
+          "fusion_x": {
+            "status": "PARTIAL_MODALITY",
+            "notes": "Spatial modality verified. Spectral and temporal modalities required for full consensus score."
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-FILE-VALIDATE-CSV-102CH",
+      "name": "CSV File Ingestion & SPECTRA V2 102-Channel Compatibility",
+      "passed": true,
+      "details": {
+        "status": "VALID",
+        "format": "CSV",
+        "filename": "sample_assembled_spectra.csv",
+        "size_bytes": 43654,
+        "rows_count": 5,
+        "columns_count": 12,
+        "columns": [
+          "source_id",
+          "ra",
+          "dec",
+          "wavelength",
+          "bandwidth",
+          "flux",
+          "uncertainty",
+          "detector_provenance",
+          "observation_provenance",
+          "valid_channel_mask",
+          "valid_channels_count",
+          "quality_summary"
+        ],
+        "has_coordinates": true,
+        "compatibility": {
+          "astrovision": {
+            "status": "INCOMPATIBLE",
+            "notes": "CSV contains tabular data. ASTROVISION spatial model requires 2D pixel cutouts."
+          },
+          "spectra": {
+            "status": "COMPATIBLE",
+            "notes": "Detected 102-channel spectrophotometry vector; compatible with SPECTRA V2"
+          },
+          "chronos_x": {
+            "status": "REQUIRES_MULTI_EPOCH",
+            "notes": "Single timestamp or insufficient rows for temporal baseline."
+          },
+          "motion_x": {
+            "status": "REQUIRES_MULTI_EPOCH",
+            "notes": "Centroid motion calculation requires at least 2 temporal epochs."
+          },
+          "fusion_x": {
+            "status": "PARTIAL_MODALITY",
+            "notes": "Tabular SED data validated. Multi-modal consensus requires spatial cutout correlation."
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-FILE-VALIDATE-INVALID",
+      "name": "Invalid / Unsupported File Format Rejection",
+      "passed": true,
+      "details": {
+        "status": "INVALID",
+        "format": ".BIN",
+        "filename": "corrupted_archive.bin",
+        "message": "Unsupported astronomical format '.bin'. Supported formats: .fits, .fit, .csv, .json",
+        "compatibility": {
+          "astrovision": {
+            "status": "INCOMPATIBLE",
+            "notes": "Requires 2D spatial pixel cutout"
+          },
+          "spectra": {
+            "status": "INCOMPATIBLE",
+            "notes": "Requires 102-channel spectrophotometry vector (0.75-5.00 um)"
+          },
+          "chronos_x": {
+            "status": "INCOMPATIBLE",
+            "notes": "Requires multi-epoch observation pairs (dt >= 10m)"
+          },
+          "motion_x": {
+            "status": "INCOMPATIBLE",
+            "notes": "Requires multi-epoch astrometric centroid registration"
+          },
+          "fusion_x": {
+            "status": "INCOMPATIBLE",
+            "notes": "Requires multi-modal consensus inputs"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-5MODULE-MATRIX",
+      "name": "5-Module Compatibility Matrix Evaluation Complete",
+      "passed": true,
+      "details": {
+        "astrovision": {
+          "status": "COMPATIBLE",
+          "notes": "2D spatial image array detected; suitable for ASTROVISION residual analysis"
+        },
+        "spectra": {
+          "status": "INCOMPATIBLE",
+          "notes": "FITS image contains spatial data only. 102-channel SED vector required for SPECTRA V2."
+        },
+        "chronos_x": {
+          "status": "EVALUATED_FAIL_CLOSED",
+          "notes": "Single FITS observation file contains 1 epoch. Multi-epoch pair required for temporal confirmation."
+        },
+        "motion_x": {
+          "status": "REQUIRES_MULTI_EPOCH",
+          "notes": "Motion detection requires at least 2 registered observation epochs."
+        },
+        "fusion_x": {
+          "status": "PARTIAL_MODALITY",
+          "notes": "Spatial modality verified. Spectral and temporal modalities required for full consensus score."
+        }
+      }
+    },
+    {
+      "id": "TC-HOW-IT-WORKS",
+      "name": "How It Works Methodology View Verification",
+      "passed": true,
+      "details": {
+        "howTitle": "How Planet X Works"
+      }
+    },
+    {
+      "id": "TC-ABOUT-VIEW",
+      "name": "About View & Team VU_VioNux Provenance Notice",
+      "passed": true,
+      "details": {
+        "aboutTeam": true
+      }
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\01_explore_desktop_1440x900.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\02_explore_laptop_1280x720.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\03_explore_mobile_390x844.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\04_objects_desktop_1440x900.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\05_objects_mobile_390x844.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\06_detail_blink_viewer.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\07_detail_difference_viewer.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\08_detail_spectrum_viewer.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\09_detail_evidence_inspector.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\10_detail_human_review.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\11_detail_export_station.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\12_datainput_desktop_1440x900.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\13_datainput_mobile_390x844.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\14_datainput_coord_search_valid.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\15_datainput_coord_search_out_of_field.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\16_datainput_file_validation_fits.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\17_datainput_file_validation_csv_102ch.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\18_datainput_file_validation_invalid.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\19_datainput_module_compatibility_matrix.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\20_howitworks_desktop_1440x900.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\docs\\verification\\task_4_28F_cleanup_c\\21_about_desktop_1440x900.png"
+  ],
+  "consoleErrors": [],
+  "networkFailures": [],
+  "verdict": "BROWSER_ACCEPTANCE_PASS"
+}

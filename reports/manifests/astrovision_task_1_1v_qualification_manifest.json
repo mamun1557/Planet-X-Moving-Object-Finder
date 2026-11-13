@@ -1,0 +1,133 @@
+{
+  "manifest_metadata": {
+    "task_id": "TASK_1_1V",
+    "campaign_name": "INDEPENDENT_ASTROVISION_V3_SCIENTIFIC_QUALIFICATION_AUDIT",
+    "timestamp_utc": "2026-11-07T02:36:00Z",
+    "evaluation_mode": "STRICT_READ_ONLY_QUALIFICATION",
+    "governance_verdict": "PARTIAL",
+    "final_scientific_status": "ASTROVISION V3 SCIENTIFIC STATUS: PARTIAL",
+    "report_path": "reports/ASTROVISION_TASK_1_1V_INDEPENDENT_QUALIFICATION_REPORT.md",
+    "report_sha256": "f1254851545f6fa913be532f21713013aee54f374b296a021f0e84e444a9d2f6"
+  },
+  "asset_cryptographic_ledger": {
+    "frozen_v2_checkpoint": {
+      "path": "checkpoints/astrovision_spatial_v2.pt",
+      "sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "frozen_v3_checkpoint": {
+      "path": "checkpoints/astrovision_spatial_v3.pt",
+      "sha256": "3b608e496f43c2648c9dc8236e1a7f5b5ed4b7906cf900468c65c67016042d99",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "frozen_v3_metadata": {
+      "path": "checkpoints/astrovision_spatial_v3.json",
+      "sha256": "70e9954752c0b4317635627d9d21180882ad36e38d5435f8c326260f58f8d188",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "frozen_v3_calibration_parameters": {
+      "path": "data/processed/pilot_results/calibration_parameters_v3.json",
+      "sha256": "aabe0d15d0e8d559cc82897e9c669f0f5f5785ab32e111123ac321a258ccf706",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "historical_pilot_results_csv": {
+      "path": "data/processed/pilot_results/astrovision_pilot_trial_results.csv",
+      "sha256": "4afddbb31d9f1b579d711712da431bf1c19701d7a63d25e9a06995a71c9d523f",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "pilot_evaluation_trial_results_v3_csv": {
+      "path": "data/processed/pilot_results/astrovision_v3_evaluation_trial_results.csv",
+      "sha256": "c088a320e459f9ad5e0a488de32a2a8307b2bee3f820e477abc9e2354cb48193",
+      "status": "GENERATED"
+    }
+  },
+  "evaluation_scope": {
+    "total_evaluation_trials": 1500,
+    "evaluation_pointings": ["0002", "0009", "0010"],
+    "partitions": {
+      "EVALUATION_CONTROL": 500,
+      "EVALUATION_POINT_SOURCE_INJECTION": 500,
+      "EVALUATION_EXTENDED_SOURCE_INJECTION": 500
+    },
+    "random_seed": 42,
+    "evaluation_device": "cuda"
+  },
+  "overall_comparative_metrics": {
+    "v2_baseline": {
+      "point_auroc": 0.6861,
+      "point_auprc": 0.6080,
+      "point_recovery": 0.1880,
+      "point_precision": 0.6861,
+      "extended_auroc": 0.5704,
+      "extended_auprc": 0.5391,
+      "extended_recovery": 0.1520,
+      "extended_precision": 0.6387,
+      "overall_fpr": 0.0860
+    },
+    "v3_peak_chi2": {
+      "point_auroc": 0.8040,
+      "point_auprc": 0.7101,
+      "point_recovery": 0.3220,
+      "point_precision": 0.7816,
+      "extended_auroc": 0.7064,
+      "extended_auprc": 0.6233,
+      "extended_recovery": 0.1740,
+      "extended_precision": 0.6591,
+      "overall_fpr": 0.0900
+    },
+    "v3_aperture_integrated": {
+      "point_auroc": 0.7982,
+      "point_auprc": 0.7070,
+      "point_recovery": 0.3480,
+      "point_precision": 0.7909,
+      "extended_auroc": 0.6177,
+      "extended_auprc": 0.5648,
+      "extended_recovery": 0.1340,
+      "extended_precision": 0.5630,
+      "point_fpr": 0.0920,
+      "extended_fpr": 0.1040
+    }
+  },
+  "defect_remediation_audit": {
+    "remediation_1_fatal_pixel_bleed": {
+      "target_detector": "D4",
+      "v2_point_auroc": 0.4776,
+      "v3_point_auroc": 0.7261,
+      "v2_point_recovery": 0.0482,
+      "v3_point_recovery": 0.2169,
+      "mwu_p_value": 4.94e-7,
+      "audit_status": "REMEDIATION_CONFIRMED_PASS"
+    },
+    "remediation_2_nep_polar_domain_shift": {
+      "target_pointing": "0010",
+      "v2_point_auroc": 0.6143,
+      "v3_point_auroc": 0.8572,
+      "v2_extended_auroc": 0.4599,
+      "v3_extended_auroc": 0.7520,
+      "v2_point_recovery": 0.1463,
+      "v3_point_recovery": 0.3293,
+      "v3_polar_fpr": 0.0427,
+      "mwu_p_value": 4.72e-29,
+      "audit_status": "REMEDIATION_CONFIRMED_PASS"
+    },
+    "remediation_3_aperture_integrated_scoring": {
+      "v2_point_recovery": 0.1880,
+      "v3_point_integrated_recovery": 0.3480,
+      "mcnemar_stat": 37.88,
+      "mcnemar_p_value": 7.53e-10,
+      "audit_status": "POINT_REMEDATION_CONFIRMED_PASS",
+      "extended_aperture_limitation": "Circular boxcar aperture at r=5.0 suffered noise dilution on faint sources"
+    }
+  },
+  "qualification_verdicts": {
+    "engineering_implementation": "PASS",
+    "governance_and_isolation": "PASS",
+    "defect_remediation": "PASS",
+    "point_source_detection": "PARTIAL",
+    "extended_source_detection": "EXPLORATORY",
+    "false_alarm_statistical_control": "PARTIAL",
+    "overall_scientific_status": "PARTIAL — NOT CERTIFIED FOR UNATTENDED PIPELINE INGESTION",
+    "deployment_recommendation": "AUTHORIZED_FOR_EXPLORATORY_HUMAN_IN_THE_LOOP_SCREENING_ONLY"
+  }
+}
+

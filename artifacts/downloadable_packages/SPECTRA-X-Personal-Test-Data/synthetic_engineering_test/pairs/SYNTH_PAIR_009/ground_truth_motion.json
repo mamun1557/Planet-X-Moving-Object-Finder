@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "HIGH_NORTHERN_DECLINATION",
+  "scenario_notes": "Northern high-declination field (cos(Dec) = 0.50)",
+  "ground_truth_epoch_a": {
+    "ra_deg": 120.0,
+    "dec_deg": 60.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-10T00:00:00.000Z",
+    "mjd": 61231.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 120.010104,
+    "dec_deg": 60.002917,
+    "pixel_x": 60.07,
+    "pixel_y": 64.69,
+    "timestamp_utc": "2026-07-17T00:00:00.000Z",
+    "mjd": 61238.0
+  },
+  "ground_truth_delta_ra_arcsec": 18.1865,
+  "ground_truth_delta_dec_arcsec": 10.5,
+  "ground_truth_angular_displacement_arcsec": 20.9993,
+  "ground_truth_position_angle_deg": 59.99,
+  "ground_truth_dt_days": 7.0,
+  "ground_truth_dt_hours": 168.0,
+  "ground_truth_motion_rate_arcsec_per_day": 2.9999,
+  "ground_truth_motion_rate_arcsec_per_hour": 0.125,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

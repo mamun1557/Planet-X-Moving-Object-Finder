@@ -1,0 +1,23 @@
+Test Case ID,Category,Description,Expected Eligibility,Expected Classification / Status,Test Function,Result
+TC-01,Dither Discrimination,Same-visit dither with 2.15-6.47 minute separation (dt=0.0045d),FALSE,INELIGIBLE: INTRA_VISIT_DITHER (E4 completeness preserved),test_same_visit_dither_rejected,Pass
+TC-02,Detector Compatibility,Concurrent cross-detector observations (Det 1 vs Det 2),FALSE,INELIGIBLE: INCOMPATIBLE_DETECTORS,test_concurrent_cross_detector_rejected,Pass
+TC-03,Metadata Provenance,Independent pair with missing observation timestamps,UNVERIFIABLE,UNVERIFIABLE: MISSING_OBSERVATION_TIMESTAMPS,test_missing_timestamp_unverifiable,Pass
+TC-04,WCS Verification,Independent pair with missing WCS overlap evidence,UNVERIFIABLE,UNVERIFIABLE: MISSING_WCS_OVERLAP_EVIDENCE,test_missing_wcs_unverifiable,Pass
+TC-05A,Calibration Compatibility,Cross-release incompatible calibrations (QR2 vs QR3),FALSE,INELIGIBLE: INCOMPATIBLE_RELEASES,test_incompatible_calibration_rejected,Pass
+TC-05B,Spectral Band Compatibility,Incompatible spectral channel metadata (Band 1 vs Band 2),FALSE,INELIGIBLE: INCOMPATIBLE_CHANNELS,test_incompatible_spectral_band_rejected,Pass
+TC-06,Valid Multi-Epoch Pair,Valid independent observation pair satisfying all 10 checks (dt=14d),TRUE,ELIGIBLE: E4 multi-epoch verified,test_valid_independent_pair_accepted,Pass
+TC-07A,False Transient Gate,>5-sigma dither residual + no Gaia match + FALSE temporal eligibility,FALSE,CLASSIFICATION: ANOMALOUS_RESIDUAL_REQUIRES_REVIEW,test_fusion_blocks_transient_without_temporal_eligibility,Pass
+TC-07B,False Transient Gate,>5-sigma residual + no Gaia match + UNVERIFIABLE temporal eligibility,UNVERIFIABLE,CLASSIFICATION: ANOMALOUS_RESIDUAL_REQUIRES_REVIEW (WARNING status),test_fusion_blocks_transient_when_unverifiable,Pass
+TC-07C,Valid Transient Promotion,>5-sigma residual + no Gaia match + TRUE temporal eligibility,TRUE,CLASSIFICATION: NEW_TRANSIENT_OR_ASTEROID_CANDIDATE,test_fusion_promotes_transient_when_temporal_eligibility_true,Pass
+TC-07D,Valid Stellar Flare,>5-sigma residual + Gaia counterpart + TRUE temporal eligibility,TRUE,CLASSIFICATION: STELLAR_VARIABILITY_OR_FLARE,test_fusion_stellar_variability_with_gaia_and_true_eligibility,Pass
+TC-08,Dataset Availability,System reports dataset status when only dithers are present,N/A,TEMPORAL_DATA_UNAVAILABLE,test_dataset_level_availability_reporting,Pass
+TC-09,Dither Utility Preservation,Intra-visit dithers remain available for registration & artifact vetting,FALSE,E4 completeness; usable_for_registration=True; usable_for_dipole_vetting=True,test_dither_usable_for_registration_and_dipole_vetting,Pass
+TC-10,Synthetic Gate,Synthetic validation pairs cannot disguise dataset unavailability,N/A,TEMPORAL_DATA_UNAVAILABLE (Synthetic excluded),test_synthetic_pairs_do_not_fabricate_dataset_availability,Pass
+TC-11,No Silent Deletion,Missing metadata produces structured UNVERIFIABLE records with explicit provenance,UNVERIFIABLE,Structured record in pair catalog with missing_evidence list,test_structured_unverifiable_provenance,Pass
+TC-12A,Non-Temporal Invariance,Multi-modal anomaly detection (spectra + astrovision) continues working,N/A,CLASSIFICATION: MULTI_MODAL_CO_PILOT_ANOMALY,test_non_temporal_anomaly_classifications_preserved,Pass
+TC-12B,Non-Temporal Invariance,Extreme spectral outlier classification continues working,N/A,CLASSIFICATION: EXTREME_SPECTRAL_OUTLIER,test_non_temporal_anomaly_classifications_preserved,Pass
+TC-12C,Non-Temporal Invariance,Extended spatial structure classification continues working,N/A,CLASSIFICATION: EXTENDED_OR_UNUSUAL_SPATIAL_STRUCTURE,test_non_temporal_anomaly_classifications_preserved,Pass
+TC-12D,Non-Temporal Invariance,ZTF BTS confirmed transient classification continues working,N/A,CLASSIFICATION: CONFIRMED_ASTRONOMICAL_TRANSIENT,test_non_temporal_anomaly_classifications_preserved,Pass
+TC-12E,Non-Temporal Invariance,Known solar system asteroid classification continues working,N/A,CLASSIFICATION: KNOWN_SOLAR_SYSTEM_OBJECT,test_non_temporal_anomaly_classifications_preserved,Pass
+TC-13,Schema Serialization,CandidateRecord round-trip serialization and temporal validation,TRUE,Validates against ALLOWED_TEMPORAL_ELIGIBILITY_STATUSES,test_candidate_record_schema_serialization,Pass
+

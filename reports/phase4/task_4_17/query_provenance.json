@@ -1,0 +1,222 @@
+{
+  "task_id": "PHASE_4_TASK_4_17",
+  "timestamp_utc": "2026-11-08T05:41:19.087766+00:00",
+  "pipeline_build": "l2b-v27-2026-222",
+  "target_cohorts": [
+    "P0002",
+    "P0009",
+    "P0010"
+  ],
+  "endpoints_probed": {
+    "Heidelberg_Gaia_TAP": {
+      "url": "https://gaia.ari.uni-heidelberg.de/tap/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+TOP+1+source_id+FROM+gaiadr3.gaia_source",
+      "status": "ACCESSIBLE",
+      "http_status_code": 200,
+      "latency_seconds": 2.227,
+      "error": null
+    },
+    "ESA_Gaia_TAP": {
+      "url": "https://gea.esac.esa.int/tap-server/tap/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+TOP+1+source_id+FROM+gaiadr3.gaia_source",
+      "status": "ACCESSIBLE",
+      "http_status_code": 200,
+      "latency_seconds": 2.815,
+      "error": null
+    },
+    "IRSA_TAP": {
+      "url": "https://irsa.ipac.caltech.edu/TAP/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+TOP+1+*+FROM+fp_psc",
+      "status": "ACCESSIBLE",
+      "http_status_code": 200,
+      "latency_seconds": 9.078,
+      "error": null
+    },
+    "IRSA_Gator_2MASS": {
+      "url": "https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query?spatial=Cone&radius=10&radunits=arcsec&objstr=0+0&catalog=fp_psc&outfmt=1",
+      "status": "ACCESSIBLE",
+      "http_status_code": 200,
+      "latency_seconds": 2.005,
+      "error": null
+    }
+  },
+  "gaia_dr3_queries": [
+    {
+      "pointing_id": "P0002",
+      "field_index": 1,
+      "query_center_ra": 222.0385,
+      "query_center_dec": -29.1357,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 3.35,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0002",
+      "field_index": 2,
+      "query_center_ra": 226.3947,
+      "query_center_dec": -30.3336,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 8.48,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0002",
+      "field_index": 3,
+      "query_center_ra": 230.6598,
+      "query_center_dec": -31.4682,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 8.62,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0009",
+      "field_index": 1,
+      "query_center_ra": 17.4052,
+      "query_center_dec": 48.2186,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 7.07,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0009",
+      "field_index": 2,
+      "query_center_ra": 12.3956,
+      "query_center_dec": 46.5564,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 6.57,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0009",
+      "field_index": 3,
+      "query_center_ra": 7.6034,
+      "query_center_dec": 44.5705,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 5.44,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0010",
+      "field_index": 1,
+      "query_center_ra": 272.8534,
+      "query_center_dec": 70.376,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 4.99,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0010",
+      "field_index": 2,
+      "query_center_ra": 272.9952,
+      "query_center_dec": 66.5525,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 5.55,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0010",
+      "field_index": 3,
+      "query_center_ra": 273.2277,
+      "query_center_dec": 62.6697,
+      "query_radius_deg": 0.85,
+      "retrieved_rows": 10000,
+      "latency_seconds": 5.59,
+      "status": "SUCCESS"
+    }
+  ],
+  "twomass_gator_queries": [
+    {
+      "pointing_id": "P0002",
+      "field_index": 1,
+      "center_ra": 222.0385,
+      "center_dec": -29.1357,
+      "retrieved_sources": 210,
+      "latency_seconds": 2.67,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0002",
+      "field_index": 2,
+      "center_ra": 226.3947,
+      "center_dec": -30.3336,
+      "retrieved_sources": 247,
+      "latency_seconds": 2.82,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0002",
+      "field_index": 3,
+      "center_ra": 230.6598,
+      "center_dec": -31.4682,
+      "retrieved_sources": 338,
+      "latency_seconds": 3.2,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0009",
+      "field_index": 1,
+      "center_ra": 17.4052,
+      "center_dec": 48.2186,
+      "retrieved_sources": 275,
+      "latency_seconds": 2.37,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0009",
+      "field_index": 2,
+      "center_ra": 12.3956,
+      "center_dec": 46.5564,
+      "retrieved_sources": 238,
+      "latency_seconds": 2.15,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0009",
+      "field_index": 3,
+      "center_ra": 7.6034,
+      "center_dec": 44.5705,
+      "retrieved_sources": 208,
+      "latency_seconds": 2.31,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0010",
+      "field_index": 1,
+      "center_ra": 272.8534,
+      "center_dec": 70.376,
+      "retrieved_sources": 102,
+      "latency_seconds": 2.09,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0010",
+      "field_index": 2,
+      "center_ra": 272.9952,
+      "center_dec": 66.5525,
+      "retrieved_sources": 117,
+      "latency_seconds": 2.27,
+      "status": "SUCCESS"
+    },
+    {
+      "pointing_id": "P0010",
+      "field_index": 3,
+      "center_ra": 273.2277,
+      "center_dec": 62.6697,
+      "retrieved_sources": 124,
+      "latency_seconds": 2.32,
+      "status": "SUCCESS"
+    }
+  ],
+  "matching_parameters": {
+    "spatial_crossmatch_tolerance_arcsec": 2.0,
+    "ambiguity_radius_arcsec": 3.0,
+    "cutout_fov_radius_arcsec": 565.0,
+    "gaia_target_depth": "G <= 20.7",
+    "twomass_target_depth": "J <= 17.0"
+  }
+}

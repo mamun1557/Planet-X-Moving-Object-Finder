@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "STATIONARY_CONTROL_NULL",
+  "scenario_notes": "Stationary control source / null motion test over 14 days",
+  "ground_truth_epoch_a": {
+    "ra_deg": 130.0,
+    "dec_deg": 30.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-22T00:00:00.000Z",
+    "mjd": 61243.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 130.0,
+    "dec_deg": 30.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-08-05T00:00:00.000Z",
+    "mjd": 61257.0
+  },
+  "ground_truth_delta_ra_arcsec": 0.0,
+  "ground_truth_delta_dec_arcsec": 0.0,
+  "ground_truth_angular_displacement_arcsec": 0.0,
+  "ground_truth_position_angle_deg": 0.0,
+  "ground_truth_dt_days": 14.0,
+  "ground_truth_dt_hours": 336.0,
+  "ground_truth_motion_rate_arcsec_per_day": 0.0,
+  "ground_truth_motion_rate_arcsec_per_hour": 0.0,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

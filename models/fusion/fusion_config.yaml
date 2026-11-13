@@ -1,0 +1,42 @@
+# FUSION-X Multimodal Discovery & Scientific Co-Pilot Configuration
+# NASA Space Apps Challenge 2026 — SPECTRA-X / F1 V2.1 Pipeline
+
+spatial_matching:
+  coordinate_match_radius_arcsec: 2.0
+  coordinate_epoch: "J2000"
+
+modality_weights:
+  spectra: 0.35
+  astrovision: 0.30
+  chronos: 0.25
+  motion: 0.10
+
+modality_scalers:
+  # Normalization parameters for transforming raw module scores to [0.0, 1.0]
+  # Using soft-saturation: norm_score = 1.0 - exp(-raw_score / scale_factor)
+  spectra_chi2_scale: 0.005
+  astrovision_sigma_scale: 5.0
+  chronos_sigma_scale: 5.0
+  motion_offset_scale_arcsec: 2.0
+
+missing_modality_policy:
+  strategy: "renormalize_available_weights"
+  penalty_per_missing_modality: 0.05
+  minimum_available_modalities: 1
+  never_impute_missing_as_zero: true
+
+quality_control_filters:
+  fatal_flag_mask: 615  # SPHEREx fatal bits: 1, 2, 4, 32, 64, 512
+  reject_on_fatal_flag: true
+  min_valid_channels: 1
+  min_aperture_coverage_fraction: 0.80
+  veto_chronos_dipoles: true
+  veto_edge_proximity_pixels: 5
+
+classification_thresholds:
+  extreme_spectral_chi2_threshold: 0.005
+  temporal_significance_sigma_threshold: 5.0
+  spatial_anomaly_sigma_threshold: 4.0
+  astrometric_motion_sigma_threshold: 3.0
+  high_priority_candidate_threshold: 0.65
+  medium_priority_candidate_threshold: 0.40

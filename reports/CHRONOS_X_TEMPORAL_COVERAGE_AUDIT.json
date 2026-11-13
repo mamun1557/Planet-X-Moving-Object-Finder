@@ -1,0 +1,137 @@
+{
+  "total_local_fits_inspected": 171,
+  "pointings_inspected": [
+    "2025W17_4B_P0001",
+    "2025W17_4B_P0002",
+    "2025W17_4B_P0004",
+    "2025W17_4B_P0005",
+    "2025W17_4B_P0006",
+    "2026W30_1B_P0001",
+    "2026W30_1B_P0002",
+    "2026W30_1B_P0003",
+    "2026W30_1B_P0004",
+    "2026W30_1B_P0008",
+    "2026W30_1B_P0009",
+    "2026W30_1B_P0010"
+  ],
+  "pointings_details": [
+    {
+      "release": "QR2",
+      "pointing_full": "2025W17_4B_P0001",
+      "pointing_num": "P0001",
+      "count": 4
+    },
+    {
+      "release": "QR2",
+      "pointing_full": "2025W17_4B_P0002",
+      "pointing_num": "P0002",
+      "count": 4
+    },
+    {
+      "release": "QR2",
+      "pointing_full": "2025W17_4B_P0004",
+      "pointing_num": "P0004",
+      "count": 2
+    },
+    {
+      "release": "QR2",
+      "pointing_full": "2025W17_4B_P0005",
+      "pointing_num": "P0005",
+      "count": 4
+    },
+    {
+      "release": "QR2",
+      "pointing_full": "2025W17_4B_P0006",
+      "pointing_num": "P0006",
+      "count": 2
+    },
+    {
+      "release": "QR3",
+      "pointing_full": "2026W30_1B_P0001",
+      "pointing_num": "P0001",
+      "count": 28
+    },
+    {
+      "release": "QR3",
+      "pointing_full": "2026W30_1B_P0002",
+      "pointing_num": "P0002",
+      "count": 28
+    },
+    {
+      "release": "QR3",
+      "pointing_full": "2026W30_1B_P0003",
+      "pointing_num": "P0003",
+      "count": 23
+    },
+    {
+      "release": "QR3",
+      "pointing_full": "2026W30_1B_P0004",
+      "pointing_num": "P0004",
+      "count": 4
+    },
+    {
+      "release": "QR3",
+      "pointing_full": "2026W30_1B_P0008",
+      "pointing_num": "P0008",
+      "count": 24
+    },
+    {
+      "release": "QR3",
+      "pointing_full": "2026W30_1B_P0009",
+      "pointing_num": "P0009",
+      "count": 24
+    },
+    {
+      "release": "QR3",
+      "pointing_full": "2026W30_1B_P0010",
+      "pointing_num": "P0010",
+      "count": 24
+    }
+  ],
+  "releases_inspected": [
+    "QR2",
+    "QR3"
+  ],
+  "total_evaluated_proximity_pairs_le_10deg": 1895,
+  "total_pairs_with_spatial_overlap": 599,
+  "total_pairs_with_overlap_ge_50pct": 599,
+  "temporal_bins_overlapping": {
+    "bin_A_intra_visit_lt_1hr": 599,
+    "bin_B_short_1hr_to_24hr": 0,
+    "bin_C_multi_day_1d_to_7d": 0,
+    "bin_D_multi_week_7d_to_30d": 0,
+    "bin_E_multi_month_ge_30d": 0
+  },
+  "same_detector_overlapping": {
+    "total": 283,
+    "bin_A": 283,
+    "bin_B": 0,
+    "bin_C": 0,
+    "bin_D": 0,
+    "bin_E": 0
+  },
+  "remote_inventory_summary": {
+    "total_items_in_manifest": 362,
+    "level2_science_items": 200,
+    "planning_periods_qr2": [
+      "2025W17_4B",
+      "2025W18_1B",
+      "2025W18_2B",
+      "2025W18_3B",
+      "2025W19_2B"
+    ],
+    "planning_periods_qr3": [
+      "2026W30_1B",
+      "2026W30_3B",
+      "2026W31_1B",
+      "2026W31_3B",
+      "2026W32_1A"
+    ],
+    "ecliptic_pole_multi_epoch_potential": true
+  },
+  "network_boundary": {
+    "sandbox_isolated": true,
+    "remote_archive_endpoint": "https://nasa-irsa-spherex.s3.amazonaws.com",
+    "query_status": "NETWORK_ACCESS_ISOLATED_IN_SANDBOX"
+  }
+}

@@ -1,0 +1,24 @@
+field_name,data_type,origin_phase,task_4_7_status,nullable,default_value,governance_constraint,backward_compatible
+contract_version,str,Phase 3 (Task 1.3B),PRESERVED,False,CONTINUUM_SIDECAR_EVIDENCE_V1,Exact match 'CONTINUUM_SIDECAR_EVIDENCE_V1',True
+source_id,str,Phase 3 (Task 1.3B),PRESERVED,False,None,Non-empty string identifier,True
+pointing_id,str,Phase 3 (Task 1.3B),PRESERVED,False,None,Non-empty pointing code (e.g. P0008),True
+color_excess_detected,bool,Phase 3 (Task 1.3B),PRESERVED,False,False,Non-promotable from unverified/flagged states,True
+continuum_anomaly_score,Optional[float],Phase 3 (Task 1.3B),PRESERVED,True,None,Finite float or None,True
+color_indices,"Dict[str, float]",Phase 3 (Task 1.3B),PRESERVED,False,{},Dictionary of empirical color indices / ratios,True
+power_law_spectral_index,Optional[float],Phase 3 (Task 1.3B),PRESERVED,True,None,Finite float or None,True
+excess_significance_sigma,Optional[float],Phase 3 (Task 1.3B),PRESERVED,True,None,Gaussian excess significance sigma or None,True
+quality_status,str,Phase 3 (Task 1.3B),EXTENDED,False,PENDING_VALIDATION,Must be in ALLOWED_EVIDENCE_STATES,True
+provenance_reference,str,Phase 3 (Task 1.3B),PRESERVED,False,SPHEREx_Continuum_Sidecar_Uncertified,Immutable reference string,True
+evidence_state,Optional[str],Phase 4 (Task 4.7),ADDED,True,None,Authoritative evidence state from Task 4.6 taxonomy,True
+primary_band,Optional[str],Phase 4 (Task 4.7),ADDED,True,None,Valid photometric band identifier (e.g. WISE_W2),True
+observed_flux_mJy,Optional[float],Phase 4 (Task 4.7),ADDED,True,None,Monochromatic flux density in mJy,True
+predicted_flux_mJy,Optional[float],Phase 4 (Task 4.7),ADDED,True,None,Photospheric baseline flux density in mJy,True
+residual_flux_mJy,Optional[float],Phase 4 (Task 4.7),ADDED,True,None,Residual flux density (Obs - Pred) in mJy,True
+total_uncertainty_mJy,Optional[float],Phase 4 (Task 4.7),ADDED,True,None,Combined 1-sigma uncertainty in mJy (non-negative),True
+flux_unit,str,Phase 4 (Task 4.7),ADDED,False,mJy,Physical monochromatic unit fixed to 'mJy',True
+is_upper_limit,Optional[bool],Phase 4 (Task 4.7),ADDED,True,None,Upper-limit flag; cannot be promoted to detected excess,True
+counterpart_ambiguity,bool,Phase 4 (Task 4.7),ADDED,False,False,Multiple counterpart flag; cannot claim verified excess,True
+validation_timestamp,Optional[str],Phase 4 (Task 4.7),ADDED,True,None,ISO 8601 UTC timestamp format,True
+pipeline_build,str,Phase 4 (Task 4.7),ADDED,False,l2b-v27-2026-222,Exact match build string 'l2b-v27-2026-222',True
+limitation_codes,List[str],Phase 4 (Task 4.7),ADDED,False,[],Mandatory scientific limitation disclosure codes,True
+metadata,"Dict[str, Any]",Phase 4 (Task 4.7),ADDED,False,{},Diagnostic and empirical engine metadata,True

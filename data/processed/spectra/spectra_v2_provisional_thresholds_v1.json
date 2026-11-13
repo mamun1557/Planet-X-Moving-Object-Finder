@@ -1,0 +1,370 @@
+{
+  "manifest_type": "SPECTRA_PROVISIONAL_NULL_THRESHOLDS",
+  "version": "1.0.0",
+  "task_id": "SPECTRA_TASK_1_2C",
+  "calibration_timestamp_utc": "2026-11-06T22:26:21Z",
+  "model_provenance": {
+    "model_identifier": "SPECTRA_Masked_AE_v2",
+    "checkpoint_path": "checkpoints/spectra_masked_ae_v2.pt",
+    "checkpoint_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+    "architecture": "MaskedSpectralAutoencoder (in=204, latent=16, hidden=64)",
+    "systematic_error_floor": 0.0193
+  },
+  "score_definition": {
+    "score_name": "masked_chi2",
+    "formula": "sum(m_i * w_i * (x_hat_i - x_i)^2) / (sum(m_i * w_i) + 1e-6)",
+    "normalization": "median of valid channels only",
+    "weighting": "calibrated inverse variance with 1.93% systematic error floor",
+    "weights_clamping": [
+      0.01,
+      100.0
+    ]
+  },
+  "calibration_cohort_definition": {
+    "pointing": "0008",
+    "pointing_role": "CALIBRATION",
+    "selection_criteria": "classification_category == 'RELIABLE_ISOLATED_POINT_SOURCE' and valid_channels_count >= 5",
+    "total_calibration_sources": 3206,
+    "training_overlap_sources": 0
+  },
+  "quantile_estimation": {
+    "estimator": "numpy.percentile",
+    "method": "linear",
+    "interpolation_type": "Type 7 (linear interpolation between nearest data points)",
+    "bootstrap_method": "source_level_with_replacement",
+    "bootstrap_replicates": 2000,
+    "random_seed": 42
+  },
+  "strata_thresholds": {
+    "D1,D4": {
+      "detector_pair": "D1,D4",
+      "eligible_sources_count": 1055,
+      "successfully_scored_count": 1055,
+      "excluded_after_scoring_count": 0,
+      "score_summary": {
+        "min": 0.015272482298314571,
+        "max": 62277.8515625,
+        "mean": 62.96882210046459,
+        "std": 1917.0781517018402,
+        "median": 0.4236657917499542,
+        "q25": 0.27311086654663086,
+        "q75": 0.7172849774360657,
+        "iqr": 0.4441741108894348,
+        "percentile_90": 1.5195086717605595,
+        "percentile_95_nominal_alpha_0_05": 4.127549123764036,
+        "percentile_97_5": 10.665992546081522,
+        "percentile_99_nominal_alpha_0_01": 61.26756484985366
+      },
+      "threshold_alpha_0_05": {
+        "nominal_alpha": 0.05,
+        "threshold_value": 4.127549123764036,
+        "sources_exceeding_threshold": 53,
+        "empirical_exceedance_fraction": 0.05023696682464455,
+        "bootstrap_confidence_interval_95": [
+          2.7600240069627695,
+          6.186413669586173
+        ],
+        "bootstrap_standard_error": 0.8482381749099717,
+        "ties_count_near_threshold": 0
+      },
+      "threshold_alpha_0_01": {
+        "nominal_alpha": 0.01,
+        "threshold_value": 61.26756484985366,
+        "sources_exceeding_threshold": 11,
+        "empirical_exceedance_fraction": 0.01042654028436019,
+        "bootstrap_confidence_interval_95": [
+          24.229502866745,
+          152.58143218994232
+        ],
+        "bootstrap_standard_error": 32.353974371707174,
+        "ties_count_near_threshold": 0
+      },
+      "spatial_autocorrelation": {
+        "morans_i": -0.0011630282530368551,
+        "expected_i": -0.0009487666034155598,
+        "interpretation": "WEAK_SPATIAL_DEPENDENCE"
+      },
+      "spatial_block_bootstrap_sensitivity": {
+        "0.5_deg": {
+          "block_size_deg": 0.5,
+          "n_blocks": 16,
+          "median_sources_per_block": 42.5,
+          "min_sources_per_block": 1,
+          "max_sources_per_block": 225,
+          "q95_median": 4.111589765548667,
+          "q95_ci": [
+            2.942444917559624,
+            7.250981589555737
+          ],
+          "q95_se": 1.1416781009328978,
+          "q99_median": 59.378456115722656,
+          "q99_ci": [
+            24.780628024101233,
+            138.7330516243002
+          ],
+          "q99_se": 24.607732234243684
+        },
+        "1.0_deg": {
+          "block_size_deg": 1.0,
+          "n_blocks": 9,
+          "median_sources_per_block": 26.0,
+          "min_sources_per_block": 1,
+          "max_sources_per_block": 370,
+          "q95_median": 4.156416547298429,
+          "q95_ci": [
+            2.287163377702231,
+            7.796108722686768
+          ],
+          "q95_se": 1.419138282244486,
+          "q99_median": 59.955908336641215,
+          "q99_ci": [
+            11.202301979064941,
+            141.07603454589844
+          ],
+          "q99_se": 27.87866598771804
+        },
+        "2.0_deg": {
+          "block_size_deg": 2.0,
+          "n_blocks": 3,
+          "median_sources_per_block": 342.0,
+          "min_sources_per_block": 46,
+          "max_sources_per_block": 667,
+          "q95_median": 4.127549123764036,
+          "q95_ci": [
+            2.32239031791687,
+            6.777097702026367
+          ],
+          "q95_se": 1.2526187664107358,
+          "q99_median": 61.26756484985366,
+          "q99_ci": [
+            10.720977783203125,
+            81.3822021484375
+          ],
+          "q99_se": 17.52182605952272
+        }
+      }
+    },
+    "D2,D5": {
+      "detector_pair": "D2,D5",
+      "eligible_sources_count": 1304,
+      "successfully_scored_count": 1304,
+      "excluded_after_scoring_count": 0,
+      "score_summary": {
+        "min": 0.003177485428750515,
+        "max": 130613.75,
+        "mean": 201.05104507993266,
+        "std": 4235.502114882806,
+        "median": 0.36889421939849854,
+        "q25": 0.29464108496904373,
+        "q75": 0.6362680196762085,
+        "iqr": 0.34162693470716476,
+        "percentile_90": 1.9893247246742274,
+        "percentile_95_nominal_alpha_0_05": 5.51579620838165,
+        "percentile_97_5": 15.43629400730132,
+        "percentile_99_nominal_alpha_0_01": 181.6013285827643
+      },
+      "threshold_alpha_0_05": {
+        "nominal_alpha": 0.05,
+        "threshold_value": 5.51579620838165,
+        "sources_exceeding_threshold": 66,
+        "empirical_exceedance_fraction": 0.05061349693251534,
+        "bootstrap_confidence_interval_95": [
+          4.153829574584961,
+          7.292314219474788
+        ],
+        "bootstrap_standard_error": 0.7196929864218611,
+        "ties_count_near_threshold": 0
+      },
+      "threshold_alpha_0_01": {
+        "nominal_alpha": 0.01,
+        "threshold_value": 181.6013285827643,
+        "sources_exceeding_threshold": 14,
+        "empirical_exceedance_fraction": 0.010736196319018405,
+        "bootstrap_confidence_interval_95": [
+          44.37146503448495,
+          913.8885830688603
+        ],
+        "bootstrap_standard_error": 226.84788655752774,
+        "ties_count_near_threshold": 0
+      },
+      "spatial_autocorrelation": {
+        "morans_i": -0.002312253924204899,
+        "expected_i": -0.0007674597083653108,
+        "interpretation": "WEAK_SPATIAL_DEPENDENCE"
+      },
+      "spatial_block_bootstrap_sensitivity": {
+        "0.5_deg": {
+          "block_size_deg": 0.5,
+          "n_blocks": 26,
+          "median_sources_per_block": 35.0,
+          "min_sources_per_block": 1,
+          "max_sources_per_block": 152,
+          "q95_median": 5.563145840167991,
+          "q95_ci": [
+            4.571692458391181,
+            7.524279728531781
+          ],
+          "q95_se": 0.7657887623297619,
+          "q99_median": 182.2794189453125,
+          "q99_ci": [
+            41.267318339347874,
+            466.2494201660156
+          ],
+          "q99_se": 126.00511606578723
+        },
+        "1.0_deg": {
+          "block_size_deg": 1.0,
+          "n_blocks": 11,
+          "median_sources_per_block": 80.0,
+          "min_sources_per_block": 3,
+          "max_sources_per_block": 306,
+          "q95_median": 5.521205902099609,
+          "q95_ci": [
+            4.595620632171631,
+            7.246752738952637
+          ],
+          "q95_se": 0.6176081513614237,
+          "q99_median": 182.2794189453125,
+          "q99_ci": [
+            26.688106629848406,
+            466.2494201660156
+          ],
+          "q99_se": 132.89554492652613
+        },
+        "2.0_deg": {
+          "block_size_deg": 2.0,
+          "n_blocks": 4,
+          "median_sources_per_block": 122.0,
+          "min_sources_per_block": 83,
+          "max_sources_per_block": 977,
+          "q95_median": 5.51579620838165,
+          "q95_ci": [
+            3.013171672821045,
+            5.817280483245843
+          ],
+          "q95_se": 0.5818253951860619,
+          "q99_median": 181.6013285827643,
+          "q99_ci": [
+            7.51758507251741,
+            306.9445532226596
+          ],
+          "q99_se": 101.33176255993952
+        }
+      }
+    },
+    "D3,D6": {
+      "detector_pair": "D3,D6",
+      "eligible_sources_count": 847,
+      "successfully_scored_count": 847,
+      "excluded_after_scoring_count": 0,
+      "score_summary": {
+        "min": 0.039758533239364624,
+        "max": 410039.1875,
+        "mean": 773.3575793127436,
+        "std": 15983.556434468917,
+        "median": 1.4254571199417114,
+        "q25": 1.0690288543701172,
+        "q75": 2.163303256034851,
+        "iqr": 1.0942744016647339,
+        "percentile_90": 7.528637504577633,
+        "percentile_95_nominal_alpha_0_05": 19.26664867401121,
+        "percentile_97_5": 50.49111309051517,
+        "percentile_99_nominal_alpha_0_01": 862.9723461914056
+      },
+      "threshold_alpha_0_05": {
+        "nominal_alpha": 0.05,
+        "threshold_value": 19.26664867401121,
+        "sources_exceeding_threshold": 43,
+        "empirical_exceedance_fraction": 0.05076741440377804,
+        "bootstrap_confidence_interval_95": [
+          12.848655700683576,
+          25.080651664733864
+        ],
+        "bootstrap_standard_error": 3.63721007153163,
+        "ties_count_near_threshold": 0
+      },
+      "threshold_alpha_0_01": {
+        "nominal_alpha": 0.01,
+        "threshold_value": 862.9723461914056,
+        "sources_exceeding_threshold": 9,
+        "empirical_exceedance_fraction": 0.010625737898465172,
+        "bootstrap_confidence_interval_95": [
+          168.93060119628717,
+          3668.69140625
+        ],
+        "bootstrap_standard_error": 725.9005395115753,
+        "ties_count_near_threshold": 0
+      },
+      "spatial_autocorrelation": {
+        "morans_i": -0.002979078627579018,
+        "expected_i": -0.001182033096926714,
+        "interpretation": "WEAK_SPATIAL_DEPENDENCE"
+      },
+      "spatial_block_bootstrap_sensitivity": {
+        "0.5_deg": {
+          "block_size_deg": 0.5,
+          "n_blocks": 15,
+          "median_sources_per_block": 50.0,
+          "min_sources_per_block": 2,
+          "max_sources_per_block": 157,
+          "q95_median": 19.241889619827262,
+          "q95_ci": [
+            12.860310536623,
+            24.834943771362305
+          ],
+          "q95_se": 3.590516777566126,
+          "q99_median": 863.0648138427728,
+          "q99_ci": [
+            192.7453155517578,
+            3672.882774169918
+          ],
+          "q99_se": 789.8134889673605
+        },
+        "1.0_deg": {
+          "block_size_deg": 1.0,
+          "n_blocks": 8,
+          "median_sources_per_block": 118.5,
+          "min_sources_per_block": 2,
+          "max_sources_per_block": 207,
+          "q95_median": 19.368944835662838,
+          "q95_ci": [
+            13.32984662532806,
+            24.177656173706055
+          ],
+          "q95_se": 3.44096776147755,
+          "q99_median": 864.8216992187497,
+          "q99_ci": [
+            402.07988150024397,
+            4866.22509765625
+          ],
+          "q99_se": 6431.612698194238
+        },
+        "2.0_deg": {
+          "block_size_deg": 2.0,
+          "n_blocks": 4,
+          "median_sources_per_block": 172.5,
+          "min_sources_per_block": 96,
+          "max_sources_per_block": 406,
+          "q95_median": 19.26664867401121,
+          "q95_ci": [
+            14.46403694152832,
+            23.048397064208984
+          ],
+          "q95_se": 2.359902488482815,
+          "q99_median": 862.9723461914056,
+          "q99_ci": [
+            442.548583984375,
+            5790.51025390625
+          ],
+          "q99_se": 4744.764617361378
+        }
+      }
+    }
+  },
+  "scientific_interpretation_and_limitations": {
+    "threshold_status": "Empirical Provisional-Null Quantiles (NOT certified production false-positive rates)",
+    "astrometric_caveat": "Astrometric cleanliness from Gaia DR3 does not guarantee absence of rare spectral anomalies in P0008",
+    "generalization_limitation": "Derived strictly on Pointing 0008 (Galactic lat b approx -50 deg); cross-pointing transfer remains unverified until Task 1.2D blind evaluation",
+    "blind_evaluation_firewall": "Pointings P0002, P0009, P0010 were strictly isolated and zero evaluation data were accessed"
+  }
+}

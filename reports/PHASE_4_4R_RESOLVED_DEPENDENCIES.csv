@@ -1,0 +1,24 @@
+package_name,resolved_version,installation_directory,component_usage,isolation_status,notes
+python,3.12.10,.venv_validation/Scripts/python.exe,CROSS_CUTTING,ISOLATED_VENV_BINARY,Dedicated virtual environment interpreter
+torch,2.15.0+cu132,.venv_validation/Lib/site-packages,ASTROVISION / SPECTRA / FUSION-X,PHYSICALLY_INSTALLED_IN_VENV,CUDA 13.2 enabled with native RTX 5060 acceleration verified
+torchvision,0.29.2+cu132,.venv_validation/Lib/site-packages,ASTROVISION,PHYSICALLY_INSTALLED_IN_VENV,Convolutions and transforms for spatial autoencoder
+numpy,2.5.4,.venv_validation/Lib/site-packages,CROSS_CUTTING,PHYSICALLY_INSTALLED_IN_VENV,Array mathematics and numerical tensors
+scipy,1.18.1,.venv_validation/Lib/site-packages,SPECTRA / CHRONOS-X,PHYSICALLY_INSTALLED_IN_VENV,Spectral interpolation and stellar atmosphere model grids
+pandas,3.1.1,.venv_validation/Lib/site-packages,MOTION-X / SPECTRA / FUSION-X,PHYSICALLY_INSTALLED_IN_VENV,Catalog dataframes tabular joins and ledgers
+astropy,8.0.2,.venv_validation/Lib/site-packages,ASTROVISION / CHRONOS-X / MOTION-X,PHYSICALLY_INSTALLED_IN_VENV,Native FITS and VOTable I/O celestial WCS coordinates
+matplotlib,3.11.2,.venv_validation/Lib/site-packages,CROSS_CUTTING,PHYSICALLY_INSTALLED_IN_VENV,Scientific plotting and visualization routines
+photutils,3.1.1,.venv_validation/Lib/site-packages,ASTROVISION / SPECTRA,PHYSICALLY_INSTALLED_IN_VENV,Aperture photometry and background estimation
+pillow,13.0.0,.venv_validation/Lib/site-packages,ASTROVISION,PHYSICALLY_INSTALLED_IN_VENV,Image rasterization and cutout processing
+pytest,9.2.0,.venv_validation/Lib/site-packages,CROSS_CUTTING,PHYSICALLY_INSTALLED_IN_VENV,Automated regression test runner (166 items passed)
+urllib3,2.8.0,.venv_validation/Lib/site-packages,CROSS_CUTTING,PHYSICALLY_INSTALLED_IN_VENV,HTTP transport client
+pyerfa,2.0.1.5,.venv_validation/Lib/site-packages,MOTION-X,PHYSICALLY_INSTALLED_IN_VENV,Essential celestial coordinate transforms backend for astropy
+PyYAML,6.0.3,.venv_validation/Lib/site-packages,CROSS_CUTTING,PHYSICALLY_INSTALLED_IN_VENV,Configuration file serialization
+pip,25.0.1,.venv_validation/Lib/site-packages,CROSS_CUTTING,PHYSICALLY_INSTALLED_IN_VENV,Isolated package installer for validation environment
+setuptools,78.1.0,.venv_validation/Lib/site-packages,CROSS_CUTTING,PHYSICALLY_INSTALLED_IN_VENV,Build and installation utilities
+reproject,NONE,PENDING_EXTERNAL_STAGING,ASTROVISION / CHRONOS-X,PENDING_EXTERNAL_INSTALL,Required for image differencing; blocked by sandbox network isolation
+scikit-learn,NONE,PENDING_EXTERNAL_STAGING,FUSION-X,PENDING_EXTERNAL_INSTALL,Optional baseline metrics; blocked by sandbox network isolation
+scikit-image,NONE,PENDING_EXTERNAL_STAGING,ASTROVISION,PENDING_EXTERNAL_INSTALL,Optional morphology filters; blocked by sandbox network isolation
+xgboost,NONE,PENDING_EXTERNAL_STAGING,FUSION-X,PENDING_EXTERNAL_INSTALL,Optional tree ranker evaluation; blocked by sandbox network isolation
+astroquery,NONE,PENDING_EXTERNAL_STAGING,SPECTRA / MOTION-X,PENDING_EXTERNAL_INSTALL,Required for TAP remote acquisition; blocked by sandbox network isolation
+requests,NONE,PENDING_EXTERNAL_STAGING,CROSS_CUTTING,PENDING_EXTERNAL_INSTALL,Required for HTTP REST queries; blocked by sandbox network isolation
+

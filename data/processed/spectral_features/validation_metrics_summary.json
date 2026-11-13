@@ -1,0 +1,70 @@
+{
+  "total_detections": 6000,
+  "dither_groups": [
+    "qr3_wide_det1",
+    "qr2_wide_det2",
+    "qr3_deep_det1"
+  ],
+  "detectors_evaluated": [
+    1,
+    2
+  ],
+  "repeatability_pairs_count": 1560,
+  "mean_pull": -1.059539456735812,
+  "std_pull": 10.523017098660459,
+  "median_rel_flux_residual_pct": 1.9342393201002075,
+  "mean_astrometric_separation_arcsec": 0.6469364810916852,
+  "snr_stratification": {
+    "bright_snr_gt_50": {
+      "count": 1361,
+      "mean_snr": 178.3775495958854,
+      "median_rel_diff_pct": 1.9349405756728733,
+      "mean_pull": -1.2005479787797744,
+      "std_pull": 11.250787809127203
+    },
+    "moderate_snr_20_50": {
+      "count": 108,
+      "mean_snr": 35.965694444444445,
+      "median_rel_diff_pct": 1.9680889912437962,
+      "mean_pull": -0.11639288039285704,
+      "std_pull": 1.5198307646603966
+    },
+    "faint_snr_5_20": {
+      "count": 86,
+      "mean_snr": 12.200988372093024,
+      "median_rel_diff_pct": 1.8397464038491473,
+      "mean_pull": -0.07056596107271507,
+      "std_pull": 0.2938183076305988
+    },
+    "marginal_snr_lt_5": {
+      "count": 5,
+      "mean_snr": 3.4850000000000003,
+      "median_rel_diff_pct": 1.9839005753647059,
+      "mean_pull": -0.05932993078227945,
+      "std_pull": 0.09009343485644769
+    }
+  },
+  "nearest_neighbor_min_arcsec": 25.899919162638977,
+  "nearest_neighbor_median_arcsec": 269.8695966622471,
+  "defect_rejection": {
+    "clean_aperture_fraction": 0.813,
+    "partial_apertures_count": 1122,
+    "fatal_flagged_count": 35,
+    "fatal_mask_value": 615
+  },
+  "spectral_coordinates": {
+    "1": {
+      "min_wavelength_um": 0.73559,
+      "max_wavelength_um": 1.12609,
+      "median_bandwidth_um": 0.02366,
+      "detections_count": 4000
+    },
+    "2": {
+      "min_wavelength_um": 1.08584,
+      "max_wavelength_um": 1.66423,
+      "median_bandwidth_um": 0.03239,
+      "detections_count": 2000
+    }
+  },
+  "assembled_spectra_count": 3665
+}

@@ -1,0 +1,48 @@
+{
+  "task_id": "Phase 3, Task 1.3G",
+  "title": "CHRONOS-X Evidence Ledger Reconciliation & NEP Revisit Mapping",
+  "governance": "STRICT READ-ONLY",
+  "date": "2026-11-07",
+  "executive_verdict": "EVIDENCE LEDGER RECONCILED \u2014 NEP REVISITS REMAIN UNVERIFIED",
+  "pair_universe": {
+    "total_raw_pairs_evaluated": 281,
+    "total_unique_pair_identities": 281,
+    "duplicate_pairs": 0,
+    "deduplication_convention": "Deterministic ordering (obs_id_a < obs_id_b) with detector-qualified observation IDs ({OBSID}_D{DET})"
+  },
+  "cumulative_tier_counts": {
+    "E0_plus_manifest_or_better": 277,
+    "E1_plus_exact_timestamp_or_better": 276,
+    "E2_plus_same_det_band_or_better": 36,
+    "E3_plus_wcs_overlap_or_better": 36,
+    "E4_fully_eligible_multi_epoch": 0
+  },
+  "exclusive_highest_tier_counts": {
+    "E0_only": 1,
+    "E1_only": 240,
+    "E2_only": 0,
+    "E3_only": 36,
+    "E4_only": 0,
+    "UNVERIFIABLE": 4,
+    "sum_exclusive": 281
+  },
+  "reconciliation_explanation": {
+    "e2_e3_resolution": "In Task 1.3F, counts were reported by exclusive highest tier reached. Exactly 36 same-detector pairs satisfied E1, E2, and E3 simultaneously; none stopped at E2. Under cumulative hierarchy, all 36 pairs belong to E2+ (E2+ = 36, E3+ = 36). Exclusive reporting without cumulative context created the apparent paradox."
+  },
+  "temporal_category_census": {
+    "intra_visit_dithers_dt_lt_1hr": 36,
+    "same_visit_cross_detector": 240,
+    "independent_within_24hr": 0,
+    "independent_1_to_7_days": 0,
+    "independent_7_to_30_days": 4,
+    "independent_ge_30_days": 1
+  },
+  "nep_weekly_revisit_mapping": {
+    "status": "NEP WEEKLY REVISIT MAPPING NOT AVAILABLE FROM CURRENT LOCAL EVIDENCE",
+    "week_30_reference_established": true,
+    "week_31_mapped_to_nep": false,
+    "week_32_mapped_to_nep": false,
+    "reason": "No weekly schedule tables or pointing-to-coordinate mapping exist locally. manifests/spherex_inventory.csv lacks coordinates and omits Pointing 0010 for QR3."
+  },
+  "verified_multi_epoch_pairs": 0
+}

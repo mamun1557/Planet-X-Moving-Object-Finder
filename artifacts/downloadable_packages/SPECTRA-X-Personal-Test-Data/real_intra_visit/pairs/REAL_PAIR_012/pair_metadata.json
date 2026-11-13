@@ -1,0 +1,44 @@
+{
+  "pair_id": "REAL_PAIR_012",
+  "dataset_class": "REAL_INTRA_VISIT",
+  "pointing_id": "P0003",
+  "detector": "D5",
+  "target_name": "P0003_D5_FIELD_TARGET",
+  "target_coordinates": {
+    "ra_deg": 170.77064455765202,
+    "dec_deg": -73.07412710373659
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "original_source_file": "data/spherex/qr3/level2/level2_2026W30_1B_0003_1D5_spx_l2b-v27-2026-222.fits",
+    "original_sha256": "575C3CF1E552B1411307B12172C173374C49FDC45451BAC94472B81BDB9126D5",
+    "dither": "1D5",
+    "timestamp_utc": "2026-07-20T00:26:21.423",
+    "mjd": 61241.018303507,
+    "crval1_deg": 170.775917128,
+    "crval2_deg": -73.0646492442,
+    "wcs_valid": true,
+    "sha256": "DFE1AC436637C2B5DD0304BD555B59F511089E17422C6F2F2C5B681E07535987"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "original_source_file": "data/spherex/qr3/level2/level2_2026W30_1B_0003_4D5_spx_l2b-v27-2026-222.fits",
+    "original_sha256": "DBEEB9E35B3EF1068D3DB14C673A43A33E773988985A0A173F110F1E5EE09D0D",
+    "dither": "4D5",
+    "timestamp_utc": "2026-07-20T00:32:48.215",
+    "mjd": 61241.022780266,
+    "crval1_deg": 168.959308356,
+    "crval2_deg": -73.3316318638,
+    "wcs_valid": true,
+    "sha256": "2F1A47AB6F68048E557D6F78A0EDE8637E1BC1E823D5607443149F9BF316415F"
+  },
+  "time_separation_minutes": 6.4465,
+  "time_separation_days": 0.004477,
+  "measured_dither_shift_arcsec": 0.0,
+  "scientific_eligibility": "INTRA_VISIT_DITHER_INELIGIBLE_FOR_SECULAR_VARIABILITY",
+  "is_secular_motion_eligible": false,
+  "has_ground_truth_motion": false,
+  "synthetic_ground_truth_motion": null,
+  "intended_test_purpose": "Astrometric WCS registration, PSF subtraction null tests, intra-visit dither dipole verification.",
+  "scientific_disclaimer": "REAL SPHEREx Level-2 flight observations. Time baseline dt < 1.0 day is strictly an intra-visit dither; INELIGIBLE as evidence of secular astronomical motion."
+}

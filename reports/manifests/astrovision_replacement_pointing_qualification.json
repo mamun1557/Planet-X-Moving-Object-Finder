@@ -1,0 +1,507 @@
+{
+  "manifest_version": "1.0",
+  "task_id": "SPECTRA-X_PHASE3_TASK_1.1L",
+  "timestamp_utc": "2026-11-06T20:45:00Z",
+  "audit_role": "Principal Scientific Auditor, SPHEREx Data Acquisition Engineer & Astronomical Benchmark Statistician",
+  "audit_objective": "Identify scientifically acceptable replacement pointings for incomplete P0004, P0005, P0006 in standard QR3 Level-2 cohort",
+  "governance_declarations": {
+    "model_forward_passes": 0,
+    "benchmark_trials_executed": 0,
+    "campaign_status": "BLOCKED",
+    "checkpoint_modifications": 0,
+    "catalogue_modifications": 0,
+    "fits_downloads_executed": 0
+  },
+  "target_replacement_cohort": {
+    "replaced_pointings": [
+      "0004",
+      "0005",
+      "0006"
+    ],
+    "replacement_pointings": [
+      "0008",
+      "0009",
+      "0010"
+    ],
+    "reserve_pointing": "0011",
+    "retained_pilot_pointings": [
+      "0001",
+      "0002"
+    ],
+    "recommended_5_pointing_cohort": [
+      "0001",
+      "0002",
+      "0008",
+      "0009",
+      "0010"
+    ],
+    "common_planning_period": "2026W30_1B",
+    "common_pipeline_build": "l2b-v27-2026-222"
+  },
+  "candidate_evaluations": [
+    {
+      "candidate_key": "2026W30_1B_0007",
+      "pointing_id": "0007",
+      "planning_period": "2026W30_1B",
+      "pipeline_build": "l2b-v27-2026-222",
+      "expected_products": 24,
+      "available_products": 18,
+      "missing_products_count": 6,
+      "qualification_status": "INCOMPLETE_ARCHIVE_COVERAGE",
+      "detector_counts": {
+        "D1": 3,
+        "D2": 3,
+        "D3": 3,
+        "D4": 3,
+        "D5": 3,
+        "D6": 3
+      },
+      "astrometry": {
+        "ra_deg": 31.7156609389,
+        "dec_deg": 3.37374443173,
+        "galactic_l_deg": 156.6664,
+        "galactic_b_deg": -54.4818,
+        "ecliptic_lon_deg": 30.7302,
+        "ecliptic_lat_deg": -8.9028
+      },
+      "observation_metadata": {
+        "date_obs": "2026-07-20T00:53:46.825",
+        "mjd_obs": 61241.037347512,
+        "obsid_sample": "2026W30_1B_0007_1"
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": 157.97,
+        "p0002": 152.62,
+        "p0003": 107.28
+      },
+      "missing_products_list": [
+        {
+          "detector": "D1",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_1B_0007_4D1_spx_l2b-v27-2026-222.fits"
+        },
+        {
+          "detector": "D2",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_1B_0007_4D2_spx_l2b-v27-2026-222.fits"
+        },
+        {
+          "detector": "D3",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_1B_0007_4D3_spx_l2b-v27-2026-222.fits"
+        },
+        {
+          "detector": "D4",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_1B_0007_4D4_spx_l2b-v27-2026-222.fits"
+        },
+        {
+          "detector": "D5",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_1B_0007_4D5_spx_l2b-v27-2026-222.fits"
+        },
+        {
+          "detector": "D6",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_1B_0007_4D6_spx_l2b-v27-2026-222.fits"
+        }
+      ],
+      "qualification_notes": "REJECTED: Incomplete coverage. Dither 4 missing across all 6 detectors (18/24 available)."
+    },
+    {
+      "candidate_key": "2026W30_1B_0008",
+      "pointing_id": "0008",
+      "planning_period": "2026W30_1B",
+      "pipeline_build": "l2b-v27-2026-222",
+      "expected_products": 24,
+      "available_products": 24,
+      "missing_products_count": 0,
+      "qualification_status": "QUALIFIED_COMPLETE_24_OF_24",
+      "detector_counts": {
+        "D1": 4,
+        "D2": 4,
+        "D3": 4,
+        "D4": 4,
+        "D5": 4,
+        "D6": 4
+      },
+      "astrometry": {
+        "ra_deg": 33.4396092636,
+        "dec_deg": 8.29249339574,
+        "galactic_l_deg": 155.2061,
+        "galactic_b_deg": -49.351,
+        "ecliptic_lon_deg": 34.0295,
+        "ecliptic_lat_deg": -4.8519
+      },
+      "observation_metadata": {
+        "date_obs": "2026-07-20T01:00:45.851",
+        "mjd_obs": 61241.04219735,
+        "obsid_sample": "2026W30_1B_0008_1"
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": 160.89,
+        "p0002": 157.83,
+        "p0003": 111.56
+      },
+      "missing_products_list": [],
+      "qualification_notes": "QUALIFIED_PRIMARY: Complete 24/24 products in 2026W30_1B (l2b-v27-2026-222). Low ecliptic latitude (-4.85 deg) high zodi background."
+    },
+    {
+      "candidate_key": "2026W30_1B_0009",
+      "pointing_id": "0009",
+      "planning_period": "2026W30_1B",
+      "pipeline_build": "l2b-v27-2026-222",
+      "expected_products": 24,
+      "available_products": 24,
+      "missing_products_count": 0,
+      "qualification_status": "QUALIFIED_COMPLETE_24_OF_24",
+      "detector_counts": {
+        "D1": 4,
+        "D2": 4,
+        "D3": 4,
+        "D4": 4,
+        "D5": 4,
+        "D6": 4
+      },
+      "astrometry": {
+        "ra_deg": 17.6348350813,
+        "dec_deg": 47.9466090343,
+        "galactic_l_deg": 126.2384,
+        "galactic_b_deg": -14.8025,
+        "ecliptic_lon_deg": 37.0252,
+        "ecliptic_lat_deg": 36.908
+      },
+      "observation_metadata": {
+        "date_obs": "2026-07-20T01:10:33.713",
+        "mjd_obs": 61241.049001308,
+        "obsid_sample": "2026W30_1B_0009_1"
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": 132.61,
+        "p0002": 153.14,
+        "p0003": 153.41
+      },
+      "missing_products_list": [],
+      "qualification_notes": "QUALIFIED_PRIMARY: Complete 24/24 products in 2026W30_1B (l2b-v27-2026-222). Mid ecliptic latitude (+36.91 deg)."
+    },
+    {
+      "candidate_key": "2026W30_1B_0010",
+      "pointing_id": "0010",
+      "planning_period": "2026W30_1B",
+      "pipeline_build": "l2b-v27-2026-222",
+      "expected_products": 24,
+      "available_products": 24,
+      "missing_products_count": 0,
+      "qualification_status": "QUALIFIED_COMPLETE_24_OF_24",
+      "detector_counts": {
+        "D1": 4,
+        "D2": 4,
+        "D3": 4,
+        "D4": 4,
+        "D5": 4,
+        "D6": 4
+      },
+      "astrometry": {
+        "ra_deg": 273.722225907,
+        "dec_deg": 70.4401877211,
+        "galactic_l_deg": 100.8407,
+        "galactic_b_deg": 28.4887,
+        "ecliptic_lon_deg": 72.3453,
+        "ecliptic_lat_deg": 85.8895
+      },
+      "observation_metadata": {
+        "date_obs": "2026-07-20T01:20:41.531",
+        "mjd_obs": 61241.056036238,
+        "obsid_sample": "2026W30_1B_0010_1"
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": 85.83,
+        "p0002": 105.83,
+        "p0003": 156.81
+      },
+      "missing_products_list": [],
+      "qualification_notes": "QUALIFIED_PRIMARY: Complete 24/24 products in 2026W30_1B (l2b-v27-2026-222). High ecliptic latitude (+85.89 deg, North Ecliptic Pole region)."
+    },
+    {
+      "candidate_key": "2026W30_1B_0011",
+      "pointing_id": "0011",
+      "planning_period": "2026W30_1B",
+      "pipeline_build": "l2b-v27-2026-222",
+      "expected_products": 24,
+      "available_products": 24,
+      "missing_products_count": 0,
+      "qualification_status": "QUALIFIED_COMPLETE_24_OF_24",
+      "detector_counts": {
+        "D1": 4,
+        "D2": 4,
+        "D3": 4,
+        "D4": 4,
+        "D5": 4,
+        "D6": 4
+      },
+      "astrometry": {
+        "ra_deg": 243.66398262,
+        "dec_deg": 41.8963521643,
+        "galactic_l_deg": 66.2936,
+        "galactic_b_deg": 46.3157,
+        "ecliptic_lon_deg": 226.3674,
+        "ecliptic_lat_deg": 61.4064
+      },
+      "observation_metadata": {
+        "date_obs": "2026-07-20T01:30:47.813",
+        "mjd_obs": 61241.063053391,
+        "obsid_sample": "2026W30_1B_0011_1"
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": 53.58,
+        "p0002": 73.5,
+        "p0003": 124.86
+      },
+      "missing_products_list": [],
+      "qualification_notes": "QUALIFIED_RESERVE: Complete 24/24 products in 2026W30_1B (l2b-v27-2026-222). Reserved as backup substitution pointing."
+    },
+    {
+      "candidate_key": "2026W30_2A_0001",
+      "pointing_id": "0001",
+      "planning_period": "2026W30_2A",
+      "pipeline_build": "l2b-v27-2026-224",
+      "expected_products": 24,
+      "available_products": 24,
+      "missing_products_count": 0,
+      "qualification_status": "QUALIFIED_COMPLETE_24_OF_24",
+      "detector_counts": {
+        "D1": 4,
+        "D2": 4,
+        "D3": 4,
+        "D4": 4,
+        "D5": 4,
+        "D6": 4
+      },
+      "astrometry": {
+        "ra_deg": 39.8143436361,
+        "dec_deg": 1.13861145953,
+        "galactic_l_deg": 169.8349,
+        "galactic_b_deg": -51.6362,
+        "ecliptic_lon_deg": 37.7754,
+        "ecliptic_lat_deg": -13.6751
+      },
+      "observation_metadata": {
+        "date_obs": "2026-07-23T12:03:42.621",
+        "mjd_obs": 61244.502576632,
+        "obsid_sample": "2026W30_2A_0001_1"
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": 164.04,
+        "p0002": 152.17,
+        "p0003": 102.89
+      },
+      "missing_products_list": [],
+      "qualification_notes": "REJECTED_HETEROGENEOUS_PIPELINE: Complete 24/24, but belongs to 2026W30_2A with differing pipeline build (l2b-v27-2026-224)."
+    },
+    {
+      "candidate_key": "2026W30_2A_0002",
+      "pointing_id": "0002",
+      "planning_period": "2026W30_2A",
+      "pipeline_build": "l2b-v27-2026-224",
+      "expected_products": 24,
+      "available_products": 6,
+      "missing_products_count": 18,
+      "qualification_status": "INCOMPLETE_ARCHIVE_COVERAGE",
+      "detector_counts": {
+        "D1": 1,
+        "D2": 1,
+        "D3": 1,
+        "D4": 1,
+        "D5": 1,
+        "D6": 1
+      },
+      "astrometry": {
+        "ra_deg": null,
+        "dec_deg": null,
+        "galactic_l_deg": null,
+        "galactic_b_deg": null,
+        "ecliptic_lon_deg": null,
+        "ecliptic_lat_deg": null
+      },
+      "observation_metadata": {
+        "date_obs": null,
+        "mjd_obs": null,
+        "obsid_sample": null
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": null,
+        "p0002": null,
+        "p0003": null
+      },
+      "missing_products_list": [
+        {
+          "detector": "D1",
+          "dither": 2,
+          "expected_filename": "level2_2026W30_2A_0002_2D1_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D1",
+          "dither": 3,
+          "expected_filename": "level2_2026W30_2A_0002_3D1_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D1",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_2A_0002_4D1_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D2",
+          "dither": 2,
+          "expected_filename": "level2_2026W30_2A_0002_2D2_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D2",
+          "dither": 3,
+          "expected_filename": "level2_2026W30_2A_0002_3D2_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D2",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_2A_0002_4D2_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D3",
+          "dither": 2,
+          "expected_filename": "level2_2026W30_2A_0002_2D3_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D3",
+          "dither": 3,
+          "expected_filename": "level2_2026W30_2A_0002_3D3_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D3",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_2A_0002_4D3_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D4",
+          "dither": 2,
+          "expected_filename": "level2_2026W30_2A_0002_2D4_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D4",
+          "dither": 3,
+          "expected_filename": "level2_2026W30_2A_0002_3D4_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D4",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_2A_0002_4D4_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D5",
+          "dither": 2,
+          "expected_filename": "level2_2026W30_2A_0002_2D5_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D5",
+          "dither": 3,
+          "expected_filename": "level2_2026W30_2A_0002_3D5_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D5",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_2A_0002_4D5_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D6",
+          "dither": 2,
+          "expected_filename": "level2_2026W30_2A_0002_2D6_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D6",
+          "dither": 3,
+          "expected_filename": "level2_2026W30_2A_0002_3D6_spx_l2b-v27-2026-224.fits"
+        },
+        {
+          "detector": "D6",
+          "dither": 4,
+          "expected_filename": "level2_2026W30_2A_0002_4D6_spx_l2b-v27-2026-224.fits"
+        }
+      ],
+      "qualification_notes": "REJECTED: Incomplete archive coverage (only 6/24 products present)."
+    },
+    {
+      "candidate_key": "2026W30_2A_0004",
+      "pointing_id": "0004",
+      "planning_period": "2026W30_2A",
+      "pipeline_build": "l2b-v27-2026-224",
+      "expected_products": 24,
+      "available_products": 24,
+      "missing_products_count": 0,
+      "qualification_status": "QUALIFIED_COMPLETE_24_OF_24",
+      "detector_counts": {
+        "D1": 4,
+        "D2": 4,
+        "D3": 4,
+        "D4": 4,
+        "D5": 4,
+        "D6": 4
+      },
+      "astrometry": {
+        "ra_deg": null,
+        "dec_deg": null,
+        "galactic_l_deg": null,
+        "galactic_b_deg": null,
+        "ecliptic_lon_deg": null,
+        "ecliptic_lat_deg": null
+      },
+      "observation_metadata": {
+        "date_obs": null,
+        "mjd_obs": null,
+        "obsid_sample": null
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": null,
+        "p0002": null,
+        "p0003": null
+      },
+      "missing_products_list": [],
+      "qualification_notes": "REJECTED_HETEROGENEOUS_PIPELINE: Complete 24/24 in 2026W30_2A, but rejected in favor of homogenous 2026W30_1B cohort to avoid mixing calibration pipeline builds."
+    },
+    {
+      "candidate_key": "2026W30_2A_0005",
+      "pointing_id": "0005",
+      "planning_period": "2026W30_2A",
+      "pipeline_build": "l2b-v27-2026-224",
+      "expected_products": 24,
+      "available_products": 24,
+      "missing_products_count": 0,
+      "qualification_status": "QUALIFIED_COMPLETE_24_OF_24",
+      "detector_counts": {
+        "D1": 4,
+        "D2": 4,
+        "D3": 4,
+        "D4": 4,
+        "D5": 4,
+        "D6": 4
+      },
+      "astrometry": {
+        "ra_deg": 244.560369224,
+        "dec_deg": 30.1498651869,
+        "galactic_l_deg": 49.5577,
+        "galactic_b_deg": 44.9094,
+        "ecliptic_lon_deg": 234.2816,
+        "ecliptic_lat_deg": 50.4825
+      },
+      "observation_metadata": {
+        "date_obs": "2026-07-23T12:36:44.165",
+        "mjd_obs": 61244.525511169,
+        "obsid_sample": "2026W30_2A_0005_1"
+      },
+      "separation_from_existing_cohort_deg": {
+        "p0001": 42.44,
+        "p0002": 62.77,
+        "p0003": 114.36
+      },
+      "missing_products_list": [],
+      "qualification_notes": "REJECTED_HETEROGENEOUS_PIPELINE: Complete 24/24 in 2026W30_2A, but rejected in favor of homogenous 2026W30_1B cohort to avoid mixing calibration pipeline builds."
+    }
+  ]
+}

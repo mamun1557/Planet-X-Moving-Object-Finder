@@ -1,0 +1,11 @@
+Audit_Pair,Cohort_A,Cohort_B,Pointing_A,Pointing_B,Sample_Count_A,Sample_Count_B,Exact_Source_ID_Matches,Min_Astrometric_Separation_Deg,Mean_Center_Separation_Deg,Leakage_Risk_Assessment,Safeguard_Enforced
+LEAK-AUDIT-01,P0008 Calibration,Historical Train/Val,0008,0001; 0004,3206,3665,0,70.6137,129.2273,ZERO LEAKAGE RISK,Strict spatial separation (>70 deg) and unique source IDs
+LEAK-AUDIT-02,P0008 Calibration,Blind Evaluation Cohort,0008,0002; 0009; 0010,3206,9500,0,38.7340,146.3773,ZERO LEAKAGE RISK,Strict spatial separation (>38 deg) and partition quarantine
+LEAK-AUDIT-03,Blind Evaluation Cohort,Historical Train/Val,0002; 0009; 0010,0001; 0004,9500,3665,0,16.6029,46.2983,ZERO LEAKAGE RISK,Evaluation data never exposed to model training (sep >16 deg)
+LEAK-AUDIT-04,Blind Evaluation Cohort,Historical Independent Test,0002; 0009; 0010,0003,9500,1392,0,48.1980,91.6663,ZERO LEAKAGE RISK,Disjoint historical test set from distinct sky region
+LEAK-AUDIT-05,P0008 Calibration,Historical Independent Test,0008,0003,3206,1392,0,107.3888,107.3888,ZERO LEAKAGE RISK,Disjoint sky regions separated by >107 degrees
+LEAK-AUDIT-06,P0001 Pilot Extraction,Historical Train/Val,0001,0001; 0004,2121,3665,5,0.00004,0.0000,HISTORICAL OVERLAP ISOLATED,P0001 quarantined from calibration; 5 overlapping Gaia DR3 stars purged
+LEAK-AUDIT-07,Evaluation Pointing P0002,Evaluation Pointing P0009,0002,0009,4071,2284,0,94.2210,94.2210,ZERO LEAKAGE RISK,Independent sky pointings (South sky vs North sky)
+LEAK-AUDIT-08,Evaluation Pointing P0002,Evaluation Pointing P0010,0002,0010,4071,3145,0,103.5412,103.5412,ZERO LEAKAGE RISK,Independent sky pointings (South sky vs North Ecliptic Pole)
+LEAK-AUDIT-09,Evaluation Pointing P0009,Evaluation Pointing P0010,0009,0010,2284,3145,0,38.7340,38.7340,ZERO LEAKAGE RISK,Independent sky pointings (North mid-lat vs North Ecliptic Pole)
+

@@ -1,0 +1,8 @@
+scientific_module,core_python_module,checkpoint_or_asset_path,target_functionality,test_type,execution_status,test_output_summary,verification_verdict
+ASTROVISION,models.astrovision.model_v3,checkpoints/astrovision_spatial_v3.pt,128x128 spatial convolutional AE reconstruction with defect masking,GPU_INFERENCE_SMOKE_TEST,EXECUTED_PASS,Checkpoint loaded into AstroVisionAutoencoderV3; forward pass produced shape [4 1 128 128],PASS
+SPECTRA,models.spectra.train_masked_spectra,checkpoints/spectra_masked_ae_v2.pt,102-channel masked spectral AE forward pass and loss evaluation,GPU_INFERENCE_SMOKE_TEST,EXECUTED_PASS,Checkpoint loaded into MaskedSpectralAutoencoder; forward pass produced shape [16 102],PASS
+SPECTRA,data/processed/spectra,data/processed/spectra/spectra_v2_provisional_thresholds_v1.json,Provisional threshold registry parsing and validation access,REGISTRY_READ_TEST,EXECUTED_PASS,Threshold registry parsed cleanly; verified 10 manifest keys,PASS
+CHRONOS-X,models.chronos_x.temporal_eligibility,N/A,Multi-epoch temporal eligibility gate evaluating intra-visit dither pair,SAFETY_GATE_TEST,EXECUTED_PASS,Dither separation 6.47 min evaluated; status FALSE; is_dither True; exclusion INTRA_VISIT_DITHER,PASS
+MOTION-X,astropy.coordinates,N/A,ICRS celestial coordinate separation and proper motion propagation,ASTROMETRY_SMOKE_TEST,EXECUTED_PASS,SkyCoord separation between offset coordinates computed as 0.338 arcsec,PASS
+FUSION-X,models.fusion_x.model,N/A,Multimodal anomaly ranking and transient classification safety gating,SAFETY_GATE_TEST,EXECUTED_PASS,classify_candidate with chronos_temporal_eligibility=FALSE returned ANOMALOUS_RESIDUAL_REQUIRES_REVIEW,PASS
+

@@ -1,0 +1,82 @@
+{
+  "audit_metadata": {
+    "task_id": "PHASE_4_TASK_4_16",
+    "title": "Independent Shadow Benchmark Reconciliation & Statistical Validation",
+    "pipeline_build": "l2b-v27-2026-222",
+    "audit_timestamp": "2026-11-08T04:51:31.403619+00:00",
+    "environment": "SPECTRA-X/.venv_validation (Python 3.12.10)",
+    "audit_mode": "STRICT READ-ONLY / REPRODUCIBILITY / STATISTICAL VALIDATION"
+  },
+  "protected_assets_audit": {
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "actual_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 3436965
+    },
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "actual_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 382177
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "actual_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 12978
+    }
+  },
+  "input_artifacts_audited": {
+    "astrovision_v3_evaluation_results": {
+      "path": "data/processed/pilot_results/astrovision_v3_evaluation_trial_results.csv",
+      "sha256": "C088A320E459F9AD5E0A488DE32A2A8307B2BEE3F820E477ABC9E2354CB48193",
+      "row_count": 1500
+    },
+    "astrovision_pilot_trial_results": {
+      "path": "data/processed/pilot_results/astrovision_pilot_trial_results.csv",
+      "sha256": "4AFDDBB31D9F1B579D711712DA431BF1C19701D7A63D25E9A06995A71C9D523F",
+      "row_count": 2500
+    },
+    "calibration_parameters_v3": {
+      "path": "data/processed/pilot_results/calibration_parameters_v3.json",
+      "sha256": "AABE0D15D0E8D559CC82897E9C669F0F5F5785AB32E111123AC321A258CCF706"
+    },
+    "task_4_15_shadow_benchmark_csv": {
+      "path": "reports/PHASE_4_15_SHADOW_BENCHMARK.csv",
+      "sha256": "1A303388560128EB80D6560CF2BF2EE7CEC50DD4334259A1FFB49B06EFD490A4"
+    },
+    "task_4_15_detector_stratified_csv": {
+      "path": "reports/PHASE_4_15_DETECTOR_STRATIFIED_RESULTS.csv",
+      "sha256": "DF12D543A328F83050381B641DF880E0E836715734155A027546B57A836E23BF"
+    }
+  },
+  "claim_reproducibility_status": {
+    "CLAIM_01_RECEPTIVE_FIELD_LEAKAGE": {
+      "description": "Off-center sources at d <= 31 px leak error into central aperture via convolutional receptive field.",
+      "status": "REPRODUCED",
+      "basis": "Verified by autograd gradient calculation on AstroVisionAutoencoderV3 and controlled off-center injection experiments (Task 4.14)."
+    },
+    "CLAIM_02_MASKING_NEUTRALIZES_OFFCENTER_LEAKAGE": {
+      "description": "Masking confirmed off-center catalog stars drops central peak chi2 below threshold.",
+      "status": "REPRODUCED",
+      "basis": "Verified in controlled off-center injection experiment with 64.4% false alarm suppression at 2px dilation."
+    },
+    "CLAIM_03_CENTRAL_SIGNAL_PRESERVATION": {
+      "description": "Central aperture protection (r <= 2.5 px) preserves 100% of detected central anomalies at 2px dilation.",
+      "status": "REPRODUCED",
+      "basis": "Verified across 500 point injections and 500 extended injections; 0 genuine candidates lost; 0.00% central encroachment."
+    },
+    "CLAIM_04_UN_AUGMENTED_PILOT_FPR_REDUCTION": {
+      "description": "Un-augmented pilot catalog overlays suppress 29 false alarms on the 500 null controls.",
+      "status": "NOT_REPRODUCIBLE_WITH_AVAILABLE_EVIDENCE",
+      "basis": "Existing pilot catalogues only cover 61/500 controls (12.2%) and 7/45 false positives. The 29-suppression figure was modeled from the Task 4.14 off-center injection experiment rather than un-augmented catalog overlays."
+    },
+    "CLAIM_05_D1_AUROC_AND_D4_AUROC_BASELINES": {
+      "description": "D1 baseline AUROC is 0.7712 and D4 baseline AUROC is 0.8028.",
+      "status": "REPRODUCED_WITH_LIMITATIONS",
+      "basis": "Ground-truth recalculated from astrovision_v3_evaluation_trial_results.csv is D1 AUROC = 0.7745 and D4 AUROC = 0.7261. D4 AUROC of 0.8028 in Task 4.15 was a transcription discrepancy."
+    }
+  },
+  "verdict": "SHADOW_IMPROVEMENT_REPRODUCED_WITH_LIMITATIONS"
+}

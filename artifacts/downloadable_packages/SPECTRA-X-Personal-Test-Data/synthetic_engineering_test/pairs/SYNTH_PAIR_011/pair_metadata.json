@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_011",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_MULTI_MONTH_LONG_BASELINE",
+  "target_coordinates": {
+    "ra_deg": 195.0,
+    "dec_deg": -25.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-12T00:00:00.000Z",
+    "mjd": 61233.0,
+    "crval1_deg": 195.0,
+    "crval2_deg": -25.0,
+    "wcs_valid": true,
+    "sha256": "3C6AB20208D950B76DF3B2BAF35E33A1B8437DFE896D8DCA686E7B01FCA574CA"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-10-10T00:00:00.000Z",
+    "mjd": 61323.0,
+    "crval1_deg": 195.0,
+    "crval2_deg": -25.0,
+    "wcs_valid": true,
+    "sha256": "7FD2E2ADB5A7AEB20CB1F29F1B78A25242C1684B5B81DEE5C48A0F63DC7AD8D3"
+  },
+  "time_separation_minutes": 129600.0,
+  "time_separation_days": 90.0,
+  "synthetic_displacement_arcsec": 89.9972,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "MULTI_MONTH_LONG_BASELINE",
+    "scenario_notes": "90-day seasonal secular baseline (1.0 arcsec/day)",
+    "ground_truth_epoch_a": {
+      "ra_deg": 195.0,
+      "dec_deg": -25.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-12T00:00:00.000Z",
+      "mjd": 61233.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 195.025921,
+      "dec_deg": -25.008551,
+      "pixel_x": 49.36,
+      "pixel_y": 58.03,
+      "timestamp_utc": "2026-10-10T00:00:00.000Z",
+      "mjd": 61323.0
+    },
+    "ground_truth_delta_ra_arcsec": 84.5723,
+    "ground_truth_delta_dec_arcsec": -30.7818,
+    "ground_truth_angular_displacement_arcsec": 89.9972,
+    "ground_truth_position_angle_deg": 110.01,
+    "ground_truth_dt_days": 90.0,
+    "ground_truth_dt_hours": 2160.0,
+    "ground_truth_motion_rate_arcsec_per_day": 1.0,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.0417,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of MULTI_MONTH_LONG_BASELINE displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

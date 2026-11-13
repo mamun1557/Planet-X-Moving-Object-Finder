@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "NEAR_EARTH_OBJECT_FAST",
+  "scenario_notes": "Fast-moving NEO trajectory (2.5 arcsec/hour, 60 arcsec/day)",
+  "ground_truth_epoch_a": {
+    "ra_deg": 170.0,
+    "dec_deg": -15.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-04T00:00:00.000Z",
+    "mjd": 61225.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 170.014943,
+    "dec_deg": -15.008333,
+    "pixel_x": 54.62,
+    "pixel_y": 58.16,
+    "timestamp_utc": "2026-07-05T00:00:00.000Z",
+    "mjd": 61226.0
+  },
+  "ground_truth_delta_ra_arcsec": 51.9615,
+  "ground_truth_delta_dec_arcsec": -30.0,
+  "ground_truth_angular_displacement_arcsec": 59.9991,
+  "ground_truth_position_angle_deg": 120.0,
+  "ground_truth_dt_days": 1.0,
+  "ground_truth_dt_hours": 24.0,
+  "ground_truth_motion_rate_arcsec_per_day": 59.9991,
+  "ground_truth_motion_rate_arcsec_per_hour": 2.5,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

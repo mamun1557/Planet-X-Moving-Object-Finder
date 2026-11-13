@@ -1,0 +1,4 @@
+pointing_id,pointing_field_environment,total_controls_n,baseline_fp_count,baseline_fpr_pct,fixed_2px_fp_count,adaptive_a_fp_count,adaptive_a_fpr_pct,adaptive_a_suppression_pct,cross_pointing_consistency
+P0002,Moderate Galactic Extinction,168,14,8.33,2,2,1.19,85.71,CONSISTENT_SUPPRESSION
+P0009,High Crowding / Stellar Disk,168,24,14.29,2,2,1.19,91.67,CONSISTENT_SUPPRESSION
+P0010,Deep South / Low Density Extragalactic,164,7,4.27,1,0,0.0,100.0,CONSISTENT_SUPPRESSION

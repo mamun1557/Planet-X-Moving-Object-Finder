@@ -1,0 +1,6 @@
+boundary_id,boundary_name,test_vector,validation_enforced,fail_closed_exception,boundary_security_status
+BOUND-01,Direct Constructor Boundary,"ContinuumEvidenceRecord(..., pointing_id='P9999', color_excess_detected=True)",True,ValueError: Governance violation: Non-calibration pointing 'P9999',SECURE_FAIL_CLOSED
+BOUND-02,Deserialization / Dict Ingestion Boundary,ContinuumEvidenceRecord(**tampered_payload),True,ValueError: Governance violation: Non-calibration pointing,SECURE_FAIL_CLOSED
+BOUND-03,Scientific Engine Output Boundary,EmpiricalContinuumSidecar.evaluate_continuum(pointing_id='P9999'),True,None (Returns verified UNVERIFIABLE + BLIND_COHORT_UNVERIFIED_BASELINE),SECURE_FAIL_CLOSED
+BOUND-04,FUSION-X Multi-Modal Ingestion Boundary,FusionEngine.evaluate_source(continuum_sidecar=tampered_or_blind_excess),True,ValueError: Governance violation / Re-validation failure,SECURE_FAIL_CLOSED
+BOUND-05,Serializer / Export Boundary,rec.to_dict() detachment and defensive cloning,True,TypeError on mutation of internal records; detached clone returned,SECURE_FAIL_CLOSED

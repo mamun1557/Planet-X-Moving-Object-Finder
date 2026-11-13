@@ -1,0 +1,156 @@
+{
+  "audit_metadata": {
+    "project": "SPECTRA-X / F1",
+    "phase": "Phase 4, Task 1",
+    "task": "SPECTRA Cohort Reconciliation & Scientific Evidence Gap Closure",
+    "pipeline_build": "l2b-v27-2026-222",
+    "audit_timestamp_utc": "2026-11-07T20:10:00Z",
+    "governance_mode": "STRICT READ-ONLY",
+    "auditor_role": "Independent Scientific Validation Lead & Software Integrity Auditor",
+    "final_verdict": "RECONCILED_WITH_LIMITATIONS"
+  },
+  "reconciled_cohort_accounting": {
+    "historical_training_validation": {
+      "role": "Training & Validation",
+      "pointings": ["0001", "0004"],
+      "total_assembled_spectra": 3665,
+      "pointing_0001_train": 2416,
+      "pointing_0004_val": 1249,
+      "primary_artifact": "data/processed/spectral_features/validation_assembled_spectra.csv"
+    },
+    "historical_independent_test": {
+      "role": "Historical Independent Test (Phase 2)",
+      "pointings": ["0003"],
+      "total_catalog_sources": 1392,
+      "evaluated_sources": 1392,
+      "observed_sources": 1380,
+      "edge_truncated_sources": 12,
+      "primary_artifact": "data/processed/spectral_features/independent_test_assembled_spectra.csv"
+    },
+    "phase3_calibration_cohort": {
+      "role": "Provisional-Null Threshold Calibration",
+      "pointing": "0008",
+      "total_catalog_sources": 7500,
+      "observed_sources": 5979,
+      "candidate_ge5_channels": 4208,
+      "quality_exclusions": 1002,
+      "historical_training_overlap_exclusions": 0,
+      "final_scored_calibration_sources": 3206,
+      "strata_breakdown": {
+        "D1,D4": 1055,
+        "D2,D5": 1304,
+        "D3,D6": 847
+      },
+      "primary_artifact": "data/processed/spectra/spectra_p0008_calibration_scores_v1.csv"
+    },
+    "phase3_blind_evaluation_cohort": {
+      "role": "Independent Blind Evaluation",
+      "pointings": ["0002", "0009", "0010"],
+      "total_catalog_sources": 22500,
+      "observed_sources": 17078,
+      "candidate_ge5_channels": 15002,
+      "quality_exclusions": 5502,
+      "final_scored_evaluation_sources": 9500,
+      "pointing_breakdown": {
+        "0002": 4071,
+        "0009": 2284,
+        "0010": 3145
+      },
+      "strata_breakdown": {
+        "D1,D4": 3580,
+        "D2,D5": 3410,
+        "D3,D6": 2510
+      },
+      "primary_artifact": "data/processed/spectra/spectra_evaluation_scores_v1.csv"
+    },
+    "phase3_synthetic_injection_benchmark": {
+      "role": "Controlled Synthetic Feature Detection Benchmark",
+      "pointings": ["0002", "0009", "0010"],
+      "template_sources": 1500,
+      "total_evaluated_trials": 6000,
+      "negative_controls": 1500,
+      "injected_anomalies": 4500,
+      "primary_artifact": "data/processed/spectra/spectra_evaluation_synthetic_injections_v1.csv"
+    }
+  },
+  "discrepancy_resolutions": {
+    "p0008_calibration_cohort_3206_vs_7858": {
+      "status": "RESOLVED_AS_TRANSCRIPTION_ERROR",
+      "authoritative_count": 3206,
+      "erroneous_count": 7858,
+      "explanation": "The actual physical calibration cohort on disk in spectra_p0008_calibration_scores_v1.csv contains exactly 3,206 clean isolated point sources (D1+D4: 1,055; D2+D5: 1,304; D3+D6: 847). The number 7,858 never existed in any Task 1.2A-1.2E report or dataset file; it was a clerical/hallucinatory transposition introduced in the Phase 3 Closeout prompt/summary."
+    },
+    "blind_evaluation_cohort_9500_vs_1392": {
+      "status": "RESOLVED_AS_EPOCH_CONFLATION",
+      "authoritative_phase3_evaluation_count": 9500,
+      "historical_phase2_test_count": 1392,
+      "explanation": "Both counts are real numbers from distinct project phases: 1,392 is the historical Phase 2 independent test set from Pointing 0003 (independent_test_assembled_spectra.csv). 9,500 is the authoritative Phase 3 multi-pointing blind evaluation cohort across Pointings 0002 (4,071), 0009 (2,284), and 0010 (3,145) in spectra_evaluation_scores_v1.csv. All 9,500 sources were evaluated in Phase 3."
+    },
+    "earlier_extraction_count_6419": {
+      "status": "RESOLVED_AS_CROSS_MODULE_CLERICAL_ERROR",
+      "explanation": "In Task 0, 6,419 evaluation sources and 11,883 SEDs were erroneously cited. Task 0R audited these and proved they originated from unrelated ASTROVISION scratch audits (scratch/audit11_out/) with zero provenance in SPECTRA artifacts. The true candidate evaluation count is 15,002, filtering to 9,500 clean sources."
+    }
+  },
+  "leakage_audit_summary": {
+    "verdict": "ZERO_UNRESOLVED_LEAKAGE",
+    "exact_source_id_overlaps": {
+      "calib_p0008_vs_eval": 0,
+      "calib_p0008_vs_train_val": 0,
+      "eval_vs_train_val": 0,
+      "eval_vs_hist_test_p0003": 0,
+      "calib_vs_hist_test_p0003": 0
+    },
+    "minimum_angular_separations_deg": {
+      "calib_p0008_vs_train_val": 70.6137,
+      "calib_p0008_vs_eval": 38.7340,
+      "eval_vs_train_val": 16.6029,
+      "eval_vs_hist_test_p0003": 48.1980,
+      "calib_vs_hist_test_p0003": 107.3888
+    },
+    "historical_training_overlap_status": "Five historical training overlaps (P0001, D1+D4) were explicitly isolated and purged during Task 1.2B-S; Pointing 0008 contains zero training overlaps."
+  },
+  "frozen_artifact_verification": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "actual_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "actual_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  },
+  "metric_provenance_summary": {
+    "blind_empirical_fpr_4_88_pct": {
+      "reported_value": "4.88%",
+      "actual_value": "6.32% global exceedance at T_0.05 (5.58% to 7.07% across strata)",
+      "provenance": "4.88% was an ASTROVISION Pointing 0010 FPR from Task 1.1T (pilot_evaluation_metrics.json), conflated into SPECTRA in Phase 3 closeout text.",
+      "scientific_classification": "Empirical provisional-threshold exceedance rate on real uncurated sources (NOT verified ground-truth FPR)."
+    },
+    "median_null_recon_error_0_00035": {
+      "reported_value": "0.00035",
+      "actual_value": "0.36 to 0.45 physical masked-chi2 median (0.4237 in D1+D4, 0.3689 in D2+D5, 1.4255 in D3+D6)",
+      "provenance": "0.00035 was an un-normalized Phase 2 Task 3 Condition A metric on Pointing 0003 (5 ch). Phase 3 properly scales by systematic noise floor f_sys=0.0193."
+    },
+    "mad_null_recon_error_0_00018": {
+      "reported_value": "0.00018",
+      "actual_value": "0.34 to 1.09 calibrated IQR across strata",
+      "provenance": "Historical Phase 2 scale parameter associated with Condition A, superseded by Phase 3 calibration distributions."
+    },
+    "synthetic_injection_improvement_42_pct": {
+      "reported_value": "+42%",
+      "actual_value": "+21.7% relative AUROC gain (+0.1259 absolute; AUROC 0.7071 vs 0.5812 baseline)",
+      "provenance": "+42% was an ASTROVISION recovery metric conflated into SPECTRA text. True synthetic benchmark achieves AUROC 0.7071, AUPRC 0.8528, and 72.88% PAH recovery on 6,000 paired trials."
+    }
+  },
+  "scientific_limitations_summary": [
+    "Unconfirmed ground-truth null distribution: P0008 and P0002/P0009/P0010 lack ground-truth spectroscopic confirmation; real exceedance is not true FPR.",
+    "Selective sensitivity horizon: High recovery on narrow high-EW emission lines (72.88% PAH), but weak on smooth continuum variations (12.13% IR excess, 13.80% absorption troughs).",
+    "Detector stratum asymmetry: Stratum D3+D6 exhibits higher thermal background variance and wider uncertainties, depressing AUROC to 0.6790 vs >0.71 in D1+D4 and D2+D5.",
+    "Survey-wide generalization limitation: Validated across 4 pointings; unvalidated in crowded Galactic plane fields or high zodiacal gradient regimes."
+  ],
+  "recommended_next_scientific_task": "Cross-match Pointing 0008 calibration sources with external spectroscopic surveys (SDSS, Gaia XP, LAMOST) to establish an authentic ground-truth normal stellar cohort, and integrate a dedicated photometric color-color sidecar for broadband continuum anomalies.",
+  "final_verdict_rationale": "All historical cohort discrepancies (3,206 vs 7,858; 9,500 vs 1,392; 6,419 clerical error) and metric origins (4.88% FPR, 0.00035 median error, +42% gain) are 100% reconciled to their underlying physical files and provenance. Frozen artifacts are verified immutable. Zero leakage risk exists. However, because real field sources lack spectroscopic normality ground-truth, broad continuum recovery remains limited, and D3+D6 exhibits thermal noise deficit, the verdict is RECONCILED_WITH_LIMITATIONS."
+}
+

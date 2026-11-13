@@ -1,0 +1,103 @@
+{
+  "manifest_metadata": {
+    "task_id": "TASK_1_2A",
+    "module": "SPECTRA — 102-Channel Infrared Spectral Anomaly Detection",
+    "campaign_name": "SPECTRA_SCIENTIFIC_VALIDATION_PREFLIGHT_AND_EVIDENCE_INVENTORY",
+    "audit_timestamp_utc": "2026-11-07T03:07:00Z",
+    "execution_mode": "STRICT_READ_ONLY",
+    "read_only_declaration": "CONFIRMED: Zero model checkpoints, weights, source code, metadata, calibration files, FITS images, trial definitions, or results were modified during this audit.",
+    "auditor_roles": [
+      "Principal Astronomical ML Scientist",
+      "SPHEREx Spectrophotometry Specialist",
+      "Scientific Validation Auditor"
+    ],
+    "report_path": "reports/SPECTRA_TASK_1_2A_VALIDATION_PREFLIGHT.md",
+    "report_sha256": "8055b27156c0ee1990b8eacb16171f48f3694ac842b5ae8858b95a21cecbeba4"
+  },
+  "inspected_assets": {
+    "checkpoints": {
+      "spectra_masked_ae_v2_pt": {
+        "path": "checkpoints/spectra_masked_ae_v2.pt",
+        "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+        "architecture": "MaskedSpectralAutoencoder (in=204, latent=16, hidden=64)",
+        "status": "FROZEN_CANDIDATE"
+      },
+      "spectra_masked_ae_v2_training_meta_json": {
+        "path": "checkpoints/spectra_masked_ae_v2_training_meta.json",
+        "sha256": "80d0d65a00cbad8f2bde844d30a7aaa839c461789de3bc58c4fee895ca9f4f2c",
+        "status": "VERIFIED_METADATA"
+      },
+      "spectra_latest_pt": {
+        "path": "checkpoints/spectra_latest.pt",
+        "sha256": "8236d8577c4842b44278a2d079f0e7f1e3ec10eb5d33d63eee315a85b10233c5",
+        "architecture": "SpectralAnomalyDetector (in=102, latent=16)",
+        "status": "DEPRECATED_V1"
+      }
+    },
+    "source_code": [
+      "models/spectra/model.py",
+      "models/spectra/train_masked_spectra.py",
+      "models/spectra/train_spectra.py",
+      "models/spectra/evaluate_spectra.py",
+      "models/spectra/assemble_spectrum.py",
+      "models/spectra/extract_photometry.py",
+      "scripts/benchmark_spectra_v2_d1_vs_d1d4.py",
+      "tests/test_spectra_v2_mask_benchmark.py"
+    ],
+    "calibration_and_data_assets": [
+      "data/spherex/qr3/calibration/spectral_channels_spx_cal-sch-v2-2026-229.fits",
+      "data/spherex/qr3/calibration/spectral_wcs_D1_spx_cal-swcs-v5-2026-191.fits",
+      "data/spherex/qr3/calibration/spectral_wcs_D2_spx_cal-swcs-v5-2026-191.fits",
+      "data/spherex/qr3/calibration/spectral_wcs_D3_spx_cal-swcs-v5-2026-191.fits",
+      "data/spherex/qr3/calibration/spectral_wcs_D4_spx_cal-swcs-v5-2026-191.fits",
+      "data/spherex/qr3/calibration/spectral_wcs_D5_spx_cal-swcs-v5-2026-191.fits",
+      "data/spherex/qr3/calibration/spectral_wcs_D6_spx_cal-swcs-v5-2026-191.fits",
+      "data/processed/spectral_features/validation_assembled_spectra.csv",
+      "data/processed/spectral_features/pointing_0003_spectra_102ch.csv",
+      "data/processed/spectral_features/independent_test_assembled_spectra.csv",
+      "data/processed/benchmarks/spectra_v2_d1_vs_d1d4_metrics.csv",
+      "data/processed/benchmarks/spectra_v2_source_scores.csv",
+      "data/processed/benchmarks/spectra_v2_injection_recovery.csv"
+    ],
+    "historical_reports": [
+      "reports/spectral_extraction_report.md",
+      "reports/spectral_channel_audit.md",
+      "reports/F1_PHASE2_TASK3_FINAL_RESULTS.md",
+      "reports/F1_PHASE2_TASK4_SPECTRA_CORRELATION.md"
+    ]
+  },
+  "preflight_verdicts": {
+    "module_implementation": "PARTIAL",
+    "sphex_data_provenance": "PASS",
+    "102_channel_spectral_integrity": "PARTIAL",
+    "scientific_preprocessing": "PASS",
+    "model_architecture_and_loss": "PASS",
+    "partition_and_leakage_governance": "PASS",
+    "existing_scientific_evidence": "EXPLORATORY",
+    "decision_threshold_calibration": "MISSING",
+    "multi_pointing_cohort_ingestion": "DEFERRED",
+    "spectra_engine_integration_readiness": "PARTIAL",
+    "overall_preflight_status": "EXPLORATORY — NOT READY FOR VALIDATION PILOT"
+  },
+  "critical_unresolved_risks": [
+    {
+      "id": "R-01",
+      "severity": "CRITICAL",
+      "name": "Channel Sparsity in Existing Datasets",
+      "description": "Existing science catalogs only contain observations in D1 and D2 or D1 and D4 (max 8 channels). Channels 34-50 and 68-101 are completely unobserved locally."
+    },
+    {
+      "id": "R-02",
+      "severity": "CRITICAL",
+      "name": "Absence of Calibrated Decision Threshold",
+      "description": "SPECTRA has no calibrated threshold table (tau_alpha=0.05). Relative ranking alone cannot support an autonomous Level-2 anomaly pipeline."
+    },
+    {
+      "id": "R-03",
+      "severity": "HIGH",
+      "name": "Multi-Pointing Extraction Latency",
+      "description": "Spectrophotometric catalogs have not yet been extracted from the 120 Level-2 FITS files in the Phase 3 pilot cohort (Pointings 0001, 0002, 0008, 0009, 0010)."
+    }
+  ],
+  "recommended_next_task": "TASK_1_2B: Multi-Pointing Spectral Extraction & Catalog Assembly across the 5 Phase 3 Pointings"
+}

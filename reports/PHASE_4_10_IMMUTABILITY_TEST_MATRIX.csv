@@ -1,0 +1,17 @@
+test_id,target_attribute,attack_vector,expected_exception,observed_result,mutation_prevented,contract_integrity_status
+TEST-IMM-01,color_excess_detected,Direct attribute reassignment: rec.color_excess_detected = True,FrozenInstanceError,Mutation blocked by FrozenInstanceError: cannot assign to field 'color_excess_detected',True,PASSED
+TEST-IMM-02,evidence_state,Direct attribute reassignment: rec.evidence_state = 'POSSIBLE_INFRARED_EXCESS',FrozenInstanceError,Mutation blocked by FrozenInstanceError: cannot assign to field 'evidence_state',True,PASSED
+TEST-IMM-03,source_id,Direct attribute reassignment: rec.source_id = 'SRC_SPOOFED',FrozenInstanceError,Mutation blocked by FrozenInstanceError: cannot assign to field 'source_id',True,PASSED
+TEST-IMM-04,pointing_id,Direct attribute reassignment: rec.pointing_id = 'P0008',FrozenInstanceError,Mutation blocked by FrozenInstanceError: cannot assign to field 'pointing_id',True,PASSED
+TEST-IMM-05,limitation_codes,Sequence clear: rec.limitation_codes.clear(),TypeError,Mutation blocked by TypeError: ReadOnlyList does not support clear: ContinuumEvidenceRecord collections are immutable.,True,PASSED
+TEST-IMM-06,limitation_codes,Sequence remove: rec.limitation_codes.remove('...'),TypeError,Mutation blocked by TypeError: ReadOnlyList does not support remove: ContinuumEvidenceRecord collections are immutable.,True,PASSED
+TEST-IMM-07,limitation_codes,Sequence append: rec.limitation_codes.append('...'),TypeError,Mutation blocked by TypeError: ReadOnlyList does not support append: ContinuumEvidenceRecord collections are immutable.,True,PASSED
+TEST-IMM-08,limitation_codes,Sequence item assign: rec.limitation_codes[0] = '...',TypeError,Mutation blocked by TypeError: ReadOnlyList does not support item assignment: ContinuumEvidenceRecord collections are immutable.,True,PASSED
+TEST-IMM-09,metadata,Mapping item assign: rec.metadata['k'] = v,TypeError,Mutation blocked by TypeError: ReadOnlyDict does not support item assignment: ContinuumEvidenceRecord metadata is immutable.,True,PASSED
+TEST-IMM-10,metadata,Mapping pop: rec.metadata.pop('...'),TypeError,Mutation blocked by TypeError: ReadOnlyDict does not support pop: ContinuumEvidenceRecord metadata is immutable.,True,PASSED
+TEST-IMM-11,metadata,Mapping update: rec.metadata.update({...}),TypeError,Mutation blocked by TypeError: ReadOnlyDict does not support update: ContinuumEvidenceRecord metadata is immutable.,True,PASSED
+TEST-IMM-12,metadata,Mapping clear: rec.metadata.clear(),TypeError,Mutation blocked by TypeError: ReadOnlyDict does not support clear: ContinuumEvidenceRecord metadata is immutable.,True,PASSED
+TEST-IMM-13,metadata.sub_dict,Nested dict mutation: rec.metadata['sub_dict']['alpha'] = 2,TypeError,Mutation blocked by TypeError: ReadOnlyDict does not support item assignment: ContinuumEvidenceRecord metadata is immutable.,True,PASSED
+TEST-IMM-14,metadata.sub_list,Nested list append: rec.metadata['sub_list'].append('item2'),TypeError,Mutation blocked by TypeError: ReadOnlyList does not support append: ContinuumEvidenceRecord collections are immutable.,True,PASSED
+TEST-IMM-15,to_dict() copy,Mutate detached serialization copy: d['color_excess_detected'] = True,Original Unaltered,Original record strictly unaltered after mutating serialization dictionary,True,PASSED
+TEST-IMM-16,deserialization,Reconstruct from tampered dict: ContinuumEvidenceRecord(**d),ValueError,Reconstruction strictly blocked by validate(): ValueError,True,PASSED

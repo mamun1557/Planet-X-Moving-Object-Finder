@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "bootstrap_iterations": 1000,
+    "confidence_level": 0.95,
+    "random_seed": 42,
+    "target_quantile": 0.95,
+    "dataset": "CALIBRATION_CONTROL (Pointings 0001, 0008)"
+  },
+  "detector_stability": {
+    "D1": {
+      "sample_size_n": 84,
+      "empirical_95th_percentile": 593.654,
+      "empirical_median": 7.5264,
+      "bootstrap_mean_tau": 473.781,
+      "bootstrap_std_error": 344.378,
+      "bootstrap_95_ci": [
+        100.1818,
+        1069.2487
+      ],
+      "bootstrap_cv": 0.7269,
+      "bootstrap_iqr": 560.2366,
+      "stability_verdict": "UNSTABLE_CV_EXCEEDS_50_PCT"
+    },
+    "D2": {
+      "sample_size_n": 84,
+      "empirical_95th_percentile": 2536.2963,
+      "empirical_median": 9.3924,
+      "bootstrap_mean_tau": 2542.2232,
+      "bootstrap_std_error": 2937.3237,
+      "bootstrap_95_ci": [
+        273.956,
+        8585.6789
+      ],
+      "bootstrap_cv": 1.1554,
+      "bootstrap_iqr": 1098.255,
+      "stability_verdict": "UNSTABLE_CV_EXCEEDS_50_PCT"
+    },
+    "D3": {
+      "sample_size_n": 83,
+      "empirical_95th_percentile": 999.7611,
+      "empirical_median": 10.8041,
+      "bootstrap_mean_tau": 4091.8287,
+      "bootstrap_std_error": 12028.8131,
+      "bootstrap_95_ci": [
+        243.1099,
+        14547.2672
+      ],
+      "bootstrap_cv": 2.9397,
+      "bootstrap_iqr": 787.0847,
+      "stability_verdict": "UNSTABLE_CV_EXCEEDS_50_PCT"
+    },
+    "D4": {
+      "sample_size_n": 83,
+      "empirical_95th_percentile": 634.1915,
+      "empirical_median": 9.0254,
+      "bootstrap_mean_tau": 730.6992,
+      "bootstrap_std_error": 3164.9514,
+      "bootstrap_95_ci": [
+        77.6372,
+        1764.1157
+      ],
+      "bootstrap_cv": 4.3314,
+      "bootstrap_iqr": 507.4441,
+      "stability_verdict": "UNSTABLE_CV_EXCEEDS_50_PCT"
+    },
+    "D5": {
+      "sample_size_n": 83,
+      "empirical_95th_percentile": 91.8464,
+      "empirical_median": 5.5457,
+      "bootstrap_mean_tau": 53352.9887,
+      "bootstrap_std_error": 181742.4818,
+      "bootstrap_95_ci": [
+        30.9957,
+        648153.0187
+      ],
+      "bootstrap_cv": 3.4064,
+      "bootstrap_iqr": 57.8269,
+      "stability_verdict": "UNSTABLE_CV_EXCEEDS_50_PCT"
+    },
+    "D6": {
+      "sample_size_n": 83,
+      "empirical_95th_percentile": 197.7276,
+      "empirical_median": 5.8172,
+      "bootstrap_mean_tau": 187.5491,
+      "bootstrap_std_error": 190.1417,
+      "bootstrap_95_ci": [
+        71.4719,
+        342.5403
+      ],
+      "bootstrap_cv": 1.0138,
+      "bootstrap_iqr": 81.8546,
+      "stability_verdict": "UNSTABLE_CV_EXCEEDS_50_PCT"
+    },
+    "POOLED": {
+      "sample_size_n": 500,
+      "empirical_95th_percentile": 683.1643,
+      "empirical_median": 7.7332,
+      "bootstrap_mean_tau": 692.7075,
+      "bootstrap_std_error": 310.4063,
+      "bootstrap_95_ci": [
+        225.3476,
+        1340.7941
+      ],
+      "bootstrap_cv": 0.4481,
+      "bootstrap_iqr": 285.4814,
+      "stability_verdict": "MODERATELY_STABLE_CV_UNDER_50_PCT"
+    }
+  },
+  "pointing_subsample_sensitivity": {
+    "D1": {
+      "p0001_n": 44,
+      "p0001_95th": 587.7772,
+      "p0008_n": 40,
+      "p0008_95th": 220.6477,
+      "delta_95th_p1_vs_p8": 367.1295,
+      "relative_discrepancy_pct": 166.39
+    },
+    "D2": {
+      "p0001_n": 44,
+      "p0001_95th": 2754.7441,
+      "p0008_n": 40,
+      "p0008_95th": 41.3289,
+      "delta_95th_p1_vs_p8": 2713.4152,
+      "relative_discrepancy_pct": 6565.42
+    },
+    "D3": {
+      "p0001_n": 43,
+      "p0001_95th": 1238.6672,
+      "p0008_n": 40,
+      "p0008_95th": 171.1979,
+      "delta_95th_p1_vs_p8": 1067.4693,
+      "relative_discrepancy_pct": 623.53
+    },
+    "D4": {
+      "p0001_n": 43,
+      "p0001_95th": 634.1915,
+      "p0008_n": 40,
+      "p0008_95th": 117.6089,
+      "delta_95th_p1_vs_p8": 516.5826,
+      "relative_discrepancy_pct": 439.24
+    },
+    "D5": {
+      "p0001_n": 43,
+      "p0001_95th": 91.4334,
+      "p0008_n": 40,
+      "p0008_95th": 35501.3198,
+      "delta_95th_p1_vs_p8": -35409.8865,
+      "relative_discrepancy_pct": 99.74
+    },
+    "D6": {
+      "p0001_n": 43,
+      "p0001_95th": 215.2,
+      "p0008_n": 40,
+      "p0008_95th": 134.6771,
+      "delta_95th_p1_vs_p8": 80.5229,
+      "relative_discrepancy_pct": 59.79
+    }
+  }
+}

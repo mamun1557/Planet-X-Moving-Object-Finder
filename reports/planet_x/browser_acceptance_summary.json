@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-11-12T20:41:18.912Z",
+  "product": "Planet X: Moving Object Finder",
+  "team": "VU_VioNux",
+  "event": "NASA Space Apps Challenge",
+  "layout": "5_full_width_stacked_divs",
+  "side_column": "NONE",
+  "sections": [
+    "Celestial Sky View — Field P0003",
+    "High-Significance Transient",
+    "Interactive Optical Blink Comparator",
+    "102-Channel Infrared Spectrophotometry",
+    "How Planet X Detects Moving Objects"
+  ],
+  "all_passed": true,
+  "screenshots": [
+    "01_div1_celestial_sky_view.png",
+    "02_div2_transient_and_div3_blink.png",
+    "03_div4_sed_and_div5_how_it_works.png",
+    "04_objects_catalog_station.png",
+    "05_how_it_works_station.png",
+    "06_about_team_vuvionux.png",
+    "07_mobile_viewport_390x844.png"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "provenance_metadata": {
+    "task_id": "Phase 4, Task 4.5",
+    "title": "External Catalog Acquisition & Evidence Staging — Controlled Pilot Provenance Record",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T23:05:00Z",
+    "governance": "STRICT_PROVENANCE_COHORT_ISOLATION_READ_ONLY_FROZEN_ASSETS",
+    "schema_reference": "reports/PHASE_4_2C_DATA_PROVENANCE_SCHEMA.json",
+    "final_acquisition_verdict": "BLOCKED_BY_NETWORK"
+  },
+  "runtime_environment": {
+    "interpreter_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation\\Scripts\\python.exe",
+    "python_version": "3.12.10",
+    "environment_root": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "isolation_mode": "STRICT_ISOLATED_VENV (include-system-site-packages = false)",
+    "sandbox_mode": "STANDARD_CONTAINER_SANDBOX (No outbound external network routing)"
+  },
+  "archive_endpoints_audited": [
+    {
+      "archive_name": "ESA_GAIA_ARCHIVE",
+      "archive_base_url": "https://gea.esac.esa.int",
+      "query_service_endpoint": "https://gea.esac.esa.int/tap-server/tap",
+      "capabilities_url": "https://gea.esac.esa.int/tap-server/tap/capabilities",
+      "query_protocol": "IVOA_TAP_ADQL_V2",
+      "target_tables": [
+        "gaiadr3.gaia_source",
+        "gaiadr3.astrophysical_parameters",
+        "gaiadr3.xp_continuous_mean_spectrum",
+        "gaiadr3.xp_sampled_mean_spectrum"
+      ],
+      "preflight_connectivity_status": "FAILED",
+      "dns_resolution_status": "FAILED",
+      "error_type": "urllib.error.URLError",
+      "error_message": "[Errno 11001] getaddrinfo failed",
+      "queries_executed": 0,
+      "records_retrieved": 0,
+      "bytes_downloaded": 0,
+      "acquisition_verdict": "BLOCKED_BY_NETWORK"
+    },
+    {
+      "archive_name": "NASA_IPAC_IRSA",
+      "archive_base_url": "https://irsa.ipac.caltech.edu",
+      "query_service_endpoint": "https://irsa.ipac.caltech.edu/TAP",
+      "capabilities_url": "https://irsa.ipac.caltech.edu/TAP/capabilities",
+      "query_protocol": "IVOA_TAP_ADQL_V2",
+      "target_tables": [
+        "fp_psc",
+        "allwise_p3as_psd"
+      ],
+      "preflight_connectivity_status": "FAILED",
+      "dns_resolution_status": "FAILED",
+      "error_type": "urllib.error.URLError",
+      "error_message": "[Errno 11001] getaddrinfo failed",
+      "queries_executed": 0,
+      "records_retrieved": 0,
+      "bytes_downloaded": 0,
+      "acquisition_verdict": "BLOCKED_BY_NETWORK"
+    }
+  ],
+  "staging_directory_infrastructure": {
+    "root": "data/external_catalogs/pilot",
+    "subdirectories": [
+      {
+        "path": "data/external_catalogs/pilot/gaia_dr3",
+        "purpose": "Staging directory for retrieved Gaia DR3 astrometry and XP metadata",
+        "file_count": 0,
+        "byte_size": 0
+      },
+      {
+        "path": "data/external_catalogs/pilot/twomass",
+        "purpose": "Staging directory for 2MASS J/H/Ks calibrated photometry",
+        "file_count": 0,
+        "byte_size": 0
+      },
+      {
+        "path": "data/external_catalogs/pilot/allwise",
+        "purpose": "Staging directory for ALLWISE W1/W2 calibrated profile photometry",
+        "file_count": 0,
+        "byte_size": 0
+      },
+      {
+        "path": "data/external_catalogs/pilot/crossmatch",
+        "purpose": "Staging directory for unified astrometric cross-match ledgers",
+        "file_count": 0,
+        "byte_size": 0
+      },
+      {
+        "path": "data/external_catalogs/pilot/provenance",
+        "purpose": "Staging directory for verbatim query manifests and SHA-256 logs",
+        "file_count": 0,
+        "byte_size": 0
+      }
+    ]
+  },
+  "pilot_cohort_provenance": {
+    "source_pointing": "P0008 (Calibration Field)",
+    "total_calibration_cohort_sources": 3206,
+    "pilot_subset_size": 25,
+    "selection_strategy": "Representative uniform stratification across Gaia G magnitude [11.54, 19.50] mag",
+    "epoch_propagation": {
+      "catalog_epoch": 2016.0,
+      "mission_epoch": 2026.55,
+      "delta_t_years": 10.55,
+      "propagation_method": "ra_epoch = ra + (pmra / (3600000 * cos(dec))) * dt; dec_epoch = dec + (pmdec / 3600000) * dt"
+    },
+    "local_astrometric_keys_available": {
+      "gaia_source_id_pct": 100.0,
+      "tmass_designation_pct": 81.85,
+      "spatial_isolation_verified": true,
+      "minimum_nearest_neighbor_arcsec": 12.04
+    },
+    "remote_physical_measurements_status": "BLOCKED_BY_NETWORK",
+    "evidence_state_assigned": "UNVERIFIABLE",
+    "evidence_ledger_path": "reports/PHASE_4_5_IR_EXCESS_EVIDENCE.csv"
+  },
+  "cohort_firewall_status": {
+    "blind_cohorts": ["P0002", "P0009", "P0010"],
+    "blind_cohort_total_sources": 9500,
+    "blind_cohort_isolation_rule": "Strict firewall; zero blind evaluation sources queried, evaluated, or staged during calibration pilot",
+    "firewall_compliance": "CONFIRMED_ZERO_ACCESS"
+  },
+  "governance_compliance": {
+    "zero_unauthorized_network_bypass": true,
+    "zero_synthetic_data_fabrication": true,
+    "zero_model_weight_mutation": true,
+    "zero_threshold_modification": true,
+    "immediate_stop_on_connectivity_failure": true
+  }
+}
+

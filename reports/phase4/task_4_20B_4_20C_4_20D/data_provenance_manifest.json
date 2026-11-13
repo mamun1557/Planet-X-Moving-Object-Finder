@@ -1,0 +1,67 @@
+{
+  "task_id": "Tasks 4.20B + 4.20C + 4.20D Combined Engineering Sprint",
+  "timestamp_utc": "2026-11-08T17:47:39Z",
+  "source_code_artifacts_created_or_modified": {
+    "models/motion_x/keplerian_ephemeris.py": {
+      "action": "CREATED",
+      "sha256": "44C1D6632CA01AAC2DA63ADED0F4135DF225F6F094CF123FC98D0710DA8C5666",
+      "role": "Keplerian orbital propagator & minor planet matching engine"
+    },
+    "models/motion_x/model.py": {
+      "action": "MODIFIED",
+      "sha256": "1D6CA480D2E2F9D6128C9E3DC53071B589B134E3968C4940112A524B98192C0B",
+      "role": "MotionXValidator stub replacement & KeplerianEphemerisEngine integration"
+    },
+    "spectra_engine/validation/infrared_excess/zero_points.py": {
+      "action": "MODIFIED",
+      "sha256": "80CBA477DF302ED5492EE45276EE3D5AAC502C8897391555E68AFB996BECB161",
+      "role": "CatWISE2020 W1 and W2 filter definitions"
+    },
+    "spectra_engine/validation/infrared_excess/catalog_normalizer.py": {
+      "action": "MODIFIED",
+      "sha256": "9B28200166F8DA5DBFEAD4CCBF620864C9514B50163FECA5FFFFFB3C25A50010",
+      "role": "Multi-catalog normalization helper & metadata preservation"
+    },
+    "spectra_engine/validation/infrared_excess/evidence_classifier.py": {
+      "action": "MODIFIED",
+      "sha256": "0E0DA457807B4D3108EAE799EE980F16A49A14D06284183F307EFC24E874A945",
+      "role": "CatWISE2020 integration into mid-IR baseline classification"
+    },
+    "spectra_engine/continuum_sidecar_engine.py": {
+      "action": "MODIFIED",
+      "sha256": "4707561416F3B4A20D934903760C200B204CCD791C47B33FCD28C70A59765A81",
+      "role": "Multi-catalog infrared evidence preservation in metadata"
+    },
+    "models/chronos_x/subpixel_registration.py": {
+      "action": "CREATED",
+      "sha256": "CE9DAEDF491C0A8DB9950900195291E8C48BB86D66446C5E4B7D69C5F36ED273",
+      "role": "2D Fourier phase-correlation sub-pixel alignment engine"
+    },
+    "models/chronos_x/model.py": {
+      "action": "MODIFIED",
+      "sha256": "505F3C9B38CF408A7C08A6C9CD15106F68440B6078FF8D29E1448B9723B69C30",
+      "role": "ChronosTemporalDifferencer sub-pixel registration wiring & fallback"
+    },
+    "tests/test_motion_x_keplerian_ephemeris.py": {
+      "action": "CREATED",
+      "sha256": "82FBD7251CDB8526E4F7AD2AC24E586C733123A3279D9AE7C51910335ECC87E2",
+      "role": "Unit test suite for Task 4.20B (11 tests)"
+    },
+    "tests/test_spectra_multicatalog_integration.py": {
+      "action": "CREATED",
+      "sha256": "6D4AEDA4B2321607FDE3DA062E57AC5AEA9311120630D29D8ABB22906F3BDCC2",
+      "role": "Unit test suite for Task 4.20C (10 tests)"
+    },
+    "tests/test_chronos_x_subpixel_registration.py": {
+      "action": "CREATED",
+      "sha256": "B1F4F72AD7F751210300D13723EB0F4023F9CB37BD4C169C4EF0C827DE15AA23",
+      "role": "Unit test suite for Task 4.20D (11 tests)"
+    }
+  },
+  "external_catalogs_referenced": {
+    "jpl_sbdb_asteroid_orbits": "data/external/minor_planets/jpl_sbdb_asteroid_orbits.json",
+    "jpl_horizons_ephemerides": "data/external/jpl_horizons/",
+    "pilot_crossmatch_evidence": "data/external_catalogs/pilot/crossmatch/pilot_25_master_crossmatch_evidence.csv",
+    "task_4_19B_catalogs": "data/external_catalogs/task_4_19B/"
+  }
+}

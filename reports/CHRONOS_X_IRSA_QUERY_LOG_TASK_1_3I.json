@@ -1,0 +1,45 @@
+{
+  "task_id": "Phase 3, Task 1.3I",
+  "title": "Controlled IRSA Metadata Retrieval & Network Capability Preflight Query Log",
+  "execution_timestamp_utc": "2026-11-07T07:39:12.530414+00:00",
+  "governance": "ZERO FITS DOWNLOAD / ZERO NETWORK BYPASS / ZERO SCIENTIFIC ASSET MODIFICATION",
+  "executive_verdict": "NETWORK PREFLIGHT FAILED \u2014 REMOTE METADATA UNAVAILABLE",
+  "stage_a_preflight_checks": {
+    "environment": {
+      "os": "Windows",
+      "os_release": "11",
+      "os_version": "10.0.26200",
+      "architecture": "AMD64",
+      "python_executable": "C:\\Users\\blues\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "python_version": "3.12.10",
+      "environment_type": "Windows Native Host (standard sandbox execution)"
+    },
+    "dns_resolution": {
+      "target_host": "irsa.ipac.caltech.edu",
+      "status": "FAILED",
+      "error_type": "gaierror",
+      "error_message": "[Errno 11001] getaddrinfo failed",
+      "elapsed_seconds": 0.0071
+    },
+    "https_root_connectivity": {
+      "url": "https://irsa.ipac.caltech.edu/",
+      "status": "SKIPPED_DUE_TO_DNS_FAILURE",
+      "error_type": "PreflightDependencyFailed",
+      "error_message": "DNS resolution failed for irsa.ipac.caltech.edu: [Errno 11001] getaddrinfo failed"
+    },
+    "sia2_service_connectivity": {
+      "url": "https://irsa.ipac.caltech.edu/SIA",
+      "status": "SKIPPED_DUE_TO_PRIOR_FAILURE",
+      "error_type": "PreflightDependencyFailed",
+      "error_message": "HTTPS root check did not succeed; SIA2 service query aborted per STOP CONDITION."
+    },
+    "stop_condition_triggered": true,
+    "stop_condition_reason": "Section 2 mandatory stop condition invoked: DNS lookup failed. No VPN, proxy, alternate DNS, or network bypass attempted."
+  },
+  "stage_b_remote_queries": {
+    "status": "ABORTED_DUE_TO_PREFLIGHT_FAILURE",
+    "queries_attempted": 0,
+    "records_retrieved": 0,
+    "notes": "Stage B remote queries were not executed because Stage A preflight failed. In compliance with directives, zero empty or fabricated successful queries were logged."
+  }
+}

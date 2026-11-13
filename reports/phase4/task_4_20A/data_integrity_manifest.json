@@ -1,0 +1,43 @@
+{
+  "task_id": "Phase 4, Task 4.20A Capability Audit",
+  "timestamp_utc": "2026-11-08T17:15:15Z",
+  "protected_production_assets": {
+    "checkpoints/astrovision_spatial_v3.pt": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+    "checkpoints/spectra_masked_ae_v2.pt": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848"
+  },
+  "task_deliverables": {
+    "60_percent_target_feasibility.md": {
+      "size_bytes": 6996,
+      "sha256": "66E441870BC1C693D7BAAE1055977CDEA3AE977A2A837238ABF683CF9942DFDC"
+    },
+    "checkpoint_integrity_manifest.json": {
+      "size_bytes": 4231,
+      "sha256": "7C36CE82E4B2E5B8CADAAF17A008C9254BD415CA6A0482F918DBB8B07B23CD1D"
+    },
+    "improvement_opportunity_matrix.csv": {
+      "size_bytes": 4594,
+      "sha256": "85D6FCDD3DBA51BB414CB61F8B7ACCBCFAE981023F5F144738C7206B4648EB25"
+    },
+    "module_capability_audit.csv": {
+      "size_bytes": 3916,
+      "sha256": "43DFD1BA23DFB9BE4CD64C55DFF691DF0B21B3D67A37EDB34439D0B6B2C76DEA"
+    },
+    "recommended_improvement_sequence.md": {
+      "size_bytes": 4973,
+      "sha256": "CEDF5CDD15DC129AFCE22DC561082A111BF186705E523975A0BACEBFD278EA60"
+    },
+    "scientific_evidence_gaps.md": {
+      "size_bytes": 6760,
+      "sha256": "F3EC0FD1EA235DC2ADC39B83CA55AA94833B7C8F3A62ADB65888C435AA17715A"
+    },
+    "task_4_20A_closeout_report.md": {
+      "size_bytes": 12146,
+      "sha256": "D00303D8ADD1BB6C077A36C0CD5BC92D7C4D508378A7E52BF278C7E4B5BEA1D7"
+    },
+    "training_inventory.csv": {
+      "size_bytes": 1581,
+      "sha256": "380551A6973FD205A3FD41DE46F3A5E808A2B48C69A5637B9B76E7F3A3FB45DC"
+    }
+  }
+}

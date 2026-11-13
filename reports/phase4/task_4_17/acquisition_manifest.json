@@ -1,0 +1,57 @@
+{
+  "manifest_version": "1.0.0",
+  "task": "PHASE_4_TASK_4_17",
+  "created_at_utc": "2026-11-08T05:41:19.087766+00:00",
+  "catalogs_acquired": {
+    "gaia_dr3": {
+      "source_archive": "Gaia DR3 (ESA / Heidelberg ARI)",
+      "catalog_file": "gaia_dr3_evaluation_catalog.csv",
+      "total_unique_sources": 110575,
+      "limiting_magnitude_g": 20.7,
+      "coordinate_epoch": "J2016.0",
+      "reference_frame": "ICRS"
+    },
+    "twomass_psc": {
+      "source_archive": "2MASS All-Sky Point Source Catalog (IPAC / Caltech)",
+      "catalog_file": "twomass_psc_evaluation_catalog.csv",
+      "total_unique_sources": 55349,
+      "limiting_magnitude_j": 17.0,
+      "coordinate_epoch": "J2000.0",
+      "reference_frame": "ICRS"
+    },
+    "spatial_crossmatch": {
+      "crossmatch_file": "gaia_2mass_crossmatch.csv",
+      "total_matched_pairs": 53868,
+      "confirmed_matches": 52280,
+      "probable_matches": 9,
+      "ambiguous_matches": 1579
+    }
+  },
+  "evaluation_coverage": {
+    "total_cutouts_evaluated": 1500,
+    "overall_gaia_coverage_pct": 37.47,
+    "overall_twomass_coverage_pct": 37.27,
+    "target_95pct_met": false,
+    "coverage_verdict": "SPARSE_ASTRONOMICAL_FIELD"
+  },
+  "protected_assets_audit": {
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "actual_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 3436965
+    },
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "actual_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 382177
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "actual_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 12978
+    }
+  }
+}

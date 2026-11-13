@@ -1,0 +1,90 @@
+{
+  "task_id": "Phase 4, Task 4.14",
+  "task_name": "ASTROVISION Catalog-Aware Masking & Receptive-Field Scientific Validation",
+  "pipeline_build": "l2b-v27-2026-222",
+  "target_module": "ASTROVISION (Spatial Infrared Anomaly Detection)",
+  "audit_timestamp_utc": "2026-11-08T04:04:47.954120+00:00",
+  "runtime_environment": {
+    "python_version": "3.12.10",
+    "virtualenv_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "is_isolated_validation_venv": true
+  },
+  "final_scientific_verdict": "MASKING_MECHANISM_SUPPORTED",
+  "verdict_rationale": "Comprehensive physical and architectural experiments definitively validate the receptive-field contamination hypothesis and the effectiveness of catalog-aware masking: (1) The theoretical receptive field at output (64, 64) is proven to be exactly 62x62 pixels (radius 31.0 px), containing 95.82% of effective gradient energy; (2) Paired injection experiments prove that off-center sources within r <= 24 px inflate the central anomaly score well above production threshold (Delta S up to +2.18e7), while sources at r >= 32 px produce zero threshold exceedance (Delta S <= +57.71 < tau); (3) Dynamic catalog masking with 2-pixel dilation completely eliminates central false alarms (Delta S suppressed by 99.74% from 1366.18 to 3.53), while preserving genuine central anomaly recovery with 98.4% fidelity (1902.92 vs ground truth 1934.05).",
+  "architectural_receptive_field_findings": {
+    "theoretical_receptive_field_diameter_pixels": 62,
+    "theoretical_receptive_field_radius_pixels": 31.0,
+    "effective_rf_energy_at_radius_8px": 22.41,
+    "effective_rf_energy_at_radius_16px": 54.01,
+    "effective_rf_energy_at_radius_24px": 80.72,
+    "effective_rf_energy_at_radius_31px": 95.82,
+    "effective_rf_energy_at_radius_40px": 99.92
+  },
+  "offcenter_injection_experiment_summary": {
+    "total_paired_configurations": 200,
+    "tested_radial_distances_pixels": [
+      0,
+      2,
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "tested_peak_fluxes_mjy_sr": [
+      50.0,
+      150.0,
+      500.0,
+      1500.0
+    ],
+    "critical_transition_boundary_pixels": 31.0,
+    "contamination_inside_rf_max_delta_s": 21805708.82,
+    "contamination_outside_rf_delta_s_at_48px": -0.07
+  },
+  "mask_dilation_experiment_summary": {
+    "tested_dilation_levels": [
+      0,
+      1,
+      2,
+      3,
+      5
+    ],
+    "optimal_dilation_pixels": 2,
+    "optimal_dilation_radius_pixels": 4.5,
+    "false_alarm_suppression_pct": 99.74,
+    "central_anomaly_recovery_retention_pct": 98.4,
+    "cutout_area_masked_pct": 0.95
+  },
+  "protected_asset_integrity": {
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "expected": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "actual": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "status": "PRISTINE_MATCH"
+    },
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "actual": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "PRISTINE_MATCH"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "actual": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "PRISTINE_MATCH"
+    }
+  },
+  "deliverable_manifest": {
+    "closeout_report": "reports/PHASE_4_14_CLOSEOUT_REPORT.md",
+    "architecture_audit_md": "reports/PHASE_4_14_ARCHITECTURE_AUDIT.md",
+    "receptive_field_analysis_csv": "reports/PHASE_4_14_RECEPTIVE_FIELD_ANALYSIS.csv",
+    "offcenter_injection_results_csv": "reports/PHASE_4_14_OFFCENTER_INJECTION_RESULTS.csv",
+    "offcenter_contamination_analysis_md": "reports/PHASE_4_14_OFFCENTER_CONTAMINATION_ANALYSIS.md",
+    "mask_semantics_md": "reports/PHASE_4_14_MASK_SEMANTICS_AND_PROPAGATION.md",
+    "mask_dilation_experiments_csv": "reports/PHASE_4_14_MASK_DILATION_EXPERIMENTS.csv",
+    "masking_prototype_md": "reports/PHASE_4_14_MASKING_PROTOTYPE.md",
+    "motion_fusion_integration_design_md": "reports/PHASE_4_14_MOTION_FUSION_INTEGRATION_DESIGN.md",
+    "audit_json": "reports/PHASE_4_14_AUDIT.json"
+  }
+}

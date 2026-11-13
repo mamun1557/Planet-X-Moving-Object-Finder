@@ -1,0 +1,20 @@
+# SPECTRA-X Protected Asset Cryptographic Hash Verification Ledger
+# Phase 4, Task 4.21 Pre-Freeze Verification
+# Timestamp: {datetime.now(timezone.utc).isoformat()}
+# Algorithm: SHA-256 (Uppercase Hexadecimal)
+
+# Asset 1: ASTROVISION V3 Production Checkpoint
+checkpoints/astrovision_spatial_v3.pt: {post_hashes['checkpoints/astrovision_spatial_v3.pt']}
+STATUS: VERIFIED_PRISTINE (Preflight Match: TRUE, Post-Sprint Match: TRUE)
+
+# Asset 2: SPECTRA V2 Production Checkpoint
+checkpoints/spectra_masked_ae_v2.pt: {post_hashes['checkpoints/spectra_masked_ae_v2.pt']}
+STATUS: VERIFIED_PRISTINE (Preflight Match: TRUE, Post-Sprint Match: TRUE)
+
+# Asset 3: SPECTRA Provisional Thresholds Artifact
+data/processed/spectra/spectra_v2_provisional_thresholds_v1.json: {post_hashes['data/processed/spectra/spectra_v2_provisional_thresholds_v1.json']}
+STATUS: VERIFIED_PRISTINE (Preflight Match: TRUE, Post-Sprint Match: TRUE)
+
+# Experimental Checkpoint (Non-Production, Isolated)
+checkpoints/experimental/spectra_masked_ae_v3_exp.pt: {exp_meta['checkpoint_sha256']}
+STATUS: EXPERIMENTAL_ISOLATED_ONLY (Not Promoted)

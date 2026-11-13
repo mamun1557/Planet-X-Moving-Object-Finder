@@ -1,0 +1,104 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.2C",
+    "title": "External Catalog Retrieval Feasibility & Controlled Data Acquisition Plan",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T21:48:00Z",
+    "audit_type": "STRICT_READ_ONLY_EXTERNAL_DATA_ACQUISITION_FEASIBILITY_AUDIT",
+    "governance": "ZERO_DOWNLOAD_ZERO_INSTALL_ZERO_MODIFICATION",
+    "target_cohort": "Pointing 0008 Calibration Cohort",
+    "cohort_size": 3206
+  },
+  "protected_asset_sha256_verification": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_hash": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "computed_hash": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "VERIFIED_MATCH"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_hash": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "computed_hash": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "VERIFIED_MATCH"
+    },
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "expected_hash": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "computed_hash": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "status": "VERIFIED_MATCH"
+    }
+  },
+  "test_suite_status": {
+    "test_command": "pytest tests/",
+    "items_collected": 166,
+    "items_passed": 166,
+    "items_failed": 0,
+    "pass_rate_percent": 100.0,
+    "verdict": "PASSED"
+  },
+  "external_archive_preflight_results": {
+    "esa_gaia_dr3_archive": {
+      "base_url": "https://gea.esac.esa.int",
+      "tap_endpoint": "https://gea.esac.esa.int/tap-server/tap",
+      "documentation_status": "DOCUMENTATION_VERIFIED",
+      "dns_resolution_status": "DNS_BLOCKED",
+      "connection_status": "ENDPOINT_UNREACHABLE",
+      "auth_required": false,
+      "protocol": "IVOA_TAP_ADQL_V2",
+      "anonymous_query_support": true,
+      "target_tables": [
+        "gaiadr3.gaia_source",
+        "gaiadr3.astrophysical_parameters",
+        "gaiadr3.xp_continuous_mean_spectrum"
+      ]
+    },
+    "nasa_ipac_irsa_2mass": {
+      "base_url": "https://irsa.ipac.caltech.edu",
+      "tap_endpoint": "https://irsa.ipac.caltech.edu/TAP",
+      "documentation_status": "DOCUMENTATION_VERIFIED",
+      "dns_resolution_status": "DNS_BLOCKED",
+      "connection_status": "ENDPOINT_UNREACHABLE",
+      "auth_required": false,
+      "protocol": "IVOA_TAP_ADQL_V2",
+      "anonymous_query_support": true,
+      "target_tables": [
+        "fp_psc"
+      ]
+    },
+    "nasa_ipac_irsa_allwise": {
+      "base_url": "https://irsa.ipac.caltech.edu",
+      "tap_endpoint": "https://irsa.ipac.caltech.edu/TAP",
+      "documentation_status": "DOCUMENTATION_VERIFIED",
+      "dns_resolution_status": "DNS_BLOCKED",
+      "connection_status": "ENDPOINT_UNREACHABLE",
+      "auth_required": false,
+      "protocol": "IVOA_TAP_ADQL_V2",
+      "anonymous_query_support": true,
+      "target_tables": [
+        "allwise_p3as_psd"
+      ]
+    }
+  },
+  "inspected_environment_inventory": {
+    "python_runtime": "3.12.10 (AMD64)",
+    "astropy": { "installed": true, "version": "8.0.2", "fits_support": true, "votable_support": true },
+    "numpy": { "installed": true, "version": "2.5.4" },
+    "pandas": { "installed": true, "version": "3.1.1" },
+    "scipy": { "installed": true, "version": "1.18.1" },
+    "urllib3": { "installed": true, "version": "2.8.0" },
+    "astroquery": { "installed": false, "future_requirement": "ESSENTIAL_FOR_AUTOMATED_TAP" },
+    "gaiaxpy": { "installed": false, "future_requirement": "OPTIONAL_FOR_HERMITE_INVERSION" },
+    "requests": { "installed": false, "future_requirement": "ESSENTIAL_FOR_HTTP_REST" }
+  },
+  "cohort_firewall_rules": {
+    "p0008_calibration": "AUTHORIZED_FOR_ACQUISITION_PLANNING_AND_CONTROL_SELECTION",
+    "p0002_blind_eval": "STRICTLY_ISOLATED_ZERO_ACQUISITION_ZERO_TUNING",
+    "p0009_blind_eval": "STRICTLY_ISOLATED_ZERO_ACQUISITION_ZERO_TUNING",
+    "p0010_blind_eval": "STRICTLY_ISOLATED_ZERO_ACQUISITION_ZERO_TUNING"
+  },
+  "final_verdict": {
+    "status": "ACQUISITION_PLAN_READY",
+    "verdict_code": "ACQUISITION_PLAN_READY",
+    "readiness_impact": "UNALTERED",
+    "rationale": "The operational data acquisition plan, 5-phase priority roadmap, unexecuted ADQL query templates, isolated validation environment specification, and versioned JSON provenance schema are fully formulated and scientifically verified. All official archive interfaces are documented and open-access. Sandbox network isolation (DNS_BLOCKED) is accurately documented without workarounds, confirming that physical data retrieval must take place inside an authorized external validation environment."
+  }
+}
+

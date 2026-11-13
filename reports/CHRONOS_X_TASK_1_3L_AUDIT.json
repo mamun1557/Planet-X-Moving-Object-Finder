@@ -1,0 +1,81 @@
+{
+  "audit_metadata": {
+    "task_id": "Task 1.3L",
+    "title": "CHRONOS-X Temporal Safety Remediation — Independent Code Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "execution_timestamp": "2026-11-07T19:09:00+06:00",
+    "governance_mode": "STRICT READ-ONLY INDEPENDENT SCIENTIFIC & ENGINEERING AUDIT",
+    "audit_verdict": "PASS WITH QUALIFICATIONS"
+  },
+  "audit_findings_summary": {
+    "fail_closed_gate_production": {
+      "status": "VERIFIED_FAIL_CLOSED",
+      "target_file": "models/fusion/fusion_engine.py",
+      "target_lines": "333-345",
+      "description": "Production FusionEngine._classify strictly requires chronos_temporal_eligibility == 'TRUE' before promoting any candidate to NEW_TRANSIENT_OR_ASTEROID_CANDIDATE. All non-TRUE inputs (FALSE, UNVERIFIABLE, None, missing, invalid string) fall through to ANOMALOUS_RESIDUAL_REQUIRES_REVIEW."
+    },
+    "eligibility_contract_verification": {
+      "status": "VERIFIED",
+      "target_file": "models/chronos_x/temporal_eligibility.py",
+      "checks_verified": 10,
+      "unverifiable_handling": "Missing timestamps, WCS coordinates, detector identity, variance uncertainty, or quality masks are strictly classified as UNVERIFIABLE with structured missing_evidence provenance."
+    },
+    "baseline_policy_verification": {
+      "status": "VERIFIED",
+      "target_file": "models/chronos_x/temporal_eligibility.py",
+      "policy_version": "v1.0-2026-F1",
+      "default_min_baseline_days": 1.0,
+      "same_visit_override": "Verified. Sequences within same visit or dt < 30 min are classified as is_dither=True and temporal_eligibility='FALSE'."
+    },
+    "evidence_orthogonality_verification": {
+      "status": "VERIFIED",
+      "target_file": "models/chronos_x/temporal_eligibility.py",
+      "invariants_confirmed": [
+        "E4 completeness does not require a multi-day baseline.",
+        "Intra-visit dithers achieve E4 while remaining temporal_eligibility='FALSE'.",
+        "Missing uncertainty or quality masks caps tier at E3 or lower.",
+        "Evidence tiers and temporal eligibility are independently serialized."
+      ]
+    },
+    "alternate_prototype_pathway_qualification": {
+      "status": "QUALIFICATION_NOTED",
+      "target_file": "models/fusion_x/model.py",
+      "target_lines": "48-49",
+      "description": "Prototype class FusionRanker.classify_candidate contains an un-gated legacy heuristic: 'if temporal_sig > 5.0 and not is_known_star: return NEW_TRANSIENT_OR_ASTEROID_CANDIDATE'. While not called by the active production pipeline (which uses models/fusion/fusion_engine.py), it should be deprecated or updated to prevent future regression."
+    }
+  },
+  "test_suite_execution": {
+    "focused_suite": "tests/test_chronos_x_temporal_eligibility.py",
+    "focused_tests_count": 17,
+    "focused_tests_passed": 17,
+    "focused_tests_failed": 0,
+    "focused_tests_duration_seconds": 4.64,
+    "full_repository_suite": "tests/",
+    "full_suite_collected": 152,
+    "full_suite_passed": 152,
+    "full_suite_failed": 0,
+    "full_suite_duration_seconds": 41.74,
+    "environment": {
+      "os": "Windows",
+      "python_version": "3.12.10",
+      "pytest_version": "9.2.0"
+    }
+  },
+  "frozen_assets_verification": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "actual_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "match": true
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "actual_sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "match": true
+    }
+  },
+  "minimal_remediation_recommendations": [
+    "In models/fusion_x/model.py, deprecate or add temporal_eligibility check to FusionRanker.classify_candidate to unify the prototype module with models/fusion/fusion_engine.py.",
+    "Retain dataset-level status as TEMPORAL_DATA_UNAVAILABLE until genuine multi-epoch Level-2 FITS files (e.g. Weeks 31-32) are retrieved from IRSA."
+  ]
+}
+

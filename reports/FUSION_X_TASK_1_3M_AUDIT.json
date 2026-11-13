@@ -1,0 +1,91 @@
+{
+  "task_metadata": {
+    "task_id": "Task 1.3M",
+    "title": "Legacy FUSION Prototype Safety Cleanup",
+    "parent_audit": "Task 1.3L",
+    "pipeline_build": "l2b-v27-2026-222",
+    "execution_timestamp": "2026-11-07T19:27:00+06:00",
+    "governance_mode": "CONTROLLED IMPLEMENTATION & REGRESSION TESTING",
+    "verdict": "PASS"
+  },
+  "remediation_strategy": {
+    "selected_strategy": "Option B — Safety-Gate Synchronization with Explicit Deprecation (Option A hybrid)",
+    "justification": "FusionRanker.classify_candidate was actively called by models/fusion_x/rank_anomalies.py. Safely synchronizing the temporal eligibility gate eliminates the ungated heuristic while maintaining executable prototype functionality and marking it deprecated in favor of production FusionEngine."
+  },
+  "before_vs_after_behavior": {
+    "legacy_prototype_transient_promotion": {
+      "before": "if temporal_sig > 5.0 and not is_known_star: return 'NEW_TRANSIENT_OR_ASTEROID_CANDIDATE' (no temporal eligibility check).",
+      "after": "if temporal_sig > 5.0 and not is_known_star: if chronos_temporal_eligibility == 'TRUE': return 'NEW_TRANSIENT_OR_ASTEROID_CANDIDATE' else: return 'ANOMALOUS_RESIDUAL_REQUIRES_REVIEW'."
+    },
+    "synthetic_demo_pipeline": {
+      "before": "rank_anomalies.py passed unverified synthetic exponential samples into classify_candidate, risking fabricated transient tags.",
+      "after": "rank_anomalies.py explicitly passes chronos_temporal_eligibility='FALSE', ensuring all synthetic anomalies are categorized as ANOMALOUS_RESIDUAL_REQUIRES_REVIEW."
+    },
+    "production_fusion_engine": {
+      "before": "models/fusion/fusion_engine.py already gated via Task 1.3K.",
+      "after": "models/fusion/fusion_engine.py confirmed 100% untouched and invariant."
+    }
+  },
+  "repo_wide_heuristic_search": {
+    "pattern": "NEW_TRANSIENT_OR_ASTEROID_CANDIDATE",
+    "production_occurrences": [
+      "models/fusion/fusion_engine.py:339 (gated on chronos_temporal_eligibility == 'TRUE')"
+    ],
+    "prototype_occurrences": [
+      "models/fusion_x/model.py:66 (gated on chronos_temporal_eligibility == 'TRUE')"
+    ],
+    "ungated_occurrences_remaining": 0
+  },
+  "test_execution_summary": {
+    "focused_legacy_tests": {
+      "file": "tests/test_legacy_fusion_safety_cleanup.py",
+      "collected": 14,
+      "passed": 14,
+      "failed": 0,
+      "duration_seconds": 3.83
+    },
+    "chronos_x_safety_tests": {
+      "file": "tests/test_chronos_x_temporal_eligibility.py",
+      "collected": 17,
+      "passed": 17,
+      "failed": 0,
+      "duration_seconds": 5.66
+    },
+    "full_repository_suite": {
+      "collected": 166,
+      "passed": 166,
+      "failed": 0,
+      "duration_seconds": 52.52
+    }
+  },
+  "changed_files_inventory": [
+    {
+      "path": "models/fusion_x/model.py",
+      "action": "MODIFY",
+      "description": "Added deprecation notice and synchronized temporal eligibility gate in FusionRanker.classify_candidate."
+    },
+    {
+      "path": "models/fusion_x/rank_anomalies.py",
+      "action": "MODIFY",
+      "description": "Explicitly passed chronos_temporal_eligibility='FALSE' to prevent synthetic transient fabrication."
+    },
+    {
+      "path": "tests/test_legacy_fusion_safety_cleanup.py",
+      "action": "CREATE",
+      "description": "14 focused regression tests verifying fail-closed behavior across all input conditions."
+    }
+  ],
+  "frozen_scientific_assets_verification": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "actual_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "CONFIRMED_UNTOUCHED"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "actual_sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "status": "CONFIRMED_UNTOUCHED"
+    }
+  }
+}
+

@@ -1,0 +1,14 @@
+metric,condition_A_d1_only,condition_B_d1_d4
+checkpoint_path,C:\Users\blues\OneDrive\Desktop\New folder (7)\SPECTRA-X\checkpoints\spectra_masked_ae_v2.pt,C:\Users\blues\OneDrive\Desktop\New folder (7)\SPECTRA-X\checkpoints\spectra_masked_ae_v2.pt
+checkpoint_sha256,6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938,6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938
+matched_cohort_sources,1132,1132
+mean_valid_channels_per_source,2.64,5.59
+median_reconstruction_chi2,0.000333,0.358371
+mean_reconstruction_chi2,0.002882,0.712215
+median_reconstruction_rmse,0.0183,0.5985
+median_d1_channel_chi2,0.000333,0.198159
+median_d4_channel_chi2,N/A (Masked),0.571893
+spearman_rank_correlation,1.0,-0.1593
+injection_overall_auroc,0.6795,0.6876
+injection_midir_d4_auroc,0.5192,0.5776
+injection_nearir_d1_auroc,1.0,0.9076

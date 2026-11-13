@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "SMALL_ONE_ARCSEC_SHIFT",
+  "scenario_notes": "Small 1.0 arcsecond displacement test",
+  "ground_truth_epoch_a": {
+    "ra_deg": 145.0,
+    "dec_deg": 22.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-14T00:00:00.000Z",
+    "mjd": 61235.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 145.0,
+    "dec_deg": 21.999722,
+    "pixel_x": 63.0,
+    "pixel_y": 62.84,
+    "timestamp_utc": "2026-07-16T00:00:00.000Z",
+    "mjd": 61237.0
+  },
+  "ground_truth_delta_ra_arcsec": 0.0,
+  "ground_truth_delta_dec_arcsec": -1.0,
+  "ground_truth_angular_displacement_arcsec": 1.0,
+  "ground_truth_position_angle_deg": 180.0,
+  "ground_truth_dt_days": 2.0,
+  "ground_truth_dt_hours": 48.0,
+  "ground_truth_motion_rate_arcsec_per_day": 0.5,
+  "ground_truth_motion_rate_arcsec_per_hour": 0.0208,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

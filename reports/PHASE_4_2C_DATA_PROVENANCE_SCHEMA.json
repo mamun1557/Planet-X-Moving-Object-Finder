@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SPECTRAExternalCatalogDataProvenanceSchema",
+  "description": "Versioned, normalized data schema governing external catalog data acquisition, provenance tracking, and infrared excess validation for the SPECTRA-X pipeline.",
+  "version": "1.0.0",
+  "pipeline_build": "l2b-v27-2026-222",
+  "governance": "STRICT_RAW_IMMUTABILITY",
+  "type": "object",
+  "definitions": {
+    "ArchiveQueryProvenance": {
+      "type": "object",
+      "required": [
+        "archive_name",
+        "archive_base_url",
+        "query_service_endpoint",
+        "query_protocol",
+        "adql_query_string",
+        "query_execution_timestamp_utc",
+        "raw_response_filename",
+        "raw_response_sha256"
+      ],
+      "properties": {
+        "archive_name": { "type": "string", "enum": ["ESA_GAIA_ARCHIVE", "NASA_IPAC_IRSA"] },
+        "archive_base_url": { "type": "string", "format": "uri" },
+        "query_service_endpoint": { "type": "string", "format": "uri" },
+        "query_protocol": { "type": "string", "enum": ["TAP_ADQL_SYNC", "TAP_ADQL_ASYNC", "DATALINK_REST"] },
+        "adql_query_string": { "type": "string" },
+        "query_execution_timestamp_utc": { "type": "string", "format": "date-time" },
+        "raw_response_filename": { "type": "string" },
+        "raw_response_sha256": { "type": "string", "pattern": "^[A-F0-9]{64}$" },
+        "query_duration_seconds": { "type": "number" },
+        "http_status_code": { "type": "integer" }
+      }
+    },
+    "PhotometricMeasurement": {
+      "type": "object",
+      "required": [
+        "band_name",
+        "effective_wavelength_microns",
+        "is_upper_limit",
+        "original_catalog_field",
+        "unit"
+      ],
+      "properties": {
+        "band_name": { "type": "string", "enum": ["G", "BP", "RP", "J", "H", "Ks", "W1", "W2", "W3", "W4"] },
+        "effective_wavelength_microns": { "type": "number" },
+        "magnitude": { "type": ["number", "null"] },
+        "magnitude_error": { "type": ["number", "null"] },
+        "flux_mJy": { "type": ["number", "null"] },
+        "flux_error_mJy": { "type": ["number", "null"] },
+        "unit": { "type": "string", "enum": ["mag", "mJy", "W/m^2/micron"] },
+        "snr": { "type": ["number", "null"] },
+        "is_upper_limit": { "type": "boolean" },
+        "upper_limit_sigma": { "type": ["number", "null"] },
+        "quality_flag": { "type": ["string", "null"] },
+        "original_catalog_field": { "type": "string" }
+      }
+    },
+    "CrossMatchDecision": {
+      "type": "object",
+      "required": [
+        "target_catalog",
+        "counterpart_designation",
+        "match_separation_arcsec",
+        "epoch_difference_years",
+        "match_verdict"
+      ],
+      "properties": {
+        "target_catalog": { "type": "string", "enum": ["GAIA_DR3", "2MASS_PSC", "ALLWISE"] },
+        "counterpart_designation": { "type": "string" },
+        "counterpart_ra_deg": { "type": "number" },
+        "counterpart_dec_deg": { "type": "number" },
+        "match_separation_arcsec": { "type": "number" },
+        "search_radius_arcsec": { "type": "number" },
+        "epoch_difference_years": { "type": "number" },
+        "multiplicity_count_within_radius": { "type": "integer" },
+        "match_verdict": {
+          "type": "string",
+          "enum": ["UNAMBIGUOUS_SINGLE_MATCH", "BLENDED_MULTIPLE_MATCH", "NO_MATCH_BEYOND_RADIUS", "SEARCH_LIMIT_EXCEEDED"]
+        }
+      }
+    },
+    "ScientificValidationOutput": {
+      "type": "object",
+      "required": [
+        "candidate_eligibility_tier",
+        "total_ir_excess_significance"
+      ],
+      "properties": {
+        "candidate_eligibility_tier": {
+          "type": "string",
+          "enum": [
+            "TIER_1_CLEAN_PHOTOSPHERIC_CONTROL_CANDIDATE",
+            "TIER_2_POSSIBLE_IR_EXCESS_CANDIDATE",
+            "TIER_3_AMBIGUOUS_OR_BLENDED",
+            "TIER_4_VARIABLE_OR_EPOCH_MISMATCH",
+            "TIER_5_INSUFFICIENT_PHOTOMETRY",
+            "TIER_6_INSUFFICIENT_STELLAR_PARAMETERS",
+            "TIER_7_UNVERIFIABLE"
+          ]
+        },
+        "fitted_teff_kelvin": { "type": ["number", "null"] },
+        "fitted_logg": { "type": ["number", "null"] },
+        "fitted_extinction_Av_mag": { "type": ["number", "null"] },
+        "photospheric_model_grid": { "type": ["string", "null"] },
+        "monochromatic_excess_significance": {
+          "type": "object",
+          "additionalProperties": { "type": "number" }
+        },
+        "total_ir_excess_significance": { "type": "number" },
+        "excess_classification_notes": { "type": "string" }
+      }
+    }
+  },
+  "required": [
+    "provenance_schema_version",
+    "source_id",
+    "cohort_id",
+    "cohort_role",
+    "query_provenance",
+    "cross_match_decisions",
+    "normalized_measurements",
+    "validation_output"
+  ],
+  "properties": {
+    "provenance_schema_version": { "type": "string", "const": "1.0.0" },
+    "source_id": { "type": "integer", "description": "Native 64-bit Gaia DR3 identifier (Primary Key)" },
+    "cohort_id": { "type": "string", "description": "Pointing designation, e.g. POINTING_0008" },
+    "cohort_role": { "type": "string", "enum": ["CALIBRATION_COHORT_ONLY", "BLIND_EVALUATION_COHORT_ONLY"] },
+    "internal_ra_deg": { "type": "number" },
+    "internal_dec_deg": { "type": "number" },
+    "internal_epoch": { "type": "number", "const": 2026.55 },
+    "query_provenance": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/ArchiveQueryProvenance" }
+    },
+    "cross_match_decisions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/CrossMatchDecision" }
+    },
+    "normalized_measurements": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/PhotometricMeasurement" }
+    },
+    "validation_output": {
+      "$ref": "#/definitions/ScientificValidationOutput"
+    }
+  }
+}
+

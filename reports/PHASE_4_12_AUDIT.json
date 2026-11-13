@@ -1,0 +1,92 @@
+{
+  "task_id": "Phase 4, Task 4.12",
+  "task_name": "ASTROVISION False-Positive Reduction & Detector-Stratified Scientific Improvement",
+  "pipeline_build": "l2b-v27-2026-222",
+  "target_module": "ASTROVISION (Spatial Infrared Anomaly Detection)",
+  "audit_timestamp_utc": "2026-11-07T20:30:36.690057+00:00",
+  "runtime_environment": {
+    "python_version": "3.12.10",
+    "virtualenv_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "is_isolated_validation_venv": true
+  },
+  "final_scientific_verdict": "SCIENTIFIC_DIAGNOSIS_COMPLETE_IMPROVEMENT_PENDING",
+  "verdict_rationale": "Comprehensive physical and algorithmic diagnosis is complete with definitive measurable proof: 100% (45/45) of ASTROVISION false positives in EVALUATION_CONTROL correspond to real astronomical stars with SPHEREx catalog source flag 2097152 and peak fluxes exceeding 50 MJy/sr. Preprocessing planar background normalization was experimentally tested and verified to produce zero reduction in false positives because the false alarms are compact stellar peaks rather than smooth background tilts. Detector 2 low recovery (8.33%) was proven to stem from Pointing 1 outlier skew in calibration, which inflated tau to 2536.3. While lowering tau to 331.5 restores D2 recovery to 44.05%, doing so exposes an identical unmasked stellar false-alarm rate (22.6%). Because modifying production thresholds or checkpoints without prior upstream catalog star-masking would compromise false-alarm control, production assets remain strictly frozen and unmutated while the diagnostic roadmap is fully established.",
+  "reproduced_benchmark_metrics": {
+    "checkpoint": "checkpoints/astrovision_spatial_v3.pt",
+    "checkpoint_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+    "point_source_auroc": 0.804,
+    "point_source_recovery_pct": 34.8,
+    "point_source_precision_pct": 79.09,
+    "empirical_fpr_pct": 9.0,
+    "nominal_target_fpr_pct": 5.0,
+    "fpr_95pct_wilson_ci": [
+      0.0679,
+      0.1183
+    ],
+    "extended_source_auroc": 0.7064,
+    "extended_source_recovery_pct": 17.4
+  },
+  "detector_stratified_findings": {
+    "D1": {
+      "empirical_fpr_pct": 22.62,
+      "point_recovery_pct": 61.9,
+      "point_auroc": 0.7745,
+      "diagnosis": "High optical throughput and stellar crowding in intermediate galactic latitude sightlines (P0009 FPR = 35.7%)."
+    },
+    "D2": {
+      "empirical_fpr_pct": 8.33,
+      "point_recovery_pct": 8.33,
+      "point_auroc": 0.7365,
+      "diagnosis": "Hyper-conservative threshold (tau=2536.3) skewed by Pointing 1 outliers (>900 MJy/sr). Restoring tau to P0008 level (331.5) restores recovery to 44.05%."
+    },
+    "D3": {
+      "empirical_fpr_pct": 2.41,
+      "point_recovery_pct": 20.48,
+      "point_auroc": 0.8082,
+      "diagnosis": "Well-behaved intermediate bandpass; nominal statistical control."
+    },
+    "D4": {
+      "empirical_fpr_pct": 10.84,
+      "point_recovery_pct": 21.69,
+      "point_auroc": 0.7261,
+      "diagnosis": "Fatal pixel bleed defect confirmed remediated by MaskAwareConv2d (AUROC improved from 0.4776 to 0.7261)."
+    },
+    "D5": {
+      "empirical_fpr_pct": 3.61,
+      "point_recovery_pct": 59.04,
+      "point_auroc": 0.9319,
+      "diagnosis": "High signal-to-noise stability; strictly compliant with false alarm budget (< 5.0%)."
+    },
+    "D6": {
+      "empirical_fpr_pct": 6.02,
+      "point_recovery_pct": 37.35,
+      "point_auroc": 0.9075,
+      "diagnosis": "Higher thermal background; acceptable operating parameters."
+    }
+  },
+  "key_diagnostic_discoveries": [
+    "100% of EVALUATION_CONTROL false positives are real astronomical catalog sources (flag 2097152) with flux > 50 MJy/sr.",
+    "Benchmark EVALUATION_CONTROL cutouts were selected from unflagged sky pixels without catalog-level de-crowding, penalizing ASTROVISION for detecting real field stars.",
+    "GradientAwareLocalNormalizer 2D plane subtraction produced zero FP reduction because false alarms are compact stellar peaks, not background slopes.",
+    "Detector 2 recovery suppression (8.33%) was caused by Pointing 1 outlier skew inflating tau to 2536.3; P0008 calibration yields tau=331.5 with 44.05% recovery."
+  ],
+  "protected_asset_integrity": {
+    "checkpoints/astrovision_spatial_v3.pt": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99 (PRISTINE)",
+    "checkpoints/spectra_masked_ae_v2.pt": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938 (PRISTINE)",
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848 (PRISTINE)"
+  },
+  "deliverable_manifest": {
+    "narrative_closeout_report": "reports/PHASE_4_12_ASTROVISION_FP_REDUCTION_CLOSEOUT.md",
+    "detector_stratified_baseline": "reports/PHASE_4_12_DETECTOR_STRATIFIED_BASELINE.csv",
+    "false_positive_morphology_audit": "reports/PHASE_4_12_FALSE_POSITIVE_MORPHOLOGY_AUDIT.csv",
+    "background_and_crowding_audit": "reports/PHASE_4_12_BACKGROUND_AND_CROWDING_AUDIT.csv",
+    "mask_and_image_quality_audit": "reports/PHASE_4_12_MASK_AND_IMAGE_QUALITY_AUDIT.csv",
+    "normalization_comparison": "reports/PHASE_4_12_NORMALIZATION_COMPARISON.csv",
+    "controlled_experiment_matrix": "reports/PHASE_4_12_CONTROLLED_EXPERIMENT_MATRIX.csv",
+    "statistical_comparison": "reports/PHASE_4_12_STATISTICAL_COMPARISON.csv",
+    "cohort_leakage_audit": "reports/PHASE_4_12_COHORT_LEAKAGE_AUDIT.csv",
+    "frozen_asset_integrity": "reports/PHASE_4_12_FROZEN_ASSET_INTEGRITY.csv",
+    "astrovision_readiness": "reports/PHASE_4_12_ASTROVISION_READINESS.csv",
+    "audit_manifest": "reports/PHASE_4_12_AUDIT.json"
+  }
+}

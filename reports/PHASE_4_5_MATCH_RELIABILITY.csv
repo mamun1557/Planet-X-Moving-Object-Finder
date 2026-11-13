@@ -1,0 +1,5 @@
+catalog_pair,planned_search_radius_arcsec,competing_match_risk,blending_risk_assessment,epoch_baseline_correction_strategy,pilot_evaluation_state,notes
+SPECTRA P0008 to Gaia DR3,0.00 (Native Key),Zero (1:1 native source_id join),Zero blending; all 3206 cohort sources have nn_dist >= 12.04 arcsec,Proper motion propagated from J2016.0 to SPHEREx 2026.55,STAGED_READY_FOR_NETWORK,Native 64-bit integer keys verified in local catalog; remote query blocked by network
+SPECTRA P0008 to 2MASS PSC,1.50,Low (2486 matches <= 0.5 arcsec in local catalog),Low blending; nn_dist >= 12.04 arcsec exceeds 2MASS beam (2.0 arcsec),Proper motion propagation from J2016.0 to 2MASS J2000.0,STAGED_READY_FOR_NETWORK,2624 designations verified in local catalog; remote flux retrieval blocked by network
+SPECTRA P0008 to ALLWISE,3.00,Zero multiple matches in 3.0 arcsec (cohort isolation >= 12 arcsec),Low blending due to spatial isolation; cirrus and background requires cc_flags screening,Proper motion propagation from J2016.0 to WISE 2010.0,STAGED_READY_FOR_NETWORK,Cone search queries formulated; remote query blocked by network
+

@@ -1,0 +1,134 @@
+{
+  "task_id": "SPECTRA-X / F1 — One-Day Scientific Readiness Sprint, Task 0",
+  "task_name": "Five-Model Evidence Inventory & Training Strategy",
+  "pipeline_build": "l2b-v27-2026-222",
+  "audit_mode": "STRICT READ-ONLY",
+  "timestamp_utc": "2026-11-07T11:35:00Z",
+  "audit_verdict": "AUDIT COMPLETE — TWO 95% TARGETS IDENTIFIED, REALISTIC ONE-DAY STRATEGY ESTABLISHED",
+  "test_suite_status": {
+    "total_tests": 135,
+    "tests_passed": 135,
+    "tests_failed": 0,
+    "status": "ALL_TESTS_PASSING"
+  },
+  "frozen_scientific_assets": {
+    "astrovision_v3_checkpoint": {
+      "path": "checkpoints/astrovision_spatial_v3.pt",
+      "size_bytes": 3436965,
+      "sha256": "3b608e496f43c2648c9dc8236e1a7f5b5ed4b7906cf900468c65c67016042d99",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "astrovision_v3_metadata": {
+      "path": "checkpoints/astrovision_spatial_v3.json",
+      "size_bytes": 5549,
+      "sha256": "70e9954752c0b4317635627d9d21180882ad36e38d5435f8c326260f58f8d188",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "astrovision_v2_checkpoint": {
+      "path": "checkpoints/astrovision_spatial_v2.pt",
+      "size_bytes": 3438117,
+      "sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "astrovision_v3_calibration": {
+      "path": "data/processed/pilot_results/calibration_parameters_v3.json",
+      "size_bytes": 2263,
+      "sha256": "aabe0d15d0e8d559cc82897e9c669f0f5f5785ab32e111123ac321a258ccf706",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "spectra_v2_checkpoint": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "size_bytes": 382177,
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "spectra_v2_training_meta": {
+      "path": "checkpoints/spectra_masked_ae_v2_training_meta.json",
+      "size_bytes": 4023,
+      "sha256": "80d0d65a00cbad8f2bde844d30a7aaa839c461789de3bc58c4fee895ca9f4f2c",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "spectra_v2_provisional_thresholds": {
+      "path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+      "size_bytes": 12978,
+      "sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "spectra_p0008_calibration_scores": {
+      "path": "data/processed/spectra/spectra_p0008_calibration_scores_v1.csv",
+      "size_bytes": 446446,
+      "sha256": "7ac34d415f8132f7f164ab20c1b25fe03461bc709eb674031e838b2208e8c1a3",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "phase3_multipointing_spectra": {
+      "path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "size_bytes": 332189097,
+      "sha256": "8a96617cfe5d5152e720ee0c3890a7b8c7025ab2bfb3c682e08743affe6858e0",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "gaia_dr3_reference_stars": {
+      "path": "data/external/gaia_dr3/gaia_dr3_reference_stars.csv",
+      "size_bytes": 615396,
+      "sha256": "d76248598072b633aeb008426b6fbd3613e1618ad994e7333fe529469d5be02d",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "jpl_sbdb_asteroid_orbits": {
+      "path": "data/external/minor_planets/jpl_sbdb_asteroid_orbits.json",
+      "size_bytes": 206783,
+      "sha256": "cd80f93befa6fdabffb1fea0c33dd4561f0c328d69988e8265c8d2850cf92b2b",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "ztf_bright_transient_survey": {
+      "path": "data/external/transient_catalogs/ztf_bright_transient_survey.csv",
+      "size_bytes": 2384903,
+      "sha256": "2a9a236b30c9c91be4450ff9a0c3c20a3b4b9c7ff7d4f5e843f2b9982dadd0ad",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  },
+  "readiness_summary": {
+    "SPECTRA": {
+      "current_maturity": 0.925,
+      "target_maturity": 0.95,
+      "target_95_selected": true,
+      "feasibility_85": true,
+      "feasibility_95": true,
+      "status": "DEVELOPMENT_READY_LEVEL_6"
+    },
+    "FUSION_X": {
+      "current_maturity": 0.755,
+      "target_maturity": 0.95,
+      "target_95_selected": true,
+      "feasibility_85": true,
+      "feasibility_95": true,
+      "status": "INTEGRATION_READY_LEVEL_5"
+    },
+    "ASTROVISION": {
+      "current_maturity": 0.820,
+      "target_maturity": 0.86,
+      "target_95_selected": false,
+      "feasibility_85": true,
+      "feasibility_95": false,
+      "status": "PARTIAL_LEVEL_5_PLUS",
+      "blocker_95": "Empirical FPR 9.0% on evaluation cohort exceeds 5% budget; D1 stellar/zodi background sensitivity"
+    },
+    "CHRONOS_X": {
+      "current_maturity": 0.630,
+      "target_maturity": 0.78,
+      "target_95_selected": false,
+      "feasibility_85": false,
+      "feasibility_95": false,
+      "status": "PIPELINE_FUNCTIONAL_LEVEL_4",
+      "blocker_85": "Zero multi-month repeat observations in repository; intra-release pairs are 2-min dithers only; zero confirmed transients"
+    },
+    "MOTION_X": {
+      "current_maturity": 0.550,
+      "target_maturity": 0.72,
+      "target_95_selected": false,
+      "feasibility_85": false,
+      "feasibility_95": false,
+      "status": "STUB_IMPLEMENTED_LEVEL_4",
+      "blocker_85": "Zero solar system small bodies in ingested FOVs (all targets >40 deg away); match_known_minor_planets is an unimplemented stub"
+    }
+  }
+}
+

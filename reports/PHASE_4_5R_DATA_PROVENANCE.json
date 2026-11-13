@@ -1,0 +1,130 @@
+{
+  "provenance_metadata": {
+    "task_id": "Phase 4, Task 4.5R",
+    "title": "Network-Enabled Controlled External Catalog Acquisition Retry — Provenance Record",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T17:36:52Z",
+    "governance": "STRICT_PROVENANCE_COHORT_ISOLATION_READ_ONLY_FROZEN_ASSETS",
+    "schema_reference": "reports/PHASE_4_2C_DATA_PROVENANCE_SCHEMA.json",
+    "final_acquisition_verdict": "PARTIAL_ACQUISITION"
+  },
+  "runtime_environment": {
+    "interpreter_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation\\Scripts\\python.exe",
+    "python_version": "3.12.10",
+    "environment_root": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "isolation_mode": "STRICT_ISOLATED_VENV (include-system-site-packages = false)",
+    "sandbox_mode": "EXPLICITLY_AUTHORIZED_NETWORK_EXECUTION (BypassSandbox = true)"
+  },
+  "archive_endpoints_audited": [
+    {
+      "archive_name": "ESA_GAIA_ARCHIVE",
+      "archive_base_url": "https://gea.esac.esa.int",
+      "query_service_endpoint": "https://gea.esac.esa.int/tap-server/tap/async",
+      "job_url": "https://gea.esac.esa.int/tap-server/tap/async/a92f8459-dad0-11f1-b71e-bc97e148b76b-O",
+      "query_protocol": "IVOA_TAP_ASYNC",
+      "target_tables": [
+        "gaiadr3.gaia_source"
+      ],
+      "query_execution_timestamp_utc": "2026-11-07T17:28:44Z",
+      "adql_query_string": "SELECT source_id, ra, dec, ra_error, dec_error, parallax, parallax_error, pmra, pmra_error, pmdec, pmdec_error, phot_g_mean_mag, phot_bp_mean_mag, phot_rp_mean_mag, ruwe, astrometric_excess_noise, has_xp_continuous, has_xp_sampled FROM gaiadr3.gaia_source WHERE source_id IN (...) ORDER BY phot_g_mean_mag ASC",
+      "raw_response_filename": "data/external_catalogs/pilot/gaia_dr3/raw_gaia_dr3_pilot_25.csv",
+      "raw_response_sha256": "5A39D1866F6954188BE300B0C28E5F54FF5204F4C601BE3328039ADB3E3D0904",
+      "http_status_code": 200,
+      "requested_sources": 25,
+      "retrieved_records": 25,
+      "acquisition_verdict": "SUCCESS"
+    },
+    {
+      "archive_name": "NASA_IPAC_IRSA",
+      "archive_base_url": "https://irsa.ipac.caltech.edu",
+      "query_service_endpoint": "https://irsa.ipac.caltech.edu/TAP/sync",
+      "query_protocol": "IVOA_TAP_SYNC",
+      "target_tables": [
+        "fp_psc",
+        "allwise_p3as_psd"
+      ],
+      "query_execution_timestamp_utc": "2026-11-07T17:29:10Z",
+      "twomass_raw_response_filename": "data/external_catalogs/pilot/twomass/raw_2mass_pilot_responses.txt",
+      "twomass_raw_response_sha256": "5E6D664267F87620B1AB5E5A8BE35A8C3C4053D06C5192A93EF144EB586CD8FF",
+      "twomass_requested_sources": 25,
+      "twomass_matched_records": 21,
+      "allwise_raw_response_filename": "data/external_catalogs/pilot/allwise/raw_allwise_pilot_responses.txt",
+      "allwise_raw_response_sha256": "E666115D4DD4ABA4BF5647C5781F526FC86534B17E82B1B4E2FF6E1341058F2B",
+      "allwise_requested_sources": 25,
+      "allwise_matched_records": 24,
+      "acquisition_verdict": "SUCCESS"
+    },
+    {
+      "archive_name": "ESA_GAIA_DATALINK",
+      "archive_base_url": "https://gea.esac.esa.int",
+      "query_service_endpoint": "https://gea.esac.esa.int/data-server/datalink/sync",
+      "query_protocol": "DATALINK_REST",
+      "target_product": "XP_CONTINUOUS",
+      "query_execution_timestamp_utc": "2026-11-07T17:34:30Z",
+      "manifest_filename": "data/external_catalogs/pilot/gaia_dr3/xp_retrieval_manifest.json",
+      "manifest_sha256": "BC773E22767F3C24CB9FECFA2B96665C42B94AC02F71AB2F6B2375397DD8E909",
+      "http_status_code": 503,
+      "error_reason": "Service Unavailable (ESA DataServer overloaded / rate-limited)",
+      "eligible_sources": 12,
+      "retrieved_spectra": 0,
+      "acquisition_verdict": "SERVICE_UNAVAILABLE"
+    }
+  ],
+  "staged_artifacts": [
+    {
+      "path": "data/external_catalogs/pilot/gaia_dr3/raw_gaia_dr3_pilot_25.csv",
+      "sha256": "5A39D1866F6954188BE300B0C28E5F54FF5204F4C601BE3328039ADB3E3D0904",
+      "type": "RAW_GAIA_DR3_TABLE"
+    },
+    {
+      "path": "data/external_catalogs/pilot/gaia_dr3/normalized_gaia_dr3_pilot_25.csv",
+      "sha256": "4B39C7A2E814794FAE63E1C34BC39A86C24AA7CC0C43EB600FFF4FBEB03EBB45",
+      "type": "NORMALIZED_GAIA_TABLE"
+    },
+    {
+      "path": "data/external_catalogs/pilot/gaia_dr3/xp_retrieval_manifest.json",
+      "sha256": "BC773E22767F3C24CB9FECFA2B96665C42B94AC02F71AB2F6B2375397DD8E909",
+      "type": "XP_RETRIEVAL_MANIFEST"
+    },
+    {
+      "path": "data/external_catalogs/pilot/twomass/raw_2mass_pilot_responses.txt",
+      "sha256": "5E6D664267F87620B1AB5E5A8BE35A8C3C4053D06C5192A93EF144EB586CD8FF",
+      "type": "RAW_2MASS_RESPONSES"
+    },
+    {
+      "path": "data/external_catalogs/pilot/twomass/normalized_2mass_pilot.csv",
+      "sha256": "35F788C8F0EFFB1249CB1D95C0C712FDAC5E458374B7D566C54B0745A643474F",
+      "type": "NORMALIZED_2MASS_TABLE"
+    },
+    {
+      "path": "data/external_catalogs/pilot/allwise/raw_allwise_pilot_responses.txt",
+      "sha256": "E666115D4DD4ABA4BF5647C5781F526FC86534B17E82B1B4E2FF6E1341058F2B",
+      "type": "RAW_ALLWISE_RESPONSES"
+    },
+    {
+      "path": "data/external_catalogs/pilot/allwise/normalized_allwise_pilot.csv",
+      "sha256": "19803AA46C90AD146D23ABAA3C83C384597B8483B42F7C6FCD7A92FD8E0E3408",
+      "type": "NORMALIZED_ALLWISE_TABLE"
+    },
+    {
+      "path": "data/external_catalogs/pilot/crossmatch/pilot_25_master_crossmatch_evidence.csv",
+      "sha256": "DF5C5DF6A60EE52A97069EBBF212FB2B0920BC2178843DD3E8776D8BD619A24A",
+      "type": "MASTER_RECONCILED_CROSSMATCH"
+    }
+  ],
+  "evidence_classification_summary": {
+    "total_pilot_sources": 25,
+    "SUPPORTED_PHOTOSPHERIC_CONSISTENCY": 15,
+    "QUALITY_FLAGGED": 6,
+    "INSUFFICIENT_PHOTOMETRY": 4,
+    "POSSIBLE_INFRARED_EXCESS": 0,
+    "UNVERIFIABLE": 0
+  },
+  "cohort_firewall_status": {
+    "blind_cohorts": ["P0002", "P0009", "P0010"],
+    "blind_cohort_total_sources": 9500,
+    "blind_cohort_isolation_rule": "Strict firewall; zero blind evaluation sources queried, evaluated, or staged",
+    "firewall_compliance": "CONFIRMED_ZERO_ACCESS"
+  }
+}
+

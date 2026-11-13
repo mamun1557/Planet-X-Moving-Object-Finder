@@ -1,0 +1,86 @@
+{
+  "task_id": "SPECTRA-X / F1 — Phase 3, Task 0R",
+  "task_name": "Cross-Report Scientific Evidence Reconciliation",
+  "pipeline_build": "l2b-v27-2026-222",
+  "audit_mode": "STRICT READ-ONLY",
+  "timestamp_utc": "2026-11-07T11:49:00Z",
+  "verdict": "RECONCILIATION COMPLETE — CRITICAL DISCREPANCIES RESOLVED, LEAKAGE SAFEGUARDS ENFORCED, THREE-AXIS MATURITY SCORECARDS ESTABLISHED",
+  "spectra_cohort_reconciliation": {
+    "total_catalog_sources_1_2b": 37500,
+    "sources_with_observational_coverage": 26455,
+    "sources_zero_coverage": 11045,
+    "evaluation_candidates_ge_5_channels_1_2d": 15002,
+    "final_eligible_evaluation_point_sources_1_2d": 9500,
+    "final_eligible_p0008_calibration_sources_1_2c": 3206,
+    "task_0_reported_seds_erroneous": 11883,
+    "task_0_reported_eval_sources_erroneous": 6419,
+    "erroneous_numbers_root_cause": "Clerical cross-module transcription error in Task 0, imported from unrelated scratch audit scripts (scratch/audit11_out/) rather than authoritative Task 1.2D/1.2E data files."
+  },
+  "fusion_leakage_safeguard": {
+    "evaluation_cohort_quarantined": [
+      "0002",
+      "0009",
+      "0010"
+    ],
+    "calibration_cohort_permitted": [
+      "0001",
+      "0008"
+    ],
+    "critical_safeguard_enforced": "FUSION-X must NOT be calibrated or tuned on Pointings 0002, 0009, 0010. Those pointings are strictly held-out blind evaluation data for SPECTRA and ASTROVISION."
+  },
+  "astrovision_frozen_boundary": {
+    "checkpoint_sha256": "3b608e496f43c2648c9dc8236e1a7f5b5ed4b7906cf900468c65c67016042d99",
+    "calibration_parameters_sha256": "aabe0d15d0e8d559cc82897e9c669f0f5f5785ab32e111123ac321a258ccf706",
+    "evaluation_fpr_peak": 0.0900,
+    "evaluation_fpr_integrated": 0.0920,
+    "d1_fpr": 0.2262,
+    "scientific_status": "PARTIAL — NOT CERTIFIED FOR UNATTENDED PIPELINE"
+  },
+  "chronos_benchmark_validity": {
+    "total_temporal_pairs": 44,
+    "all_pairs_short_cadence_dithers": true,
+    "min_dt_days": 0.001492,
+    "max_dt_days": 0.004495,
+    "multi_month_repeat_observations_in_repo": 0,
+    "confirmed_transients_in_repo": 0
+  },
+  "motion_benchmark_validity": {
+    "gaia_astrometric_precision_arcsec": 0.08,
+    "match_known_minor_planets_status": "UNIMPLEMENTED_STUB",
+    "solar_system_bodies_in_fov": 0,
+    "min_separation_to_horizons_targets_deg": 16.07
+  },
+  "three_axis_maturity_scores": {
+    "SPECTRA": {
+      "scientific_evidence_maturity": 0.78,
+      "engineering_implementation_maturity": 0.98,
+      "integration_readiness": 0.95,
+      "target_95_eligible": true
+    },
+    "FUSION_X": {
+      "scientific_evidence_maturity": 0.30,
+      "engineering_implementation_maturity": 0.75,
+      "integration_readiness": 0.65,
+      "target_95_eligible": true
+    },
+    "ASTROVISION": {
+      "scientific_evidence_maturity": 0.62,
+      "engineering_implementation_maturity": 0.88,
+      "integration_readiness": 0.60,
+      "target_95_eligible": false
+    },
+    "CHRONOS_X": {
+      "scientific_evidence_maturity": 0.25,
+      "engineering_implementation_maturity": 0.80,
+      "integration_readiness": 0.40,
+      "target_95_eligible": false
+    },
+    "MOTION_X": {
+      "scientific_evidence_maturity": 0.20,
+      "engineering_implementation_maturity": 0.45,
+      "integration_readiness": 0.35,
+      "target_95_eligible": false
+    }
+  }
+}
+

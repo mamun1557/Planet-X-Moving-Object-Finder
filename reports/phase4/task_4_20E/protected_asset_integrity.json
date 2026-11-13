@@ -1,0 +1,31 @@
+{
+  "audit_metadata": {
+    "task_id": "Task 4.20E",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-08T18:14:15.531166+00:00",
+    "governance": "STRICT_READ_ONLY_PRODUCTION_PRESERVING"
+  },
+  "assets": [
+    {
+      "file_path": "checkpoints/astrovision_spatial_v3.pt",
+      "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "actual_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "verified_match": true,
+      "status": "PRISTINE"
+    },
+    {
+      "file_path": "checkpoints/spectra_masked_ae_v2.pt",
+      "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "actual_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "verified_match": true,
+      "status": "PRISTINE"
+    },
+    {
+      "file_path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+      "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "actual_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "verified_match": true,
+      "status": "PRISTINE"
+    }
+  ]
+}

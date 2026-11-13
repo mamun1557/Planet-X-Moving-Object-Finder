@@ -1,0 +1,79 @@
+{
+  "provenance_metadata": {
+    "task_id": "Phase 4, Task 4.7",
+    "title": "Continuum Sidecar Integration & Evidence-Governance Validation Provenance Record",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T18:26:33Z",
+    "governance": "STRICT_PROVENANCE_COHORT_ISOLATION_READ_ONLY_FROZEN_ASSETS",
+    "final_verdict": "INTEGRATION_COMPLETE_WITH_LIMITATIONS"
+  },
+  "timezone_and_timestamp_audit": {
+    "local_system_timezone": "UTC+06:00 (Bangladesh Standard Time)",
+    "local_system_time": "2026-11-08T00:26:33.242049",
+    "audit_timestamp_utc": "2026-11-07T18:26:33Z",
+    "task_4_6_timestamp_utc": "2026-11-07T18:05:00Z",
+    "timestamp_consistency_verdict": "ZERO_DISCREPANCY (All machine manifests and audit records consistently formatted in ISO 8601 UTC with 'Z' suffix, reflecting exact +06:00 offset relative to local system clock)"
+  },
+  "runtime_environment": {
+    "interpreter_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation\\Scripts\\python.exe",
+    "python_version": "3.12.10",
+    "environment_root": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "isolation_state": "STRICT_ISOLATION_VERIFIED (include-system-site-packages = false)",
+    "sandbox_mode": "STANDARD_SANDBOX"
+  },
+  "upstream_artifacts": [
+    {
+      "task_id": "Phase 4, Task 4.5R",
+      "artifact_name": "Normalized External Catalogs Pilot",
+      "gaia_path": "data/external_catalogs/pilot/gaia_dr3/normalized_gaia_dr3_pilot_25.csv",
+      "twomass_path": "data/external_catalogs/pilot/twomass/normalized_2mass_pilot.csv",
+      "allwise_path": "data/external_catalogs/pilot/allwise/normalized_allwise_pilot.csv"
+    },
+    {
+      "task_id": "Phase 4, Task 4.6",
+      "artifact_name": "Empirical Infrared Excess Validation Tables",
+      "classification_table": "reports/PHASE_4_6_EVIDENCE_CLASSIFICATION.csv",
+      "significance_table": "reports/PHASE_4_6_EXCESS_SIGNIFICANCE.csv",
+      "photometric_table": "reports/PHASE_4_6_PHOTOMETRIC_NORMALIZATION.csv"
+    },
+    {
+      "task_id": "Phase 3, Task 1.3B",
+      "artifact_name": "Continuum Sidecar Evidence Interface Specification",
+      "interface_file": "spectra_engine/continuum_sidecar_interface.py",
+      "contract_identity": "CONTINUUM_SIDECAR_EVIDENCE_V1"
+    }
+  ],
+  "protected_asset_integrity": {
+    "verification_timestamp_utc": "2026-11-07T18:26:33Z",
+    "assets": [
+      {
+        "file_path": "checkpoints/spectra_masked_ae_v2.pt",
+        "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+        "verified_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+        "status": "PRISTINE_MATCH"
+      },
+      {
+        "file_path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+        "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+        "verified_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+        "status": "PRISTINE_MATCH"
+      },
+      {
+        "file_path": "checkpoints/astrovision_spatial_v3.pt",
+        "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+        "verified_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+        "status": "PRISTINE_MATCH"
+      }
+    ],
+    "all_assets_verified": true
+  },
+  "downstream_integration": {
+    "target_component": "FUSION-X Multi-Modal Discovery Engine",
+    "implementation_path": "models/fusion/fusion_engine.py",
+    "candidate_schema_path": "models/common/candidate_schema.py",
+    "ingestion_method": "FusionEngine.evaluate_source(..., continuum_sidecar=sidecar)",
+    "governance_contract": "CONTINUUM_SIDECAR_EVIDENCE_V1",
+    "fail_closed_mode": "STRICT_FAIL_CLOSED",
+    "score_distortion": "ZERO (max |delta| = 0.0)"
+  }
+}

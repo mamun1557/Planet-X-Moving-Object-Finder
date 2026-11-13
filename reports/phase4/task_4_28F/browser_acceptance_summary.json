@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-11-12T18:36:49.367Z",
+  "pipeline_build": "l2b-v27-2026-222",
+  "total_workflows_tested": 11,
+  "all_passed": true,
+  "results": [
+    {
+      "test": "01_home_dashboard_overview",
+      "pass": true
+    },
+    {
+      "test": "02_candidate_explorer",
+      "pass": true
+    },
+    {
+      "test": "03_blink_observatory",
+      "pass": true
+    },
+    {
+      "test": "04_difference_view",
+      "pass": true
+    },
+    {
+      "test": "05_spectral_viewer",
+      "pass": true
+    },
+    {
+      "test": "06_evidence_inspector",
+      "pass": true
+    },
+    {
+      "test": "07_human_review",
+      "pass": true
+    },
+    {
+      "test": "08_export_results",
+      "pass": true
+    },
+    {
+      "test": "09_viewport_1440x900",
+      "pass": true
+    },
+    {
+      "test": "10_viewport_1280x720",
+      "pass": true
+    },
+    {
+      "test": "11_viewport_390x844_mobile",
+      "pass": true
+    }
+  ]
+}

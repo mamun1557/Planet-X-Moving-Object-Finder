@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_005",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_KUIPER_BELT_OBJECT_SLOW",
+  "target_coordinates": {
+    "ra_deg": 210.0,
+    "dec_deg": -5.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-06T00:00:00.000Z",
+    "mjd": 61227.0,
+    "crval1_deg": 210.0,
+    "crval2_deg": -5.0,
+    "wcs_valid": true,
+    "sha256": "B30A20C9D514C0970EE435496CCE527A909EA4C0693B06DD1B1DF36B6CD25F16"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-08-05T00:00:00.000Z",
+    "mjd": 61257.0,
+    "crval1_deg": 210.0,
+    "crval2_deg": -5.0,
+    "wcs_valid": true,
+    "sha256": "D4B3C816D767ABFC8CC861C1E3640790F96D20F1D0C45C96EE0E0E9A066B50E9"
+  },
+  "time_separation_minutes": 43200.0,
+  "time_separation_days": 30.0,
+  "synthetic_displacement_arcsec": 2.5,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "KUIPER_BELT_OBJECT_SLOW",
+    "scenario_notes": "Slow trans-Neptunian orbital motion (0.083 arcsec/day)",
+    "ground_truth_epoch_a": {
+      "ra_deg": 210.0,
+      "dec_deg": -5.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-06T00:00:00.000Z",
+      "mjd": 61227.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 210.000697,
+      "dec_deg": -5.0,
+      "pixel_x": 62.6,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-08-05T00:00:00.000Z",
+      "mjd": 61257.0
+    },
+    "ground_truth_delta_ra_arcsec": 2.5,
+    "ground_truth_delta_dec_arcsec": 0.0,
+    "ground_truth_angular_displacement_arcsec": 2.5,
+    "ground_truth_position_angle_deg": 90.0,
+    "ground_truth_dt_days": 30.0,
+    "ground_truth_dt_hours": 720.0,
+    "ground_truth_motion_rate_arcsec_per_day": 0.0833,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.0035,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of KUIPER_BELT_OBJECT_SLOW displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

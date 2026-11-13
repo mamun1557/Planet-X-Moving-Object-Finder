@@ -1,0 +1,53 @@
+field_name,catalog_origin,expected_dtype,local_status,available_count,total_cohort_count,coverage_pct,scientific_impact_and_notes
+source_id,Gaia DR3 Astrometry,int64,LOCALLY_AVAILABLE,3206,3206,100.00,Native Gaia DR3 identifier; primary foreign key for cross-matching
+ra,Gaia DR3 Astrometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Right Ascension in ICRS J2016.0 (degrees)
+dec,Gaia DR3 Astrometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Declination in ICRS J2016.0 (degrees)
+pmra,Gaia DR3 Astrometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Proper motion in RA * cos(dec) (mas/yr); median -0.49 mas/yr
+pmdec,Gaia DR3 Astrometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Proper motion in Declination (mas/yr); median -3.21 mas/yr
+parallax,Gaia DR3 Astrometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Parallax (mas); median 0.88 mas; mean 1.28 mas
+phot_g_mean_mag,Gaia DR3 Photometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Gaia G band mean magnitude; range [11.54 19.50]; median 17.82 mag
+phot_bp_mean_mag,Gaia DR3 Photometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Gaia BP band mean magnitude; range [11.87 21.59]; median 18.60 mag
+phot_rp_mean_mag,Gaia DR3 Photometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Gaia RP band mean magnitude; range [10.74 19.49]; median 16.99 mag
+ruwe,Gaia DR3 Astrometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Renormalized Unit Weight Error; max 1.396; 100% <= 1.40; single-star quality metric
+astrometric_excess_noise,Gaia DR3 Astrometry,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Excess noise (mas); median 0.00 mas; max 1.98 mas
+ra_epoch,SPHEREx Propagation,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Proper-motion propagated RA to SPHEREx mission epoch 2026.55
+dec_epoch,SPHEREx Propagation,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Proper-motion propagated Dec to SPHEREx mission epoch 2026.55
+pm_propagated,SPHEREx Propagation,bool,LOCALLY_AVAILABLE,3206,3206,100.00,Flag confirming successful proper motion propagation to 2026.55
+delta_ra_arcsec,SPHEREx Propagation,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Proper-motion displacement along RA (arcsec)
+delta_dec_arcsec,SPHEREx Propagation,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Proper-motion displacement along Dec (arcsec)
+nn_dist_arcsec,SPHEREx Field Catalog,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Nearest-neighbor distance (arcsec); min 12.04 arcsec; median 50.73 arcsec
+dist_to_sat_arcsec,SPHEREx Field Catalog,float64,LOCALLY_AVAILABLE,3206,3206,100.00,Distance to nearest bright saturated source (arcsec); min 185.35 arcsec
+classification_category,SPHEREx Field Catalog,string,LOCALLY_AVAILABLE,3206,3206,100.00,100% RELIABLE_ISOLATED_POINT_SOURCE; satisfies spatial isolation criteria
+has_xp_continuous,Gaia DR3 XP,bool,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Flag indicating presence of continuous Hermite basis spectrum in Gaia DR3
+has_xp_sampled,Gaia DR3 XP,bool,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Flag indicating sampled synthetic XP spectrum availability
+xp_continuous_mean_spectrum,Gaia DR3 XP,array[float],NOT_LOCALLY_AVAILABLE,0,3206,0.00,55 Hermite spectral coefficients per band (BP/RP); essential for SED modeling
+xp_sampled_mean_spectrum,Gaia DR3 XP,array[float],NOT_LOCALLY_AVAILABLE,0,3206,0.00,Sampled low-resolution flux array (336-1020 nm); provides optical continuum slope
+teff_gspphot,Gaia DR3 Apsis GSP-Phot,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Effective temperature (K); primary parameter for synthetic stellar photosphere fitting
+logg_gspphot,Gaia DR3 Apsis GSP-Phot,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Surface gravity (dex); needed to distinguish giant vs dwarf photospheric SED
+mh_gspphot,Gaia DR3 Apsis GSP-Phot,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Metallicity [M/H] (dex); secondary atmospheric parameter
+ag_gspphot,Gaia DR3 Apsis GSP-Phot,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Line-of-sight G-band extinction (mag); required for de-reddening optical/NIR SED
+ebpminrp_gspphot,Gaia DR3 Apsis GSP-Phot,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Color excess E(BP-RP) (mag); required for interstellar extinction correction
+phot_variable_flag,Gaia DR3 Photometry,string,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Gaia variability classifier (VARIABLE/NOT_AVAILABLE); critical for transient screening
+tmass_id,2MASS PSC,string,LOCALLY_AVAILABLE,2624,3206,81.85,2MASS designation string; astrometric match exists for 81.85% (582 sources too faint for 2MASS)
+tmass_dist_arcsec,2MASS PSC,float64,LOCALLY_AVAILABLE,2624,3206,81.85,Astrometric match distance; median 0.151 arcsec; 94.7% of matches <= 0.5 arcsec
+has_tmass_match,2MASS PSC,bool,LOCALLY_AVAILABLE,3206,3206,100.00,Cross-match status flag; True for 2624 sources; False for 582 sources
+j_m,2MASS PSC,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,2MASS J-band magnitude (1.25 um); critical near-infrared anchor for photospheric model
+j_cmsig,2MASS PSC,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,2MASS J-band photometric uncertainty (mag)
+h_m,2MASS PSC,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,2MASS H-band magnitude (1.65 um); near-infrared anchor
+h_cmsig,2MASS PSC,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,2MASS H-band photometric uncertainty (mag)
+ks_m,2MASS PSC,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,2MASS Ks-band magnitude (2.16 um); baseline anchor before SPHEREx band 1 (0.75 um)
+ks_cmsig,2MASS PSC,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,2MASS Ks-band photometric uncertainty (mag)
+ph_qual_2mass,2MASS PSC,string,NOT_LOCALLY_AVAILABLE,0,3206,0.00,2MASS photometric quality flag (e.g. AAA); essential for filtering upper limits
+w1mpro,ALLWISE,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE W1 profile-fit magnitude (3.4 um); primary mid-IR excess benchmark
+w1sigmpro,ALLWISE,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE W1 photometric uncertainty (mag)
+w1snr,ALLWISE,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE W1 signal-to-noise ratio
+w2mpro,ALLWISE,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE W2 profile-fit magnitude (4.6 um); primary mid-IR excess benchmark (circumstellar dust)
+w2sigmpro,ALLWISE,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE W2 photometric uncertainty (mag)
+w2snr,ALLWISE,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE W2 signal-to-noise ratio
+w3mpro,ALLWISE,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE W3 profile-fit magnitude (12 um); warm dust excess indicator
+w4mpro,ALLWISE,float64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE W4 profile-fit magnitude (22 um); cold debris disk excess indicator
+cc_flags,ALLWISE,string,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Contamination and confusion flags (0=uncontaminated; D/P/H/O flags indicate artifacts)
+ext_flg,ALLWISE,int64,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Extended source flag (0=point source; >0 indicates extended morphology or confusion)
+var_flg,ALLWISE,string,NOT_LOCALLY_AVAILABLE,0,3206,0.00,Variability flag; essential to detect intrinsic stellar variability masquerading as excess
+ph_qual_allwise,ALLWISE,string,NOT_LOCALLY_AVAILABLE,0,3206,0.00,ALLWISE photometric quality flag (e.g. AA, AB, UU); distinguishes detections from upper limits
+

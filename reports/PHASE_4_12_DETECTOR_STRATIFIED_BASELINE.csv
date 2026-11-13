@@ -1,0 +1,8 @@
+detector_id,bandpass_wavelength_um,null_control_count,false_positive_count,empirical_fpr_pct,fpr_ci_lower_pct,fpr_ci_upper_pct,point_auroc,point_recovery_pct,point_precision_pct,extended_auroc,extended_recovery_pct,applied_threshold_peak,primary_defect_mechanism
+D1,Band 1: 0.75 - 1.12 um,84,19,22.62,14.99,32.65,0.7745,61.9,71.23,0.6841,40.48,186.29,High stellar density and unmodeled field crowding; 100% of FPs contain bright field stars > 50 MJy/sr.
+D2,Band 2: 1.12 - 1.68 um,84,7,8.33,4.1,16.22,0.7365,8.33,53.85,0.5937,4.76,2536.3,Extreme calibration threshold (tau=2536.3) skewed by Pointing 1 outliers; suppresses point recovery to 8.33%.
+D3,Band 3: 1.68 - 2.42 um,83,2,2.41,0.66,8.37,0.8082,20.48,94.44,0.7344,14.46,999.76,Well-behaved intermediate bandpass; near-nominal statistical control (FPR=2.41%).
+D4,Band 4: 2.42 - 3.48 um,83,9,10.84,5.81,19.34,0.7261,21.69,64.29,0.6017,4.82,633.73,Fatal pixel bleed remediated by MaskAwareConv2d; AUROC restored from 0.4776 to 0.7261.
+D5,Band 5: 3.48 - 4.42 um,83,3,3.61,1.24,10.1,0.9319,59.04,96.08,0.8978,33.73,91.85,"Nominal thermal infrared bandpass; tightly controlled false alarms (FPR=3.61%, Point AUROC=0.9319)."
+D6,Band 6: 4.42 - 5.00 um,83,5,6.02,2.6,13.34,0.9075,37.35,83.78,0.7886,6.02,197.35,Elevated thermal instrument background; cross-calibrated against ALLWISE W2.
+POOLED_ALL_DETECTORS,All Bands (0.75 - 5.00 um),500,45,9.0,6.79,11.83,0.804,34.8,79.09,0.7064,17.4,,FPR drift driven by Detector 1 (22.6%) and crowded Pointing 0009 (14.3%); D2 recovery suppressed by outlier threshold.

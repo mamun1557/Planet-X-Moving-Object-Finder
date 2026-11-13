@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_010",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_EQUATORIAL_BASELINE",
+  "target_coordinates": {
+    "ra_deg": 180.0,
+    "dec_deg": 0.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-11T00:00:00.000Z",
+    "mjd": 61232.0,
+    "crval1_deg": 180.0,
+    "crval2_deg": 0.0,
+    "wcs_valid": true,
+    "sha256": "12462CB979B5CBED5B099687BAD884D359117DD25F0B805EEF651CA130ABD0A8"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-21T00:00:00.000Z",
+    "mjd": 61242.0,
+    "crval1_deg": 180.0,
+    "crval2_deg": 0.0,
+    "wcs_valid": true,
+    "sha256": "2B9129A05CE10782E2C64F4EB06CDDC36C94DD066FE25334D4DFF284804D7B5F"
+  },
+  "time_separation_minutes": 14400.0,
+  "time_separation_days": 10.0,
+  "synthetic_displacement_arcsec": 30.0,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "EQUATORIAL_BASELINE",
+    "scenario_notes": "Celestial equator reference baseline with zero Dec curvature",
+    "ground_truth_epoch_a": {
+      "ra_deg": 180.0,
+      "dec_deg": 0.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-11T00:00:00.000Z",
+      "mjd": 61232.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 180.008333,
+      "dec_deg": 0.0,
+      "pixel_x": 58.16,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-21T00:00:00.000Z",
+      "mjd": 61242.0
+    },
+    "ground_truth_delta_ra_arcsec": 30.0,
+    "ground_truth_delta_dec_arcsec": 0.0,
+    "ground_truth_angular_displacement_arcsec": 30.0,
+    "ground_truth_position_angle_deg": 90.0,
+    "ground_truth_dt_days": 10.0,
+    "ground_truth_dt_hours": 240.0,
+    "ground_truth_motion_rate_arcsec_per_day": 3.0,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.125,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of EQUATORIAL_BASELINE displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

@@ -1,0 +1,7 @@
+dimension,catalog_or_subsystem,parameter_tested,sample_coverage_pct,quality_assessment,scientific_limitation_and_caveat
+Catalog Astrometry & Photometry,Gaia DR3,RUWE <= 1.40 & Broadband G/BP/RP,100.0,EXCELLENT,RUWE <= 1.4 confirms single-star astrometric fit; cannot rule out equal-mass close binaries or faint debris disks.
+Spectrophotometry,Gaia DR3 XP Spectra,Continuous Hermite coefficients,0.0,BLOCKED_SERVICE_UNAVAILABLE,"12 sources eligible, but ESA DataLink returned 503; optical continuum spectral slopes unretrieved."
+Near-Infrared Baseline,2MASS Point Source Catalog,Ks-band (2.16 um) profile photometry,84.0,GOOD (Clean for G <= 17.2; Upper limits for G >= 17.4),2MASS completeness limit (Ks ~ 14.3 mag) causes 4 faint dropouts and 6 upper-limit Ks measurements.
+Mid-Infrared Photometry,ALLWISE Source Catalog,W1 (3.35 um) and W2 (4.60 um) profile photometry,96.0,HIGH_SNR_POINT_SOURCES,W3 (12 um) and W4 (22 um) are predominantly upper limits (AAUU) for faint optical stars.
+Hyperspectral Integration,SPHEREx 102-Channel Extractor,Band 6 Channel Photometry (4.4 - 4.6 um),100.0,CONSISTENT_WITH_WISE_W2,Only 5-8 channels active per pointing due to detector focal plane layout; full 102 channels require multi-pointing coverage.
+Photospheric Modeling,PhotosphericBaselineEstimator,Empirical stellar sequence color baseline,60.0,ROBUST_FOR_ANCHORED_SOURCES,Uses empirical color-consistency relation; full physical stellar atmosphere fitting requires Teff and log(g).

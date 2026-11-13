@@ -1,0 +1,69 @@
+{
+  "task_id": "Phase 4, Task 4.19C",
+  "timestamp_utc": "2026-11-08T16:36:00Z",
+  "protected_production_assets": {
+    "checkpoints/astrovision_spatial_v3.pt": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+    "checkpoints/spectra_masked_ae_v2.pt": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848"
+  },
+  "audited_input_artifacts": {
+    "data/processed/pilot_results/astrovision_pilot_trial_results.csv": "4AFDDBB31D9F1B579D711712DA431BF1C19701D7A63D25E9A06995A71C9D523F",
+    "reports/phase4/task_4_18/false_positive_catalog_attribution.csv": "42A71C04BB707A76A6D8997FAC0E97CFD5038670ABB2AEB127211878B6C1F9BA",
+    "reports/PHASE_4_12_FALSE_POSITIVE_MORPHOLOGY_AUDIT.csv": "8EDB6075ADC21C3641769B13F848D4E59D248D3000ADA0B26D6AA76800102B10",
+    "reports/phase4/task_4_19B/exact_footprint_crossmatch.csv": "AB0F6585B174B3E86F0A9A53ED1C96B683A3DDB1043699826548CFAB00BB1705"
+  },
+  "task_deliverables": {
+    "adaptive_masking_shadow_comparison.csv": {
+      "size_bytes": 1307,
+      "sha256": "5FEE702489570E345E80D1C377A79C509FDF207F812D01C5DA7797841A786D60"
+    },
+    "chance_coincidence_statistics.json": {
+      "size_bytes": 3448,
+      "sha256": "A60582C6B322F5AF02CD8DD512E4C7A274084398DC21822298B84CFFB0EE1BA1"
+    },
+    "detector_stratified_association_analysis.csv": {
+      "size_bytes": 684,
+      "sha256": "282EEE054778217AE8A3DCC876F782D217A48B36166336CC83382247FA5596EF"
+    },
+    "false_positive_separation_analysis.csv": {
+      "size_bytes": 14443,
+      "sha256": "C94FA0D4037B7D3AEAE0A6DD89A8B573302E32E259A7BFC84F57FC2197AD9BD3"
+    },
+    "input_provenance_audit.md": {
+      "size_bytes": 3791,
+      "sha256": "E5C8D84CE2A3455F4531B5F911D20921484E5C81DD5979B4938414F5159D7A74"
+    },
+    "null_control_separation_analysis.csv": {
+      "size_bytes": 131036,
+      "sha256": "EB19DA0AA36F874B94C2060FC65D10A269D8AD10E34354D88CDF992FB9B56747"
+    },
+    "pointing_stratified_association_analysis.csv": {
+      "size_bytes": 498,
+      "sha256": "D574C88A330D6F5D6DA4D10A66A5C41E47DA572749847A8C7DEBDC802203D58F"
+    },
+    "psf_contamination_evidence_audit.csv": {
+      "size_bytes": 13058,
+      "sha256": "2E099F29AE8BA0F1BE9E5F6E741E1ADDA012F41A276AC32CE0F093615A913D48"
+    },
+    "random_position_null_trials.csv": {
+      "size_bytes": 3680571,
+      "sha256": "937CA74DA05AB335B8C07FE239BCE814E45765D63952319A1C4B34F5B90F32FE"
+    },
+    "reproducibility_instructions.md": {
+      "size_bytes": 1435,
+      "sha256": "B16A137FB4E4918813A7182DAF2A909244FDC99CD542E7697FDE0207DAAE9A66"
+    },
+    "scientific_limitations.md": {
+      "size_bytes": 3135,
+      "sha256": "B346D59133A5825B3CAD2F2E016B15D2663B69288DD19CC4E681923B9B71563A"
+    },
+    "shifted_coordinate_null_trials.csv": {
+      "size_bytes": 203430,
+      "sha256": "A29318F0285BA362B775D4FC5CF5D2425D6919C08CB76444D3DF65F11AFFA282"
+    },
+    "task_4_19C_closeout_report.md": {
+      "size_bytes": 18263,
+      "sha256": "86EFC29BA694856FCBDEE7E705A743CC1E849422A49B135E69C08240A7AACEF1"
+    }
+  }
+}

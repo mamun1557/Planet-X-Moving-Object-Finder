@@ -1,0 +1,88 @@
+{
+  "manifest_version": "1.0",
+  "timestamp_utc": "2026-11-03T05:00:00Z",
+  "pipeline_version": "SPECTRA-X / F1 V2.1",
+  "budget_limit_gb": 180.0,
+  "current_local_data_gb": 2.05,
+  "acquisition_tiers": [
+    {
+      "tier": "Tier 1: High Priority (Pointing 0003 102-Channel Science Completion)",
+      "category": "required_for_full_102_band_coverage",
+      "scientific_purpose": "Unlock full 102-channel SED reconstruction for Pointing 0003 independent test set, enabling detection of 3.05um H2O ice, 4.26um CO2 ice, and PAH bands.",
+      "sky_region": "Pointing 0003 (RA=165.685 deg, Dec=-69.565 deg)",
+      "observation_ids": [
+        "2026W30_1B_0003_1",
+        "2026W30_1B_0003_2",
+        "2026W30_1B_0003_3",
+        "2026W30_1B_0003_4"
+      ],
+      "detector_coverage": [
+        "D2 (Bands 18-34)",
+        "D3 (Bands 35-51)",
+        "D4 (Bands 52-68)",
+        "D5 (Bands 69-85)",
+        "D6 (Bands 86-102)"
+      ],
+      "file_count": 19,
+      "estimated_size_mb": 1150.0,
+      "remote_source": "https://nasa-irsa-spherex.s3.amazonaws.com/qr3/level2/2026W30_1B/l2b-v27-2026-222/",
+      "priority": "P0",
+      "dependencies": "None (Verified existent on remote S3)",
+      "necessity_justification": "Without D2-D6 science exposures, SPECTRA v2 operates with 90-99% channel masking and cannot perform physical spectrophotometric SED classification."
+    },
+    {
+      "tier": "Tier 2: High Priority (Pointing 0003 Gaia DR3 Local Cone Search)",
+      "category": "required_for_observatory_and_motion_x",
+      "scientific_purpose": "Provide localized high-density astrometric reference stars to eliminate stellar false alarms and establish static controls for Pointing 0003.",
+      "sky_region": "Cone centered at RA=165.685 deg, Dec=-69.565 deg, radius=2.5 deg",
+      "observation_ids": [
+        "Gaia DR3 ICRS J2016.0 cone search"
+      ],
+      "detector_coverage": [
+        "G-band astrometry, pmRA, pmDec, parallax, ruwe"
+      ],
+      "file_count": 1,
+      "estimated_size_mb": 25.0,
+      "remote_source": "https://gaia.ari.uni-heidelberg.de/tap/sync (TOP 25000 / batch cone)",
+      "priority": "P0",
+      "dependencies": "Heidelberg TAP or ESA Gaia archive",
+      "necessity_justification": "Current all-sky 5000-star downsample has zero stars within 300 arcseconds of Pointing 0003."
+    },
+    {
+      "tier": "Tier 3: Medium Priority (Multi-Month Seasonal Repeat Pointings)",
+      "category": "required_for_multi_month_temporal_validation",
+      "scientific_purpose": "Provide genuine weeks-to-months baseline for supernova, TDE, and long-period variable star detection in CHRONOS-X.",
+      "sky_region": "Survey pass repeat covering identical ecliptic coordinates 6 months later",
+      "observation_ids": [
+        "SPHEREx survey pass 2 / seasonal repeat planning period"
+      ],
+      "detector_coverage": [
+        "D1 (0.75 - 0.98 um) and D2 (0.98 - 1.32 um)"
+      ],
+      "file_count": 8,
+      "estimated_size_mb": 500.0,
+      "remote_source": "https://nasa-irsa-spherex.s3.amazonaws.com/qr3/level2/ (Subsequent planning period)",
+      "priority": "P0",
+      "dependencies": "Availability of repeat survey pass in IRSA archive",
+      "necessity_justification": "Intra-pointing dithers (dt=6.45 min) only detect fast moving objects; seasonal repeat observations are mandatory for astrophysical transient discovery."
+    },
+    {
+      "tier": "Tier 4: Benchmark Priority (NASA Challenge Target Pointings)",
+      "category": "optional_advanced_data",
+      "scientific_purpose": "Ingest Level-2 science files covering the 5 NASA Challenge targets (Barnard's Star, eps Ind B, WISE 0855, RW Aurigae, R Draconis) once public SPHEREx survey releases cover their coordinates.",
+      "sky_region": "Coordinates of the 5 NASA targets",
+      "observation_ids": [
+        "Target-centered Level-2 visits"
+      ],
+      "detector_coverage": [
+        "D1-D6"
+      ],
+      "file_count": 20,
+      "estimated_size_mb": 1250.0,
+      "remote_source": "NASA IRSA SPHEREx public archive (future releases)",
+      "priority": "P1",
+      "dependencies": "SPHEREx survey scanning progress",
+      "necessity_justification": "Target demonstration for NASA challenge benchmarking."
+    }
+  ]
+}

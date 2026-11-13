@@ -1,0 +1,150 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.2B",
+    "title": "Gaia XP + ALLWISE Local Cross-match Pilot & Infrared Excess Validation Design",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T21:23:00Z",
+    "audit_type": "STRICT_READ_ONLY_SCIENTIFIC_DATA_AUDIT",
+    "governance": "ZERO_MODIFICATION_POLICY",
+    "pilot_cohort": "Pointing 0008 Calibration Cohort",
+    "cohort_size": 3206
+  },
+  "protected_asset_sha256_verification": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_hash": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "computed_hash": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "VERIFIED_MATCH"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_hash": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "computed_hash": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "VERIFIED_MATCH"
+    },
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "expected_hash": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "computed_hash": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "status": "VERIFIED_MATCH"
+    }
+  },
+  "test_suite_status": {
+    "test_command": "pytest tests/",
+    "items_collected": 166,
+    "items_passed": 166,
+    "items_failed": 0,
+    "pass_rate_percent": 100.0,
+    "verdict": "PASSED"
+  },
+  "cohort_crossmatch_census": {
+    "total_cohort_sources": 3206,
+    "gaia_dr3_native_keys_available": 3206,
+    "gaia_dr3_native_keys_coverage_pct": 100.0,
+    "gaia_dr3_broadband_photometry_available": 3206,
+    "gaia_dr3_broadband_photometry_coverage_pct": 100.0,
+    "gaia_dr3_xp_spectra_available": 0,
+    "gaia_dr3_xp_spectra_coverage_pct": 0.0,
+    "gaia_dr3_apsis_gspphot_params_available": 0,
+    "gaia_dr3_apsis_gspphot_params_coverage_pct": 0.0,
+    "tmass_psc_identifiers_available": 2624,
+    "tmass_psc_identifiers_coverage_pct": 81.85,
+    "tmass_psc_non_matches": 582,
+    "tmass_psc_non_matches_pct": 18.15,
+    "tmass_psc_photometry_j_h_ks_available": 0,
+    "tmass_psc_photometry_j_h_ks_coverage_pct": 0.0,
+    "allwise_photometry_p0008_available": 0,
+    "allwise_photometry_p0008_coverage_pct": 0.0
+  },
+  "cohort_astrometric_and_quality_distributions": {
+    "tmass_dist_arcsec": {
+      "min": 0.0026,
+      "median": 0.1512,
+      "mean": 0.1950,
+      "max": 1.4822,
+      "std": 0.1609,
+      "count_le_0_5_arcsec": 2486,
+      "count_le_1_0_arcsec": 2615,
+      "count_gt_1_0_arcsec": 9
+    },
+    "nn_dist_arcsec": {
+      "min": 12.0389,
+      "median": 50.7310,
+      "mean": 57.4605,
+      "max": 301.4024,
+      "std": 33.8875,
+      "count_lt_6_0_arcsec": 0,
+      "count_lt_12_0_arcsec": 0
+    },
+    "ruwe": {
+      "min": 0.8221,
+      "median": 1.0116,
+      "mean": 1.0188,
+      "max": 1.3958,
+      "std": 0.0725,
+      "count_le_1_2": 3126,
+      "count_le_1_4": 3206,
+      "count_gt_1_4": 0
+    },
+    "astrometric_excess_noise_mas": {
+      "min": 0.0,
+      "median": 0.0,
+      "mean": 0.1580,
+      "max": 1.9812,
+      "std": 0.2742
+    },
+    "dist_to_sat_arcsec": {
+      "min": 185.3470,
+      "median": 534.6695,
+      "mean": 655.5268,
+      "max": 3440.8663,
+      "std": 449.9366
+    },
+    "phot_g_mean_mag": {
+      "min": 11.5383,
+      "median": 17.8168,
+      "mean": 17.3959,
+      "max": 19.4996,
+      "std": 1.7033
+    },
+    "phot_bp_mean_mag": {
+      "min": 11.8721,
+      "median": 18.5952,
+      "mean": 18.1681,
+      "max": 21.5893,
+      "std": 1.9158
+    },
+    "phot_rp_mean_mag": {
+      "min": 10.7416,
+      "median": 16.9911,
+      "mean": 16.5884,
+      "max": 19.4939,
+      "std": 1.6133
+    },
+    "parallax_mas": {
+      "min": -1.2257,
+      "median": 0.8839,
+      "mean": 1.2804,
+      "max": 23.0521,
+      "std": 1.5194,
+      "positive_count": 3084,
+      "positive_pct": 96.19,
+      "non_positive_count": 122,
+      "non_positive_pct": 3.81
+    }
+  },
+  "candidate_eligibility_tier_summary": {
+    "tier_1_clean_photospheric_control_candidate": 0,
+    "tier_2_possible_ir_excess_candidate": 0,
+    "tier_3_ambiguous_or_blended": 0,
+    "tier_4_variable_or_epoch_mismatch": 0,
+    "tier_5_insufficient_photometry": 0,
+    "tier_6_insufficient_stellar_parameters": 0,
+    "tier_7_unverifiable_due_to_missing_local_fluxes": 3206,
+    "notes": "All 3206 calibration sources currently fall into Tier 7 (UNVERIFIABLE) because physical infrared flux measurements (2MASS J/H/Ks, ALLWISE W1/W2) and Gaia XP/Apsis parameters are absent from the local repository."
+  },
+  "final_verdict": {
+    "status": "NOT_FEASIBLE_WITH_CURRENT_LOCAL_DATA",
+    "verdict_code": "NOT_FEASIBLE_WITH_CURRENT_LOCAL_DATA",
+    "readiness_impact": "UNALTERED",
+    "rationale": "While high-precision astrometric cross-match keys (source_id, tmass_id) and Gaia broadband optical magnitudes exist locally for Pointing 0008, zero actual physical infrared flux measurements (2MASS J/H/Ks, ALLWISE W1/W2) and zero Gaia XP low-resolution spectra or Apsis atmospheric parameters exist in local files. Evaluating infrared excess or establishing empirical photospheric control baselines cannot proceed until these external measurements are ingested."
+  }
+}
+

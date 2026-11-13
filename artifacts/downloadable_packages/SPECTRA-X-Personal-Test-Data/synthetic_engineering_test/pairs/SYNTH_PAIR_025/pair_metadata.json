@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_025",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_MID_BASELINE_SECULAR",
+  "target_coordinates": {
+    "ra_deg": 165.0,
+    "dec_deg": -35.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-26T00:00:00.000Z",
+    "mjd": 61247.0,
+    "crval1_deg": 165.0,
+    "crval2_deg": -35.0,
+    "wcs_valid": true,
+    "sha256": "C9F072DCD9B0799B5B15DE0BDA2D7576C5C499779847D66C3A9025A06ACE5FA4"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-09-24T00:00:00.000Z",
+    "mjd": 61307.0,
+    "crval1_deg": 165.0,
+    "crval2_deg": -35.0,
+    "wcs_valid": true,
+    "sha256": "CC352CE7A264CC3D252B23F659669A5C9B89E8327AB8C1040018A4A0D536D4B7"
+  },
+  "time_separation_minutes": 86400.0,
+  "time_separation_days": 60.0,
+  "synthetic_displacement_arcsec": 75.0016,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "MID_BASELINE_SECULAR",
+    "scenario_notes": "60-day baseline secular asteroid track (1.25 arcsec/day)",
+    "ground_truth_epoch_a": {
+      "ra_deg": 165.0,
+      "dec_deg": -35.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-26T00:00:00.000Z",
+      "mjd": 61247.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 165.025046,
+      "dec_deg": -34.996382,
+      "pixel_x": 51.09,
+      "pixel_y": 65.1,
+      "timestamp_utc": "2026-09-24T00:00:00.000Z",
+      "mjd": 61307.0
+    },
+    "ground_truth_delta_ra_arcsec": 73.8606,
+    "ground_truth_delta_dec_arcsec": 13.0236,
+    "ground_truth_angular_displacement_arcsec": 75.0016,
+    "ground_truth_position_angle_deg": 80.01,
+    "ground_truth_dt_days": 60.0,
+    "ground_truth_dt_hours": 1440.0,
+    "ground_truth_motion_rate_arcsec_per_day": 1.25,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.0521,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of MID_BASELINE_SECULAR displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

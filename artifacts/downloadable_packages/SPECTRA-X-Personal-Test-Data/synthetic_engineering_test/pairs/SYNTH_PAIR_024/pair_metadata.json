@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_024",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_UNCERTAINTY_BOUNDARY_TEST",
+  "target_coordinates": {
+    "ra_deg": 155.0,
+    "dec_deg": -40.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-25T00:00:00.000Z",
+    "mjd": 61246.0,
+    "crval1_deg": 155.0,
+    "crval2_deg": -40.0,
+    "wcs_valid": true,
+    "sha256": "016C845E0C8C53011D1827DEB1E9A86C71E13B441FE2D95F85EE574D1379CE02"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-27T00:00:00.000Z",
+    "mjd": 61248.0,
+    "crval1_deg": 155.0,
+    "crval2_deg": -40.0,
+    "wcs_valid": true,
+    "sha256": "971151539641FB933081BDA14CF877C5C3F911DE6CCF492302227EA73D573654"
+  },
+  "time_separation_minutes": 2880.0,
+  "time_separation_days": 2.0,
+  "synthetic_displacement_arcsec": 1.5,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "UNCERTAINTY_BOUNDARY_TEST",
+    "scenario_notes": "High astrometric coordinate uncertainty (sigma = 0.5 arcsec)",
+    "ground_truth_epoch_a": {
+      "ra_deg": 155.0,
+      "dec_deg": -40.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-25T00:00:00.000Z",
+      "mjd": 61246.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 154.999529,
+      "dec_deg": -39.999792,
+      "pixel_x": 63.21,
+      "pixel_y": 63.12,
+      "timestamp_utc": "2026-07-27T00:00:00.000Z",
+      "mjd": 61248.0
+    },
+    "ground_truth_delta_ra_arcsec": -1.299,
+    "ground_truth_delta_dec_arcsec": 0.75,
+    "ground_truth_angular_displacement_arcsec": 1.5,
+    "ground_truth_position_angle_deg": 300.0,
+    "ground_truth_dt_days": 2.0,
+    "ground_truth_dt_hours": 48.0,
+    "ground_truth_motion_rate_arcsec_per_day": 0.75,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.0313,
+    "astrometric_coordinate_uncertainty_arcsec": 0.5
+  },
+  "intended_test_purpose": "Algorithmic verification of UNCERTAINTY_BOUNDARY_TEST displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

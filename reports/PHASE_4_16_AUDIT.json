@@ -1,0 +1,93 @@
+{
+  "task_metadata": {
+    "task_id": "PHASE_4_TASK_4_16",
+    "task_title": "Independent Shadow Benchmark Reconciliation & Statistical Validation",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp": "2026-11-08T04:51:31.403619+00:00",
+    "environment": "SPECTRA-X/.venv_validation",
+    "audit_mode": "READ-ONLY / REPRODUCIBILITY / STATISTICAL VALIDATION",
+    "verdict": "SHADOW_IMPROVEMENT_REPRODUCED_WITH_LIMITATIONS"
+  },
+  "protected_assets_verification": {
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "actual_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 3436965
+    },
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "actual_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 382177
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "actual_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "PRISTINE_MATCH",
+      "size_bytes": 12978
+    }
+  },
+  "cohort_reconciliation": {
+    "total_evaluation_cutouts": 1500,
+    "evaluation_negative_controls": 500,
+    "evaluation_point_injections": 500,
+    "evaluation_extended_injections": 500,
+    "pointing_distribution": {
+      "P0002": 504,
+      "P0009": 504,
+      "P0010": 492
+    },
+    "detector_distribution": {
+      "D1": 252,
+      "D2": 252,
+      "D3": 249,
+      "D4": 249,
+      "D5": 249,
+      "D6": 249
+    },
+    "membership_match": true,
+    "calibration_blind_separation_preserved": true
+  },
+  "discrepancy_resolution": {
+    "D1_false_positives": {
+      "earlier_reported": "19/84",
+      "task_4_15_reported": "20/84",
+      "ground_truth": "19/84 with centroid gate (r <= 2.5 px); 21/84 raw peak chi2; 20/84 under provisional tau=124.50",
+      "classification": "EXPLAINED_BY_SCORING_CONFIGURATION"
+    },
+    "D1_point_auroc": {
+      "earlier_reported": 0.7745,
+      "task_4_15_reported": 0.7712,
+      "ground_truth": 0.7745,
+      "classification": "EXPLAINED_BY_METRIC_DEFINITION"
+    },
+    "D4_point_auroc": {
+      "earlier_reported": 0.7261,
+      "task_4_15_reported": 0.8028,
+      "ground_truth": 0.7261,
+      "classification": "REPRODUCIBILITY_FAILURE"
+    }
+  },
+  "dilation_tradeoff_verdict": {
+    "authoritative_optimal_operating_point": "DILATION_2PX",
+    "selection_rationale": "2px dilation achieves 64.4% false alarm suppression, reduces overall FPR to 3.20% (meeting < 5.0% mission budget), preserves 100% of detected central anomalies, incurs zero central aperture encroachments, and consumes only 3.79% sky area.",
+    "alternative_viable_operating_point": "DILATION_1PX (for highly crowded fields where area cost is critical: FPR 4.20%, area 2.76%)"
+  },
+  "detector_budget_compliance": {
+    "D1": "POINT_ESTIMATE_WITHIN_BUDGET (4.76% vs 5.0%; CI upper bound 11.61%)",
+    "D2": "CONFIDENCE_INTERVAL_WITHIN_BUDGET (0.00%; CI upper bound 4.38%)",
+    "D3": "POINT_ESTIMATE_WITHIN_BUDGET (2.41%; CI upper bound 8.37%)",
+    "D4": "POINT_ESTIMATE_WITHIN_BUDGET (3.61%; CI upper bound 10.10%)",
+    "D5": "POINT_ESTIMATE_WITHIN_BUDGET (2.41%; CI upper bound 8.37%)",
+    "D6": "BUDGET_EXCEEDED (6.02% vs 5.0% budget; thermal background)",
+    "POOLED_ALL": "POINT_ESTIMATE_WITHIN_BUDGET (3.20% vs 5.0%; CI [1.94%, 5.17%])"
+  },
+  "conclusions": {
+    "scientific_conclusion": "The physical mechanism of off-center stellar contamination leaking through the 31-pixel convolutional receptive field and being mitigated by catalog masking is solidly confirmed. However, real-world deployment efficacy depends directly on catalog completeness.",
+    "engineering_conclusion": "CatalogAwareSourceMasker implementation is reproducible, deterministic, polarity-consistent, preserves Level-2 defects, protects central apertures, and passes 100% of safety tests.",
+    "production_conclusion": "No production code, checkpoint, or threshold changes are authorized or justified. Masker should remain in shadow validation.",
+    "readiness_conclusion": "ASTROVISION scientific validation completeness increases from partial diagnostic (Task 4.14) to verified shadow engineering prototype (Task 4.16).",
+    "next_recommendation": "Phase 4 Task 4.17: Deep Gaia DR3 / 2MASS Crossmatch Catalog Ingestion for Full Evaluation Cohort Footprint."
+  }
+}

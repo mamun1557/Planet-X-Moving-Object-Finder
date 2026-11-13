@@ -1,0 +1,59 @@
+{
+  "model_name": "AstroVision_Spatial_v2",
+  "checkpoint_path": "checkpoints/astrovision_spatial_v2.pt",
+  "best_epoch": 4,
+  "best_val_loss": 86.85384798049927,
+  "duration_sec": 1.4876790046691895,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 591.58,
+      "val_loss": 321.7919
+    },
+    {
+      "epoch": 2,
+      "train_loss": 148.8092,
+      "val_loss": 169.6072
+    },
+    {
+      "epoch": 3,
+      "train_loss": 92.9051,
+      "val_loss": 95.8934
+    },
+    {
+      "epoch": 4,
+      "train_loss": 85.1622,
+      "val_loss": 86.8538
+    },
+    {
+      "epoch": 5,
+      "train_loss": 74.3139,
+      "val_loss": 90.2606
+    },
+    {
+      "epoch": 6,
+      "train_loss": 71.6888,
+      "val_loss": 102.1674
+    },
+    {
+      "epoch": 7,
+      "train_loss": 65.6757,
+      "val_loss": 109.8391
+    },
+    {
+      "epoch": 8,
+      "train_loss": 68.1381,
+      "val_loss": 127.6859
+    },
+    {
+      "epoch": 9,
+      "train_loss": 71.152,
+      "val_loss": 121.1403
+    },
+    {
+      "epoch": 10,
+      "train_loss": 63.1604,
+      "val_loss": 115.5083
+    }
+  ]
+}

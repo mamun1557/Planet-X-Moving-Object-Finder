@@ -1,0 +1,110 @@
+{
+  "authorization_metadata": {
+    "task_id": "SPECTRA-X_PHASE3_TASK_1.1Q",
+    "review_type": "PRE_EXECUTION_SAFETY_AND_CAMPAIGN_AUTHORIZATION_REVIEW",
+    "timestamp_utc": "2026-11-06T17:36:30Z",
+    "roles": [
+      "Principal Scientific Governance Officer",
+      "Independent Astronomical Benchmark Auditor",
+      "ML Validation Architect",
+      "Reproducibility Engineer"
+    ],
+    "verdict": "AUTHORIZED — RESTRICTED FIVE-POINTING PILOT CAMPAIGN MAY BE SEPARATELY EXECUTED",
+    "astrovision_status": "FAIL — NOT CERTIFIED",
+    "campaign_execution_status": "AWAITING_EXPLICIT_USER_AUTHORIZATION"
+  },
+  "parent_approvals": {
+    "task_1_1n_dataset_audit": {
+      "verdict": "PARTIAL — DATASET VALID, BUT STATISTICAL OR PARTITION REMEDIATION REQUIRED",
+      "report": "reports/ASTROVISION_TASK_1_1N_INDEPENDENT_DATASET_AUDIT.md",
+      "sha256": "a580e0452fa63a4da95e7d6b4849057fba7723badbad6bc0ba36fba87c11f9ed"
+    },
+    "task_1_1o_pilot_preparation": {
+      "verdict": "PASS — PILOT PREPARATION COMPLETE; READY FOR INDEPENDENT AUDIT",
+      "report": "reports/ASTROVISION_TASK_1_1O_PILOT_PREPARATION.md",
+      "sha256": "9124d94ee9e2d6829ad29d4a51d1b715550b421042a7d71b734404c9094f5e79"
+    },
+    "task_1_1p_independent_audit": {
+      "verdict": "PASS — PILOT PREPARATION SCIENTIFICALLY ACCEPTED; READY FOR SEPARATE CAMPAIGN AUTHORIZATION REVIEW",
+      "report": "reports/ASTROVISION_TASK_1_1P_INDEPENDENT_SCIENTIFIC_AUDIT.md",
+      "sha256": "82a8848cf69dbd3bf4ea0f8cb83bf6c4cfcbcc74d1264c7d0d02444ff53e87ae"
+    }
+  },
+  "audit_a_frozen_inputs": {
+    "pointings": ["0001", "0002", "0008", "0009", "0010"],
+    "total_fits_products": 120,
+    "pipeline_build": "l2b-v27-2026-222",
+    "planning_period": "2026W30_1B",
+    "checkpoint_path": "checkpoints/astrovision_spatial_v2.pt",
+    "checkpoint_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+    "manifest_path": "reports/manifests/astrovision_five_partition_pilot_manifest.csv",
+    "manifest_sha256": "c1d83662b311f3f89efbe90f3c0ebd702c0ee58bcfae880dcd5d25e42eee0c0b",
+    "protocol_path": "reports/ASTROVISION_CONTROLLED_PILOT_PROTOCOL_V3.md",
+    "protocol_sha256": "25a39d99e3206bb425035316ec99b09856204cb36cffc63b577fd97d9dde5db8",
+    "protected_assets_verified": 16,
+    "protected_assets_mutation": false
+  },
+  "audit_b_driver_safety": {
+    "execution_safety_gate": "CAMPAIGN_EXECUTION_LOCKED",
+    "import_side_effects": false,
+    "input_mutation_prevention": true,
+    "random_seed_locked": 42,
+    "failure_recording_policy": "EXPLICIT_REJECTION_REASON_LOGGING",
+    "interrupt_recovery_strategy": "INCREMENTAL_CSV_STREAMING_BY_TRIAL_ID"
+  },
+  "audit_c_trial_design": {
+    "total_planned_trials": 2500,
+    "trials_per_partition": 500,
+    "partitions": [
+      "CALIBRATION_CONTROL",
+      "CALIBRATION_INJECTION",
+      "EVALUATION_CONTROL",
+      "EVALUATION_POINT_SOURCE_INJECTION",
+      "EVALUATION_EXTENDED_SOURCE_INJECTION"
+    ],
+    "paired_residual_formula": "R_injected = max(0, I_injected - Recon_injected); R_control = max(0, I_control - Recon_control); F_recovered = sum_A[(R_injected - R_control) * M]",
+    "secondary_clipping_prohibited": true,
+    "recovery_metric_classification": "DIFFERENTIAL_MODEL_RESPONSE"
+  },
+  "audit_d_calibration_governance": {
+    "tau_historical_169_10_deprecated": true,
+    "null_threshold_source": "CALIBRATION_CONTROL",
+    "transfer_curve_source": "CALIBRATION_INJECTION",
+    "evaluation_leakage_prohibited": true,
+    "unsupported_calibration_handling": "MARK_DETECTOR_UNSUPPORTED"
+  },
+  "audit_e_statistical_reporting": {
+    "G_eval_clusters": 3,
+    "unique_cluster_bootstrap_multisets": 10,
+    "narrow_ci_claim_prohibited": true,
+    "exploratory_pilot_classification": true
+  },
+  "audit_f_resource_safety": {
+    "system_ram_total_gb": 15.82,
+    "system_ram_available_gb": 4.78,
+    "system_disk_free_gb": 205.20,
+    "cuda_available": true,
+    "gpu_device": "NVIDIA GeForce RTX 5060 (7.93 GB VRAM)",
+    "cpu_logical_cores": 16,
+    "model_vram_requirement_mb": 50,
+    "output_disk_requirement_mb": 150,
+    "estimated_runtime_gpu_seconds": 60,
+    "estimated_runtime_cpu_minutes": 8,
+    "resource_headroom_verdict": "AMPLE_CAPACITY_EXCELLENT_FEASIBILITY"
+  },
+  "audit_g_reproducibility": {
+    "python_version": "3.12.10",
+    "torch_version": "2.15.0+cu132",
+    "numpy_version": "2.5.4",
+    "pandas_version": "3.1.1",
+    "astropy_version": "8.0.2",
+    "test_suite_status": "74/74_PASSED"
+  },
+  "strict_governance_confirmation": {
+    "model_forward_passes": 0,
+    "synthetic_injections_generated": 0,
+    "benchmark_trials_executed": 0,
+    "model_retraining": 0
+  }
+}
+

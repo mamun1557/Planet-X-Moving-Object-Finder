@@ -1,0 +1,125 @@
+{
+  "manifest_type": "SPECTRA_CALIBRATION_RECONCILIATION_AUDIT_MANIFEST",
+  "version": "1.0.0",
+  "task_id": "SPECTRA_TASK_1_3A_R",
+  "audit_type": "STRICT_READ_ONLY_SCIENTIFIC_AND_ARCHITECTURAL_AUDIT",
+  "pipeline_build": "l2b-v27-2026-222",
+  "execution_timestamp_utc": "2026-11-07T05:03:00Z",
+  "governance_mode": "STRICT_READ_ONLY_NO_MODIFICATIONS",
+  "audit_verdict": {
+    "overall_verdict": "PARTIAL — IMPLEMENTATION VALID, DOCUMENTATION OR BOUNDARY ISSUES REMAIN",
+    "calibration_median_reconciliation": "RECONCILED — REPORT TRANSCRIPTION ERROR IN HISTORICAL REPORTS 1.2D AND 1.2E",
+    "empirical_percentile_verdict": "PASS — MATHEMATICALLY SOUND AND DETERMINISTIC",
+    "z_score_nomenclature_verdict": "PARTIAL — IMPLEMENTATION SOUND, NOMENCLATURE QUALIFIED",
+    "engine_boundary_verdict": "PARTIAL — MOSTLY INDEPENDENT, DOCUMENTED COUPLING",
+    "protected_asset_integrity": "PASS — 100% UNMODIFIED"
+  },
+  "verified_input_artifacts": {
+    "checkpoint": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "size_bytes": 382177,
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "provisional_thresholds": {
+      "path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+      "size_bytes": 12978,
+      "sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "calibration_scores": {
+      "path": "data/processed/spectra/spectra_p0008_calibration_scores_v1.csv",
+      "size_bytes": 446446,
+      "sha256": "7ac34d415f8132f7f164ab20c1b25fe03461bc709eb674031e838b2208e8c1a3",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "master_spectra_extraction": {
+      "path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "size_bytes": 332189097,
+      "sha256": "8a96617cfe5d5152e720ee0c3890a7b8c7025ab2bfb3c682e08743affe6858e0",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "contract_schema": {
+      "path": "models/spectra/fusion_contract.py",
+      "size_bytes": 9453,
+      "sha256": "4b5438696a14ec60335a96b5133ed6c47ab2c298b00c9e82c4ecb5b09d22fd05",
+      "status": "VERIFIED"
+    },
+    "evidence_adapter": {
+      "path": "models/spectra/spectra_evidence_adapter.py",
+      "size_bytes": 18703,
+      "sha256": "2591c5a6b7269d2dec20e57d53ac692baf01e839b31d5f376b99e48c1aa9411c",
+      "status": "VERIFIED"
+    },
+    "continuum_sidecar_spec": {
+      "path": "models/spectra/continuum_sidecar_interface.py",
+      "size_bytes": 2163,
+      "sha256": "88790ad287c2a9523f6d4a4cc079d50fa46b1bbdfb2771973e6af7ca00744a05",
+      "status": "VERIFIED"
+    },
+    "task_1_3a_report": {
+      "path": "reports/SPECTRA_TASK_1_3A_FUSION_CONTRACT_REPORT.md",
+      "size_bytes": 19693,
+      "sha256": "bf202326aac52dc4ccd6af653c318d7a20a95b086b6a1dfcfc28f60ddbbb1067",
+      "status": "VERIFIED"
+    }
+  },
+  "recomputed_calibration_statistics": {
+    "D1_D4": {
+      "N": 1055,
+      "median": 0.4236657917499542,
+      "mean": 62.96882210046459,
+      "std_ddof1": 1917.987365691163,
+      "iqr": 0.4441741108894348,
+      "mad": 0.1873546540737152,
+      "min": 0.015272482298314571,
+      "max": 62277.8515625,
+      "p05": 0.14141040444374084,
+      "p95": 4.127549123764036,
+      "p99": 61.26756484985366
+    },
+    "D2_D5": {
+      "N": 1304,
+      "median": 0.36889421939849854,
+      "mean": 201.05104507993266,
+      "std_ddof1": 4237.127092178229,
+      "iqr": 0.34162693470716476,
+      "mad": 0.11108183860778809,
+      "min": 0.003177485428750515,
+      "max": 130613.75,
+      "p05": 0.13805316388607025,
+      "p95": 5.51579620838165,
+      "p99": 181.6013285827643
+    },
+    "D3_D6": {
+      "N": 847,
+      "median": 1.4254571199417114,
+      "mean": 773.3575793127436,
+      "std_ddof1": 15993.000191295963,
+      "iqr": 1.0942744016647339,
+      "mad": 0.4805293083190918,
+      "min": 0.039758533239364624,
+      "max": 410039.1875,
+      "p05": 0.39419342279434205,
+      "p95": 19.26664867401121,
+      "p99": 862.9723461914056
+    }
+  },
+  "non_mutation_verification": {
+    "test_command": "pytest tests/test_spectra_task_1_3a_fusion_contract.py -v",
+    "tests_executed": 18,
+    "tests_passed": 18,
+    "tests_failed": 0,
+    "pre_test_hashes_verified": true,
+    "post_test_hashes_verified": true,
+    "protected_assets_modified": false
+  },
+  "output_artifacts": {
+    "reconciliation_report": {
+      "path": "reports/SPECTRA_TASK_1_3A_R_RECONCILIATION.md",
+      "size_bytes": 20039,
+      "sha256": "aa4aca4281c58c187aab0cb0c1da12e56634bdf4840f4028367843355770e944"
+    }
+  }
+}
+

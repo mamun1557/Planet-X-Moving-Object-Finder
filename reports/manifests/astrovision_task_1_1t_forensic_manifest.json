@@ -1,0 +1,108 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA-X_PHASE3_TASK_1.1T",
+    "investigation_type": "FORENSIC_FAILURE_ANALYSIS_AND_REMEDIATION_DESIGN",
+    "timestamp_utc": "2026-11-06T19:45:00Z",
+    "roles": [
+      "Principal Astronomical ML Scientist",
+      "Independent Scientific Validation Auditor",
+      "Detector Characterization Specialist",
+      "Statistical Benchmark Reviewer"
+    ],
+    "investigation_mode": "STRICT_READ_ONLY",
+    "audit_verdict": "REMEDIATION JUSTIFIED \u2014 BOUNDED REMEDIATION PLAN PROPOSED",
+    "astrovision_status": "FAIL \u2014 NOT CERTIFIED"
+  },
+  "inspected_artifacts": {
+    "checkpoint_path": "checkpoints/astrovision_spatial_v2.pt",
+    "checkpoint_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+    "audit_1_1s_report": "reports/ASTROVISION_TASK_1_1S_INDEPENDENT_AUDIT_REPORT.md",
+    "audit_1_1s_report_sha256": "40555bc890492a14b1cdc5f1948ca125d0f45768713787ab8e8e0aaa039d62a3",
+    "audit_1_1s_manifest": "reports/manifests/astrovision_task_1_1s_independent_audit_manifest.json",
+    "audit_1_1s_manifest_sha256": "c9ec031af04762b13cf092552961733de8a4b43d3e48f4e42e2b445dd8c72002",
+    "pilot_trial_results": "data/processed/pilot_results/astrovision_pilot_trial_results.csv",
+    "pilot_trial_results_sha256": "4afddbb31d9f1b579d711712da431bf1c19701d7a63d25e9a06995a71c9d523f",
+    "calibration_parameters": "data/processed/pilot_results/calibration_parameters.json",
+    "calibration_parameters_sha256": "4a5bbe8a04dffb609b507eba45f0d34a1ebb235e18d2f586bbad4906f09a46ac",
+    "pilot_evaluation_metrics": "data/processed/pilot_results/pilot_evaluation_metrics.json",
+    "pilot_evaluation_metrics_sha256": "688b98d123b3cd5bc942a1bda050ee88ccbf03132c038ed09605cd1a22e14393"
+  },
+  "forensic_root_causes": {
+    "cause_1_unmasked_conv2d_bleed": {
+      "description": "AstroVisionAutoencoder passes unmasked images directly to standard Conv2d, allowing fatal flagged pixels (saturated stars, cosmic rays up to 75,000 MJy/sr) to corrupt latent representations and contaminate central unflagged sky pixels.",
+      "classification": "CONFIRMED",
+      "code_location": "models/astrovision/model.py: AstroVisionAutoencoder.forward",
+      "key_evidence": "PILOT_001118: pixel (93, 53) has flux 75,035 MJy/sr (flag 2097217, fatal=True). Center pixel has true flux 0.095 MJy/sr, but recon outputs 6.57 MJy/sr, generating chi2=409,866 on clean sky."
+    },
+    "cause_2_no_background_normalization": {
+      "description": "Autoencoder was trained on raw non-zero-centered surface brightness (P0001, P0002). In low-zodiacal fields (P0010 NEP), background drops by 3.1x, creating massive DC reconstruction offset and score elevation on empty sky.",
+      "classification": "CONFIRMED",
+      "code_location": "models/astrovision/train_spatial_astrovision.py: SpatialPartitionedCutoutDataset.__init__",
+      "key_evidence": "D1 median flux drops from 0.4262 (P0008) to 0.1370 (P0010); D4 drops from 0.2307 to 0.0830. In P0010, control median chi2 (125.37) exceeds extended injection median (120.01)."
+    },
+    "cause_3_peak_chi2_scoring_mismatch": {
+      "description": "Using single peak-pixel chi2 as the benchmark score severely discriminates against diffuse extended sources whose flux is dispersed across 30-50 pixels.",
+      "classification": "CONFIRMED",
+      "code_location": "scripts/validation/astrovision_injection_benchmark_v2.py: evaluate_paired_model_output",
+      "key_evidence": "Extended AUROC using model_target_peak_chi2 is 0.5704, but using differential_residual_flux is 0.9700."
+    },
+    "cause_4_shot_variance_damping": {
+      "description": "Physical injection engine adds Poisson variance to inj_var, inflating the denominator of (I - I_hat)^2 / Var in diffuse regions and lowering normalized chi2 below null controls.",
+      "classification": "CONFIRMED",
+      "code_location": "scripts/validation/astrovision_injection_benchmark_v2.py: inject_extended_source (line 420)",
+      "key_evidence": "D4 extended injections have lower median chi2 (154.42) than null controls (283.80)."
+    },
+    "cause_5_static_scalar_threshold_transfer_failure": {
+      "description": "A single static scalar threshold tau_d fitted on two pointings cannot generalize across heterogeneous zodiacal backgrounds, leading to empirical FPR inflation from 5.6% to 8.6% (p=6.39e-4).",
+      "classification": "CONFIRMED",
+      "code_location": "scripts/validation/execute_pilot_benchmark_campaign.py: calibration logic",
+      "key_evidence": "D1 control 95th percentile in evaluation is 2,714.90 vs tau_d=399.04, driving D1 eval FPR to 19.05%."
+    },
+    "cause_6_sample_starvation_in_training": {
+      "description": "Spatial autoencoder was trained on only 80 clean cutouts from 16 files, providing inadequate diversity across detectors and sky coordinates.",
+      "classification": "STRONGLY_SUPPORTED",
+      "code_location": "models/astrovision/train_spatial_astrovision.py: SpatialPartitionedCutoutDataset",
+      "key_evidence": "Dataset had only 80 training patches and 60 validation patches."
+    },
+    "cause_7_hardware_or_pipeline_defect_in_d4": {
+      "description": "D4 failure is caused by broken hardware or corrupt FITS pipeline data.",
+      "classification": "REJECTED",
+      "code_location": "data/spherex/multipointing_pilot/level2/*/level2_*_1D4_*.fits",
+      "key_evidence": "FITS files for D4 are standard Level-2 products with valid WCS, expected background, and clean images; failure is algorithmic."
+    },
+    "cause_8_p0010_high_fpr": {
+      "description": "Pointing 0010 suffers from excessive false alarms.",
+      "classification": "REJECTED",
+      "code_location": "data/processed/pilot_results/pilot_evaluation_metrics.json",
+      "key_evidence": "P0010 had the lowest FPR (4.88%) of all pointings; its failure is loss of signal contrast (score inversion)."
+    }
+  },
+  "remediation_plan": {
+    "priority_1_mask_aware_convolutions": {
+      "action": "Replace standard Conv2d with Partial Convolution (PConv) or MaskAwareConvBlock to prevent masked pixels from polluting the latent space.",
+      "feasibility_before_deadline": "FEASIBLE",
+      "risk": "LOW"
+    },
+    "priority_2_local_background_normalization": {
+      "action": "Implement Local Adaptive Noise Scaling (LANS) or zero-centered background subtraction (I - median(I)) prior to model input.",
+      "feasibility_before_deadline": "FEASIBLE",
+      "risk": "LOW"
+    },
+    "priority_3_aperture_integrated_scoring": {
+      "action": "Adopt aperture-integrated chi2 or differential residual flux as detection score for extended sources.",
+      "feasibility_before_deadline": "FEASIBLE",
+      "risk": "LOW"
+    },
+    "priority_4_quantile_regression_calibration": {
+      "action": "Replace fixed tau_d with local-background conditioned quantile thresholding tau_d(bg, var).",
+      "feasibility_before_deadline": "FEASIBLE",
+      "risk": "LOW"
+    },
+    "priority_5_stratified_retraining": {
+      "action": "Retrain ASTROVISION on an expanded, stratified multi-pointing dataset covering ecliptic and polar fields.",
+      "feasibility_before_deadline": "FEASIBLE_IF_SCOPED",
+      "risk": "MODERATE"
+    }
+  },
+  "final_decision": "LIMITED REMEDIATION JUSTIFIED \u2014 Proceed to a strictly bounded remediation task (Task 1.1U) targeting algorithmic pre-processing, mask-aware inference, and aperture scoring before November 10 milestone."
+}

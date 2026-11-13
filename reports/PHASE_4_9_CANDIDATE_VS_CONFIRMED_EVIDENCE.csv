@@ -1,0 +1,7 @@
+scenario_id,source_id,pointing_id,candidate_excess_indication,unverified_excess_significance,evidence_state,color_excess_detected,fusion_score,fusion_classification,confirmatory_claim_prevented,presentation_exposure
+SCEN-CVE-01,10081,P0008,False,,POSSIBLE_INFRARED_EXCESS,True,0.85,VALID,True,INTERNAL_DIAGNOSTIC_METADATA_ONLY (Not exposed as confirmed excess)
+SCEN-CVE-02,10021,P0002,True,,UNVERIFIABLE,False,0.85,VALID,True,INTERNAL_DIAGNOSTIC_METADATA_ONLY (Not exposed as confirmed excess)
+SCEN-CVE-03,10091,P0009,True,,UNVERIFIABLE,False,0.85,VALID,True,INTERNAL_DIAGNOSTIC_METADATA_ONLY (Not exposed as confirmed excess)
+SCEN-CVE-04,10101,P0010,True,,UNVERIFIABLE,False,0.85,VALID,True,INTERNAL_DIAGNOSTIC_METADATA_ONLY (Not exposed as confirmed excess)
+SCEN-CVE-05,10022,P0002,True,,UNVERIFIABLE,False,0.85,VALID,True,INTERNAL_DIAGNOSTIC_METADATA_ONLY (Not exposed as confirmed excess)
+SCEN-CVE-06,10082,P0008,False,,POSSIBLE_INFRARED_EXCESS,True,0.85,VALID,True,INTERNAL_DIAGNOSTIC_METADATA_ONLY (Not exposed as confirmed excess)

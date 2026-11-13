@@ -1,0 +1,1707 @@
+{
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "count": 25,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "pairs": [
+    {
+      "pair_id": "SYNTH_PAIR_001",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_MAIN_BELT_ASTEROID_SLOW",
+      "target_coordinates": {
+        "ra_deg": 150.0,
+        "dec_deg": 10.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-02T00:00:00.000Z",
+        "mjd": 61223.0,
+        "crval1_deg": 150.0,
+        "crval2_deg": 10.0,
+        "wcs_valid": true,
+        "sha256": "CB9AB259BEC7CFE27809AC947C6DC73BEC7AAE8B525BB0BB1A970DFDC8C1E542"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-04T00:00:00.000Z",
+        "mjd": 61225.0,
+        "crval1_deg": 150.0,
+        "crval2_deg": 10.0,
+        "wcs_valid": true,
+        "sha256": "C938E90D4B08C16A54011AA62E9843D218714D944CE9CC1EBD8DFB1412A2D743"
+      },
+      "time_separation_minutes": 2880.0,
+      "time_separation_days": 2.0,
+      "synthetic_displacement_arcsec": 4.8,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "MAIN_BELT_ASTEROID_SLOW",
+        "scenario_notes": "Typical slow MBA shift (2.4 arcsec/day)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 150.0,
+          "dec_deg": 10.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-02T00:00:00.000Z",
+          "mjd": 61223.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 150.000957,
+          "dec_deg": 10.000943,
+          "pixel_x": 62.45,
+          "pixel_y": 63.55,
+          "timestamp_utc": "2026-07-04T00:00:00.000Z",
+          "mjd": 61225.0
+        },
+        "ground_truth_delta_ra_arcsec": 3.3941,
+        "ground_truth_delta_dec_arcsec": 3.3941,
+        "ground_truth_angular_displacement_arcsec": 4.8,
+        "ground_truth_position_angle_deg": 45.0,
+        "ground_truth_dt_days": 2.0,
+        "ground_truth_dt_hours": 48.0,
+        "ground_truth_motion_rate_arcsec_per_day": 2.4,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.1,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of MAIN_BELT_ASTEROID_SLOW displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_002",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_MAIN_BELT_ASTEROID_TYPICAL",
+      "target_coordinates": {
+        "ra_deg": 160.0,
+        "dec_deg": 12.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-03T00:00:00.000Z",
+        "mjd": 61224.0,
+        "crval1_deg": 160.0,
+        "crval2_deg": 12.0,
+        "wcs_valid": true,
+        "sha256": "2775BA4B827A1722099C0861C14AFF01B558B456CFFF7FCCFEAB5BED6B322E1B"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-07T00:00:00.000Z",
+        "mjd": 61228.0,
+        "crval1_deg": 160.0,
+        "crval2_deg": 12.0,
+        "wcs_valid": true,
+        "sha256": "15D93C3BC3EE76797B43F0575199B79C4E509CD306B9B657E2FAA3A079D23D73"
+      },
+      "time_separation_minutes": 5760.0,
+      "time_separation_days": 4.0,
+      "synthetic_displacement_arcsec": 12.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "MAIN_BELT_ASTEROID_TYPICAL",
+        "scenario_notes": "Standard MBA motion over 4-day baseline (3.0 arcsec/day)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 160.0,
+          "dec_deg": 12.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-03T00:00:00.000Z",
+          "mjd": 61224.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 160.003292,
+          "dec_deg": 12.000863,
+          "pixel_x": 61.13,
+          "pixel_y": 63.5,
+          "timestamp_utc": "2026-07-07T00:00:00.000Z",
+          "mjd": 61228.0
+        },
+        "ground_truth_delta_ra_arcsec": 11.5911,
+        "ground_truth_delta_dec_arcsec": 3.1058,
+        "ground_truth_angular_displacement_arcsec": 12.0,
+        "ground_truth_position_angle_deg": 75.0,
+        "ground_truth_dt_days": 4.0,
+        "ground_truth_dt_hours": 96.0,
+        "ground_truth_motion_rate_arcsec_per_day": 3.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.125,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of MAIN_BELT_ASTEROID_TYPICAL displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_003",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_NEAR_EARTH_OBJECT_FAST",
+      "target_coordinates": {
+        "ra_deg": 170.0,
+        "dec_deg": -15.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-04T00:00:00.000Z",
+        "mjd": 61225.0,
+        "crval1_deg": 170.0,
+        "crval2_deg": -15.0,
+        "wcs_valid": true,
+        "sha256": "A5C69F67971BE2482F7D143B203C03EA669491377EAB79011055197DB10CE1EB"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-05T00:00:00.000Z",
+        "mjd": 61226.0,
+        "crval1_deg": 170.0,
+        "crval2_deg": -15.0,
+        "wcs_valid": true,
+        "sha256": "3D0D2D2BB15FBF520BD79E3BC39F5136F8894D4E4FBD2D41750818DBC8F8AF9D"
+      },
+      "time_separation_minutes": 1440.0,
+      "time_separation_days": 1.0,
+      "synthetic_displacement_arcsec": 59.9991,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "NEAR_EARTH_OBJECT_FAST",
+        "scenario_notes": "Fast-moving NEO trajectory (2.5 arcsec/hour, 60 arcsec/day)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 170.0,
+          "dec_deg": -15.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-04T00:00:00.000Z",
+          "mjd": 61225.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 170.014943,
+          "dec_deg": -15.008333,
+          "pixel_x": 54.62,
+          "pixel_y": 58.16,
+          "timestamp_utc": "2026-07-05T00:00:00.000Z",
+          "mjd": 61226.0
+        },
+        "ground_truth_delta_ra_arcsec": 51.9615,
+        "ground_truth_delta_dec_arcsec": -30.0,
+        "ground_truth_angular_displacement_arcsec": 59.9991,
+        "ground_truth_position_angle_deg": 120.0,
+        "ground_truth_dt_days": 1.0,
+        "ground_truth_dt_hours": 24.0,
+        "ground_truth_motion_rate_arcsec_per_day": 59.9991,
+        "ground_truth_motion_rate_arcsec_per_hour": 2.5,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of NEAR_EARTH_OBJECT_FAST displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_004",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_NEAR_EARTH_OBJECT_ULTRA_FAST",
+      "target_coordinates": {
+        "ra_deg": 175.0,
+        "dec_deg": -20.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-05T00:00:00.000Z",
+        "mjd": 61226.0,
+        "crval1_deg": 175.0,
+        "crval2_deg": -20.0,
+        "wcs_valid": true,
+        "sha256": "73A192C422694E9FFFA868AC3C032ECF49492B9E167063988D7ECA68BCE8D366"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-06T00:00:00.000Z",
+        "mjd": 61227.0,
+        "crval1_deg": 175.0,
+        "crval2_deg": -20.0,
+        "wcs_valid": true,
+        "sha256": "4B1C064702244D9EA4D3FD040EA55DD724B051291A451BDF5A300A0D225F80F0"
+      },
+      "time_separation_minutes": 1440.0,
+      "time_separation_days": 1.0,
+      "synthetic_displacement_arcsec": 119.9972,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "NEAR_EARTH_OBJECT_ULTRA_FAST",
+        "scenario_notes": "High proper motion NEO close-approach (5.0 arcsec/hour)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 175.0,
+          "dec_deg": -20.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-05T00:00:00.000Z",
+          "mjd": 61226.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 175.017736,
+          "dec_deg": -20.028868,
+          "pixel_x": 53.32,
+          "pixel_y": 46.24,
+          "timestamp_utc": "2026-07-06T00:00:00.000Z",
+          "mjd": 61227.0
+        },
+        "ground_truth_delta_ra_arcsec": 60.0,
+        "ground_truth_delta_dec_arcsec": -103.923,
+        "ground_truth_angular_displacement_arcsec": 119.9972,
+        "ground_truth_position_angle_deg": 150.01,
+        "ground_truth_dt_days": 1.0,
+        "ground_truth_dt_hours": 24.0,
+        "ground_truth_motion_rate_arcsec_per_day": 119.9972,
+        "ground_truth_motion_rate_arcsec_per_hour": 4.9999,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of NEAR_EARTH_OBJECT_ULTRA_FAST displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_005",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_KUIPER_BELT_OBJECT_SLOW",
+      "target_coordinates": {
+        "ra_deg": 210.0,
+        "dec_deg": -5.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-06T00:00:00.000Z",
+        "mjd": 61227.0,
+        "crval1_deg": 210.0,
+        "crval2_deg": -5.0,
+        "wcs_valid": true,
+        "sha256": "B30A20C9D514C0970EE435496CCE527A909EA4C0693B06DD1B1DF36B6CD25F16"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-08-05T00:00:00.000Z",
+        "mjd": 61257.0,
+        "crval1_deg": 210.0,
+        "crval2_deg": -5.0,
+        "wcs_valid": true,
+        "sha256": "D4B3C816D767ABFC8CC861C1E3640790F96D20F1D0C45C96EE0E0E9A066B50E9"
+      },
+      "time_separation_minutes": 43200.0,
+      "time_separation_days": 30.0,
+      "synthetic_displacement_arcsec": 2.5,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "KUIPER_BELT_OBJECT_SLOW",
+        "scenario_notes": "Slow trans-Neptunian orbital motion (0.083 arcsec/day)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 210.0,
+          "dec_deg": -5.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-06T00:00:00.000Z",
+          "mjd": 61227.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 210.000697,
+          "dec_deg": -5.0,
+          "pixel_x": 62.6,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-08-05T00:00:00.000Z",
+          "mjd": 61257.0
+        },
+        "ground_truth_delta_ra_arcsec": 2.5,
+        "ground_truth_delta_dec_arcsec": 0.0,
+        "ground_truth_angular_displacement_arcsec": 2.5,
+        "ground_truth_position_angle_deg": 90.0,
+        "ground_truth_dt_days": 30.0,
+        "ground_truth_dt_hours": 720.0,
+        "ground_truth_motion_rate_arcsec_per_day": 0.0833,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.0035,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of KUIPER_BELT_OBJECT_SLOW displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_006",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_RA_WRAPAROUND_MERIDIAN",
+      "target_coordinates": {
+        "ra_deg": 359.985,
+        "dec_deg": 5.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-07T00:00:00.000Z",
+        "mjd": 61228.0,
+        "crval1_deg": 359.985,
+        "crval2_deg": 5.0,
+        "wcs_valid": true,
+        "sha256": "B677494F6713755294F8F4591C8792719CFBC9DED091E7F4E8287E8525610FCC"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-10T00:00:00.000Z",
+        "mjd": 61231.0,
+        "crval1_deg": 359.985,
+        "crval2_deg": 5.0,
+        "wcs_valid": true,
+        "sha256": "32FF091BCA030F610EE2D63E4C71E5DAAFBC5D17B08E8E3908805D137D239105"
+      },
+      "time_separation_minutes": 4320.0,
+      "time_separation_days": 3.0,
+      "synthetic_displacement_arcsec": 108.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "RA_WRAPAROUND_MERIDIAN",
+        "scenario_notes": "Cross-meridian RA wraparound from 359.985 deg to ~0.015 deg",
+        "ground_truth_epoch_a": {
+          "ra_deg": 359.985,
+          "dec_deg": 5.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-07T00:00:00.000Z",
+          "mjd": 61228.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 0.015115,
+          "dec_deg": 5.0,
+          "pixel_x": 45.58,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-10T00:00:00.000Z",
+          "mjd": 61231.0
+        },
+        "ground_truth_delta_ra_arcsec": 108.0,
+        "ground_truth_delta_dec_arcsec": 0.0,
+        "ground_truth_angular_displacement_arcsec": 108.0,
+        "ground_truth_position_angle_deg": 90.0,
+        "ground_truth_dt_days": 3.0,
+        "ground_truth_dt_hours": 72.0,
+        "ground_truth_motion_rate_arcsec_per_day": 36.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 1.5,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of RA_WRAPAROUND_MERIDIAN displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_007",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_RA_WRAPAROUND_REVERSE",
+      "target_coordinates": {
+        "ra_deg": 0.01,
+        "dec_deg": -5.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-08T00:00:00.000Z",
+        "mjd": 61229.0,
+        "crval1_deg": 0.01,
+        "crval2_deg": -5.0,
+        "wcs_valid": true,
+        "sha256": "37AD1147D052A1FD0749B65D82797F275BBBE2D6AE9D8CC974BA7418022A956C"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-10T00:00:00.000Z",
+        "mjd": 61231.0,
+        "crval1_deg": 0.01,
+        "crval2_deg": -5.0,
+        "wcs_valid": true,
+        "sha256": "E6FDD8AF3BFA132E3D7F506006B8C2F0BF4CB791EE342663D310ADBD9443455E"
+      },
+      "time_separation_minutes": 2880.0,
+      "time_separation_days": 2.0,
+      "synthetic_displacement_arcsec": 72.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "RA_WRAPAROUND_REVERSE",
+        "scenario_notes": "Cross-meridian reverse RA wraparound from 0.010 deg to ~359.990 deg",
+        "ground_truth_epoch_a": {
+          "ra_deg": 0.01,
+          "dec_deg": -5.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-08T00:00:00.000Z",
+          "mjd": 61229.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 359.989924,
+          "dec_deg": -5.0,
+          "pixel_x": 74.61,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-10T00:00:00.000Z",
+          "mjd": 61231.0
+        },
+        "ground_truth_delta_ra_arcsec": -72.0,
+        "ground_truth_delta_dec_arcsec": 0.0,
+        "ground_truth_angular_displacement_arcsec": 72.0,
+        "ground_truth_position_angle_deg": 270.0,
+        "ground_truth_dt_days": 2.0,
+        "ground_truth_dt_hours": 48.0,
+        "ground_truth_motion_rate_arcsec_per_day": 36.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 1.5,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of RA_WRAPAROUND_REVERSE displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_008",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_HIGH_SOUTHERN_DECLINATION",
+      "target_coordinates": {
+        "ra_deg": 80.0,
+        "dec_deg": -65.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-09T00:00:00.000Z",
+        "mjd": 61230.0,
+        "crval1_deg": 80.0,
+        "crval2_deg": -65.0,
+        "wcs_valid": true,
+        "sha256": "CDA67CEF96303ABD27500A09C3E80D1B7F31BBF870463B609E0B04905BAB5C2B"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-14T00:00:00.000Z",
+        "mjd": 61235.0,
+        "crval1_deg": 80.0,
+        "crval2_deg": -65.0,
+        "wcs_valid": true,
+        "sha256": "EFAAE6ABC23630F95F928E0F28F8F8A8E6F6B258632B0B0D4C37B7FAA265AB53"
+      },
+      "time_separation_minutes": 7200.0,
+      "time_separation_days": 5.0,
+      "synthetic_displacement_arcsec": 15.0003,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "HIGH_SOUTHERN_DECLINATION",
+        "scenario_notes": "Southern polar cap astrometry with cos(Dec) geometric scaling",
+        "ground_truth_epoch_a": {
+          "ra_deg": 80.0,
+          "dec_deg": -65.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-09T00:00:00.000Z",
+          "mjd": 61230.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 80.00493,
+          "dec_deg": -64.996392,
+          "pixel_x": 61.79,
+          "pixel_y": 65.1,
+          "timestamp_utc": "2026-07-14T00:00:00.000Z",
+          "mjd": 61235.0
+        },
+        "ground_truth_delta_ra_arcsec": 7.5,
+        "ground_truth_delta_dec_arcsec": 12.9904,
+        "ground_truth_angular_displacement_arcsec": 15.0003,
+        "ground_truth_position_angle_deg": 30.0,
+        "ground_truth_dt_days": 5.0,
+        "ground_truth_dt_hours": 120.0,
+        "ground_truth_motion_rate_arcsec_per_day": 3.0001,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.125,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of HIGH_SOUTHERN_DECLINATION displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_009",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_HIGH_NORTHERN_DECLINATION",
+      "target_coordinates": {
+        "ra_deg": 120.0,
+        "dec_deg": 60.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-10T00:00:00.000Z",
+        "mjd": 61231.0,
+        "crval1_deg": 120.0,
+        "crval2_deg": 60.0,
+        "wcs_valid": true,
+        "sha256": "EB89924ACA8A0FDA198D7321D4AC3613951D615AEAF918985EC74F0B776552D8"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-17T00:00:00.000Z",
+        "mjd": 61238.0,
+        "crval1_deg": 120.0,
+        "crval2_deg": 60.0,
+        "wcs_valid": true,
+        "sha256": "F1D41B610892545FD7C3CF9C8B684BE65B3D82C8D42E8D91EC1B60F2A74C493E"
+      },
+      "time_separation_minutes": 10080.0,
+      "time_separation_days": 7.0,
+      "synthetic_displacement_arcsec": 20.9993,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "HIGH_NORTHERN_DECLINATION",
+        "scenario_notes": "Northern high-declination field (cos(Dec) = 0.50)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 120.0,
+          "dec_deg": 60.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-10T00:00:00.000Z",
+          "mjd": 61231.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 120.010104,
+          "dec_deg": 60.002917,
+          "pixel_x": 60.07,
+          "pixel_y": 64.69,
+          "timestamp_utc": "2026-07-17T00:00:00.000Z",
+          "mjd": 61238.0
+        },
+        "ground_truth_delta_ra_arcsec": 18.1865,
+        "ground_truth_delta_dec_arcsec": 10.5,
+        "ground_truth_angular_displacement_arcsec": 20.9993,
+        "ground_truth_position_angle_deg": 59.99,
+        "ground_truth_dt_days": 7.0,
+        "ground_truth_dt_hours": 168.0,
+        "ground_truth_motion_rate_arcsec_per_day": 2.9999,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.125,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of HIGH_NORTHERN_DECLINATION displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_010",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_EQUATORIAL_BASELINE",
+      "target_coordinates": {
+        "ra_deg": 180.0,
+        "dec_deg": 0.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-11T00:00:00.000Z",
+        "mjd": 61232.0,
+        "crval1_deg": 180.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "12462CB979B5CBED5B099687BAD884D359117DD25F0B805EEF651CA130ABD0A8"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-21T00:00:00.000Z",
+        "mjd": 61242.0,
+        "crval1_deg": 180.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "2B9129A05CE10782E2C64F4EB06CDDC36C94DD066FE25334D4DFF284804D7B5F"
+      },
+      "time_separation_minutes": 14400.0,
+      "time_separation_days": 10.0,
+      "synthetic_displacement_arcsec": 30.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "EQUATORIAL_BASELINE",
+        "scenario_notes": "Celestial equator reference baseline with zero Dec curvature",
+        "ground_truth_epoch_a": {
+          "ra_deg": 180.0,
+          "dec_deg": 0.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-11T00:00:00.000Z",
+          "mjd": 61232.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 180.008333,
+          "dec_deg": 0.0,
+          "pixel_x": 58.16,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-21T00:00:00.000Z",
+          "mjd": 61242.0
+        },
+        "ground_truth_delta_ra_arcsec": 30.0,
+        "ground_truth_delta_dec_arcsec": 0.0,
+        "ground_truth_angular_displacement_arcsec": 30.0,
+        "ground_truth_position_angle_deg": 90.0,
+        "ground_truth_dt_days": 10.0,
+        "ground_truth_dt_hours": 240.0,
+        "ground_truth_motion_rate_arcsec_per_day": 3.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.125,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of EQUATORIAL_BASELINE displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_011",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_MULTI_MONTH_LONG_BASELINE",
+      "target_coordinates": {
+        "ra_deg": 195.0,
+        "dec_deg": -25.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-12T00:00:00.000Z",
+        "mjd": 61233.0,
+        "crval1_deg": 195.0,
+        "crval2_deg": -25.0,
+        "wcs_valid": true,
+        "sha256": "3C6AB20208D950B76DF3B2BAF35E33A1B8437DFE896D8DCA686E7B01FCA574CA"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-10-10T00:00:00.000Z",
+        "mjd": 61323.0,
+        "crval1_deg": 195.0,
+        "crval2_deg": -25.0,
+        "wcs_valid": true,
+        "sha256": "7FD2E2ADB5A7AEB20CB1F29F1B78A25242C1684B5B81DEE5C48A0F63DC7AD8D3"
+      },
+      "time_separation_minutes": 129600.0,
+      "time_separation_days": 90.0,
+      "synthetic_displacement_arcsec": 89.9972,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "MULTI_MONTH_LONG_BASELINE",
+        "scenario_notes": "90-day seasonal secular baseline (1.0 arcsec/day)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 195.0,
+          "dec_deg": -25.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-12T00:00:00.000Z",
+          "mjd": 61233.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 195.025921,
+          "dec_deg": -25.008551,
+          "pixel_x": 49.36,
+          "pixel_y": 58.03,
+          "timestamp_utc": "2026-10-10T00:00:00.000Z",
+          "mjd": 61323.0
+        },
+        "ground_truth_delta_ra_arcsec": 84.5723,
+        "ground_truth_delta_dec_arcsec": -30.7818,
+        "ground_truth_angular_displacement_arcsec": 89.9972,
+        "ground_truth_position_angle_deg": 110.01,
+        "ground_truth_dt_days": 90.0,
+        "ground_truth_dt_hours": 2160.0,
+        "ground_truth_motion_rate_arcsec_per_day": 1.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.0417,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of MULTI_MONTH_LONG_BASELINE displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_012",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_SUB_ARCSEC_LIMIT",
+      "target_coordinates": {
+        "ra_deg": 140.0,
+        "dec_deg": 20.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-13T00:00:00.000Z",
+        "mjd": 61234.0,
+        "crval1_deg": 140.0,
+        "crval2_deg": 20.0,
+        "wcs_valid": true,
+        "sha256": "85618D5C817DF42DDB9DDFDA266F1816F9A833D4DDD5B01DB717A603FD7E7904"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-14T00:00:00.000Z",
+        "mjd": 61235.0,
+        "crval1_deg": 140.0,
+        "crval2_deg": 20.0,
+        "wcs_valid": true,
+        "sha256": "A8B52CFA644E689BA1FC56B446A89B3CF65507F640AA7BE6DC047F2EE79BB9D4"
+      },
+      "time_separation_minutes": 1440.0,
+      "time_separation_days": 1.0,
+      "synthetic_displacement_arcsec": 0.5,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "SUB_ARCSEC_LIMIT",
+        "scenario_notes": "Sub-arcsecond astrometric resolution limit test (0.5 arcsec)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 140.0,
+          "dec_deg": 20.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-13T00:00:00.000Z",
+          "mjd": 61234.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 140.0,
+          "dec_deg": 20.000139,
+          "pixel_x": 63.0,
+          "pixel_y": 63.08,
+          "timestamp_utc": "2026-07-14T00:00:00.000Z",
+          "mjd": 61235.0
+        },
+        "ground_truth_delta_ra_arcsec": 0.0,
+        "ground_truth_delta_dec_arcsec": 0.5,
+        "ground_truth_angular_displacement_arcsec": 0.5,
+        "ground_truth_position_angle_deg": 0.0,
+        "ground_truth_dt_days": 1.0,
+        "ground_truth_dt_hours": 24.0,
+        "ground_truth_motion_rate_arcsec_per_day": 0.5,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.0208,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of SUB_ARCSEC_LIMIT displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_013",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_SMALL_ONE_ARCSEC_SHIFT",
+      "target_coordinates": {
+        "ra_deg": 145.0,
+        "dec_deg": 22.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-14T00:00:00.000Z",
+        "mjd": 61235.0,
+        "crval1_deg": 145.0,
+        "crval2_deg": 22.0,
+        "wcs_valid": true,
+        "sha256": "42E33811C0B0B8EC4367D3E1C6F3B3AF93261CAED5A27A91702F1DC499975566"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-16T00:00:00.000Z",
+        "mjd": 61237.0,
+        "crval1_deg": 145.0,
+        "crval2_deg": 22.0,
+        "wcs_valid": true,
+        "sha256": "2936F5F3269267B546F5981A35BA141E4353072CEF6F13DF87BB90A479E46206"
+      },
+      "time_separation_minutes": 2880.0,
+      "time_separation_days": 2.0,
+      "synthetic_displacement_arcsec": 1.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "SMALL_ONE_ARCSEC_SHIFT",
+        "scenario_notes": "Small 1.0 arcsecond displacement test",
+        "ground_truth_epoch_a": {
+          "ra_deg": 145.0,
+          "dec_deg": 22.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-14T00:00:00.000Z",
+          "mjd": 61235.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 145.0,
+          "dec_deg": 21.999722,
+          "pixel_x": 63.0,
+          "pixel_y": 62.84,
+          "timestamp_utc": "2026-07-16T00:00:00.000Z",
+          "mjd": 61237.0
+        },
+        "ground_truth_delta_ra_arcsec": 0.0,
+        "ground_truth_delta_dec_arcsec": -1.0,
+        "ground_truth_angular_displacement_arcsec": 1.0,
+        "ground_truth_position_angle_deg": 180.0,
+        "ground_truth_dt_days": 2.0,
+        "ground_truth_dt_hours": 48.0,
+        "ground_truth_motion_rate_arcsec_per_day": 0.5,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.0208,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of SMALL_ONE_ARCSEC_SHIFT displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_014",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_DIRECTIONAL_PURE_NORTH",
+      "target_coordinates": {
+        "ra_deg": 100.0,
+        "dec_deg": 0.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-15T00:00:00.000Z",
+        "mjd": 61236.0,
+        "crval1_deg": 100.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "8E2E0C02AEBBA52BC8815001AD8C9B912EB2B1818B0A261874F23B1EB5FBAAE1"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-18T00:00:00.000Z",
+        "mjd": 61239.0,
+        "crval1_deg": 100.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "4B3CF88B30672BA4CDFCB43737619494E0FFC69B39D2BC6EE5C6614E469E44C9"
+      },
+      "time_separation_minutes": 4320.0,
+      "time_separation_days": 3.0,
+      "synthetic_displacement_arcsec": 18.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "DIRECTIONAL_PURE_NORTH",
+        "scenario_notes": "Pure North displacement along celestial meridian (PA = 0 deg)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 100.0,
+          "dec_deg": 0.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-15T00:00:00.000Z",
+          "mjd": 61236.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 100.0,
+          "dec_deg": 0.005,
+          "pixel_x": 63.0,
+          "pixel_y": 65.9,
+          "timestamp_utc": "2026-07-18T00:00:00.000Z",
+          "mjd": 61239.0
+        },
+        "ground_truth_delta_ra_arcsec": 0.0,
+        "ground_truth_delta_dec_arcsec": 18.0,
+        "ground_truth_angular_displacement_arcsec": 18.0,
+        "ground_truth_position_angle_deg": 0.0,
+        "ground_truth_dt_days": 3.0,
+        "ground_truth_dt_hours": 72.0,
+        "ground_truth_motion_rate_arcsec_per_day": 6.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.25,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of DIRECTIONAL_PURE_NORTH displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_015",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_DIRECTIONAL_PURE_EAST",
+      "target_coordinates": {
+        "ra_deg": 100.0,
+        "dec_deg": 0.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-16T00:00:00.000Z",
+        "mjd": 61237.0,
+        "crval1_deg": 100.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "D1F4BD3ECF8565FE804E6384F1A90D94637B837CDFFA4463265866401824A3B5"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-19T00:00:00.000Z",
+        "mjd": 61240.0,
+        "crval1_deg": 100.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "0921D767E2C3AFF40602B231E01F76CFDCE19021D6D734C76D699120A4C157F2"
+      },
+      "time_separation_minutes": 4320.0,
+      "time_separation_days": 3.0,
+      "synthetic_displacement_arcsec": 18.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "DIRECTIONAL_PURE_EAST",
+        "scenario_notes": "Pure East displacement along right ascension (PA = 90 deg)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 100.0,
+          "dec_deg": 0.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-16T00:00:00.000Z",
+          "mjd": 61237.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 100.005,
+          "dec_deg": 0.0,
+          "pixel_x": 60.1,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-19T00:00:00.000Z",
+          "mjd": 61240.0
+        },
+        "ground_truth_delta_ra_arcsec": 18.0,
+        "ground_truth_delta_dec_arcsec": 0.0,
+        "ground_truth_angular_displacement_arcsec": 18.0,
+        "ground_truth_position_angle_deg": 90.0,
+        "ground_truth_dt_days": 3.0,
+        "ground_truth_dt_hours": 72.0,
+        "ground_truth_motion_rate_arcsec_per_day": 6.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.25,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of DIRECTIONAL_PURE_EAST displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_016",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_DIRECTIONAL_PURE_SOUTH",
+      "target_coordinates": {
+        "ra_deg": 100.0,
+        "dec_deg": 0.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-17T00:00:00.000Z",
+        "mjd": 61238.0,
+        "crval1_deg": 100.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "519DB87CD1AC1346A39B034A9D73BA5202F2830BFD184A805787302158086CCB"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-20T00:00:00.000Z",
+        "mjd": 61241.0,
+        "crval1_deg": 100.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "CC705B7EFEFB613F5127B810AD75654E7337A145626A4252D38EDF4ADE4D6DC0"
+      },
+      "time_separation_minutes": 4320.0,
+      "time_separation_days": 3.0,
+      "synthetic_displacement_arcsec": 18.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "DIRECTIONAL_PURE_SOUTH",
+        "scenario_notes": "Pure South displacement along celestial meridian (PA = 180 deg)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 100.0,
+          "dec_deg": 0.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-17T00:00:00.000Z",
+          "mjd": 61238.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 100.0,
+          "dec_deg": -0.005,
+          "pixel_x": 63.0,
+          "pixel_y": 60.1,
+          "timestamp_utc": "2026-07-20T00:00:00.000Z",
+          "mjd": 61241.0
+        },
+        "ground_truth_delta_ra_arcsec": 0.0,
+        "ground_truth_delta_dec_arcsec": -18.0,
+        "ground_truth_angular_displacement_arcsec": 18.0,
+        "ground_truth_position_angle_deg": 180.0,
+        "ground_truth_dt_days": 3.0,
+        "ground_truth_dt_hours": 72.0,
+        "ground_truth_motion_rate_arcsec_per_day": 6.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.25,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of DIRECTIONAL_PURE_SOUTH displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_017",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_DIRECTIONAL_PURE_WEST",
+      "target_coordinates": {
+        "ra_deg": 100.0,
+        "dec_deg": 0.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-18T00:00:00.000Z",
+        "mjd": 61239.0,
+        "crval1_deg": 100.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "98E2B3DE0978042D6B9AB8839C634E9E12D0AFECB06B6322D3DCA1B4DB7699DE"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-21T00:00:00.000Z",
+        "mjd": 61242.0,
+        "crval1_deg": 100.0,
+        "crval2_deg": 0.0,
+        "wcs_valid": true,
+        "sha256": "B233E32F390481147FD9E22BD1CA16C39DC214840978051CFC081268DAC1E0B7"
+      },
+      "time_separation_minutes": 4320.0,
+      "time_separation_days": 3.0,
+      "synthetic_displacement_arcsec": 18.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "DIRECTIONAL_PURE_WEST",
+        "scenario_notes": "Pure West displacement along right ascension (PA = 270 deg)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 100.0,
+          "dec_deg": 0.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-18T00:00:00.000Z",
+          "mjd": 61239.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 99.995,
+          "dec_deg": -0.0,
+          "pixel_x": 65.9,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-21T00:00:00.000Z",
+          "mjd": 61242.0
+        },
+        "ground_truth_delta_ra_arcsec": -18.0,
+        "ground_truth_delta_dec_arcsec": -0.0,
+        "ground_truth_angular_displacement_arcsec": 18.0,
+        "ground_truth_position_angle_deg": 270.0,
+        "ground_truth_dt_days": 3.0,
+        "ground_truth_dt_hours": 72.0,
+        "ground_truth_motion_rate_arcsec_per_day": 6.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.25,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of DIRECTIONAL_PURE_WEST displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_018",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_DIAGONAL_NORTHEAST",
+      "target_coordinates": {
+        "ra_deg": 110.0,
+        "dec_deg": 15.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-19T00:00:00.000Z",
+        "mjd": 61240.0,
+        "crval1_deg": 110.0,
+        "crval2_deg": 15.0,
+        "wcs_valid": true,
+        "sha256": "E801A1E4830A52A6C92F3070D7BDB537AC7D72E30EEAA94BAEB7BE6E595462AB"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-23T00:00:00.000Z",
+        "mjd": 61244.0,
+        "crval1_deg": 110.0,
+        "crval2_deg": 15.0,
+        "wcs_valid": true,
+        "sha256": "250D9101AAC358339B87B1FF2C0412E08F7EADBDB53EFD3ABC143DB36B180062"
+      },
+      "time_separation_minutes": 5760.0,
+      "time_separation_days": 4.0,
+      "synthetic_displacement_arcsec": 24.9999,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "DIAGONAL_NORTHEAST",
+        "scenario_notes": "Symmetric diagonal displacement Northeast (PA = 45 deg)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 110.0,
+          "dec_deg": 15.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-19T00:00:00.000Z",
+          "mjd": 61240.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 110.005084,
+          "dec_deg": 15.00491,
+          "pixel_x": 60.15,
+          "pixel_y": 65.85,
+          "timestamp_utc": "2026-07-23T00:00:00.000Z",
+          "mjd": 61244.0
+        },
+        "ground_truth_delta_ra_arcsec": 17.6777,
+        "ground_truth_delta_dec_arcsec": 17.6777,
+        "ground_truth_angular_displacement_arcsec": 24.9999,
+        "ground_truth_position_angle_deg": 45.0,
+        "ground_truth_dt_days": 4.0,
+        "ground_truth_dt_hours": 96.0,
+        "ground_truth_motion_rate_arcsec_per_day": 6.25,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.2604,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of DIAGONAL_NORTHEAST displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_019",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_DIAGONAL_SOUTHEAST",
+      "target_coordinates": {
+        "ra_deg": 115.0,
+        "dec_deg": 15.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-20T00:00:00.000Z",
+        "mjd": 61241.0,
+        "crval1_deg": 115.0,
+        "crval2_deg": 15.0,
+        "wcs_valid": true,
+        "sha256": "D9497FA56316A14F3099E9D39C13A33E4915748D0CA191F5EE7C8854971E9EB0"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-25T00:00:00.000Z",
+        "mjd": 61246.0,
+        "crval1_deg": 115.0,
+        "crval2_deg": 15.0,
+        "wcs_valid": true,
+        "sha256": "217DE73B656DA03507107DAEE1045F948A8099CBEFF56BCA69F9B0349FE95EFF"
+      },
+      "time_separation_minutes": 7200.0,
+      "time_separation_days": 5.0,
+      "synthetic_displacement_arcsec": 35.0003,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "DIAGONAL_SOUTHEAST",
+        "scenario_notes": "Symmetric diagonal displacement Southeast (PA = 135 deg)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 115.0,
+          "dec_deg": 15.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-20T00:00:00.000Z",
+          "mjd": 61241.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 115.007117,
+          "dec_deg": 14.993125,
+          "pixel_x": 59.01,
+          "pixel_y": 59.01,
+          "timestamp_utc": "2026-07-25T00:00:00.000Z",
+          "mjd": 61246.0
+        },
+        "ground_truth_delta_ra_arcsec": 24.7487,
+        "ground_truth_delta_dec_arcsec": -24.7487,
+        "ground_truth_angular_displacement_arcsec": 35.0003,
+        "ground_truth_position_angle_deg": 135.0,
+        "ground_truth_dt_days": 5.0,
+        "ground_truth_dt_hours": 120.0,
+        "ground_truth_motion_rate_arcsec_per_day": 7.0001,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.2917,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of DIAGONAL_SOUTHEAST displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_020",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_DIAGONAL_SOUTHWEST",
+      "target_coordinates": {
+        "ra_deg": 120.0,
+        "dec_deg": 15.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-21T00:00:00.000Z",
+        "mjd": 61242.0,
+        "crval1_deg": 120.0,
+        "crval2_deg": 15.0,
+        "wcs_valid": true,
+        "sha256": "1FFFC8BF3EA2DAE5C8CA8364BA52BDBB23291412874C4B713C81970A24EF70BE"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-27T00:00:00.000Z",
+        "mjd": 61248.0,
+        "crval1_deg": 120.0,
+        "crval2_deg": 15.0,
+        "wcs_valid": true,
+        "sha256": "FE3E93599A61736A3BFB095D403A710E48B4EE3B1933EEC50E49C433B4DD380D"
+      },
+      "time_separation_minutes": 8640.0,
+      "time_separation_days": 6.0,
+      "synthetic_displacement_arcsec": 42.0004,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "DIAGONAL_SOUTHWEST",
+        "scenario_notes": "Symmetric diagonal displacement Southwest (PA = 225 deg)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 120.0,
+          "dec_deg": 15.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-21T00:00:00.000Z",
+          "mjd": 61242.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 119.991459,
+          "dec_deg": 14.99175,
+          "pixel_x": 67.79,
+          "pixel_y": 58.21,
+          "timestamp_utc": "2026-07-27T00:00:00.000Z",
+          "mjd": 61248.0
+        },
+        "ground_truth_delta_ra_arcsec": -29.6985,
+        "ground_truth_delta_dec_arcsec": -29.6985,
+        "ground_truth_angular_displacement_arcsec": 42.0004,
+        "ground_truth_position_angle_deg": 225.0,
+        "ground_truth_dt_days": 6.0,
+        "ground_truth_dt_hours": 144.0,
+        "ground_truth_motion_rate_arcsec_per_day": 7.0001,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.2917,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of DIAGONAL_SOUTHWEST displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_021",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_STATIONARY_CONTROL_NULL",
+      "target_coordinates": {
+        "ra_deg": 130.0,
+        "dec_deg": 30.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-22T00:00:00.000Z",
+        "mjd": 61243.0,
+        "crval1_deg": 130.0,
+        "crval2_deg": 30.0,
+        "wcs_valid": true,
+        "sha256": "8494F66A073B95DE9CC7A5CC043F4B5474AD7C4A8AC745C4EB2E9CAFF78DFBCE"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-08-05T00:00:00.000Z",
+        "mjd": 61257.0,
+        "crval1_deg": 130.0,
+        "crval2_deg": 30.0,
+        "wcs_valid": true,
+        "sha256": "14638CB0E6D90725CB3EB07407A8CF58942EDD338BBE5B4D7A9BFCD3C206DC87"
+      },
+      "time_separation_minutes": 20160.0,
+      "time_separation_days": 14.0,
+      "synthetic_displacement_arcsec": 0.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "STATIONARY_CONTROL_NULL",
+        "scenario_notes": "Stationary control source / null motion test over 14 days",
+        "ground_truth_epoch_a": {
+          "ra_deg": 130.0,
+          "dec_deg": 30.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-22T00:00:00.000Z",
+          "mjd": 61243.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 130.0,
+          "dec_deg": 30.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-08-05T00:00:00.000Z",
+          "mjd": 61257.0
+        },
+        "ground_truth_delta_ra_arcsec": 0.0,
+        "ground_truth_delta_dec_arcsec": 0.0,
+        "ground_truth_angular_displacement_arcsec": 0.0,
+        "ground_truth_position_angle_deg": 0.0,
+        "ground_truth_dt_days": 14.0,
+        "ground_truth_dt_hours": 336.0,
+        "ground_truth_motion_rate_arcsec_per_day": 0.0,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.0,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of STATIONARY_CONTROL_NULL displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_022",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_LOW_SNR_FAINT_TARGET",
+      "target_coordinates": {
+        "ra_deg": 135.0,
+        "dec_deg": -10.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-23T00:00:00.000Z",
+        "mjd": 61244.0,
+        "crval1_deg": 135.0,
+        "crval2_deg": -10.0,
+        "wcs_valid": true,
+        "sha256": "DC20556D10F46BB336E3C2723AD578E8D01142B0B491BCD78CE579A92D671F5A"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-26T00:00:00.000Z",
+        "mjd": 61247.0,
+        "crval1_deg": 135.0,
+        "crval2_deg": -10.0,
+        "wcs_valid": true,
+        "sha256": "F3EA280A221EDE3276F60FB5D29606BF4FCEBD90F572190FB2EAB36234376F2E"
+      },
+      "time_separation_minutes": 4320.0,
+      "time_separation_days": 3.0,
+      "synthetic_displacement_arcsec": 8.0,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "LOW_SNR_FAINT_TARGET",
+        "scenario_notes": "Low-SNR faint source embedded in elevated Poisson noise",
+        "ground_truth_epoch_a": {
+          "ra_deg": 135.0,
+          "dec_deg": -10.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-23T00:00:00.000Z",
+          "mjd": 61244.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 135.001954,
+          "dec_deg": -9.998889,
+          "pixel_x": 61.88,
+          "pixel_y": 63.65,
+          "timestamp_utc": "2026-07-26T00:00:00.000Z",
+          "mjd": 61247.0
+        },
+        "ground_truth_delta_ra_arcsec": 6.9282,
+        "ground_truth_delta_dec_arcsec": 4.0,
+        "ground_truth_angular_displacement_arcsec": 8.0,
+        "ground_truth_position_angle_deg": 60.0,
+        "ground_truth_dt_days": 3.0,
+        "ground_truth_dt_hours": 72.0,
+        "ground_truth_motion_rate_arcsec_per_day": 2.6667,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.1111,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of LOW_SNR_FAINT_TARGET displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_023",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_CROWDED_FIELD_SIMULATION",
+      "target_coordinates": {
+        "ra_deg": 270.0,
+        "dec_deg": -29.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-24T00:00:00.000Z",
+        "mjd": 61245.0,
+        "crval1_deg": 270.0,
+        "crval2_deg": -29.0,
+        "wcs_valid": true,
+        "sha256": "8B9E7F2787023CEB343E30AC699C5807ADEA21A1963A98CF9D40D9B63847DB87"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-29T00:00:00.000Z",
+        "mjd": 61250.0,
+        "crval1_deg": 270.0,
+        "crval2_deg": -29.0,
+        "wcs_valid": true,
+        "sha256": "32C9FE1992EA6955C41558BD10BC8A6B0DEFDFFAF8EE1CCE0EF685F58BC96F57"
+      },
+      "time_separation_minutes": 7200.0,
+      "time_separation_days": 5.0,
+      "synthetic_displacement_arcsec": 15.9999,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "CROWDED_FIELD_SIMULATION",
+        "scenario_notes": "Synthetic moving source surrounded by stationary companion stars",
+        "ground_truth_epoch_a": {
+          "ra_deg": 270.0,
+          "dec_deg": -29.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-24T00:00:00.000Z",
+          "mjd": 61245.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 270.004401,
+          "dec_deg": -29.002222,
+          "pixel_x": 60.77,
+          "pixel_y": 61.71,
+          "timestamp_utc": "2026-07-29T00:00:00.000Z",
+          "mjd": 61250.0
+        },
+        "ground_truth_delta_ra_arcsec": 13.8564,
+        "ground_truth_delta_dec_arcsec": -8.0,
+        "ground_truth_angular_displacement_arcsec": 15.9999,
+        "ground_truth_position_angle_deg": 120.0,
+        "ground_truth_dt_days": 5.0,
+        "ground_truth_dt_hours": 120.0,
+        "ground_truth_motion_rate_arcsec_per_day": 3.2,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.1333,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of CROWDED_FIELD_SIMULATION displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_024",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_UNCERTAINTY_BOUNDARY_TEST",
+      "target_coordinates": {
+        "ra_deg": 155.0,
+        "dec_deg": -40.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-25T00:00:00.000Z",
+        "mjd": 61246.0,
+        "crval1_deg": 155.0,
+        "crval2_deg": -40.0,
+        "wcs_valid": true,
+        "sha256": "016C845E0C8C53011D1827DEB1E9A86C71E13B441FE2D95F85EE574D1379CE02"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-07-27T00:00:00.000Z",
+        "mjd": 61248.0,
+        "crval1_deg": 155.0,
+        "crval2_deg": -40.0,
+        "wcs_valid": true,
+        "sha256": "971151539641FB933081BDA14CF877C5C3F911DE6CCF492302227EA73D573654"
+      },
+      "time_separation_minutes": 2880.0,
+      "time_separation_days": 2.0,
+      "synthetic_displacement_arcsec": 1.5,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "UNCERTAINTY_BOUNDARY_TEST",
+        "scenario_notes": "High astrometric coordinate uncertainty (sigma = 0.5 arcsec)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 155.0,
+          "dec_deg": -40.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-25T00:00:00.000Z",
+          "mjd": 61246.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 154.999529,
+          "dec_deg": -39.999792,
+          "pixel_x": 63.21,
+          "pixel_y": 63.12,
+          "timestamp_utc": "2026-07-27T00:00:00.000Z",
+          "mjd": 61248.0
+        },
+        "ground_truth_delta_ra_arcsec": -1.299,
+        "ground_truth_delta_dec_arcsec": 0.75,
+        "ground_truth_angular_displacement_arcsec": 1.5,
+        "ground_truth_position_angle_deg": 300.0,
+        "ground_truth_dt_days": 2.0,
+        "ground_truth_dt_hours": 48.0,
+        "ground_truth_motion_rate_arcsec_per_day": 0.75,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.0313,
+        "astrometric_coordinate_uncertainty_arcsec": 0.5
+      },
+      "intended_test_purpose": "Algorithmic verification of UNCERTAINTY_BOUNDARY_TEST displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    },
+    {
+      "pair_id": "SYNTH_PAIR_025",
+      "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+      "pointing_id": "SYNTHETIC_TEST_FIELD",
+      "detector": "SIMULATED_BAND_1",
+      "target_name": "SYN_MID_BASELINE_SECULAR",
+      "target_coordinates": {
+        "ra_deg": 165.0,
+        "dec_deg": -35.0
+      },
+      "obs_a": {
+        "filename": "obs_a.fits",
+        "timestamp_utc": "2026-07-26T00:00:00.000Z",
+        "mjd": 61247.0,
+        "crval1_deg": 165.0,
+        "crval2_deg": -35.0,
+        "wcs_valid": true,
+        "sha256": "C9F072DCD9B0799B5B15DE0BDA2D7576C5C499779847D66C3A9025A06ACE5FA4"
+      },
+      "obs_b": {
+        "filename": "obs_b.fits",
+        "timestamp_utc": "2026-09-24T00:00:00.000Z",
+        "mjd": 61307.0,
+        "crval1_deg": 165.0,
+        "crval2_deg": -35.0,
+        "wcs_valid": true,
+        "sha256": "CC352CE7A264CC3D252B23F659669A5C9B89E8327AB8C1040018A4A0D536D4B7"
+      },
+      "time_separation_minutes": 86400.0,
+      "time_separation_days": 60.0,
+      "synthetic_displacement_arcsec": 75.0016,
+      "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+      "is_secular_motion_eligible": true,
+      "has_ground_truth_motion": true,
+      "synthetic_ground_truth_motion": {
+        "is_synthetic": true,
+        "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+        "target_type": "MID_BASELINE_SECULAR",
+        "scenario_notes": "60-day baseline secular asteroid track (1.25 arcsec/day)",
+        "ground_truth_epoch_a": {
+          "ra_deg": 165.0,
+          "dec_deg": -35.0,
+          "pixel_x": 63.0,
+          "pixel_y": 63.0,
+          "timestamp_utc": "2026-07-26T00:00:00.000Z",
+          "mjd": 61247.0
+        },
+        "ground_truth_epoch_b": {
+          "ra_deg": 165.025046,
+          "dec_deg": -34.996382,
+          "pixel_x": 51.09,
+          "pixel_y": 65.1,
+          "timestamp_utc": "2026-09-24T00:00:00.000Z",
+          "mjd": 61307.0
+        },
+        "ground_truth_delta_ra_arcsec": 73.8606,
+        "ground_truth_delta_dec_arcsec": 13.0236,
+        "ground_truth_angular_displacement_arcsec": 75.0016,
+        "ground_truth_position_angle_deg": 80.01,
+        "ground_truth_dt_days": 60.0,
+        "ground_truth_dt_hours": 1440.0,
+        "ground_truth_motion_rate_arcsec_per_day": 1.25,
+        "ground_truth_motion_rate_arcsec_per_hour": 0.0521,
+        "astrometric_coordinate_uncertainty_arcsec": 0.05
+      },
+      "intended_test_purpose": "Algorithmic verification of MID_BASELINE_SECULAR displacement and rate calculation.",
+      "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+    }
+  ]
+}

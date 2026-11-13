@@ -1,0 +1,136 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA_TASK_1_2B_S",
+    "module": "SPECTRA \u2014 102-Channel Infrared Spectral Anomaly Detection",
+    "campaign_name": "Calibration Cohort Reconciliation & Statistical Design Verification",
+    "audit_timestamp_utc": "2026-11-07T04:15:00Z",
+    "execution_mode": "STRICT_READ_ONLY",
+    "governance_declaration": "CONFIRMED: Strict read-only audit. Zero model checkpoints, weights, source code, metadata, calibration files, FITS images, catalogs, trial definitions, or results were modified. Zero model inference, forward evaluation, or threshold calculations were executed.",
+    "auditor_roles": [
+      "Principal Astronomical ML Scientist",
+      "SPHEREx Calibration Specialist",
+      "Benchmark Reconciliation Auditor",
+      "Statistical Methodology Reviewer"
+    ]
+  },
+  "protected_assets_audit": {
+    "spectra_masked_ae_v2_pt": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "FROZEN_BYTE_FOR_BYTE_VERIFIED"
+    },
+    "phase3_multpointing_spectra_v1_csv": {
+      "path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "sha256": "8a96617cfe5d5152e720ee0c3890a7b8c7025ab2bfb3c682e08743affe6858e0",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "phase3_multpointing_coverage_v1_csv": {
+      "path": "data/processed/spectra/phase3_multpointing_coverage_v1.csv",
+      "sha256": "c8153bf0b0f07f4bde753b12309d06613fed6a90527cfd2409d7438218262c30",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "phase3_multpointing_extraction_manifest_v1_json": {
+      "path": "data/processed/spectra/phase3_multpointing_extraction_manifest_v1.json",
+      "sha256": "e9fa9cfee57a99850d1ef617e0a875aac473530cfa76c416a52802180c87e777",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  },
+  "reconciliation_summary": {
+    "discrepancy_resolved": "5,327 vs 5,347",
+    "cause": "Clerical typographical error in Table 7.1 of Task 1.2B-R recording D1+D4 as 1,175 instead of verified 1,155 (+20 discrepancy). All detector pairs are strictly mutually exclusive.",
+    "verified_calibration_counts": {
+      "total_sources": 15000,
+      "unobserved_sources": 5623,
+      "observed_sources": 9377,
+      "reliable_point_sources_total": 11380,
+      "reliable_point_sources_unobserved": 4242,
+      "reliable_point_sources_observed": 7138,
+      "reliable_point_sources_ge_5_channels": 5327,
+      "reliable_ge_5ch_minus_training_overlaps": 5322
+    },
+    "verified_pair_wise_counts_ge_5ch": {
+      "D1_D4": {
+        "total_reliable_ge_5ch": 1155,
+        "P0001": 100,
+        "P0008": 1055,
+        "training_overlaps": 5,
+        "reconciled_clean": 1150
+      },
+      "D2_D5": {
+        "total_reliable_ge_5ch": 2624,
+        "P0001": 1320,
+        "P0008": 1304,
+        "training_overlaps": 0,
+        "reconciled_clean": 2624
+      },
+      "D3_D6": {
+        "total_reliable_ge_5ch": 1548,
+        "P0001": 701,
+        "P0008": 847,
+        "training_overlaps": 0,
+        "reconciled_clean": 1548
+      },
+      "sum_verified": 5327,
+      "sum_reconciled_clean": 5322
+    },
+    "verified_p0008_only_counts": {
+      "catalog_sources": 7500,
+      "observed_sources": 5979,
+      "unobserved_sources": 1521,
+      "reliable_candidates": 5695,
+      "reliable_observed": 4556,
+      "reliable_candidates_ge_5ch": 3206,
+      "pair_breakdown_ge_5ch": {
+        "D1_D4": 1055,
+        "D2_D5": 1304,
+        "D3_D6": 847
+      },
+      "historical_training_overlaps": 0
+    },
+    "historical_training_overlaps_audit": {
+      "verified_overlap_count": 5,
+      "source_ids": [
+        6316932723797678080,
+        6268273836710905344,
+        6316494229114061952,
+        6316495122467403776,
+        6316948567937380224
+      ],
+      "pointing": "0001",
+      "detector_provenance": "D1,D4",
+      "valid_channels_count": 8,
+      "all_in_p0001": true,
+      "p0008_overlaps": 0
+    }
+  },
+  "statistical_design_assessment": {
+    "empirical_tail_events_p0008": {
+      "alpha_0_05": {
+        "D1_D4": 52.8,
+        "D2_D5": 65.2,
+        "D3_D6": 42.4,
+        "total": 160.3,
+        "status": "WELL_POWERED"
+      },
+      "alpha_0_01": {
+        "D1_D4": 10.6,
+        "D2_D5": 13.0,
+        "D3_D6": 8.5,
+        "total": 32.1,
+        "status": "CONDITIONALLY_POWERED (Bootstrap CIs required)"
+      }
+    },
+    "bootstrap_methodology": "Source-level bootstrap captures sampling variance; spatial-block bootstrap captures correlated background; neither overcomes pointing-to-pointing domain shift.",
+    "p0001_role": "Descriptive comparison and domain-shift diagnostics only; excluded from primary out-of-sample null calibration."
+  },
+  "final_readiness_verdict": "CONDITIONALLY READY FOR TASK 1.2C",
+  "verdict_conditions": [
+    "Use P0008 (N=3,206 clean reliable >=5ch sources) as the primary out-of-sample null benchmark.",
+    "Derive separate pair-stratified thresholds for D1+D4 (N=1,055), D2+D5 (N=1,304), and D3+D6 (N=847).",
+    "Exclude the 5 verified training overlap sources from P0001.",
+    "Compute bootstrap confidence intervals to account for finite-sample tail variability at alpha=0.01.",
+    "Maintain strict read-only boundary over Blind Evaluation pointings (P0002, P0009, P0010)."
+  ],
+  "recommended_next_task": "Task 1.2C: Controlled Multi-Pointing Stratified Null Calibration",
+  "report_sha256": "32b7de618e814398e7ea233f4af9dadf7b94a35f30332031e5158c80976998b4"
+}

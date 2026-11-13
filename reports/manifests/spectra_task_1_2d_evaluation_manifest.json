@@ -1,0 +1,136 @@
+{
+  "manifest_type": "SPECTRA_BLIND_EVALUATION_CAMPAIGN_MANIFEST",
+  "version": "1.0.0",
+  "task_id": "SPECTRA_TASK_1_2D",
+  "pipeline_build": "l2b-v27-2026-222",
+  "execution_timestamp_utc": "2026-11-06T22:45:00Z",
+  "governance_status": "EXPLICITLY_AUTHORIZED_AND_COMPLETED",
+  "prerequisite_assets_verified": {
+    "model_checkpoint": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "provisional_thresholds": {
+      "path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+      "sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "p0008_calibration_scores": {
+      "path": "data/processed/spectra/spectra_p0008_calibration_scores_v1.csv",
+      "sha256": "7ac34d415f8132f7f164ab20c1b25fe03461bc709eb674031e838b2208e8c1a3",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  },
+  "evaluation_cohort_composition": {
+    "evaluation_pointings": [
+      "0002",
+      "0009",
+      "0010"
+    ],
+    "total_catalog_sources": 22500,
+    "observed_sources": 17078,
+    "unobserved_sources": 5422,
+    "sources_lt5_channels_excluded": 2076,
+    "quality_excluded_sources_ge5_ch": 5502,
+    "final_eligible_sources_scored": 9500,
+    "eligible_breakdown_by_pointing": {
+      "P0002": 4071,
+      "P0009": 2284,
+      "P0010": 3145
+    },
+    "eligible_breakdown_by_stratum": {
+      "D1,D4": 3580,
+      "D2,D5": 3410,
+      "D3,D6": 2510
+    }
+  },
+  "evaluation_metrics_summary": {
+    "real_source_exceedance_rates": {
+      "D1,D4": {
+        "q95_threshold": 4.127549123764036,
+        "q95_exceedance_pct": 0.0611731843575419,
+        "q95_wilson_ci": [0.05378349235801481, 0.06950361838546301],
+        "q99_threshold": 61.26756484985366,
+        "q99_exceedance_pct": 0.016201117318435754,
+        "q99_wilson_ci": [0.012553966335405837, 0.02088541992029349]
+      },
+      "D2,D5": {
+        "q95_threshold": 5.51579620838165,
+        "q95_exceedance_pct": 0.07067448680351907,
+        "q95_wilson_ci": [0.06254713017628534, 0.07976804897925964],
+        "q99_threshold": 181.6013285827643,
+        "q99_exceedance_pct": 0.011143695014662757,
+        "q99_wilson_ci": [0.008129740596625442, 0.015257830204121478]
+      },
+      "D3,D6": {
+        "q95_threshold": 19.26664867401121,
+        "q95_exceedance_pct": 0.055776892430278883,
+        "q95_wilson_ci": [0.04745901659902535, 0.06545242331089293],
+        "q99_threshold": 862.9723461914056,
+        "q99_exceedance_pct": 0.007171314741035857,
+        "q99_wilson_ci": [0.004541042540470551, 0.01130779258829081]
+      },
+      "global_q95_exceedance_pct": 0.06315789473684211,
+      "global_q99_exceedance_pct": 0.012
+    },
+    "synthetic_injection_benchmark": {
+      "total_trials": 6000,
+      "nominal_negative_controls": 1500,
+      "injected_anomalies": 4500,
+      "global_auroc": 0.7070622222222223,
+      "global_auroc_ci_95": [0.6928320948484595, 0.7213826131042677],
+      "global_auprc": 0.8527978369474026,
+      "global_auprc_ci_95": [0.8399536746084486, 0.8661044636967454],
+      "recovery_at_q95": 0.19444444444444445,
+      "recovery_at_q95_ci": [0.18314360842169916, 0.2062665151042581],
+      "recovery_at_q99": 0.03177777777777778,
+      "recovery_at_q99_ci": [0.027038813780632474, 0.03731546277877988],
+      "family_recovery_q95": {
+        "PAH_3_3UM_EMISSION": 0.7288135593220338,
+        "LOCALIZED_EMISSION_LINE": 0.30742539902845245,
+        "ABSORPTION_TROUGH": 0.138,
+        "BROAD_IR_EXCESS": 0.12133333333333333
+      }
+    }
+  },
+  "audit_verdicts": {
+    "calibration_transfer_verdict": "TRANSFER STABLE WITH NOMINAL MODEST ELEVATION",
+    "synthetic_discrimination_verdict": "MODERATE LATENT DISCRIMINATION WITH HIGH PAH SELECTIVITY",
+    "detector_stratum_consistency_verdict": "STRATUM-DEPENDENT DETECTION HORIZON CONFIRMED",
+    "pipeline_qualification_verdict": "QUALIFIED FOR DOWNSTREAM FUSION-X (STRATUM-NORMALIZED ONLY)"
+  },
+  "delivered_artifacts": {
+    "evaluation_scores_csv": {
+      "path": "data/processed/spectra/spectra_evaluation_scores_v1.csv",
+      "size_bytes": 1620798,
+      "sha256": "7f0d977cd63a1f1086a3232fca3bfda5c7b0e5df64136d8245b9b8e876285b25"
+    },
+    "synthetic_injections_csv": {
+      "path": "data/processed/spectra/spectra_evaluation_synthetic_injections_v1.csv",
+      "size_bytes": 801816,
+      "sha256": "4247db17fa23fd870b33b2005f2d743a1cdc60170f667a2e5ad47aa1b313203e"
+    },
+    "evaluation_metrics_json": {
+      "path": "data/processed/spectra/spectra_v2_blind_evaluation_metrics_v1.json",
+      "size_bytes": 18407,
+      "sha256": "37e4ab82e61d55113bf6e08df3eea96b29a8ef2823d1f191953b48b0aef9fabb"
+    },
+    "evaluation_driver_script": {
+      "path": "scripts/evaluation/evaluate_spectra_v2_blind.py",
+      "size_bytes": 31556,
+      "sha256": "46d55ca686837e27368ef99c8a9bbb62989c47fc8feed72a070b8cb2d87ad3b5"
+    },
+    "evaluation_test_suite": {
+      "path": "tests/test_spectra_task_1_2d_evaluation.py",
+      "size_bytes": 7677,
+      "sha256": "fb55c6753953f6e230ffcca9b11ccbdb27dd121886db3e128b01e8f9392a1abd"
+    },
+    "evaluation_report_md": {
+      "path": "reports/SPECTRA_TASK_1_2D_BLIND_EVALUATION_REPORT.md",
+      "size_bytes": 17804,
+      "sha256": "e2b5caa70a73c05a78994dc157242a93ebfaa7737eb561caecc97615d7ca2638"
+    }
+  }
+}
+

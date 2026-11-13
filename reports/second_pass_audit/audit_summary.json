@@ -1,0 +1,79 @@
+{
+  "audit_name": "SPECTRA-X Second-Pass Scientific Audit & Validation",
+  "timestamp_utc": "2026-11-01T23:18:57.417906+00:00",
+  "dataset": {
+    "total_bytes": 5577836001,
+    "total_gb": 5.1948,
+    "data_files_count": 205,
+    "level2_fits_count": 32,
+    "calibration_files_count": 151,
+    "external_catalogs_count": 8,
+    "corrupted_files": 0,
+    "zero_byte_files": 0,
+    "duplicates": 0
+  },
+  "model_readiness": {
+    "ASTROVISION": {
+      "level": 6,
+      "status": "INDEPENDENTLY_EVALUATED",
+      "first_pass_claim": "READY",
+      "real_world_discovery": "PENDING"
+    },
+    "SPECTRA": {
+      "level": 4,
+      "status": "BASELINE_TRAINED_PROXY_DATA",
+      "first_pass_claim": "READY",
+      "real_world_discovery": "PENDING"
+    },
+    "CHRONOS-X": {
+      "level": 5,
+      "status": "PIPELINE_IMPLEMENTED_VAL_PENDING",
+      "first_pass_claim": "READY",
+      "real_world_discovery": "PENDING"
+    },
+    "MOTION-X": {
+      "level": 5,
+      "status": "PIPELINE_IMPLEMENTED_VAL_PENDING",
+      "first_pass_claim": "READY",
+      "real_world_discovery": "PENDING"
+    },
+    "FUSION-X": {
+      "level": 5,
+      "status": "PIPELINE_IMPLEMENTED_HEURISTIC_FUNCTIONAL",
+      "first_pass_claim": "READY",
+      "real_world_discovery": "PENDING"
+    }
+  },
+  "critical_scientific_corrections": [
+    {
+      "topic": "152.2 Sigma Residual",
+      "first_pass_claim": "Potential temporal transient significance (152.4 sigma)",
+      "second_pass_finding": "Instrumental dead-pixel defect (MP_OVERFLOW + MP_NONFUNC, flag 655426) in epoch 2 smeared by bilinear reprojection and unmasked due to nearest-neighbor mask interpolation mismatch.",
+      "scientific_status": "PROVEN_INSTRUMENTAL_ARTIFACT"
+    },
+    {
+      "topic": "Flag Policy",
+      "first_pass_claim": "Blanket rejection rule: FLAGS != 0",
+      "second_pass_finding": "Rejection of all non-zero flags erroneously discards astronomical sources (MP_SOURCE, Bit 21), full telemetry sampling (MP_FULLSAMPLE, Bit 12), and calibrated non-linear pixels (MP_NONLINEAR, Bit 15).",
+      "scientific_status": "REPLACED_WITH_FATAL_MASK_615"
+    },
+    {
+      "topic": "SPECTRA 102-Band SED Extraction",
+      "first_pass_claim": "Ready for 102-channel spectrophotometric anomaly detection",
+      "second_pass_finding": "Each downloaded pointing contains exactly 1 detector (D1 in QR3, D2 in QR2). Assembling 102 channels across 0.75-5.0 um requires D1-D6 coordinated pointings. Current model was trained on synthetic proxy SEDs.",
+      "scientific_status": "CORRECTED_TO_BASELINE_PROXY_LEVEL_4"
+    },
+    {
+      "topic": "Horizons Solar System Ephemerides",
+      "first_pass_claim": "Ceres, Pallas, Vesta ephemerides downloaded",
+      "second_pass_finding": "Horizons query syntax without ';' returned Mercury, Venus, Mars. Apophis and Eros are correct. Zero small bodies fell in SPHEREx fields on observation dates.",
+      "scientific_status": "CORRECTED_NO_EMPIRICAL_ASTEROID_RECOVERY"
+    }
+  ],
+  "strict_read_only_compliance": {
+    "existing_files_modified": 0,
+    "existing_files_deleted": 0,
+    "existing_files_overwritten": 0,
+    "new_data_downloaded_bytes": 0
+  }
+}

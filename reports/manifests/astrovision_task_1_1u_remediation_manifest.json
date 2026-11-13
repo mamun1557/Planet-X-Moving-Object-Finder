@@ -1,0 +1,133 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA-X_PHASE3_TASK_1.1U",
+    "task_type": "ASTROVISION_LIMITED_SCIENTIFIC_REMEDIATION_AND_V3_DEVELOPMENT",
+    "timestamp_utc": "2026-11-06T20:05:00Z",
+    "roles": [
+      "Senior Astronomical ML Engineer",
+      "Scientific Imaging Specialist",
+      "ML Validation Engineer",
+      "Reproducibility Auditor"
+    ],
+    "task_verdict": "REMEDIATION_IMPLEMENTED_AND_VERSIONED_CANDIDATE_FROZEN",
+    "astrovision_status": "FAIL \u2014 NOT CERTIFIED (CANDIDATE V3 AWAITING INDEPENDENT QUALIFICATION)",
+    "report_path": "reports/ASTROVISION_TASK_1_1U_REMEDIATION_REPORT.md",
+    "report_sha256": "5c3f104abd94ee2311487bf8f51aa134f9b81012f7cc3e23897672b82e9fcbf6"
+  },
+  "historical_baseline_preservation": {
+    "v2_checkpoint_path": "checkpoints/astrovision_spatial_v2.pt",
+    "v2_checkpoint_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+    "v2_expected_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+    "v2_mutation_detected": false,
+    "task_1_1s_report": "reports/ASTROVISION_TASK_1_1S_INDEPENDENT_AUDIT_REPORT.md",
+    "task_1_1s_report_sha256": "40555bc890492a14b1cdc5f1948ca125d0f45768713787ab8e8e0aaa039d62a3",
+    "task_1_1t_report": "reports/ASTROVISION_TASK_1_1T_FORENSIC_FAILURE_ANALYSIS.md",
+    "task_1_1t_report_sha256": "1541fffcaf29c2fd57869c821f36e3f91edfd5b79606ae4d20a4470cc5d84817",
+    "original_pilot_trial_results": "data/processed/pilot_results/astrovision_pilot_trial_results.csv",
+    "original_calibration_parameters": "data/processed/pilot_results/calibration_parameters.json"
+  },
+  "remediation_modules_implemented": {
+    "module_a_mask_aware_preprocessing": {
+      "implementation_file": "models/astrovision/model_v3.py",
+      "classes": [
+        "MaskAwareConv2d",
+        "RobustLocalNormalizer"
+      ],
+      "functionality": "Partial convolution layer renormalizes feature activations by valid mask coverage. Fatal pixels (flags & 615 != 0, NaNs, saturation > 5000 MJy/sr) are identified and median-imputed before Conv2d, preventing 400k outlier receptive-field smearing."
+    },
+    "module_b_local_background_normalization": {
+      "implementation_file": "models/astrovision/model_v3.py",
+      "class": "RobustLocalNormalizer",
+      "formula": "I_norm = (I - local_median_bg) / max(1.4826 * MAD, 1e-4)",
+      "functionality": "Normalizes cutouts to zero-mean and unit robust dispersion, eliminating DC baseline shift between high-zodiacal (P0008, 0.70 MJy/sr) and low-zodiacal (P0010, 0.08 MJy/sr) sky fields."
+    },
+    "module_c_aperture_integrated_scoring": {
+      "implementation_file": "models/astrovision/model_v3.py",
+      "class": "ApertureAnomalyScorer",
+      "apertures": {
+        "point_source_radius": 2.5,
+        "extended_source_radius": 5.0
+      },
+      "functionality": "Integrates normalized reconstruction anomaly over source footprint using nominal sky variance, eliminating Poisson shot-noise denominator damping on diffuse sources."
+    },
+    "module_d_stratified_v3_training": {
+      "training_script": "models/astrovision/train_spatial_astrovision_v3.py",
+      "checkpoint_path": "checkpoints/astrovision_spatial_v3.pt",
+      "checkpoint_sha256": "3b608e496f43c2648c9dc8236e1a7f5b5ed4b7906cf900468c65c67016042d99",
+      "metadata_path": "checkpoints/astrovision_spatial_v3.json",
+      "metadata_sha256": "70e9954752c0b4317635627d9d21180882ad36e38d5435f8c326260f58f8d188",
+      "training_patches_extracted": 1200,
+      "validation_patches_extracted": 240,
+      "epochs_trained": 15,
+      "best_epoch": 14,
+      "best_val_loss": 148.791767,
+      "random_seed": 42
+    }
+  },
+  "critical_partition_governance": {
+    "quarantined_evaluation_pointings": [
+      "0002",
+      "0009",
+      "0010"
+    ],
+    "separated_calibration_pointings": [
+      "0001",
+      "0008"
+    ],
+    "eligible_training_pointings_used": [
+      "0003",
+      "0004",
+      "0005",
+      "1B",
+      "4B"
+    ],
+    "training_evaluation_overlap": false,
+    "training_calibration_overlap": false,
+    "north_polar_data_status": "UNAVAILABLE_IN_ELIGIBLE_TRAINING_CORPUS (Pointing 0010 NEP is strictly quarantined as an evaluation pointing; high-latitude Southern proxy Pointing 0003 beta=-63.4 deg used; domain gap bridged by Remediation B robust normalization)"
+  },
+  "v3_calibration_parameters": {
+    "file_path": "data/processed/pilot_results/calibration_parameters_v3.json",
+    "file_sha256": "aabe0d15d0e8d559cc82897e9c669f0f5f5785ab32e111123ac321a258ccf706",
+    "calibration_data_source": "Pointings 0001 and 0008 CALIBRATION_CONTROL null cutouts (N=500)",
+    "evaluation_data_used_in_calibration": false,
+    "detector_thresholds_alpha_0_05": {
+      "D1": {
+        "peak_tau": 186.2904,
+        "pt_int_tau": 373.0434,
+        "ext_int_tau": 1922.7729
+      },
+      "D2": {
+        "peak_tau": 2536.2963,
+        "pt_int_tau": 3752.3552,
+        "ext_int_tau": 23012.3148
+      },
+      "D3": {
+        "peak_tau": 999.7611,
+        "pt_int_tau": 1735.2102,
+        "ext_int_tau": 34018.427
+      },
+      "D4": {
+        "peak_tau": 633.7253,
+        "pt_int_tau": 747.4456,
+        "ext_int_tau": 8275.964
+      },
+      "D5": {
+        "peak_tau": 91.8464,
+        "pt_int_tau": 180.5691,
+        "ext_int_tau": 7012.1488
+      },
+      "D6": {
+        "peak_tau": 197.3499,
+        "pt_int_tau": 356.3344,
+        "ext_int_tau": 2186.0833
+      }
+    }
+  },
+  "engineering_test_results": {
+    "test_module": "tests/test_astrovision_v3_remediation.py",
+    "tests_passed": 5,
+    "tests_failed": 0,
+    "total_repository_tests": 79,
+    "total_repository_tests_passed": 79
+  }
+}

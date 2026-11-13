@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "MULTI_MONTH_LONG_BASELINE",
+  "scenario_notes": "90-day seasonal secular baseline (1.0 arcsec/day)",
+  "ground_truth_epoch_a": {
+    "ra_deg": 195.0,
+    "dec_deg": -25.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-12T00:00:00.000Z",
+    "mjd": 61233.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 195.025921,
+    "dec_deg": -25.008551,
+    "pixel_x": 49.36,
+    "pixel_y": 58.03,
+    "timestamp_utc": "2026-10-10T00:00:00.000Z",
+    "mjd": 61323.0
+  },
+  "ground_truth_delta_ra_arcsec": 84.5723,
+  "ground_truth_delta_dec_arcsec": -30.7818,
+  "ground_truth_angular_displacement_arcsec": 89.9972,
+  "ground_truth_position_angle_deg": 110.01,
+  "ground_truth_dt_days": 90.0,
+  "ground_truth_dt_hours": 2160.0,
+  "ground_truth_motion_rate_arcsec_per_day": 1.0,
+  "ground_truth_motion_rate_arcsec_per_hour": 0.0417,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "MAIN_BELT_ASTEROID_TYPICAL",
+  "scenario_notes": "Standard MBA motion over 4-day baseline (3.0 arcsec/day)",
+  "ground_truth_epoch_a": {
+    "ra_deg": 160.0,
+    "dec_deg": 12.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-03T00:00:00.000Z",
+    "mjd": 61224.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 160.003292,
+    "dec_deg": 12.000863,
+    "pixel_x": 61.13,
+    "pixel_y": 63.5,
+    "timestamp_utc": "2026-07-07T00:00:00.000Z",
+    "mjd": 61228.0
+  },
+  "ground_truth_delta_ra_arcsec": 11.5911,
+  "ground_truth_delta_dec_arcsec": 3.1058,
+  "ground_truth_angular_displacement_arcsec": 12.0,
+  "ground_truth_position_angle_deg": 75.0,
+  "ground_truth_dt_days": 4.0,
+  "ground_truth_dt_hours": 96.0,
+  "ground_truth_motion_rate_arcsec_per_day": 3.0,
+  "ground_truth_motion_rate_arcsec_per_hour": 0.125,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

@@ -1,0 +1,227 @@
+{
+  "audit_metadata": {
+    "project": "SPECTRA-X / F1",
+    "phase": "Phase 4, Task 4.2A",
+    "task": "External Spectroscopic Catalog Availability & Coverage Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "audit_timestamp_utc": "2026-11-07T20:55:00Z",
+    "governance_mode": "STRICT READ-ONLY",
+    "auditor_role": "Independent Scientific Validation Lead & Software Integrity Auditor",
+    "final_decision": "PARTIALLY_FEASIBLE"
+  },
+  "target_cohort_metadata": {
+    "primary_calibration_cohort_p0008": {
+      "sample_size": 3206,
+      "ra_range_deg": [24.86, 34.41],
+      "dec_range_deg": [5.32, 9.99],
+      "galactic_l_deg": [143.31, 157.23],
+      "galactic_b_deg": [-54.31, -48.16],
+      "ecliptic_lat_deg": [-6.16, -2.83],
+      "median_phot_g_mag": 17.82,
+      "mag_g_range": [11.54, 19.50],
+      "native_crossmatch_keys": [
+        "source_id (Gaia DR3 64-bit int)",
+        "tmass_id (2MASS string ID)",
+        "ra (ICRS J2016.0)",
+        "dec (ICRS J2016.0)",
+        "pmra (mas/yr)",
+        "pmdec (mas/yr)",
+        "parallax (mas)",
+        "ra_epoch (propagated 2026.55)",
+        "dec_epoch (propagated 2026.55)"
+      ]
+    },
+    "secondary_blind_evaluation_cohorts": {
+      "pointing_0002": {
+        "field_name": "Deep South Sky Field",
+        "sample_size": 4071,
+        "ra_range_deg": [220.61, 232.30],
+        "dec_range_deg": [-32.17, -28.65],
+        "galactic_b_deg": [19.84, 28.18],
+        "median_phot_g_mag": 18.22,
+        "mag_g_range": [11.55, 19.50]
+      },
+      "pointing_0009": {
+        "field_name": "Moderate North Sky Field",
+        "sample_size": 2284,
+        "ra_range_deg": [7.29, 20.60],
+        "dec_range_deg": [43.30, 49.67],
+        "galactic_b_deg": [-19.42, -13.13],
+        "median_phot_g_mag": 18.01,
+        "mag_g_range": [11.70, 19.50]
+      },
+      "pointing_0010": {
+        "field_name": "North Ecliptic Pole (NEP)",
+        "sample_size": 3145,
+        "ra_range_deg": [268.04, 276.47],
+        "dec_range_deg": [60.94, 72.16],
+        "galactic_b_deg": [26.74, 30.35],
+        "median_phot_g_mag": 17.86,
+        "mag_g_range": [11.50, 19.50]
+      }
+    }
+  },
+  "catalog_evaluations": {
+    "gaia_dr3_xp": {
+      "catalog_name": "ESA Gaia DR3 BP/RP Low-Resolution Spectra (XP)",
+      "release_date": "2022-06-13",
+      "sky_coverage": "All-Sky (~220 million sources with XP spectra)",
+      "wavelength_range_um": [0.33, 1.05],
+      "spectral_resolution": "R ~ 30 to 100",
+      "spherex_overlap": "Band 1 only (0.75-1.05 um; Channels 0-13). Zero coverage for Bands 2-6 (1.1-5.0 um)",
+      "p0008_coverage_pct_estimated": 42.5,
+      "p0008_limiting_factor": "G < 17.65 publication threshold for continuous XP coefficients",
+      "crossmatch_method": "Native 1-to-1 exact key match on source_id (zero positional ambiguity)",
+      "epoch_propagation_required": false,
+      "stellar_parameters_available": [
+        "teff_gspphot",
+        "logg_gspphot",
+        "mh_gspphot",
+        "ag_gspphot",
+        "ebpminrp_gspphot",
+        "ruwe",
+        "astrometric_excess_noise"
+      ],
+      "scientific_suitability_class": [
+        "ASTROMETRIC_IDENTIFICATION",
+        "STELLAR_CLASSIFICATION",
+        "OPTICAL_SPECTROSCOPIC_EVIDENCE"
+      ],
+      "infrared_normality_status": "PROXY_ONLY (Optical normal stars can possess warm dust / IR excess)",
+      "reconstruction_dependency": "Requires gaiaxpy Python package (currently NOT installed in workspace)",
+      "overall_feasibility": "HIGH_PRIORITY_FEASIBLE"
+    },
+    "sdss_optical_boss": {
+      "catalog_name": "Sloan Digital Sky Survey (SDSS DR17 / DR18 BOSS Spectrograph)",
+      "release_date": "DR17 (2021) / DR18 (2023)",
+      "sky_coverage": "North Galactic Cap (|b| > 30 deg) and Stripe 82; zero coverage below Dec -15 deg",
+      "wavelength_range_um": [0.36, 1.04],
+      "spectral_resolution": "R ~ 1500 to 2500",
+      "spherex_overlap": "Band 1 only (0.75-1.04 um). Zero coverage for Bands 2-6",
+      "p0008_coverage_pct_estimated": 8.5,
+      "p0008_limiting_factor": "Sparse ancillary plate coverage in Dec +5 to +10 deg region (outside Stripe 82)",
+      "crossmatch_method": "Astrometric cone search (1.5 arcsec radius) with proper motion propagation from J2000",
+      "epoch_propagation_required": true,
+      "stellar_parameters_available": [
+        "CLASS",
+        "SUBCLASS (spectral type)",
+        "Z (radial velocity)",
+        "Z_ERR",
+        "ZWARNING",
+        "SN_MEDIAN_ALL"
+      ],
+      "scientific_suitability_class": [
+        "STELLAR_CLASSIFICATION",
+        "OPTICAL_SPECTROSCOPIC_EVIDENCE"
+      ],
+      "infrared_normality_status": "PROXY_ONLY",
+      "p0002_coverage_status": "ZERO_COVERAGE (Dec -30 deg is below Apache Point horizon)",
+      "overall_feasibility": "PARTIALLY_FEASIBLE (Sparse coverage)"
+    },
+    "sdss_apogee_2": {
+      "catalog_name": "SDSS-IV APOGEE-2 High-Resolution Infrared Spectrograph",
+      "release_date": "2021-12",
+      "sky_coverage": "Targeted pencil-beam fields in Northern and Southern hemispheres",
+      "wavelength_range_um": [1.51, 1.70],
+      "spectral_resolution": "R ~ 22,500 (High-resolution H-band)",
+      "spherex_overlap": "SPHEREx Band 2/3 transition (1.51-1.70 um; Channels 30-35)",
+      "p0008_coverage_pct_estimated": 1.2,
+      "p0008_limiting_factor": "Sparse pencil-beam plate geometry; red-giant target selection bias",
+      "crossmatch_method": "2MASS ID match or 1.5 arcsec cone search",
+      "epoch_propagation_required": true,
+      "stellar_parameters_available": [
+        "ASPCAP Teff",
+        "logg",
+        "[Fe/H]",
+        "[alpha/M]",
+        "20+ individual chemical abundances"
+      ],
+      "scientific_suitability_class": [
+        "STELLAR_CLASSIFICATION",
+        "NEAR_INFRARED_SPECTROSCOPIC_EVIDENCE"
+      ],
+      "infrared_normality_status": "PROXY_ONLY (Covers H-band only; no 3-5 um coverage)",
+      "overall_feasibility": "LOW_YIELD_FEASIBLE"
+    },
+    "lamost_lrs": {
+      "catalog_name": "LAMOST Data Release 10 (LRS Low-Resolution Spectrograph)",
+      "release_date": "2023",
+      "sky_coverage": "Northern sky observable from Xinglong (-10 deg < Dec < +60 deg)",
+      "wavelength_range_um": [0.37, 0.90],
+      "spectral_resolution": "R ~ 1800",
+      "spherex_overlap": "SPHEREx Band 1 only (0.75-0.90 um; Channels 0-7)",
+      "p0008_coverage_pct_estimated": 14.0,
+      "p0008_limiting_factor": "Dec +5 to +10 deg accessible; moderate stellar survey coverage",
+      "crossmatch_method": "Astrometric cone search (1.5 arcsec radius) with proper motion propagation",
+      "epoch_propagation_required": true,
+      "stellar_parameters_available": [
+        "subclass (spectral type AFGKM)",
+        "LASP Teff",
+        "logg",
+        "[Fe/H]",
+        "rv",
+        "snrg",
+        "snri"
+      ],
+      "scientific_suitability_class": [
+        "STELLAR_CLASSIFICATION",
+        "OPTICAL_SPECTROSCOPIC_EVIDENCE"
+      ],
+      "infrared_normality_status": "PROXY_ONLY (Overlaps only 8 SPHEREx channels; ends at 0.90 um)",
+      "p0002_coverage_status": "ZERO_COVERAGE (Dec -30 deg is below LAMOST horizon)",
+      "overall_feasibility": "PARTIALLY_FEASIBLE"
+    },
+    "allwise_photometric_sidecar": {
+      "catalog_name": "NASA/IPAC ALLWISE All-Sky Source Catalog",
+      "release_date": "2013-11",
+      "sky_coverage": "All-Sky",
+      "wavelength_range_um": [3.4, 4.6, 12.0, 22.0],
+      "spectral_resolution": "Photometric (R ~ 4-6)",
+      "spherex_overlap": "Direct overlap with SPHEREx Band 4 (W1 3.4 um) and Band 6 (W2 4.6 um)",
+      "p0008_coverage_pct_estimated": 97.5,
+      "crossmatch_method": "Astrometric cone search (2.0 arcsec radius)",
+      "epoch_propagation_required": true,
+      "scientific_suitability_class": [
+        "INFRARED_NORMALITY_EVIDENCE"
+      ],
+      "infrared_normality_status": "SUITABLE (Directly flags 3-5 um circumstellar dust, YSOs, and AGN)",
+      "overall_feasibility": "ESSENTIAL_COMPLEMENTARY_SIDECAR"
+    }
+  },
+  "environment_and_access_audit": {
+    "network_sandbox_status": "RESTRICTED (DNS getaddrinfo failed on all external endpoints in standard sandbox mode)",
+    "live_query_execution_status": "UNVERIFIABLE_IN_SANDBOX",
+    "python_astronomy_dependencies": {
+      "astropy": "8.0.2 (INSTALLED)",
+      "numpy": "2.5.4 (INSTALLED)",
+      "scipy": "1.18.1 (INSTALLED)",
+      "pandas": "3.1.1 (INSTALLED)",
+      "gaiaxpy": "NOT_INSTALLED",
+      "astroquery": "NOT_INSTALLED"
+    }
+  },
+  "recommendations_for_task_4_2b": {
+    "primary_catalog_to_test": "Gaia DR3 XP & Astrophysical Parameters",
+    "primary_rationale": "100% of P0008 calibration sources natively possess Gaia DR3 64-bit source_id values in the catalog table, eliminating all astrometric cone search ambiguity and proper motion propagation uncertainty. ~40-45% of P0008 sources are expected to have published continuous/sampled XP spectra, and nearly 100% have Apsis astrophysical parameters (Teff, logg, Av).",
+    "secondary_recommendation": "Integrate an ALLWISE mid-infrared color-excess sidecar (W1 - W2) to provide the only direct physical mid-infrared normality check for circumstellar dust, debris disks, and late-type excesses across SPHEREx Bands 4-6.",
+    "prerequisite_engineering_step": "Install gaiaxpy and astroquery in the python environment, and execute remote queries with user-authorized sandbox bypass or pre-staged offline TAP extracts."
+  },
+  "protected_scientific_asset_integrity": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "actual_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "actual_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "actual_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  }
+}
+

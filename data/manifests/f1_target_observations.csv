@@ -1,0 +1,6 @@
+target_name,search_radius_arcsec,available_observations_count,observation_id,data_release,data_level,detector,band_coverage,obs_timestamp_utc,footprint_status,quality_flags,query_source,observation_status
+Barnard's Star,120.0,0,NONE,QR2 / QR3 Local Files,Level-2,NONE,NONE,NONE,"OUT_OF_FOOTPRINT (Closest: level2_2026W30_1B_0001_1D1, sep=39.73 deg)",N/A,Local 32 Level-2 files + Remote S3 inventory inspection,NOT_FOUND
+Epsilon Indi B,120.0,0,NONE,QR2 / QR3 Local Files,Level-2,NONE,NONE,NONE,"OUT_OF_FOOTPRINT (Closest: deep_level2_2025W17_4B_0006_2D2, sep=21.12 deg)",N/A,Local 32 Level-2 files + Remote S3 inventory inspection,NOT_FOUND
+WISE 0855,120.0,0,NONE,QR2 / QR3 Local Files,Level-2,NONE,NONE,NONE,"OUT_OF_FOOTPRINT (Closest: level2_2025W17_4B_0002_4D2, sep=14.68 deg)",N/A,Local 32 Level-2 files + Remote S3 inventory inspection,NOT_FOUND
+RW Aurigae,120.0,0,NONE,QR2 / QR3 Local Files,Level-2,NONE,NONE,NONE,"OUT_OF_FOOTPRINT (Closest: level2_2025W17_4B_0002_1D2, sep=56.98 deg)",N/A,Local 32 Level-2 files + Remote S3 inventory inspection,NOT_FOUND
+R Draconis,120.0,0,NONE,QR2 / QR3 Local Files,Level-2,NONE,NONE,NONE,"OUT_OF_FOOTPRINT (Closest: level2_2025W17_4B_0001_1D2, sep=60.88 deg)",N/A,Local 32 Level-2 files + Remote S3 inventory inspection,NOT_FOUND

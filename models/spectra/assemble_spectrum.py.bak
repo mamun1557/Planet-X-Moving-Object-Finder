@@ -1,0 +1,222 @@
+"""
+SPECTRA-X: Six-Detector Spectral Assembly Engine
+NASA Space Apps Challenge 2026 — F1 V2.1 Architecture
+
+Assembles multi-epoch and multi-detector monochromatic photometric measurements into
+quality-controlled spectrophotometric SED vectors matching the official SPHEREx 102-channel grid.
+
+Core Scientific Rules:
+1. Matches astronomical sources across detector footprints via astrometric tolerance (<= 2.0 arcsec).
+2. Uses official 102-channel definitions from spectral_channels_*.fits (17 channels x 6 detectors).
+3. Preserves unobserved channels as NaN with valid_channel_mask = False (Never fills missing channels with zero).
+4. Combines multiple measurements within the same spectral channel using inverse-variance weighting.
+5. Tracks complete detector and observation provenance.
+"""
+
+import os
+import glob
+import logging
+from typing import Dict, Any, List, Optional, Tuple
+import numpy as np
+import pandas as pd
+from astropy.io import fits
+from astropy.coordinates import SkyCoord
+import astropy.units as u
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logger = logging.getLogger("SPHERExSpectrumAssembler")
+
+
+class SPHERExSpectrumAssembler:
+    """Assembles monochromatic aperture photometry into 102-channel SED vectors."""
+    
+    def __init__(self,
+                 match_radius_arcsec: float = 2.0,
+                 channel_def_path: Optional[str] = None,
+                 base_dir: str = "."):
+        self.match_radius_arcsec = match_radius_arcsec
+        self.base_dir = base_dir
+        
+        # Load official 102-channel grid
+        if channel_def_path is None:
+            pattern = os.path.join(base_dir, "data", "spherex", "*", "calibration", "*spectral_channels*.fits")
+            files = sorted(glob.glob(pattern))
+            if not files:
+                raise FileNotFoundError(f"No spectral_channels calibration file found matching: {pattern}")
+            channel_def_path = files[-1]
+            
+        self.channel_def_path = channel_def_path
+        self.channels_table = self._load_channel_definitions(channel_def_path)
+        logger.info(f"Loaded {len(self.channels_table)} official SPHEREx channel definitions from {os.path.basename(channel_def_path)}")
+
+    def _load_channel_definitions(self, fpath: str) -> pd.DataFrame:
+        """Parses the 102 spectral channels from the official calibration product."""
+        with fits.open(fpath) as hdul:
+            hdu_names = [h.name for h in hdul]
+            target_hdu = "SPECTRAL_CHANNELS" if "SPECTRAL_CHANNELS" in hdu_names else hdul[1]
+            data = hdul[target_hdu].data
+            
+            df = pd.DataFrame({
+                "channel_idx": np.arange(len(data)),
+                "detector_id": np.array(data["DETECTOR"], dtype=int),
+                "subchan_id": np.array(data["SUBCHAN"], dtype=int),
+                "wavelength": np.array(data["WAVELENGTH"], dtype=float),
+                "wl_min": np.array(data["WL_MIN"], dtype=float),
+                "wl_max": np.array(data["WL_MAX"], dtype=float),
+                "r_res": np.array(data["R"], dtype=float),
+                "bandwidth": np.array(data["BANDWIDTH"], dtype=float)
+            })
+        return df
+
+    def match_channel(self, detector_id: int, wavelength: float) -> int:
+        """Matches an observed central wavelength to the nearest official channel for that detector."""
+        det_channels = self.channels_table[self.channels_table["detector_id"] == detector_id]
+        if det_channels.empty:
+            # Fallback across all channels
+            det_channels = self.channels_table
+            
+        diffs = np.abs(det_channels["wavelength"] - wavelength)
+        best_idx = det_channels.index[np.argmin(diffs)]
+        return int(best_idx)
+
+    def cluster_sources(self, phot_df: pd.DataFrame) -> List[List[int]]:
+        """Groups photometric measurements of the same astronomical source using celestial coordinates."""
+        if phot_df.empty:
+            return []
+            
+        coords = SkyCoord(ra=phot_df["ra"].values * u.deg, dec=phot_df["dec"].values * u.deg)
+        
+        # Astrometric clustering
+        match_rad = self.match_radius_arcsec * u.arcsec
+        n_sources = len(phot_df)
+        visited = np.zeros(n_sources, dtype=bool)
+        clusters = []
+        
+        for i in range(n_sources):
+            if visited[i]:
+                continue
+                
+            # Search within match radius
+            seps = coords[i].separation(coords)
+            group_indices = np.where(seps <= match_rad)[0]
+            
+            # Mark visited
+            visited[group_indices] = True
+            clusters.append(group_indices.tolist())
+            
+        logger.info(f"Clustered {n_sources} photometric detections into {len(clusters)} distinct astronomical sources (Match radius: {self.match_radius_arcsec}\").")
+        return clusters
+
+    def assemble_spectrum_for_cluster(self, phot_df: pd.DataFrame, cluster_indices: List[int]) -> Dict[str, Any]:
+        """Combines all observations of a single source into a 102-channel SED vector."""
+        sub_df = phot_df.iloc[cluster_indices]
+        
+        # Representative celestial coordinates
+        ra_mean = float(sub_df["ra"].mean())
+        dec_mean = float(sub_df["dec"].mean())
+        source_id = sub_df["source_id"].iloc[0]
+        
+        # Provenance tracking
+        detectors_seen = sorted(list(set(sub_df["detector_id"].astype(str))))
+        obs_seen = sorted(list(set(sub_df["observation_id"].astype(str))))
+        files_seen = sorted(list(set(sub_df["source_file"].astype(str))))
+        
+        # Initialize 102-channel vectors
+        n_channels = len(self.channels_table)
+        flux_vector = np.full(n_channels, np.nan, dtype=np.float32)
+        uncert_vector = np.full(n_channels, np.nan, dtype=np.float32)
+        valid_mask = np.zeros(n_channels, dtype=bool)
+        
+        # Group observations by matched spectral channel
+        channel_obs: Dict[int, List[Tuple[float, float]]] = {}
+        for _, row in sub_df.iterrows():
+            ch_idx = self.match_channel(int(row["detector_id"]), float(row["central_wavelength"]))
+            f_val = float(row["flux"])
+            u_val = float(row["flux_uncertainty"])
+            
+            if not np.isnan(f_val) and not np.isnan(u_val) and u_val > 0:
+                channel_obs.setdefault(ch_idx, []).append((f_val, u_val))
+                
+        # Inverse-variance weighted combination for channels with multiple observations
+        for ch_idx, obs_list in channel_obs.items():
+            fluxes = np.array([o[0] for o in obs_list])
+            uncerts = np.array([o[1] for o in obs_list])
+            weights = 1.0 / (uncerts ** 2)
+            
+            # Weighted mean
+            w_sum = np.sum(weights)
+            comb_flux = np.sum(fluxes * weights) / w_sum
+            comb_uncert = 1.0 / np.sqrt(w_sum)
+            
+            flux_vector[ch_idx] = float(comb_flux)
+            uncert_vector[ch_idx] = float(comb_uncert)
+            valid_mask[ch_idx] = True
+            
+        n_valid = int(np.sum(valid_mask))
+        mean_snr = float(np.nanmean(flux_vector[valid_mask] / uncert_vector[valid_mask])) if n_valid > 0 else 0.0
+        
+        quality_summary = f"CHANNELS={n_valid}/{n_channels}; DETECTORS={','.join(detectors_seen)}; MEAN_SNR={mean_snr:.1f}; DITHERS={len(sub_df)}"
+        
+        return {
+            "source_id": source_id,
+            "ra": ra_mean,
+            "dec": dec_mean,
+            "wavelength": list(self.channels_table["wavelength"].values),
+            "bandwidth": list(self.channels_table["bandwidth"].values),
+            "flux": [float(x) if not np.isnan(x) else None for x in flux_vector],
+            "uncertainty": [float(x) if not np.isnan(x) else None for x in uncert_vector],
+            "detector_provenance": ",".join(detectors_seen),
+            "observation_provenance": ",".join(obs_seen),
+            "valid_channel_mask": [bool(b) for b in valid_mask],
+            "valid_channels_count": n_valid,
+            "quality_summary": quality_summary
+        }
+
+    def assemble_catalog(self, phot_df: pd.DataFrame) -> pd.DataFrame:
+        """Assembles all sources in a photometry DataFrame into a catalog of SED vectors."""
+        clusters = self.cluster_sources(phot_df)
+        records = []
+        for c in clusters:
+            rec = self.assemble_spectrum_for_cluster(phot_df, c)
+            # Format record adhering exactly to deliverable schema
+            records.append({
+                "source_id": rec["source_id"],
+                "ra": round(rec["ra"], 6),
+                "dec": round(rec["dec"], 6),
+                "wavelength": str(rec["wavelength"]),
+                "bandwidth": str(rec["bandwidth"]),
+                "flux": str(rec["flux"]),
+                "uncertainty": str(rec["uncertainty"]),
+                "detector_provenance": rec["detector_provenance"],
+                "observation_provenance": rec["observation_provenance"],
+                "valid_channel_mask": str(rec["valid_channel_mask"]),
+                "valid_channels_count": rec["valid_channels_count"],
+                "quality_summary": rec["quality_summary"]
+            })
+            
+        df_out = pd.DataFrame(records)
+        return df_out
+
+
+def run_assembly_pipeline(input_photometry_csv: str, output_spectra_csv: str) -> pd.DataFrame:
+    """Executes end-to-end assembly on extracted photometry."""
+    if not os.path.exists(input_photometry_csv):
+        print(f"Photometry file not found: {input_photometry_csv}")
+        return pd.DataFrame()
+        
+    df_phot = pd.read_csv(input_photometry_csv)
+    print(f"Loaded {len(df_phot)} photometric records from {input_photometry_csv}")
+    
+    assembler = SPHERExSpectrumAssembler()
+    df_spectra = assembler.assemble_catalog(df_phot)
+    
+    os.makedirs(os.path.dirname(output_spectra_csv), exist_ok=True)
+    df_spectra.to_csv(output_spectra_csv, index=False)
+    print(f"Successfully assembled {len(df_spectra)} spectral SED vectors into {output_spectra_csv}")
+    return df_spectra
+
+
+if __name__ == '__main__':
+    in_csv = "data/processed/spectral_features/sample_extracted_photometry.csv"
+    out_csv = "data/processed/spectral_features/sample_assembled_spectra.csv"
+    run_assembly_pipeline(in_csv, out_csv)

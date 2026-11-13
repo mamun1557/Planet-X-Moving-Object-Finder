@@ -1,0 +1,8 @@
+Cohort_ID,Dataset_Role,Pointing_IDs,Raw_Input_Sources,Observed_Coverage_Sources,Eligible_Qualified_Sources,Quality_Exclusions,Historical_Overlap_Exclusions,Final_Scored_Evaluated_Count,Primary_Data_Artifact,Status_and_Notes
+SPEC-COHORT-HIST-TRAIN,Training & Validation,0001; 0004,3665,3665,3665,0,0,3665,data/processed/spectral_features/validation_assembled_spectra.csv,Historical Phase 2 training (2416 P0001) and validation (1249 P0004) assembled SEDs
+SPEC-COHORT-HIST-TEST,Historical Independent Test,0003,1392,1380,1380,12,0,1392,data/processed/spectral_features/independent_test_assembled_spectra.csv,Historical Phase 2 test set (1392 total sources; 1380 observed; 12 edge-truncated)
+SPEC-COHORT-P0008-CALIB,Provisional-Null Calibration,0008,7500,5979,4208,1002,0,3206,data/processed/spectra/spectra_p0008_calibration_scores_v1.csv,Authoritative Phase 3 calibration cohort (D1+D4: 1055; D2+D5: 1304; D3+D6: 847). Reconciles 7858 transcription error
+SPEC-COHORT-P0001-DEV,Development / Pilot Quarantined,0001,7500,3398,2839,718,5,2116,data/processed/spectra/phase3_multpointing_spectra_v1.csv,Quarantined from calibration due to historical training overlap (5 Gaia DR3 overlaps isolated)
+SPEC-COHORT-EVAL-BLIND,Blind Evaluation Cohort,0002; 0009; 0010,22500,17078,15002,5502,0,9500,data/processed/spectra/spectra_evaluation_scores_v1.csv,Authoritative Phase 3 blind evaluation cohort (P0002: 4071; P0009: 2284; P0010: 3145). Reconciles 1392 conflation
+SPEC-COHORT-EVAL-SYNTH,Synthetic Injection Benchmark,0002; 0009; 0010,1500,1500,1500,0,0,6000,data/processed/spectra/spectra_evaluation_synthetic_injections_v1.csv,6000 paired trials from 1500 templates (1500 negative controls + 4500 synthetic anomalies)
+

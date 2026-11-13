@@ -1,0 +1,157 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.5",
+    "title": "External Catalog Acquisition & Evidence Staging — Controlled Pilot Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T23:05:00Z",
+    "audit_type": "CONTROLLED_EXTERNAL_SCIENTIFIC_DATA_ACQUISITION",
+    "governance": "STRICT_PROVENANCE_COHORT_ISOLATION_READ_ONLY_FROZEN_ASSETS",
+    "final_verdict": "BLOCKED_BY_NETWORK"
+  },
+  "environment_audit": {
+    "environment_root": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "interpreter_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation\\Scripts\\python.exe",
+    "python_version": "3.12.10",
+    "include_system_site_packages": false,
+    "isolation_state": "STRICT_ISOLATION_VERIFIED",
+    "installed_core_packages": {
+      "astropy": "8.0.2",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "urllib3": "2.8.0",
+      "torch": "2.15.0+cu132",
+      "torchvision": "0.29.2+cu132",
+      "pytest": "9.0.3",
+      "astroquery": "NOT_INSTALLED",
+      "requests": "NOT_INSTALLED"
+    }
+  },
+  "connectivity_preflight_audit": {
+    "stage": "STAGE_1_CONNECTIVITY_PREFLIGHT",
+    "gaia_dr3_endpoint": {
+      "url": "https://gea.esac.esa.int/tap-server/tap/capabilities",
+      "host": "gea.esac.esa.int",
+      "dns_resolution": "FAILED",
+      "http_status": "UNREACHABLE",
+      "error": "urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>",
+      "verdict": "DNS_BLOCKED"
+    },
+    "irsa_tap_endpoint": {
+      "url": "https://irsa.ipac.caltech.edu/TAP/capabilities",
+      "host": "irsa.ipac.caltech.edu",
+      "dns_resolution": "FAILED",
+      "http_status": "UNREACHABLE",
+      "error": "urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>",
+      "verdict": "DNS_BLOCKED"
+    },
+    "stop_condition_triggered": true,
+    "governance_rule_enforced": "Section 2 & 11: If either endpoint is unreachable, stop acquisition and report failure. No bypass or synthetic fabrication permitted.",
+    "bypass_attempted": false,
+    "synthetic_photometry_fabricated": false
+  },
+  "cohort_firewall_audit": {
+    "p0008_calibration_cohort_total": 3206,
+    "p0008_pilot_target_subset": 25,
+    "blind_cohorts": ["P0002", "P0009", "P0010"],
+    "blind_cohorts_isolation_status": "FIREWALLED_NOT_ACCESSED",
+    "data_leakage_risk": "ZERO"
+  },
+  "staging_infrastructure_audit": {
+    "staging_root": "data/external_catalogs/pilot",
+    "directories_created": [
+      "data/external_catalogs/pilot/gaia_dr3",
+      "data/external_catalogs/pilot/twomass",
+      "data/external_catalogs/pilot/allwise",
+      "data/external_catalogs/pilot/crossmatch",
+      "data/external_catalogs/pilot/provenance"
+    ],
+    "external_records_ingested": 0,
+    "external_files_written": 0
+  },
+  "pilot_evidence_assessment": {
+    "pilot_sources_stratified": 25,
+    "magnitude_range_g": [11.5383415, 19.499584],
+    "local_gaia_id_coverage_pct": 100.0,
+    "local_tmass_id_coverage_pct": 80.0,
+    "remote_fluxes_retrieved_count": 0,
+    "evidence_state_classification": "UNVERIFIABLE",
+    "photospheric_excess_validated": false
+  },
+  "protected_asset_integrity": {
+    "verification_timestamp_utc": "2026-11-07T23:05:00Z",
+    "assets": [
+      {
+        "file_path": "checkpoints/spectra_masked_ae_v2.pt",
+        "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+        "verified_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+        "status": "PRISTINE_MATCH"
+      },
+      {
+        "file_path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+        "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+        "verified_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+        "status": "PRISTINE_MATCH"
+      },
+      {
+        "file_path": "checkpoints/astrovision_spatial_v3.pt",
+        "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+        "verified_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+        "status": "PRISTINE_MATCH"
+      }
+    ]
+  },
+  "regression_testing": {
+    "command": ".\\.venv_validation\\Scripts\\python.exe -m pytest tests/ -q",
+    "environment": ".venv_validation",
+    "total_tests": 166,
+    "passed": 166,
+    "failed": 0,
+    "duration_seconds": 53.14,
+    "regression_detected": false
+  },
+  "deliverables_manifest": [
+    {
+      "name": "PHASE_4_5_EXTERNAL_CATALOG_ACQUISITION.md",
+      "path": "reports/PHASE_4_5_EXTERNAL_CATALOG_ACQUISITION.md",
+      "type": "NARRATIVE_AUDIT_REPORT",
+      "status": "AUTHORED"
+    },
+    {
+      "name": "PHASE_4_5_CATALOG_COVERAGE.csv",
+      "path": "reports/PHASE_4_5_CATALOG_COVERAGE.csv",
+      "type": "COVERAGE_LEDGER",
+      "status": "AUTHORED"
+    },
+    {
+      "name": "PHASE_4_5_MATCH_RELIABILITY.csv",
+      "path": "reports/PHASE_4_5_MATCH_RELIABILITY.csv",
+      "type": "CROSSMATCH_RELIABILITY_LEDGER",
+      "status": "AUTHORED"
+    },
+    {
+      "name": "PHASE_4_5_PHOTOMETRY_QUALITY.csv",
+      "path": "reports/PHASE_4_5_PHOTOMETRY_QUALITY.csv",
+      "type": "PHOTOMETRIC_QUALITY_LEDGER",
+      "status": "AUTHORED"
+    },
+    {
+      "name": "PHASE_4_5_IR_EXCESS_EVIDENCE.csv",
+      "path": "reports/PHASE_4_5_IR_EXCESS_EVIDENCE.csv",
+      "type": "PILOT_EVIDENCE_LEDGER",
+      "status": "AUTHORED"
+    },
+    {
+      "name": "PHASE_4_5_DATA_PROVENANCE.json",
+      "path": "reports/PHASE_4_5_DATA_PROVENANCE.json",
+      "type": "PROVENANCE_RECORD",
+      "status": "AUTHORED"
+    },
+    {
+      "name": "PHASE_4_5_AUDIT.json",
+      "path": "reports/PHASE_4_5_AUDIT.json",
+      "type": "MACHINE_READABLE_AUDIT",
+      "status": "AUTHORED"
+    }
+  ]
+}
+

@@ -1,0 +1,18 @@
+package_name,target_version_spec,system_python_31210_status,system_python_31210_version,conda_dl_status,validation_env_requirement_level,target_scientific_component,compatibility_risks_and_notes
+python,>=3.12.0 <3.13.0,INSTALLED,3.12.10,INSTALLED (3.12.16),Essential,CROSS_CUTTING,Python 3.12 is the authoritative project interpreter baseline
+torch,>=2.5.0 <2.16.0,INSTALLED,2.15.0+cu132,INSTALLED (2.15.0+cu132),Essential,ASTROVISION / SPECTRA / FUSION-X,Requires CUDA 13.2 support for Blackwell RTX 5060 GPU acceleration
+torchvision,>=0.20.0,INSTALLED,0.29.2+cu132,INSTALLED (0.29.2+cu132),Essential,ASTROVISION,Tied to PyTorch release; needed for spatial convolutions and transforms
+numpy,>=2.0.0 <3.0.0,INSTALLED,2.5.4,INSTALLED (2.x),Essential,CROSS_CUTTING,NumPy 2.x ABI requires downstream C-extensions to be compiled with NumPy 2.x support
+scipy,>=1.13.0,INSTALLED,1.18.1,INSTALLED,Essential,SPECTRA / CHRONOS-X,Required for spectral interpolation and synthetic stellar atmosphere grid fitting
+pandas,>=2.2.0,INSTALLED,3.1.1,INSTALLED,Essential,MOTION-X / SPECTRA / FUSION-X,Required for catalog ingestion tabular joining and cross-match ledgers
+astropy,>=6.1.0,INSTALLED,8.0.2,INSTALLED,Essential,ASTROVISION / CHRONOS-X / MOTION-X,Native FITS and VOTable support verified; handles celestial WCS transformations
+reproject,>=0.13.0,NOT_INSTALLED,None,INSTALLED,Essential,ASTROVISION / CHRONOS-X,Required for celestial image reprojection and spatial difference imaging
+scikit-learn,>=1.4.0,NOT_INSTALLED,None,INSTALLED,Recommended,FUSION-X / ASTROVISION,Required for baseline clustering anomaly metrics and classification thresholds
+scikit-image,>=0.22.0,NOT_INSTALLED,None,INSTALLED,Recommended,ASTROVISION,Morphological segmentation connected-component labeling and image filtering
+xgboost,>=2.0.0,NOT_INSTALLED,None,INSTALLED,Optional,FUSION-X,Gradient boosted tree evaluation for multimodal candidate ranking
+astroquery,>=0.4.7,NOT_INSTALLED,None,NOT_INSTALLED,Essential (External Data),SPECTRA / MOTION-X,Required for programmatic TAP/ADQL catalog retrieval from Gaia and IRSA
+gaiaxpy,>=2.2.0,NOT_INSTALLED,None,NOT_INSTALLED,Optional,SPECTRA,Official ESA tool for Hermite continuous XP basis inversion to sampled spectra
+requests,>=2.31.0,NOT_INSTALLED,None,NOT_INSTALLED,Essential (External Data),CROSS_CUTTING,HTTP transport layer for TAP REST submissions and archive capabilities
+urllib3,>=2.0.0,INSTALLED,2.8.0,INSTALLED,Supporting,CROSS_CUTTING,Low-level HTTP transport client currently installed in environment
+pytest,>=8.0.0,INSTALLED,9.2.0,INSTALLED,Supporting,CROSS_CUTTING,Primary automated regression test harness running all 166 verified tests
+

@@ -1,0 +1,12 @@
+layer_index,layer_name,layer_type,kernel_size,stride,padding,cumulative_stride,spatial_dimension_h,spatial_dimension_w,channel_count,theoretical_rf_size,rf_radius_pixels,effective_rf_energy_fraction_pct,mask_propagation_mechanism
+0,Input Cutout,Normalized Tensor,1,1,0,1,128,128,1,1,0.0,1.13,Input Defect Filtering (valid = flags & 615 == 0)
+1,Encoder Block 1 (enc1),MaskAwareConv2d + BatchNorm2d + LeakyReLU,4,2,1,2,64,64,32,4,2.0,2.3,Dynamic coverage ratio scaling: (k*k) / sum(mask)
+2,Encoder Block 2 (enc2),MaskAwareConv2d + BatchNorm2d + LeakyReLU,4,2,1,4,32,32,64,10,5.0,10.42,Dynamic coverage ratio scaling: (k*k) / sum(mask)
+3,Encoder Block 3 (enc3),MaskAwareConv2d + BatchNorm2d + LeakyReLU,4,2,1,8,16,16,128,22,11.0,36.85,Dynamic coverage ratio scaling: (k*k) / sum(mask)
+4,Encoder Block 4 (enc4),MaskAwareConv2d + LeakyReLU,4,2,1,16,8,8,128,46,23.0,77.2,Final spatial bottleneck mask pooling
+5,Latent Bottleneck,Spatial Bottleneck Tensor,1,1,0,16,8,8,128,46,23.0,77.2,"Uncompressed spatial representation (8x8x128 = 8,192 parameters)"
+6,Decoder Block 1 (dec1),ConvTranspose2d + BatchNorm2d + ReLU,4,2,1,8,16,16,128,50,25.0,84.15,Feature reconstruction without mask conditioning
+7,Decoder Block 2 (dec2),ConvTranspose2d + BatchNorm2d + ReLU,4,2,1,4,32,32,64,54,27.0,89.3,Feature reconstruction without mask conditioning
+8,Decoder Block 3 (dec3),ConvTranspose2d + BatchNorm2d + ReLU,4,2,1,2,64,64,32,58,29.0,93.45,Feature reconstruction without mask conditioning
+9,Decoder Block 4 (dec4),ConvTranspose2d (Reconstruction Output),4,2,1,1,128,128,1,62,31.0,95.82,Final spatial reconstruction
+10,Anomaly Map Output,Normalized Residual Operator,1,1,0,1,128,128,1,62,31.0,95.82,Residual masking: anom_map = ((I_norm - Recon)^2 / var) * mask

@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_006",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_RA_WRAPAROUND_MERIDIAN",
+  "target_coordinates": {
+    "ra_deg": 359.985,
+    "dec_deg": 5.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-07T00:00:00.000Z",
+    "mjd": 61228.0,
+    "crval1_deg": 359.985,
+    "crval2_deg": 5.0,
+    "wcs_valid": true,
+    "sha256": "B677494F6713755294F8F4591C8792719CFBC9DED091E7F4E8287E8525610FCC"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-10T00:00:00.000Z",
+    "mjd": 61231.0,
+    "crval1_deg": 359.985,
+    "crval2_deg": 5.0,
+    "wcs_valid": true,
+    "sha256": "32FF091BCA030F610EE2D63E4C71E5DAAFBC5D17B08E8E3908805D137D239105"
+  },
+  "time_separation_minutes": 4320.0,
+  "time_separation_days": 3.0,
+  "synthetic_displacement_arcsec": 108.0,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "RA_WRAPAROUND_MERIDIAN",
+    "scenario_notes": "Cross-meridian RA wraparound from 359.985 deg to ~0.015 deg",
+    "ground_truth_epoch_a": {
+      "ra_deg": 359.985,
+      "dec_deg": 5.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-07T00:00:00.000Z",
+      "mjd": 61228.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 0.015115,
+      "dec_deg": 5.0,
+      "pixel_x": 45.58,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-10T00:00:00.000Z",
+      "mjd": 61231.0
+    },
+    "ground_truth_delta_ra_arcsec": 108.0,
+    "ground_truth_delta_dec_arcsec": 0.0,
+    "ground_truth_angular_displacement_arcsec": 108.0,
+    "ground_truth_position_angle_deg": 90.0,
+    "ground_truth_dt_days": 3.0,
+    "ground_truth_dt_hours": 72.0,
+    "ground_truth_motion_rate_arcsec_per_day": 36.0,
+    "ground_truth_motion_rate_arcsec_per_hour": 1.5,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of RA_WRAPAROUND_MERIDIAN displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

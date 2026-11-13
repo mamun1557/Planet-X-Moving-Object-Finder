@@ -1,0 +1,6 @@
+comparison_pair,sample_size_n,baseline_v2_metric,candidate_v3_metric,absolute_difference,relative_gain_pct,statistical_test_type,test_statistic,p_value,statistically_significant,scientific_conclusion
+ASTROVISION V2 vs ASTROVISION V3 (Point Recovery),500,0.188,0.348,0.16,85.1,McNemar Paired Chi-Square Test,37.84,7.53e-10,True,Definitive statistically significant improvement in point-source anomaly detection.
+ASTROVISION V2 vs ASTROVISION V3 (Detector 4 AUROC),166,0.4776,0.7261,0.2485,52.0,Mann-Whitney U Test,5064.0,4.94e-07,True,Definitive elimination of D4 fatal pixel convolutional bleed.
+Pointing 0010 (NEP) V2 vs V3 AUROC,328,0.6143,0.8572,0.2429,39.5,Mann-Whitney U Test,23412.0,4.72e-29,True,Definitive resolution of North Ecliptic Pole zodiacal domain shift via RobustLocalNormalizer.
+RobustLocalNormalizer vs GradientAware (EVAL_CONTROL FP),500,0.136,0.136,0.0,0.0,Exact McNemar Contingency Test,0.0,1.0,False,"Planar gradient subtraction produces zero reduction in false positives because false alarms are compact stars, not gradients."
+D2 Threshold (tau=2536.3 vs P0008 tau=331.5) Point Recovery,84,0.0833,0.4405,0.3572,428.8,McNemar Paired Chi-Square Test,30.0,4.32e-08,True,"Significant recovery restoration on D2, but trade-off increases unmasked field star FPR to 22.6%."

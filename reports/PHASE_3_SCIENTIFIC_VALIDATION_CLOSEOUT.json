@@ -1,0 +1,194 @@
+{
+  "audit_metadata": {
+    "project": "SPECTRA-X / F1",
+    "phase": "Phase 3 Closeout",
+    "task": "Scientific Validation Closeout & Evidence-Based Readiness Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "audit_date": "2026-11-07T19:35:00+06:00",
+    "governance_mode": "STRICT READ-ONLY",
+    "final_verdict": "SCIENTIFIC VALIDATION CLOSEOUT COMPLETE WITH LIMITATIONS"
+  },
+  "protected_asset_integrity": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "status": "VERIFIED_INTACT"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "status": "VERIFIED_INTACT"
+    },
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "status": "VERIFIED_INTACT"
+    }
+  },
+  "test_suite_status": {
+    "total_tests": 166,
+    "passed": 166,
+    "failed": 0,
+    "execution_time_seconds": 48.32,
+    "status": "ALL_TESTS_PASSING"
+  },
+  "component_evaluations": {
+    "ASTROVISION": {
+      "role": "Spatial Image Anomaly Detection",
+      "certification_status": "PARTIALLY VALIDATED",
+      "readiness_scores": {
+        "scientific_evidence": 72,
+        "engineering_implementation": 90,
+        "safety_governance": 95,
+        "integration": 90,
+        "demo_readiness": 85,
+        "overall": 86.4
+      },
+      "key_metrics": {
+        "point_auroc": 0.8040,
+        "point_recovery_rate": 0.3480,
+        "point_precision": 0.7909,
+        "extended_auroc": 0.7064,
+        "extended_recovery_rate": 0.1740,
+        "empirical_fpr": 0.0900,
+        "target_fpr": 0.0500,
+        "detector_1_fpr": [0.226, 0.250],
+        "detector_2_recovery": 0.0833
+      },
+      "qualification_summary": "Certified strictly for assisted point-source anomaly triage in interactive viewer. Unattended discovery rejected due to 9.0% empirical FPR and severe sensitivity drop on extended sources (17.4%). Detector 1/2 noise-floor asymmetry documented."
+    },
+    "SPECTRA": {
+      "role": "102-Channel Infrared Spectral Anomaly Detection",
+      "certification_status": "CONDITIONALLY VALIDATED",
+      "readiness_scores": {
+        "scientific_evidence": 88,
+        "engineering_implementation": 95,
+        "safety_governance": 98,
+        "integration": 95,
+        "demo_readiness": 92,
+        "overall": 93.6
+      },
+      "key_metrics": {
+        "calibration_cohort_size": 7858,
+        "blind_evaluation_cohort_size": 1392,
+        "blind_eval_fpr": 0.0488,
+        "target_fpr": 0.0500,
+        "relative_gain_over_raw_flux": 0.420,
+        "median_null_error": 0.00035,
+        "mad_null_error": 0.00018
+      },
+      "qualification_summary": "Qualified for provisional-null anomaly scoring and interactive SED inspection. 102-band masked AE v2 rigorously controlled false positive rate to 4.88% on blind test set. Validated for unblended point sources; crowded field photometry unvalidated."
+    },
+    "CHRONOS-X": {
+      "role": "Multi-Epoch Temporal Anomaly Detection",
+      "certification_status": "NOT SCIENTIFICALLY VALIDATED (Secular Transients) / PARTIALLY VALIDATED (Intra-Visit Dither CV Engine)",
+      "readiness_scores": {
+        "scientific_evidence": 52,
+        "engineering_implementation": 90,
+        "safety_governance": 98,
+        "integration": 92,
+        "demo_readiness": 80,
+        "overall": 82.4
+      },
+      "key_metrics": {
+        "local_science_fits_count": 171,
+        "local_candidate_pairs_count": 599,
+        "multi_epoch_pairs_available": 0,
+        "min_observation_gap_minutes": 2.15,
+        "max_observation_gap_minutes": 6.47,
+        "temporal_eligibility_enforced": true,
+        "fail_closed_gate_pass_rate": 1.000
+      },
+      "qualification_summary": "Multi-epoch secular transient discovery capability is completely unvalidated on local data due to zero multi-epoch repeat observations (all 599 local pairs are 2.15-6.47 min intra-visit dithers). Computer-vision difference engine (WCS alignment, variance propagation, dipole vetoing) is verified. Strict fail-closed temporal gate blocks false transient promotions."
+    },
+    "MOTION-X": {
+      "role": "Astrometric Cross-Matching and Moving-Object Detection",
+      "certification_status": "PARTIALLY VALIDATED (Gaia DR3 Stellar Cross-Matching) / NOT VALIDATED (Moving-Object Tracklets & Asteroids)",
+      "readiness_scores": {
+        "scientific_evidence": 42,
+        "engineering_implementation": 60,
+        "safety_governance": 90,
+        "integration": 80,
+        "demo_readiness": 70,
+        "overall": 68.4
+      },
+      "key_metrics": {
+        "gaia_cone_search_radius_arcsec": 3.0,
+        "astrometric_match_precision_arcsec": 0.08,
+        "ruwe_threshold_filtering": true,
+        "minor_planet_catalog_query_status": "UNVERIFIED_STUB",
+        "tracklet_linking_status": "NOT_IMPLEMENTED"
+      },
+      "qualification_summary": "Gaia DR3 astrometric cross-matching and RUWE stellar vetting are functional and verified. Moving-object tracklet construction and automated asteroid discovery are completely unimplemented stubs. Must not claim minor planet discovery."
+    },
+    "FUSION-X": {
+      "role": "Multimodal Evidence Fusion and Candidate Ranking",
+      "certification_status": "PARTIALLY VALIDATED",
+      "readiness_scores": {
+        "scientific_evidence": 65,
+        "engineering_implementation": 92,
+        "safety_governance": 98,
+        "integration": 95,
+        "demo_readiness": 88,
+        "overall": 87.6
+      },
+      "key_metrics": {
+        "modality_weights": {
+          "spectra": 0.35,
+          "astrovision": 0.30,
+          "chronos": 0.25,
+          "motion": 0.10
+        },
+        "missing_modality_penalty": 0.05,
+        "fail_closed_temporal_gate": "STRICTLY_ENFORCED",
+        "legacy_heuristic_removed": true
+      },
+      "qualification_summary": "Heuristic multimodal priority ranker validated across 166 automated test fixtures. Provides deterministic anomaly sorting and graceful degradation under missing modalities. Not a calibrated Bayesian posterior probability estimator. Task 1.3M eliminated all legacy bypasses to ensure fail-closed transient gating."
+    }
+  },
+  "cohort_censuses": {
+    "astrovision_evaluation_cohort": {
+      "pointings": ["0002", "0009", "0010"],
+      "partitions": [3, 4, 5],
+      "total_trials": 1500,
+      "point_trials": 500,
+      "extended_trials": 500,
+      "null_trials": 500
+    },
+    "spectra_cohorts": {
+      "calibration": {
+        "pointing": "0008",
+        "clean_sources": 7858,
+        "channels": 102
+      },
+      "blind_evaluation": {
+        "pointings": ["0002", "0009", "0010"],
+        "clean_sources": 1392,
+        "channels": 102
+      }
+    },
+    "chronos_local_inventory": {
+      "total_l2_fits": 171,
+      "candidate_pairs": 599,
+      "temporal_baselines_days": [0.00149, 0.00449],
+      "secular_revisit_pairs": 0,
+      "status": "TEMPORAL_DATA_UNAVAILABLE"
+    }
+  },
+  "demo_boundary_summary": {
+    "permitted_modes": [
+      "AI-Assisted Spatial Anomaly Inspection (Point Sources)",
+      "102-Band Infrared SED Reconstruction Outlier Scoring",
+      "Sub-Pixel WCS Dither Alignment & Dipole Artifact Vetting",
+      "Gaia DR3 Astrometric Cross-Matching & RUWE Vetting",
+      "Multimodal Co-Pilot Triage Ranking",
+      "Honest Fallback Notification (TEMPORAL_DATA_UNAVAILABLE)"
+    ],
+    "strictly_prohibited_modes": [
+      "Automated Supernova / Secular Transient Discovery",
+      "Automated Minor Planet / Asteroid Tracklet Discovery",
+      "Presenting Heuristic Priority Scores as Calibrated Physical Probabilities",
+      "Automated Extended Morphology Discovery (Nebulae/Diffuse)",
+      "Unattended High-Stakes Discovery Pipelines Without Human Verification"
+    ]
+  },
+  "closeout_verdict_rationale": "The scientific validation closeout is complete across all five components with rigorous evidence bases, cohort separation, and frozen checkpoints. However, because local multi-epoch temporal data is physically absent (CHRONOS-X secular validation impossible on local data), moving-object tracklet algorithms are unimplemented (MOTION-X asteroid discovery stubbed), ASTROVISION exhibits elevated D1 false positives and diffuse sensitivity drop, and FUSION-X is a heuristic ranking co-pilot rather than a Bayesian probability model, full unconditional certification is denied. The prototype is certified as 'SCIENTIFIC VALIDATION CLOSEOUT COMPLETE WITH LIMITATIONS' for assisted human-in-the-loop triage in the NASA Space Apps Challenge demo."
+}
+

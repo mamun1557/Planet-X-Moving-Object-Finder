@@ -1,0 +1,403 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA-X_PHASE3_TASK_1.1S",
+    "audit_type": "INDEPENDENT_SCIENTIFIC_RESULTS_AUDIT",
+    "timestamp_utc": "2026-11-06T19:00:00Z",
+    "auditor_roles": [
+      "Independent Principal Scientific Auditor",
+      "Astronomical ML Benchmark Statistician",
+      "Detection-Performance Reviewer",
+      "Calibration and Statistical Integrity Auditor"
+    ],
+    "audit_mode": "STRICTLY_READ_ONLY",
+    "audit_verdict": "AUDIT PASS \u2014 RESULTS INDEPENDENTLY REPRODUCED; SCIENTIFIC PERFORMANCE INSUFFICIENT",
+    "astrovision_certification_status": "FAIL \u2014 NOT CERTIFIED",
+    "campaign_status": "COMPLETED_RESTRICTED_PILOT_FROZEN"
+  },
+  "parent_records": {
+    "authorization_review": "reports/ASTROVISION_TASK_1_1Q_AUTHORIZATION_REVIEW.md",
+    "authorization_manifest": "reports/manifests/astrovision_task_1_1Q_authorization_review.json",
+    "execution_report": "reports/ASTROVISION_TASK_1_1R_CAMPAIGN_EXECUTION_REPORT.md",
+    "execution_manifest": "reports/manifests/astrovision_task_1_1R_execution_manifest.json",
+    "execution_manifest_sha256": "7e8a8f353e7f757911fc6bc38a09003b687d173c3df9270872ea8fb38d8a90ea"
+  },
+  "frozen_checkpoint_verification": {
+    "checkpoint_path": "checkpoints/astrovision_spatial_v2.pt",
+    "expected_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+    "actual_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+    "verified_match": true
+  },
+  "campaign_dataset_integrity": {
+    "approved_pointings": [
+      "0001",
+      "0002",
+      "0008",
+      "0009",
+      "0010"
+    ],
+    "calibration_pointings": [
+      "0001",
+      "0008"
+    ],
+    "evaluation_pointings": [
+      "0002",
+      "0009",
+      "0010"
+    ],
+    "spatial_isolation_verified": true,
+    "total_trials_planned": 2500,
+    "total_trials_executed": 2500,
+    "unique_trial_ids": 2500,
+    "duplicate_trials": 0,
+    "missing_trials": 0,
+    "nan_values_in_critical_columns": {
+      "model_target_peak_chi2": 0,
+      "model_global_peak_chi2": 0,
+      "differential_residual_flux": 0,
+      "is_detected": 0,
+      "applied_threshold_tau": 0
+    },
+    "partition_counts": {
+      "CALIBRATION_CONTROL": 500,
+      "CALIBRATION_INJECTION": 500,
+      "EVALUATION_CONTROL": 500,
+      "EVALUATION_POINT_SOURCE_INJECTION": 500,
+      "EVALUATION_EXTENDED_SOURCE_INJECTION": 500
+    }
+  },
+  "calibration_audit": {
+    "alpha_target": 0.05,
+    "empirical_calibration_fpr_chi2": 0.06,
+    "empirical_calibration_fpr_astrometric": 0.056,
+    "reproduced_thresholds": {
+      "1": 399.0363,
+      "2": 2120.0993,
+      "3": 614.3817,
+      "4": 1007.3037,
+      "5": 358.4182,
+      "6": 183.7052
+    },
+    "threshold_discrepancy_count": 0,
+    "evaluation_fpr_astrometric": 0.086,
+    "evaluation_fpr_ci_95": [
+      0.0645,
+      0.1138
+    ],
+    "evaluation_fpr_pure_chi2": 0.09,
+    "binomial_test_pvalue": 0.0006392094744212642,
+    "calibration_transfer_verdict": "FAILURE \u2014 STATISTICALLY SIGNIFICANT FPR INFLATION (p = 6.39e-4)"
+  },
+  "reproduced_evaluation_metrics": {
+    "point_source": {
+      "auroc": 0.6861,
+      "bootstrap_range": [
+        0.6143,
+        0.7388
+      ],
+      "auprc": 0.608,
+      "recovery": 0.188,
+      "recovery_ci": [
+        0.1562,
+        0.2246
+      ],
+      "precision": 0.6861,
+      "tp": 94,
+      "fp": 43,
+      "tn": 457,
+      "fn": 406
+    },
+    "extended_source": {
+      "auroc": 0.5704,
+      "bootstrap_range": [
+        0.4599,
+        0.6358
+      ],
+      "auprc": 0.5391,
+      "recovery": 0.152,
+      "recovery_ci": [
+        0.1232,
+        0.1861
+      ],
+      "precision": 0.6387,
+      "tp": 76,
+      "fp": 43,
+      "tn": 457,
+      "fn": 424
+    },
+    "detector_metrics": {
+      "D1": {
+        "n_ctrl": 84,
+        "n_pt": 84,
+        "n_ext": 84,
+        "fpr": 0.1905,
+        "fpr_ci": [
+          0.1208,
+          0.2872
+        ],
+        "point_auroc": 0.7188,
+        "point_recovery": 0.4405,
+        "point_recovery_ci": [
+          0.3392,
+          0.5469
+        ],
+        "extended_auroc": 0.6087,
+        "extended_recovery": 0.2738,
+        "extended_recovery_ci": [
+          0.1899,
+          0.3775
+        ]
+      },
+      "D2": {
+        "n_ctrl": 84,
+        "n_pt": 84,
+        "n_ext": 84,
+        "fpr": 0.0595,
+        "fpr_ci": [
+          0.0257,
+          0.1319
+        ],
+        "point_auroc": 0.6835,
+        "point_recovery": 0.0595,
+        "point_recovery_ci": [
+          0.0257,
+          0.1319
+        ],
+        "extended_auroc": 0.4957,
+        "extended_recovery": 0.0357,
+        "extended_recovery_ci": [
+          0.0122,
+          0.0998
+        ]
+      },
+      "D3": {
+        "n_ctrl": 83,
+        "n_pt": 83,
+        "n_ext": 83,
+        "fpr": 0.0602,
+        "fpr_ci": [
+          0.026,
+          0.1334
+        ],
+        "point_auroc": 0.7216,
+        "point_recovery": 0.1687,
+        "point_recovery_ci": [
+          0.1032,
+          0.2634
+        ],
+        "extended_auroc": 0.5992,
+        "extended_recovery": 0.2048,
+        "extended_recovery_ci": [
+          0.132,
+          0.3038
+        ]
+      },
+      "D4": {
+        "n_ctrl": 83,
+        "n_pt": 83,
+        "n_ext": 83,
+        "fpr": 0.1084,
+        "fpr_ci": [
+          0.0581,
+          0.1934
+        ],
+        "point_auroc": 0.4776,
+        "point_recovery": 0.0482,
+        "point_recovery_ci": [
+          0.0189,
+          0.1175
+        ],
+        "extended_auroc": 0.3041,
+        "extended_recovery": 0.0602,
+        "extended_recovery_ci": [
+          0.026,
+          0.1334
+        ]
+      },
+      "D5": {
+        "n_ctrl": 83,
+        "n_pt": 83,
+        "n_ext": 83,
+        "fpr": 0.0361,
+        "fpr_ci": [
+          0.0124,
+          0.101
+        ],
+        "point_auroc": 0.7596,
+        "point_recovery": 0.0602,
+        "point_recovery_ci": [
+          0.026,
+          0.1334
+        ],
+        "extended_auroc": 0.6847,
+        "extended_recovery": 0.0964,
+        "extended_recovery_ci": [
+          0.0497,
+          0.1788
+        ]
+      },
+      "D6": {
+        "n_ctrl": 83,
+        "n_pt": 83,
+        "n_ext": 83,
+        "fpr": 0.0602,
+        "fpr_ci": [
+          0.026,
+          0.1334
+        ],
+        "point_auroc": 0.8763,
+        "point_recovery": 0.3494,
+        "point_recovery_ci": [
+          0.2556,
+          0.4566
+        ],
+        "extended_auroc": 0.775,
+        "extended_recovery": 0.241,
+        "extended_recovery_ci": [
+          0.1617,
+          0.3431
+        ]
+      }
+    },
+    "pointing_metrics": {
+      "0002": {
+        "n_ctrl": 168,
+        "n_pt": 168,
+        "n_ext": 168,
+        "fpr": 0.0893,
+        "fpr_ci": [
+          0.0549,
+          0.1421
+        ],
+        "point_auroc": 0.7388,
+        "point_recovery": 0.2321,
+        "point_recovery_ci": [
+          0.1747,
+          0.3015
+        ],
+        "extended_auroc": 0.6358,
+        "extended_recovery": 0.1905,
+        "extended_recovery_ci": [
+          0.1383,
+          0.2565
+        ]
+      },
+      "0009": {
+        "n_ctrl": 168,
+        "n_pt": 168,
+        "n_ext": 168,
+        "fpr": 0.119,
+        "fpr_ci": [
+          0.0784,
+          0.1767
+        ],
+        "point_auroc": 0.7025,
+        "point_recovery": 0.1845,
+        "point_recovery_ci": [
+          0.1332,
+          0.25
+        ],
+        "extended_auroc": 0.6092,
+        "extended_recovery": 0.1726,
+        "extended_recovery_ci": [
+          0.123,
+          0.2369
+        ]
+      },
+      "0010": {
+        "n_ctrl": 164,
+        "n_pt": 164,
+        "n_ext": 164,
+        "fpr": 0.0488,
+        "fpr_ci": [
+          0.0249,
+          0.0933
+        ],
+        "point_auroc": 0.6143,
+        "point_recovery": 0.1463,
+        "point_recovery_ci": [
+          0.1004,
+          0.2085
+        ],
+        "extended_auroc": 0.4599,
+        "extended_recovery": 0.0915,
+        "extended_recovery_ci": [
+          0.0562,
+          0.1454
+        ]
+      }
+    }
+  },
+  "statistical_uncertainty_audit": {
+    "evaluation_pointing_clusters": 3,
+    "cluster_bootstrap_multisets_count": 10,
+    "multiset_aurocs_point": [
+      0.7388,
+      0.7257,
+      0.7001,
+      0.7136,
+      0.6861,
+      0.6586,
+      0.7025,
+      0.673,
+      0.6436,
+      0.6143
+    ],
+    "multiset_aurocs_extended": [
+      0.6358,
+      0.6258,
+      0.5783,
+      0.6169,
+      0.5704,
+      0.5197,
+      0.6092,
+      0.5636,
+      0.5139,
+      0.4599
+    ],
+    "bootstrap_range_point": [
+      0.6143,
+      0.7388
+    ],
+    "bootstrap_range_extended": [
+      0.4599,
+      0.6358
+    ],
+    "asymptotic_reliability_assessment": "UNRELIABLE_FOR_ASYMPTOTIC_INFERENCE (G=3 clusters yields only 10 discrete multisets; trial-level Wilson score intervals provide rigorous within-cluster uncertainty, but survey-level population inference requires G >= 30 pointings)"
+  },
+  "scientific_claim_assessments": {
+    "claim_1_reliable_point_detection": {
+      "claim": "ASTROVISION reliably detects injected point sources",
+      "verdict": "NOT SUPPORTED",
+      "evidence": "Recovery fraction is only 18.80% (94/500). Even at high SNR (25), recovery is 46.27% (<50%). D4 AUROC is 0.4776."
+    },
+    "claim_2_reliable_extended_detection": {
+      "claim": "ASTROVISION reliably detects extended sources",
+      "verdict": "NOT SUPPORTED",
+      "evidence": "Recovery fraction is only 15.20% (76/500). AUROC is 0.5704 (barely above chance). In Pointing 10, AUROC collapses to 0.4599."
+    },
+    "claim_3_detector_calibration_transfers": {
+      "claim": "Detector-specific calibration transfers to unseen pointings",
+      "verdict": "NOT SUPPORTED",
+      "evidence": "Evaluation FPR significantly inflates to 8.60% (p = 6.39e-4, 95% CI [0.0645, 0.1138]) vs 5.0% target. In D1, FPR reaches 19.05%."
+    },
+    "claim_4_robust_across_detectors": {
+      "claim": "Model is robust across all six detectors",
+      "verdict": "NOT SUPPORTED",
+      "evidence": "Massive inter-detector disparity: D6 has AUROC=0.8763, while D4 completely collapses with AUROC=0.4776 and D2 has 5.95% recovery."
+    },
+    "claim_5_generalizes_to_low_background": {
+      "claim": "Model generalizes to low-background fields",
+      "verdict": "NOT SUPPORTED",
+      "evidence": "Pointing 0010 (NEP low-zodiacal field) exhibits severe degradation: Extended AUROC=0.4599, Point AUROC=0.6143, control scores exceed injection scores."
+    },
+    "claim_6_ready_for_citizen_science": {
+      "claim": "Model is ready for citizen-science candidate discovery",
+      "verdict": "NOT SUPPORTED",
+      "evidence": "8.6% FPR produces prohibitive false alarm volume; >81% of true point sources and >84% of extended sources are missed."
+    }
+  },
+  "protected_assets_verification": {
+    "verified_count": 16,
+    "mutations_detected": false
+  }
+}

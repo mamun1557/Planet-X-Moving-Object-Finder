@@ -1,0 +1,124 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA-X_PHASE3_TASK_1.1R",
+    "execution_type": "AUTHORIZED_RESTRICTED_FIVE_POINTING_CONTROLLED_PILOT_CAMPAIGN",
+    "timestamp_utc": "2026-11-06T18:25:40Z",
+    "status": "CAMPAIGN_EXECUTION_COMPLETED",
+    "astrovision_scientific_status": "FAIL — NOT CERTIFIED",
+    "governance_authorization": "Task 1.1Q — AUTHORIZED"
+  },
+  "pre_execution_gate": {
+    "authorization_manifest_verified": true,
+    "historical_assets_verified": 16,
+    "fits_products_verified": 120,
+    "checkpoint_hash_verified": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+    "manifest_trial_count_verified": 2500,
+    "spatial_disjointness_verified": true
+  },
+  "trial_reconciliation": {
+    "total_planned_trials": 2500,
+    "total_executed_trials": 2500,
+    "total_failed_trials": 0,
+    "total_skipped_trials": 0,
+    "reconciliation_status": "100%_COMPLETE_ZERO_OMISSIONS",
+    "by_partition": {
+      "CALIBRATION_CONTROL": {
+        "planned": 500,
+        "executed": 500,
+        "failed": 0,
+        "pointings": ["0001", "0008"]
+      },
+      "CALIBRATION_INJECTION": {
+        "planned": 500,
+        "executed": 500,
+        "failed": 0,
+        "pointings": ["0001", "0008"]
+      },
+      "EVALUATION_CONTROL": {
+        "planned": 500,
+        "executed": 500,
+        "failed": 0,
+        "pointings": ["0002", "0009", "0010"]
+      },
+      "EVALUATION_POINT_SOURCE_INJECTION": {
+        "planned": 500,
+        "executed": 500,
+        "failed": 0,
+        "pointings": ["0002", "0009", "0010"]
+      },
+      "EVALUATION_EXTENDED_SOURCE_INJECTION": {
+        "planned": 500,
+        "executed": 500,
+        "failed": 0,
+        "pointings": ["0002", "0009", "0010"]
+      }
+    }
+  },
+  "calibration_parameters": {
+    "artifact_path": "data/processed/pilot_results/calibration_parameters.json",
+    "sha256": "4a5bbe8a04dffb609b507eba45f0d34a1ebb235e18d2f586bbad4906f09a46ac",
+    "historical_threshold_169_10_applied": false,
+    "calibrated_detector_operating_thresholds_alpha_0_05": {
+      "D1": 399.0363,
+      "D2": 2120.0993,
+      "D3": 614.3817,
+      "D4": 1007.3037,
+      "D5": 358.4182,
+      "D6": 183.7052
+    }
+  },
+  "scientific_evaluation_metrics": {
+    "artifact_path": "data/processed/pilot_results/pilot_evaluation_metrics.json",
+    "sha256": "688b98d123b3cd5bc942a1bda050ee88ccbf03132c038ed09605cd1a22e14393",
+    "overall": {
+      "evaluation_fpr": 0.086,
+      "point_source_auroc": 0.6861,
+      "point_source_auroc_bootstrap_range_10_multisets": [0.6143, 0.7388],
+      "point_source_auprc": 0.608,
+      "point_source_recovery_fraction": 0.188,
+      "extended_source_auroc": 0.5704,
+      "extended_source_auroc_bootstrap_range_10_multisets": [0.4599, 0.6358],
+      "extended_source_auprc": 0.5391,
+      "extended_source_recovery_fraction": 0.152
+    },
+    "detector_breakdown": {
+      "D1": {"point_auroc": 0.7188, "ext_auroc": 0.6087, "fpr": 0.1905, "status": "MODERATE_RECOVERY"},
+      "D2": {"point_auroc": 0.6835, "ext_auroc": 0.4957, "fpr": 0.0595, "status": "LOW_RECOVERY"},
+      "D3": {"point_auroc": 0.7216, "ext_auroc": 0.5992, "fpr": 0.0602, "status": "MODERATE_RECOVERY"},
+      "D4": {"point_auroc": 0.4776, "ext_auroc": 0.3041, "fpr": 0.1084, "status": "CATASTROPHIC_FAILURE"},
+      "D5": {"point_auroc": 0.7596, "ext_auroc": 0.6847, "fpr": 0.0361, "status": "HIGH_THRESHOLD_LOW_RECOVERY"},
+      "D6": {"point_auroc": 0.8763, "ext_auroc": 0.7750, "fpr": 0.0602, "status": "BEST_PERFORMING_DETECTOR"}
+    },
+    "pointing_breakdown": {
+      "0002": {"point_auroc": 0.7388, "recovery": 0.2321, "fpr": 0.0893},
+      "0009": {"point_auroc": 0.7025, "recovery": 0.1845, "fpr": 0.1190},
+      "0010": {"point_auroc": 0.6143, "recovery": 0.1463, "fpr": 0.0488}
+    }
+  },
+  "execution_records": {
+    "artifact_path": "data/processed/pilot_results/astrovision_pilot_trial_results.csv",
+    "sha256": "4afddbb31d9f1b579d711712da431bf1c19701d7a63d25e9a06995a71c9d523f",
+    "total_rows": 2500,
+    "unique_trial_ids": 2500,
+    "nan_flux_count": 0,
+    "nan_chi2_count": 0
+  },
+  "runtime_environment": {
+    "platform": "win32",
+    "python": "3.12.10",
+    "torch": "2.15.0+cu132",
+    "cuda_available": true,
+    "device_name": "NVIDIA GeForce RTX 5060",
+    "total_runtime_seconds": 61.95
+  },
+  "post_execution_verification": {
+    "protected_assets_verified": 16,
+    "protected_assets_mutation": false,
+    "checkpoint_mutation": false,
+    "p0003_catalogue_mutation": false,
+    "repository_tests_total": 74,
+    "repository_tests_passed": 74,
+    "repository_tests_failed": 0
+  }
+}
+

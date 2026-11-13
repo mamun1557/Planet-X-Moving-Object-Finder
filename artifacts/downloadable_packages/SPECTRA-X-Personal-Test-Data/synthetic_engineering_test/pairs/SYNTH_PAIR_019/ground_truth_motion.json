@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "DIAGONAL_SOUTHEAST",
+  "scenario_notes": "Symmetric diagonal displacement Southeast (PA = 135 deg)",
+  "ground_truth_epoch_a": {
+    "ra_deg": 115.0,
+    "dec_deg": 15.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-20T00:00:00.000Z",
+    "mjd": 61241.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 115.007117,
+    "dec_deg": 14.993125,
+    "pixel_x": 59.01,
+    "pixel_y": 59.01,
+    "timestamp_utc": "2026-07-25T00:00:00.000Z",
+    "mjd": 61246.0
+  },
+  "ground_truth_delta_ra_arcsec": 24.7487,
+  "ground_truth_delta_dec_arcsec": -24.7487,
+  "ground_truth_angular_displacement_arcsec": 35.0003,
+  "ground_truth_position_angle_deg": 135.0,
+  "ground_truth_dt_days": 5.0,
+  "ground_truth_dt_hours": 120.0,
+  "ground_truth_motion_rate_arcsec_per_day": 7.0001,
+  "ground_truth_motion_rate_arcsec_per_hour": 0.2917,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

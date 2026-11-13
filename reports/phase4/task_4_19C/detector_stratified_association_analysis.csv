@@ -1,0 +1,7 @@
+detector_id,false_positives_total,false_positives_le_1px_count,false_positives_le_1px_pct,null_controls_total,null_controls_le_1px_count,null_controls_le_1px_pct,odds_ratio,fisher_exact_p_value,median_dist_fp_pixels,median_dist_ctrl_pixels,statistical_excess_confirmed
+D1,19,15,78.95,84,37,44.05,4.764,0.009806730759603512,0.487,1.397,True
+D2,7,7,100.0,84,38,45.24,inf,0.0056065820361465,0.418,1.308,True
+D3,2,2,100.0,83,21,25.3,inf,0.07086834733893559,0.352,2.403,False
+D4,9,8,88.89,83,15,18.07,36.267,3.988334813776548e-05,0.29,2.433,True
+D5,3,1,33.33,83,13,15.66,2.692,0.4172366621067032,1.589,1.865,False
+D6,5,3,60.0,83,24,28.92,3.688,0.16602182901300785,0.457,1.412,False

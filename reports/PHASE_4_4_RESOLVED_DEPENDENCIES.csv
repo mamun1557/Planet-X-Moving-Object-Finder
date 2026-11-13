@@ -1,0 +1,24 @@
+package_name,resolved_version,package_source,component_usage,operational_status,notes
+python,3.12.10,Base System Python Interpreter,CROSS_CUTTING,ACTIVE_VERIFIED,Standard base interpreter in .venv_validation
+torch,2.15.0+cu132,System Site-Packages (Inherited),ASTROVISION / SPECTRA / FUSION-X,ACTIVE_VERIFIED,CUDA 13.2 enabled with native RTX 5060 acceleration verified
+torchvision,0.29.2+cu132,System Site-Packages (Inherited),ASTROVISION,ACTIVE_VERIFIED,Convolutions and transforms for spatial autoencoder
+numpy,2.5.4,System Site-Packages (Inherited),CROSS_CUTTING,ACTIVE_VERIFIED,Array mathematics and numerical tensors
+scipy,1.18.1,System Site-Packages (Inherited),SPECTRA / CHRONOS-X,ACTIVE_VERIFIED,Spectral interpolation and stellar atmosphere model grids
+pandas,3.1.1,System Site-Packages (Inherited),MOTION-X / SPECTRA / FUSION-X,ACTIVE_VERIFIED,Catalog dataframes tabular joins and ledgers
+astropy,8.0.2,System Site-Packages (Inherited),ASTROVISION / CHRONOS-X / MOTION-X,ACTIVE_VERIFIED,Native FITS and VOTable I/O celestial WCS coordinates
+matplotlib,3.11.2,System Site-Packages (Inherited),CROSS_CUTTING,ACTIVE_VERIFIED,Scientific plotting and visualization routines
+photutils,3.1.1,System Site-Packages (Inherited),ASTROVISION / SPECTRA,ACTIVE_VERIFIED,Aperture photometry and background estimation
+pillow,13.0.0,System Site-Packages (Inherited),ASTROVISION,ACTIVE_VERIFIED,Image rasterization and cutout processing
+pytest,9.2.0,System Site-Packages (Inherited),CROSS_CUTTING,ACTIVE_VERIFIED,Automated regression test runner (166 items passed)
+urllib3,2.8.0,System Site-Packages (Inherited),CROSS_CUTTING,ACTIVE_VERIFIED,HTTP transport client
+pyerfa,2.0.1.5,System Site-Packages (Inherited),MOTION-X,ACTIVE_VERIFIED,Essential celestial coordinate transforms backend for astropy
+PyYAML,6.0.3,System Site-Packages (Inherited),CROSS_CUTTING,ACTIVE_VERIFIED,Configuration file serialization
+pip,25.0.1,Dedicated Venv (.venv_validation),CROSS_CUTTING,ACTIVE_VERIFIED,Isolated package installer for validation environment
+setuptools,78.1.0,Dedicated Venv (.venv_validation),CROSS_CUTTING,ACTIVE_VERIFIED,Build and installation utilities
+reproject,NONE,PENDING_EXTERNAL_STAGING,ASTROVISION / CHRONOS-X,PENDING_EXTERNAL_INSTALL,Required for image differencing; blocked by sandbox network isolation
+scikit-learn,NONE,PENDING_EXTERNAL_STAGING,FUSION-X,PENDING_EXTERNAL_INSTALL,Optional baseline metrics; blocked by sandbox network isolation
+scikit-image,NONE,PENDING_EXTERNAL_STAGING,ASTROVISION,PENDING_EXTERNAL_INSTALL,Optional morphology filters; blocked by sandbox network isolation
+xgboost,NONE,PENDING_EXTERNAL_STAGING,FUSION-X,PENDING_EXTERNAL_INSTALL,Optional tree ranker evaluation; blocked by sandbox network isolation
+astroquery,NONE,PENDING_EXTERNAL_STAGING,SPECTRA / MOTION-X,PENDING_EXTERNAL_INSTALL,Required for TAP remote acquisition; blocked by sandbox network isolation
+requests,NONE,PENDING_EXTERNAL_STAGING,CROSS_CUTTING,PENDING_EXTERNAL_INSTALL,Required for HTTP REST queries; blocked by sandbox network isolation
+

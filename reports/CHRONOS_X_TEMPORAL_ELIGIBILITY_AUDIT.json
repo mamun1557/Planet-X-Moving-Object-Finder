@@ -1,0 +1,99 @@
+{
+  "task_metadata": {
+    "task_id": "Task 1.3K",
+    "title": "CHRONOS-X Temporal Eligibility & False Transient Promotion Safety Remediation",
+    "pipeline_build": "l2b-v27-2026-222",
+    "execution_timestamp": "2026-11-07T18:50:00+06:00",
+    "governance_mode": "CONTROLLED SCIENTIFIC SAFETY IMPLEMENTATION",
+    "verdict": "PASS"
+  },
+  "baseline_policy": {
+    "version": "v1.0-2026-F1",
+    "operational_min_baseline_days": 1.0,
+    "description": "Project-level safety baseline rule for secular variability comparisons. Same-visit metadata overrides misleading timestamp differences.",
+    "allowed_pair_states": ["TRUE", "FALSE", "UNVERIFIABLE"],
+    "allowed_dataset_states": ["TEMPORAL_DATA_AVAILABLE", "TEMPORAL_DATA_UNAVAILABLE"]
+  },
+  "before_vs_after_behavior": {
+    "pair_discovery": {
+      "before": "min_time_diff_days=0.001 (86.4s) allowed intra-visit dithers (2.15-6.47 min) to be tagged as temporal observation pairs.",
+      "after": "min_time_diff_days=1.0 day operational minimum; intra-visit dithers are explicitly tagged temporal_eligibility='FALSE' and is_dither=True."
+    },
+    "candidate_classification": {
+      "before": "Residual significance > 5.0 sigma on dither without Gaia match was automatically promoted to NEW_TRANSIENT_OR_ASTEROID_CANDIDATE.",
+      "after": "Promotion to NEW_TRANSIENT_OR_ASTEROID_CANDIDATE strictly requires temporal_eligibility='TRUE'. Dithers or unverified pairs receive ANOMALOUS_RESIDUAL_REQUIRES_REVIEW."
+    },
+    "missing_metadata": {
+      "before": "Files with missing MJD or coordinates were silently dropped from pairing without audit records.",
+      "after": "Missing metadata produces structured UNVERIFIABLE candidate pairs preserving explicit missing_evidence provenance."
+    },
+    "evidence_tier_separation": {
+      "before": "Evidence tiers were conflated with temporal separation.",
+      "after": "E0-E4 completeness is completely orthogonal to temporal eligibility. Intra-visit dithers achieve full E4 completeness while remaining temporal_eligibility='FALSE'."
+    }
+  },
+  "test_execution_summary": {
+    "total_tests_collected": 152,
+    "total_passed": 152,
+    "total_failed": 0,
+    "new_task_1_3k_tests": 17,
+    "existing_regression_tests": 135,
+    "pass_rate_percentage": 100.0,
+    "duration_seconds": 41.74
+  },
+  "changed_files": [
+    {
+      "path": "models/chronos_x/temporal_eligibility.py",
+      "action": "CREATE",
+      "description": "Implemented temporal eligibility engine, 10 scientific checks, E0-E4 evidence tier separation, and dataset availability function."
+    },
+    {
+      "path": "models/chronos_x/__init__.py",
+      "action": "CREATE",
+      "description": "Package init re-exporting differencer, quality masks, and temporal eligibility contracts."
+    },
+    {
+      "path": "models/chronos_x/model.py",
+      "action": "MODIFY",
+      "description": "Safeguarded reproject import and re-exported temporal eligibility functions."
+    },
+    {
+      "path": "models/common/candidate_schema.py",
+      "action": "MODIFY",
+      "description": "Added ALLOWED_TEMPORAL_ELIGIBILITY_STATUSES and temporal_eligibility field to CandidateRecord dataclass with full serialization."
+    },
+    {
+      "path": "models/fusion/fusion_engine.py",
+      "action": "MODIFY",
+      "description": "Integrated temporal eligibility safety gate into evaluate_source and _classify, preventing false transient promotions."
+    },
+    {
+      "path": "scripts/inspect_fits.py",
+      "action": "MODIFY",
+      "description": "Updated find_temporal_pairs to evaluate temporal eligibility, preserve dither registration utility, and retain UNVERIFIABLE pairs."
+    },
+    {
+      "path": "tests/test_chronos_x_temporal_eligibility.py",
+      "action": "CREATE",
+      "description": "17 comprehensive unit and regression tests covering all 12 mandatory requirements."
+    }
+  ],
+  "frozen_scientific_assets_verification": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "actual_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "CONFIRMED_UNTOUCHED"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "actual_sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "status": "CONFIRMED_UNTOUCHED"
+    }
+  },
+  "remaining_limitations": [
+    "No multi-epoch Level-2 FITS files exist locally in data/spherex (all local overlapping pairs are intra-visit dithers).",
+    "Dataset-level temporal availability for local data remains correctly reported as TEMPORAL_DATA_UNAVAILABLE.",
+    "Real multi-epoch transient discovery requires retrieval of remote IRSA archive observation assets (Weeks 31-32)."
+  ]
+}
+

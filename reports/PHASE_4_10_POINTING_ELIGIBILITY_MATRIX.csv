@@ -1,0 +1,15 @@
+provenance_scenario,pointing_id_input,metadata_input,secondary_pointing,calibration_eligible,expected_state,observed_state,color_excess_detected,limitation_codes_present,governance_action,safety_verdict
+"Canonical P0008, trusted provenance",P0008,{},P0008,True,POSSIBLE_INFRARED_EXCESS,POSSIBLE_INFRARED_EXCESS,True,False,PERMIT_CALIBRATION_EVALUATION,PASS
+P0002 blind evaluation cohort,P0002,{},P0002,False,UNVERIFIABLE,UNVERIFIABLE,False,True,ENFORCE_FAIL_CLOSED_RESTRICTION,PASS
+P0009 blind evaluation cohort,P0009,{},P0009,False,UNVERIFIABLE,UNVERIFIABLE,False,True,ENFORCE_FAIL_CLOSED_RESTRICTION,PASS
+P0010 blind evaluation cohort,P0010,{},P0010,False,UNVERIFIABLE,UNVERIFIABLE,False,True,ENFORCE_FAIL_CLOSED_RESTRICTION,PASS
+P9999 unknown pointing identifier,P9999,{},P9999,False,UNVERIFIABLE,UNVERIFIABLE,False,True,ENFORCE_FAIL_CLOSED_RESTRICTION,PASS
+Missing pointing ID (None),None,{},None,False,REJECTED_VALUE_ERROR,REJECTED_VALUE_ERROR,False,False,FAIL_CLOSED_EXCEPTION,PASS
+Empty pointing ID string (''),,{},,False,REJECTED_VALUE_ERROR,REJECTED_VALUE_ERROR,False,False,FAIL_CLOSED_EXCEPTION,PASS
+Malformed pointing ID (int 12345),12345,{},12345,False,REJECTED_VALUE_ERROR,REJECTED_VALUE_ERROR,False,False,FAIL_CLOSED_EXCEPTION,PASS
+Conflicting pointing/cohort metadata (P0008 + P0002 meta),P0008,"{""cohort"": ""P0002""}",P0008,False,UNVERIFIABLE,UNVERIFIABLE,False,True,ENFORCE_FAIL_CLOSED_RESTRICTION,PASS
+Caller-supplied calibration metadata without P0008 (P0002 + cal meta),P0002,"{""cohort"": ""calibration"", ""role"": ""CALIBRATION""}",P0002,False,UNVERIFIABLE,UNVERIFIABLE,False,True,ENFORCE_FAIL_CLOSED_RESTRICTION,PASS
+Unknown cohort ('UNKNOWN_FIELD'),UNKNOWN_FIELD,{},UNKNOWN_FIELD,False,UNVERIFIABLE,UNVERIFIABLE,False,True,ENFORCE_FAIL_CLOSED_RESTRICTION,PASS
+Untrusted legacy alias ('8' + untrusted marker),8,"{""untrusted"": true}",8,False,UNVERIFIABLE,UNVERIFIABLE,False,True,ENFORCE_FAIL_CLOSED_RESTRICTION,PASS
+Trusted legacy alias ('8' + verified clean provenance),8,{},P0008,True,POSSIBLE_INFRARED_EXCESS,POSSIBLE_INFRARED_EXCESS,True,False,PERMIT_CALIBRATION_EVALUATION,PASS
+Missing provenance (unattached metadata),P0008,"{""cohort"": null}",None,True,POSSIBLE_INFRARED_EXCESS,POSSIBLE_INFRARED_EXCESS,True,False,PERMIT_CALIBRATION_EVALUATION,PASS

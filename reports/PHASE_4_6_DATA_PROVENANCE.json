@@ -1,0 +1,73 @@
+{
+  "provenance_metadata": {
+    "task_id": "Phase 4, Task 4.6",
+    "title": "Empirical Infrared Excess Validation & SED Evidence Engine Provenance Record",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T18:05:00Z",
+    "governance": "STRICT_PROVENANCE_COHORT_ISOLATION_READ_ONLY_FROZEN_ASSETS",
+    "final_verdict": "EMPIRICAL_VALIDATION_ENGINE_IMPLEMENTED"
+  },
+  "timezone_and_timestamp_audit": {
+    "local_system_timezone": "UTC+06:00 (Bangladesh Standard Time)",
+    "local_system_time": "2026-11-08T00:05:00+06:00",
+    "audit_timestamp_utc": "2026-11-07T18:05:00Z",
+    "task_4_5r_audit_timestamp_utc": "2026-11-07T17:36:52Z",
+    "task_4_5r_local_timestamp": "2026-11-07T23:36:52+06:00",
+    "timestamp_discrepancy_verdict": "ZERO_DISCREPANCY (Audit timestamps consistently formatted in ISO 8601 UTC with 'Z' suffix, reflecting exact +06:00 offset relative to local system clock)"
+  },
+  "runtime_environment": {
+    "interpreter_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation\\Scripts\\python.exe",
+    "python_version": "3.12.10",
+    "environment_root": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "isolation_state": "STRICT_ISOLATION_VERIFIED (include-system-site-packages = false)",
+    "sandbox_mode": "STANDARD_SANDBOX"
+  },
+  "input_catalog_provenance": [
+    {
+      "catalog_name": "Gaia DR3 Pilot Sources",
+      "file_path": "data/external_catalogs/pilot/gaia_dr3/normalized_gaia_dr3_pilot_25.csv",
+      "source_records_count": 25,
+      "sha256": "4B39C7A2E814794FAE63E1C34BC39A86C24AA7CC0C43EB600FFF4FBEB03EBB45"
+    },
+    {
+      "catalog_name": "2MASS Point Source Catalog Counterparts",
+      "file_path": "data/external_catalogs/pilot/twomass/normalized_2mass_pilot.csv",
+      "source_records_count": 21,
+      "sha256": "35F788C8F0EFFB1249CB1D95C0C712FDAC5E458374B7D566C54B0745A643474F"
+    },
+    {
+      "catalog_name": "ALLWISE Source Catalog Counterparts",
+      "file_path": "data/external_catalogs/pilot/allwise/normalized_allwise_pilot.csv",
+      "source_records_count": 24,
+      "sha256": "19803AA46C90AD146D23ABAA3C83C384597B8483B42F7C6FCD7A92FD8E0E3408"
+    },
+    {
+      "catalog_name": "SPHEREx 102-Channel Extracted Spectra",
+      "file_path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "source_records_count": 25,
+      "units": "milliJanskys (mJy)"
+    }
+  ],
+  "authoritative_zero_points": {
+    "2MASS": "Cohen et al. (2003), AJ, 126, 1090 (J=1594 Jy, H=1024 Jy, Ks=666.7 Jy)",
+    "ALLWISE": "Jarrett et al. (2011), ApJ, 735, 112 (W1=309.54 Jy, W2=171.787 Jy, W3=31.674 Jy, W4=8.363 Jy)",
+    "Gaia_DR3": "Carrasco et al. (2021), A&A, 652, A86 (G=3228.75 Jy, BP=3552.01 Jy, RP=2554.95 Jy)"
+  },
+  "cohort_firewall_status": {
+    "evaluated_cohort": "P0008 (Calibration/Control Only)",
+    "evaluated_source_count": 25,
+    "blind_cohorts": ["P0002", "P0009", "P0010"],
+    "blind_cohort_total_sources": 9500,
+    "firewall_compliance": "CONFIRMED_ZERO_ACCESS (Zero blind cohort data accessed or used for baseline tuning)"
+  },
+  "evidence_classification_breakdown": {
+    "total_evaluated": 25,
+    "SUPPORTED_PHOTOSPHERIC_CONSISTENCY": 15,
+    "QUALITY_FLAGGED": 6,
+    "INSUFFICIENT_PHOTOMETRY": 4,
+    "POSSIBLE_INFRARED_EXCESS": 0,
+    "AMBIGUOUS_COUNTERPART": 0,
+    "UNVERIFIABLE": 0
+  }
+}
+

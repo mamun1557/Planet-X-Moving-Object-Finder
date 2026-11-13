@@ -1,0 +1,10 @@
+catalog_name,target_cohort,planned_pilot_sources,attempted_queries,successful_retrievals,retrieved_records,coverage_percentage,acquisition_status,blocker_reason_and_notes
+Gaia DR3 Astrometry,P0008 Calibration,25,0,0,0,0.00,BLOCKED_BY_NETWORK,Outbound DNS lookup to gea.esac.esa.int failed ([Errno 11001]); stopped at Stage 1
+Gaia DR3 XP Spectra,P0008 Calibration,25,0,0,0,0.00,BLOCKED_BY_NETWORK,Outbound DNS lookup to gea.esac.esa.int failed ([Errno 11001]); stopped at Stage 1
+Gaia DR3 Apsis GSP-Phot,P0008 Calibration,25,0,0,0,0.00,BLOCKED_BY_NETWORK,Outbound DNS lookup to gea.esac.esa.int failed ([Errno 11001]); stopped at Stage 1
+2MASS PSC (J/H/Ks),P0008 Calibration,25,0,0,0,0.00,BLOCKED_BY_NETWORK,Outbound DNS lookup to irsa.ipac.caltech.edu failed ([Errno 11001]); stopped at Stage 1
+ALLWISE (W1/W2),P0008 Calibration,25,0,0,0,0.00,BLOCKED_BY_NETWORK,Outbound DNS lookup to irsa.ipac.caltech.edu failed ([Errno 11001]); stopped at Stage 1
+Gaia DR3 Astrometry,P0002/P0009/P0010 Blind,25,0,0,0,0.00,NOT_ATTEMPTED_FIREWALLED,Stage 3 blind evaluation pilot held in reserve pending Stage 2 completion
+2MASS PSC (J/H/Ks),P0002/P0009/P0010 Blind,25,0,0,0,0.00,NOT_ATTEMPTED_FIREWALLED,Stage 3 blind evaluation pilot held in reserve pending Stage 2 completion
+ALLWISE (W1/W2),P0002/P0009/P0010 Blind,25,0,0,0,0.00,NOT_ATTEMPTED_FIREWALLED,Stage 3 blind evaluation pilot held in reserve pending Stage 2 completion
+

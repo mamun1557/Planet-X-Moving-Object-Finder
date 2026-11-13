@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_023",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_CROWDED_FIELD_SIMULATION",
+  "target_coordinates": {
+    "ra_deg": 270.0,
+    "dec_deg": -29.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-24T00:00:00.000Z",
+    "mjd": 61245.0,
+    "crval1_deg": 270.0,
+    "crval2_deg": -29.0,
+    "wcs_valid": true,
+    "sha256": "8B9E7F2787023CEB343E30AC699C5807ADEA21A1963A98CF9D40D9B63847DB87"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-29T00:00:00.000Z",
+    "mjd": 61250.0,
+    "crval1_deg": 270.0,
+    "crval2_deg": -29.0,
+    "wcs_valid": true,
+    "sha256": "32C9FE1992EA6955C41558BD10BC8A6B0DEFDFFAF8EE1CCE0EF685F58BC96F57"
+  },
+  "time_separation_minutes": 7200.0,
+  "time_separation_days": 5.0,
+  "synthetic_displacement_arcsec": 15.9999,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "CROWDED_FIELD_SIMULATION",
+    "scenario_notes": "Synthetic moving source surrounded by stationary companion stars",
+    "ground_truth_epoch_a": {
+      "ra_deg": 270.0,
+      "dec_deg": -29.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-24T00:00:00.000Z",
+      "mjd": 61245.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 270.004401,
+      "dec_deg": -29.002222,
+      "pixel_x": 60.77,
+      "pixel_y": 61.71,
+      "timestamp_utc": "2026-07-29T00:00:00.000Z",
+      "mjd": 61250.0
+    },
+    "ground_truth_delta_ra_arcsec": 13.8564,
+    "ground_truth_delta_dec_arcsec": -8.0,
+    "ground_truth_angular_displacement_arcsec": 15.9999,
+    "ground_truth_position_angle_deg": 120.0,
+    "ground_truth_dt_days": 5.0,
+    "ground_truth_dt_hours": 120.0,
+    "ground_truth_motion_rate_arcsec_per_day": 3.2,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.1333,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of CROWDED_FIELD_SIMULATION displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

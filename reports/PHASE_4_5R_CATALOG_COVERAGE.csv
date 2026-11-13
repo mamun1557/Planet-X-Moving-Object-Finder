@@ -1,0 +1,6 @@
+catalog_name,target_cohort,requested_sources,attempted_queries,successful_queries,retrieved_records,matched_sources,coverage_pct,retrieval_method,status,notes
+Gaia DR3 Source Astrometry & Photometry,P0008 Calibration Pilot,25,1,1,25,25,100.0,IVOA_TAP_ASYNC,SUCCESS,"Full astrometric solution (ra, dec, pm, plx) and G/BP/RP photometry acquired via gea.esac.esa.int/tap-server/tap/async"
+Gaia DR3 XP Continuous Spectra,P0008 Calibration Pilot,25,12,0,0,0,0.0,DATALINK_REST,SERVICE_UNAVAILABLE,12 sources eligible with has_xp_continuous=True; ESA DataServer returned HTTP 503 Service Unavailable
+2MASS Point Source Catalog (fp_psc),P0008 Calibration Pilot,25,25,25,21,21,84.0,IVOA_TAP_SYNC,SUCCESS,21 sources matched within 2.0 arcsec; 4 faint sources (G > 18.4) below 2MASS detection threshold
+ALLWISE Source Catalog (allwise_p3as_psd),P0008 Calibration Pilot,25,25,25,24,24,96.0,IVOA_TAP_SYNC,SUCCESS,24 sources matched within 3.5 arcsec; 1 source (G=19.16) below ALLWISE W1/W2 detection threshold
+Gaia DR3 / 2MASS / ALLWISE Blind Cohorts,P0002 / P0009 / P0010 Blind Evaluation,9500,0,0,0,0,0.0,UNACCESSED_FIREWALLED,FIREWALLED,Strictly firewalled; zero queries attempted to preserve blind evaluation isolation mandate

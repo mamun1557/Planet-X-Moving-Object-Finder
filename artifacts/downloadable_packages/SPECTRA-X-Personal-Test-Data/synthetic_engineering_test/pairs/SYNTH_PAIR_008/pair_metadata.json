@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_008",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_HIGH_SOUTHERN_DECLINATION",
+  "target_coordinates": {
+    "ra_deg": 80.0,
+    "dec_deg": -65.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-09T00:00:00.000Z",
+    "mjd": 61230.0,
+    "crval1_deg": 80.0,
+    "crval2_deg": -65.0,
+    "wcs_valid": true,
+    "sha256": "CDA67CEF96303ABD27500A09C3E80D1B7F31BBF870463B609E0B04905BAB5C2B"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-14T00:00:00.000Z",
+    "mjd": 61235.0,
+    "crval1_deg": 80.0,
+    "crval2_deg": -65.0,
+    "wcs_valid": true,
+    "sha256": "EFAAE6ABC23630F95F928E0F28F8F8A8E6F6B258632B0B0D4C37B7FAA265AB53"
+  },
+  "time_separation_minutes": 7200.0,
+  "time_separation_days": 5.0,
+  "synthetic_displacement_arcsec": 15.0003,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "HIGH_SOUTHERN_DECLINATION",
+    "scenario_notes": "Southern polar cap astrometry with cos(Dec) geometric scaling",
+    "ground_truth_epoch_a": {
+      "ra_deg": 80.0,
+      "dec_deg": -65.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-09T00:00:00.000Z",
+      "mjd": 61230.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 80.00493,
+      "dec_deg": -64.996392,
+      "pixel_x": 61.79,
+      "pixel_y": 65.1,
+      "timestamp_utc": "2026-07-14T00:00:00.000Z",
+      "mjd": 61235.0
+    },
+    "ground_truth_delta_ra_arcsec": 7.5,
+    "ground_truth_delta_dec_arcsec": 12.9904,
+    "ground_truth_angular_displacement_arcsec": 15.0003,
+    "ground_truth_position_angle_deg": 30.0,
+    "ground_truth_dt_days": 5.0,
+    "ground_truth_dt_hours": 120.0,
+    "ground_truth_motion_rate_arcsec_per_day": 3.0001,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.125,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of HIGH_SOUTHERN_DECLINATION displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

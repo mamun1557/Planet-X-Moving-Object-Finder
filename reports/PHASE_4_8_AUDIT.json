@@ -1,0 +1,52 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.8",
+    "title": "End-to-End Continuum Evidence Propagation & Blind-Cohort Leakage Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T18:35:44Z",
+    "audit_type": "STRICT_READ_ONLY_SCIENTIFIC_INTEGRATION_AUDIT",
+    "governance": "STRICT_PROVENANCE_CALIBRATION_BLIND_SEPARATION_FROZEN_ASSET_PROTECTION",
+    "final_verdict": "INTEGRATION_VALIDATED_WITH_LIMITATIONS"
+  },
+  "verdict_justification": {
+    "verdict": "INTEGRATION_VALIDATED_WITH_LIMITATIONS",
+    "summary": "End-to-end evidence propagation from external catalog measurements to FUSION-X candidate records is fully functional, strictly score-invariant, and provenance-preserving within the declared P0008 scope. No calibration parameter leakage exists (baselines use static literature loci and frozen calibration assets). However, a governance enforcement gap was audited in EmpiricalContinuumSidecar: when external photometry is attached for blind-cohort sources (P0002/P0009/P0010), BLIND_COHORT_UNVERIFIED_BASELINE is appended as metadata but does not enforce a programmatic fail-closed block against color_excess_detected=True. Controlled remediation is documented and recommended."
+  },
+  "environment_and_runtime": {
+    "interpreter_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation\\Scripts\\python.exe",
+    "python_version": "3.12.10",
+    "environment_root": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "isolation_verified": true,
+    "sandbox_mode": "STANDARD_SANDBOX"
+  },
+  "core_audit_metrics": {
+    "pilot_sources_audited": 25,
+    "synthetic_fixtures_audited": 3,
+    "evidence_states_tested": 6,
+    "fail_closed_scenarios_tested": 12,
+    "max_fusion_score_delta": 0.0,
+    "evidence_propagation_rate": "100.0% (25/25 real sources)",
+    "provenance_loss_rate": "0.0% (zero lost fields)",
+    "unit_consistency_verified": "mJy (100% compliant)",
+    "all_protected_assets_pristine": true
+  },
+  "calibration_blind_leakage_audit": {
+    "leakage_detected": false,
+    "model_weights_leakage": false,
+    "calibration_thresholds_leakage": false,
+    "photospheric_baseline_leakage": false,
+    "significance_engine_leakage": false,
+    "governance_gap_identified": true,
+    "gap_description": "BLIND_COHORT_UNVERIFIED_BASELINE is attached as metadata disclosure only when external photometry is provided; it does not programmatically override color_excess_detected to False in EmpiricalContinuumSidecar.evaluate_continuum."
+  },
+  "deliverables": [
+    "reports/PHASE_4_8_END_TO_END_EVIDENCE_AUDIT.md",
+    "reports/PHASE_4_8_EVIDENCE_LINEAGE.csv",
+    "reports/PHASE_4_8_BLIND_LEAKAGE_AUDIT.csv",
+    "reports/PHASE_4_8_EVIDENCE_STATE_SAFETY.csv",
+    "reports/PHASE_4_8_FUSION_SCORE_INVARIANCE.csv",
+    "reports/PHASE_4_8_PROVENANCE_INTEGRITY.csv",
+    "reports/PHASE_4_8_FROZEN_ASSET_INTEGRITY.csv",
+    "reports/PHASE_4_8_AUDIT.json"
+  ]
+}

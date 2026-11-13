@@ -1,0 +1,138 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.20A Checkpoint Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-08T17:15:15Z"
+  },
+  "checkpoints": {
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "size_bytes": 3436965,
+      "sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "keys": [
+        "model_name",
+        "epoch",
+        "model_state_dict",
+        "val_loss",
+        "train_patches_count",
+        "val_patches_count",
+        "patch_size",
+        "random_seed",
+        "governance",
+        "timestamp_utc"
+      ],
+      "trained_epoch": 14,
+      "validation_loss": 148.7917673746745,
+      "parameter_count": 855079,
+      "governance_status": "PROTECTED_PRODUCTION"
+    },
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "size_bytes": 382177,
+      "sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "keys": [
+        "epoch",
+        "model_state_dict",
+        "optimizer_state_dict",
+        "val_loss",
+        "config"
+      ],
+      "trained_epoch": 23,
+      "validation_loss": 0.0010442028993566054,
+      "parameter_count": 30326,
+      "governance_status": "PROTECTED_PRODUCTION"
+    },
+    "checkpoints/astrovision_spatial_v2.pt": {
+      "size_bytes": 3438117,
+      "sha256": "F65C0F139A5E1FA5073707EB006145D6A380637A42599D7EA061724F64080557",
+      "keys": [
+        "epoch",
+        "model_state_dict",
+        "val_loss",
+        "config"
+      ],
+      "trained_epoch": 4,
+      "validation_loss": 86.85384798049927,
+      "parameter_count": 855367,
+      "governance_status": "HISTORICAL_ARCHIVE"
+    },
+    "checkpoints/astrovision_latest.pt": {
+      "size_bytes": 3437397,
+      "sha256": "1AD1BE98A61DC7D8989C5276CAE858798DBAEE6649B83816362BF1AD00622E2F",
+      "keys": [
+        "encoder.0.weight",
+        "encoder.0.bias",
+        "encoder.1.weight",
+        "encoder.1.bias",
+        "encoder.1.running_mean",
+        "encoder.1.running_var",
+        "encoder.1.num_batches_tracked",
+        "encoder.3.weight",
+        "encoder.3.bias",
+        "encoder.4.weight",
+        "encoder.4.bias",
+        "encoder.4.running_mean",
+        "encoder.4.running_var",
+        "encoder.4.num_batches_tracked",
+        "encoder.6.weight",
+        "encoder.6.bias",
+        "encoder.7.weight",
+        "encoder.7.bias",
+        "encoder.7.running_mean",
+        "encoder.7.running_var",
+        "encoder.7.num_batches_tracked",
+        "encoder.9.weight",
+        "encoder.9.bias",
+        "decoder.0.weight",
+        "decoder.0.bias",
+        "decoder.1.weight",
+        "decoder.1.bias",
+        "decoder.1.running_mean",
+        "decoder.1.running_var",
+        "decoder.1.num_batches_tracked",
+        "decoder.3.weight",
+        "decoder.3.bias",
+        "decoder.4.weight",
+        "decoder.4.bias",
+        "decoder.4.running_mean",
+        "decoder.4.running_var",
+        "decoder.4.num_batches_tracked",
+        "decoder.6.weight",
+        "decoder.6.bias",
+        "decoder.7.weight",
+        "decoder.7.bias",
+        "decoder.7.running_mean",
+        "decoder.7.running_var",
+        "decoder.7.num_batches_tracked",
+        "decoder.9.weight",
+        "decoder.9.bias"
+      ],
+      "trained_epoch": null,
+      "validation_loss": null,
+      "parameter_count": 855367,
+      "governance_status": "HISTORICAL_ARCHIVE"
+    },
+    "checkpoints/spectra_latest.pt": {
+      "size_bytes": 100805,
+      "sha256": "8236D8577C4842B44278A2D079F0E7F1E3EC10EB5D33D63EEE315A85B10233C5",
+      "keys": [
+        "encoder.0.weight",
+        "encoder.0.bias",
+        "encoder.1.weight",
+        "encoder.1.bias",
+        "encoder.3.weight",
+        "encoder.3.bias",
+        "encoder.5.weight",
+        "encoder.5.bias",
+        "decoder.0.weight",
+        "decoder.0.bias",
+        "decoder.2.weight",
+        "decoder.2.bias",
+        "decoder.4.weight",
+        "decoder.4.bias"
+      ],
+      "trained_epoch": null,
+      "validation_loss": null,
+      "parameter_count": 23798,
+      "governance_status": "HISTORICAL_ARCHIVE"
+    }
+  }
+}

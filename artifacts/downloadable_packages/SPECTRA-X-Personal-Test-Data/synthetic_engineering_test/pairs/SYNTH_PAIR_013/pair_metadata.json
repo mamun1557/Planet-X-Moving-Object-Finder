@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_013",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_SMALL_ONE_ARCSEC_SHIFT",
+  "target_coordinates": {
+    "ra_deg": 145.0,
+    "dec_deg": 22.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-14T00:00:00.000Z",
+    "mjd": 61235.0,
+    "crval1_deg": 145.0,
+    "crval2_deg": 22.0,
+    "wcs_valid": true,
+    "sha256": "42E33811C0B0B8EC4367D3E1C6F3B3AF93261CAED5A27A91702F1DC499975566"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-16T00:00:00.000Z",
+    "mjd": 61237.0,
+    "crval1_deg": 145.0,
+    "crval2_deg": 22.0,
+    "wcs_valid": true,
+    "sha256": "2936F5F3269267B546F5981A35BA141E4353072CEF6F13DF87BB90A479E46206"
+  },
+  "time_separation_minutes": 2880.0,
+  "time_separation_days": 2.0,
+  "synthetic_displacement_arcsec": 1.0,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "SMALL_ONE_ARCSEC_SHIFT",
+    "scenario_notes": "Small 1.0 arcsecond displacement test",
+    "ground_truth_epoch_a": {
+      "ra_deg": 145.0,
+      "dec_deg": 22.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-14T00:00:00.000Z",
+      "mjd": 61235.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 145.0,
+      "dec_deg": 21.999722,
+      "pixel_x": 63.0,
+      "pixel_y": 62.84,
+      "timestamp_utc": "2026-07-16T00:00:00.000Z",
+      "mjd": 61237.0
+    },
+    "ground_truth_delta_ra_arcsec": 0.0,
+    "ground_truth_delta_dec_arcsec": -1.0,
+    "ground_truth_angular_displacement_arcsec": 1.0,
+    "ground_truth_position_angle_deg": 180.0,
+    "ground_truth_dt_days": 2.0,
+    "ground_truth_dt_hours": 48.0,
+    "ground_truth_motion_rate_arcsec_per_day": 0.5,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.0208,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of SMALL_ONE_ARCSEC_SHIFT displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

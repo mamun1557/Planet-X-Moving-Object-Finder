@@ -1,0 +1,114 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.6",
+    "title": "Empirical Infrared Excess Validation & SED Evidence Engine Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T18:05:00Z",
+    "audit_type": "CONTROLLED_SCIENTIFIC_VALIDATION_IMPLEMENTATION",
+    "governance": "STRICT_PROVENANCE_COHORT_ISOLATION_READ_ONLY_FROZEN_ASSETS",
+    "final_verdict": "EMPIRICAL_VALIDATION_ENGINE_IMPLEMENTED"
+  },
+  "implementation_architecture": {
+    "package_root": "spectra_engine/validation/infrared_excess",
+    "modules_created": [
+      "spectra_engine/validation/infrared_excess/zero_points.py",
+      "spectra_engine/validation/infrared_excess/catalog_normalizer.py",
+      "spectra_engine/validation/infrared_excess/photospheric_model.py",
+      "spectra_engine/validation/infrared_excess/excess_engine.py",
+      "spectra_engine/validation/infrared_excess/evidence_classifier.py",
+      "spectra_engine/validation/infrared_excess/__init__.py"
+    ],
+    "decoupling_status": "COMPLETELY_DECOUPLED (No coupling to React, FastAPI, SQLite, or SPECTRA weights)"
+  },
+  "evaluated_cohort_metrics": {
+    "cohort": "P0008 Calibration Field Pilot",
+    "source_count": 25,
+    "evaluated_in_task": 25,
+    "SUPPORTED_PHOTOSPHERIC_CONSISTENCY": 15,
+    "QUALITY_FLAGGED": 6,
+    "INSUFFICIENT_PHOTOMETRY": 4,
+    "POSSIBLE_INFRARED_EXCESS": 0,
+    "AMBIGUOUS_COUNTERPART": 0,
+    "UNVERIFIABLE": 0
+  },
+  "protected_asset_integrity": {
+    "verification_timestamp_utc": "2026-11-07T18:05:00Z",
+    "assets": [
+      {
+        "file_path": "checkpoints/spectra_masked_ae_v2.pt",
+        "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+        "verified_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+        "status": "PRISTINE_MATCH"
+      },
+      {
+        "file_path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+        "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+        "verified_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+        "status": "PRISTINE_MATCH"
+      },
+      {
+        "file_path": "checkpoints/astrovision_spatial_v3.pt",
+        "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+        "verified_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+        "status": "PRISTINE_MATCH"
+      }
+    ]
+  },
+  "automated_test_suite": {
+    "command": ".\\.venv_validation\\Scripts\\python.exe -m pytest tests/ -q",
+    "total_tests": 184,
+    "passed": 184,
+    "failed": 0,
+    "duration_seconds": 27.71,
+    "new_infrared_excess_tests_passed": 18,
+    "regression_detected": false
+  },
+  "deliverables_manifest": [
+    {
+      "name": "PHASE_4_6_EMPIRICAL_IR_EXCESS_VALIDATION.md",
+      "path": "reports/PHASE_4_6_EMPIRICAL_IR_EXCESS_VALIDATION.md",
+      "type": "NARRATIVE_AUDIT_REPORT"
+    },
+    {
+      "name": "PHASE_4_6_PHOTOMETRIC_NORMALIZATION.csv",
+      "path": "reports/PHASE_4_6_PHOTOMETRIC_NORMALIZATION.csv",
+      "type": "NORMALIZATION_LEDGER",
+      "rows": 234
+    },
+    {
+      "name": "PHASE_4_6_PHOTOSPHERIC_BASELINE.csv",
+      "path": "reports/PHASE_4_6_PHOTOSPHERIC_BASELINE.csv",
+      "type": "BASELINE_LEDGER",
+      "rows": 25
+    },
+    {
+      "name": "PHASE_4_6_EXCESS_SIGNIFICANCE.csv",
+      "path": "reports/PHASE_4_6_EXCESS_SIGNIFICANCE.csv",
+      "type": "SIGNIFICANCE_LEDGER",
+      "rows": 25
+    },
+    {
+      "name": "PHASE_4_6_EVIDENCE_CLASSIFICATION.csv",
+      "path": "reports/PHASE_4_6_EVIDENCE_CLASSIFICATION.csv",
+      "type": "CLASSIFICATION_LEDGER",
+      "rows": 25
+    },
+    {
+      "name": "PHASE_4_6_QUALITY_AND_LIMITATIONS.csv",
+      "path": "reports/PHASE_4_6_QUALITY_AND_LIMITATIONS.csv",
+      "type": "LIMITATIONS_LEDGER",
+      "rows": 6
+    },
+    {
+      "name": "PHASE_4_6_DATA_PROVENANCE.json",
+      "path": "reports/PHASE_4_6_DATA_PROVENANCE.json",
+      "type": "PROVENANCE_RECORD"
+    },
+    {
+      "name": "PHASE_4_6_AUDIT.json",
+      "path": "reports/PHASE_4_6_AUDIT.json",
+      "type": "MACHINE_READABLE_AUDIT"
+    }
+  ]
+}
+

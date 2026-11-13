@@ -1,0 +1,120 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA_TASK_1_2B_R",
+    "module": "SPECTRA \u2014 102-Channel Infrared Spectral Anomaly Detection",
+    "campaign_name": "Calibration-Readiness & Data Independence Audit",
+    "audit_timestamp_utc": "2026-11-07T03:55:00Z",
+    "execution_mode": "STRICT_READ_ONLY",
+    "governance_declaration": "CONFIRMED: Strict read-only audit. Zero model checkpoints, weights, source code, metadata, calibration files, FITS images, catalogs, trial definitions, or results were modified. Zero model inference, forward evaluation, or threshold calculations were executed.",
+    "auditor_roles": [
+      "Principal Astronomical ML Scientist",
+      "SPHEREx Calibration Specialist",
+      "Astrometric Independence Auditor",
+      "Statistical Benchmark Governance Officer"
+    ]
+  },
+  "protected_assets_audit": {
+    "spectra_masked_ae_v2_pt": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "FROZEN_BYTE_FOR_BYTE_VERIFIED"
+    },
+    "spectra_masked_ae_v2_training_meta_json": {
+      "path": "checkpoints/spectra_masked_ae_v2_training_meta.json",
+      "sha256": "80d0d65a00cbad8f2bde844d30a7aaa839c461789de3bc58c4fee895ca9f4f2c",
+      "status": "FROZEN_BYTE_FOR_BYTE_VERIFIED"
+    },
+    "phase3_multpointing_spectra_v1_csv": {
+      "path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "sha256": "8a96617cfe5d5152e720ee0c3890a7b8c7025ab2bfb3c682e08743affe6858e0",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "phase3_multpointing_coverage_v1_csv": {
+      "path": "data/processed/spectra/phase3_multpointing_coverage_v1.csv",
+      "sha256": "c8153bf0b0f07f4bde753b12309d06613fed6a90527cfd2409d7438218262c30",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "phase3_multpointing_extraction_manifest_v1_json": {
+      "path": "data/processed/spectra/phase3_multpointing_extraction_manifest_v1.json",
+      "sha256": "e9fa9cfee57a99850d1ef617e0a875aac473530cfa76c416a52802180c87e777",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  },
+  "audit_findings_summary": {
+    "audit_a_null_control_suitability": {
+      "verified_null_controls": 0,
+      "provisional_control_candidates": 7036,
+      "unsuitable_or_excluded_sources": 7964,
+      "training_set_overlap_detected": {
+        "p0001_overlap_count": 5,
+        "p0008_overlap_count": 0,
+        "p0001_historical_field_role": "TRAIN_POINTING",
+        "p0008_historical_field_role": "UNSEEN_OUT_OF_SAMPLE"
+      },
+      "verdict": "PROVISIONAL_CONTROLS_IDENTIFIED_WITH_STRICT_EXCLUSIONS"
+    },
+    "audit_b_cross_partition_independence": {
+      "coordinate_frame": "ICRS (Gaia DR3 / 2MASS)",
+      "minimum_angular_separation_deg": 17.4668,
+      "minimum_angular_separation_arcmin": 1048.01,
+      "matches_under_5_arcsec": 0,
+      "matches_under_1_arcmin": 0,
+      "matches_under_1_deg": 0,
+      "source_id_overlap_count": 0,
+      "astrophysical_source_leakage": false,
+      "verdict": "COMPLETE_CROSS_PARTITION_INDEPENDENCE_CONFIRMED"
+    },
+    "audit_c_spectral_eligibility": {
+      "calibration_sources_evaluated": 15000,
+      "observed_sources_count": 9377,
+      "zero_coverage_count": 5623,
+      "multi_detector_count": 9160,
+      "single_detector_count": 217,
+      "valid_channels_ge_5_count": 5327,
+      "valid_channels_1_to_4_count": 1811,
+      "median_normalization_degeneracy_risk": "HIGH_FOR_N_LE_2_CHANNELS",
+      "recommended_primary_calibration_filter": "RELIABLE_ISOLATED_POINT_SOURCE with valid_channels >= 5 (N=5,322)"
+    },
+    "audit_d_detector_pair_feasibility": {
+      "d1_d4_pair": {
+        "total_sources": 2028,
+        "reliable_point_sources": 1581,
+        "reliable_ge_5ch": 1175,
+        "p0001_count": 109,
+        "p0008_count": 1472,
+        "statistical_feasibility": "FEASIBLE"
+      },
+      "d2_d5_pair": {
+        "total_sources": 3884,
+        "reliable_point_sources": 2973,
+        "reliable_ge_5ch": 2624,
+        "p0001_count": 1462,
+        "p0008_count": 1511,
+        "statistical_feasibility": "HIGHLY_FEASIBLE"
+      },
+      "d3_d6_pair": {
+        "total_sources": 3248,
+        "reliable_point_sources": 2482,
+        "reliable_ge_5ch": 1548,
+        "p0001_count": 968,
+        "p0008_count": 1514,
+        "statistical_feasibility": "HIGHLY_FEASIBLE"
+      },
+      "pooled_vs_stratified_recommendation": "STRATIFIED_MANDATORY_TO_PREVENT_DOMAIN_SHIFT"
+    },
+    "audit_e_statistical_design": {
+      "alpha_0_05_feasibility": "STATISTICALLY_FEASIBLE (Expected tail events > 75 per pair)",
+      "alpha_0_01_feasibility": "CONDITIONALLY_FEASIBLE (Expected tail events 15-30 per pair; bootstrap CIs required)",
+      "spatial_correlation_risk": "MODERATE_ACROSS_POINTINGS (P0001 vs P0008 stratification required)"
+    },
+    "audit_f_provenance_verification": {
+      "model_checkpoint_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "preflight_checkpoint_sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "provenance_consistency": "BYTE_FOR_BYTE_IDENTICAL"
+    }
+  },
+  "final_readiness_verdict": "CONDITIONALLY READY FOR TASK 1.2C",
+  "verdict_justification": "Cross-partition astrophysical independence is mathematically proven (>17.4 deg separation, zero source overlap). However, calibration is conditioned on: (1) using P0008 as the primary unseen null cohort due to historical P0001 training association, (2) excluding the 5 overlapping P0001 training sources, (3) restricting primary calibration to multi-detector sources with >=5 valid channels to prevent median normalization degeneracy, and (4) stratifying thresholds by dichroic detector pair (D1+D4, D2+D5, D3+D6).",
+  "recommended_next_task": "Task 1.2C: Multi-Pointing Stratified Null-Control Calibration with Precondition Enforcements",
+  "report_sha256": "dc44109ace8bc54895a81a0a6551c045fd11b31ba4f36e21b4831bbd11494cf7"
+}

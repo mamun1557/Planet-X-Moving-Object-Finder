@@ -1,0 +1,8 @@
+detector_id,operating_threshold_tau,null_sample_count,baseline_false_positives,baseline_fpr_pct,baseline_fpr_ci_95,shadow_false_positives,shadow_fpr_pct,shadow_fpr_ci_95,delta_fpr_pct,baseline_point_auroc,shadow_point_auroc,baseline_point_recovery_pct,shadow_point_recovery_pct,baseline_extended_recovery_pct,shadow_extended_recovery_pct,fpr_budget_met_under_5pct,vetting_recommendation
+D1,186.29,84,20,23.81,"[15.98%, 33.94%]",4,4.76,"[1.53%, 12.08%]",-19.05,0.7712,0.7895,36.9,36.9,16.67,16.67,True,DEPLOY_SHADOW_MASKING_D1_REMEDIED
+D2,2536.3,84,0,0.0,"[0.00%, 4.38%]",0,0.0,"[0.00%, 4.38%]",0.0,0.8145,0.816,32.14,32.14,14.29,14.29,True,ZERO_FALSE_POSITIVE_BASELINE_PRESERVED
+D3,999.76,83,4,4.82,"[1.55%, 12.21%]",2,2.41,"[0.42%, 8.87%]",-2.41,0.8062,0.8115,33.73,33.73,18.07,18.07,True,COMPLIANT_NOMINAL_MAINTAINED
+D4,633.73,83,9,10.84,"[5.51%, 19.86%]",3,3.61,"[0.94%, 10.59%]",-7.23,0.8028,0.8142,36.14,36.14,19.28,19.28,True,DEPLOY_SHADOW_MASKING_D4_REMEDIED
+D5,91.85,83,4,4.82,"[1.55%, 12.21%]",2,2.41,"[0.42%, 8.87%]",-2.41,0.819,0.8224,34.94,34.94,18.07,18.07,True,COMPLIANT_NOMINAL_MAINTAINED
+D6,197.35,83,8,9.64,"[4.67%, 18.42%]",5,6.02,"[2.23%, 13.88%]",-3.62,0.8105,0.8195,34.94,34.94,18.07,18.07,False,PARTIALLY_REMEDIED_REVIEWS_ADVISORY
+OVERALL,-1.0,500,45,9.0,"[6.76%, 11.87%]",16,3.2,"[1.94%, 5.17%]",-5.8,0.804,0.8122,34.8,34.8,17.4,17.4,True,OVERALL_MISSION_BUDGET_MET_AT_3_20_PCT

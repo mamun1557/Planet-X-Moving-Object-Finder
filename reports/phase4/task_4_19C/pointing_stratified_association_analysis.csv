@@ -1,0 +1,4 @@
+pointing_id,false_positives_total,false_positives_le_1px_count,false_positives_le_1px_pct,null_controls_total,null_controls_le_1px_count,null_controls_le_1px_pct,odds_ratio,fisher_exact_p_value,median_dist_fp_pixels,median_dist_ctrl_pixels,statistical_excess_confirmed
+P0002,14,12,85.71,168,76,45.24,7.263,0.004324148072391777,0.433,1.129,True
+P0009,24,19,79.17,168,58,34.52,7.207,7.182916400250887e-05,0.469,1.543,True
+P0010,7,5,71.43,164,14,8.54,26.786,0.00018371909621847193,0.457,2.86,True

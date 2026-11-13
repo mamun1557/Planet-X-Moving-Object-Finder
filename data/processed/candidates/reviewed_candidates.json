@@ -1,0 +1,22 @@
+{
+  "SPX-J163.6309-69.4422": {
+    "candidate_id": "SPX-J163.6309-69.4422",
+    "verdict": "CONFIRMED_CANDIDATE",
+    "disposition": "CONFIRMED_CANDIDATE",
+    "reviewer": "TEST_INVESTIGATOR_ALPHA",
+    "reviewer_id": "TEST_INVESTIGATOR_ALPHA",
+    "confidence_pct": 95,
+    "notes": "Verified dither pair and 102-channel SED reconstruction.",
+    "timestamp": "2026-11-13T09:11:51.261263+00:00"
+  },
+  "SPX-J162.4518-70.0267": {
+    "candidate_id": "SPX-J162.4518-70.0267",
+    "verdict": "NEEDS_FOLLOWUP",
+    "disposition": "NEEDS_FOLLOWUP",
+    "reviewer": "NASA_INVESTIGATOR_01",
+    "reviewer_id": "NASA_INVESTIGATOR_01",
+    "confidence_pct": 70,
+    "notes": "",
+    "timestamp": "2026-11-09T19:39:40.851218+00:00"
+  }
+}

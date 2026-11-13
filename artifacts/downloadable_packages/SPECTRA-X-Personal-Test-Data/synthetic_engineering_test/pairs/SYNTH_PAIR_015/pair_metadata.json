@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_015",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_DIRECTIONAL_PURE_EAST",
+  "target_coordinates": {
+    "ra_deg": 100.0,
+    "dec_deg": 0.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-16T00:00:00.000Z",
+    "mjd": 61237.0,
+    "crval1_deg": 100.0,
+    "crval2_deg": 0.0,
+    "wcs_valid": true,
+    "sha256": "D1F4BD3ECF8565FE804E6384F1A90D94637B837CDFFA4463265866401824A3B5"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-19T00:00:00.000Z",
+    "mjd": 61240.0,
+    "crval1_deg": 100.0,
+    "crval2_deg": 0.0,
+    "wcs_valid": true,
+    "sha256": "0921D767E2C3AFF40602B231E01F76CFDCE19021D6D734C76D699120A4C157F2"
+  },
+  "time_separation_minutes": 4320.0,
+  "time_separation_days": 3.0,
+  "synthetic_displacement_arcsec": 18.0,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "DIRECTIONAL_PURE_EAST",
+    "scenario_notes": "Pure East displacement along right ascension (PA = 90 deg)",
+    "ground_truth_epoch_a": {
+      "ra_deg": 100.0,
+      "dec_deg": 0.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-16T00:00:00.000Z",
+      "mjd": 61237.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 100.005,
+      "dec_deg": 0.0,
+      "pixel_x": 60.1,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-19T00:00:00.000Z",
+      "mjd": 61240.0
+    },
+    "ground_truth_delta_ra_arcsec": 18.0,
+    "ground_truth_delta_dec_arcsec": 0.0,
+    "ground_truth_angular_displacement_arcsec": 18.0,
+    "ground_truth_position_angle_deg": 90.0,
+    "ground_truth_dt_days": 3.0,
+    "ground_truth_dt_hours": 72.0,
+    "ground_truth_motion_rate_arcsec_per_day": 6.0,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.25,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of DIRECTIONAL_PURE_EAST displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

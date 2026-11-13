@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "model": "SPECTRA_Masked_AE_v2",
+    "checkpoint": "checkpoints\\spectra_masked_ae_v2.pt",
+    "dataset": "Pointing_0003_Independent_Test",
+    "timestamp_utc": "2026-11-02T21:12:46.502250",
+    "device": "cuda"
+  },
+  "sample_counts": {
+    "total_test_sources_in_catalog": 1392,
+    "evaluated_sources": 1392,
+    "rejected_sources": 0,
+    "rejected_details": []
+  },
+  "score_distribution_chi2": {
+    "mean": 0.00036540732758620685,
+    "std": 0.00263772312724621,
+    "min": 0.0,
+    "percentiles": {
+      "p10": 0.0,
+      "p25": 1e-06,
+      "p50": 2e-06,
+      "p75": 6.424999999999999e-05,
+      "p90": 0.0007673000000000006,
+      "p95": 0.0016451500000000004,
+      "p99": 0.005026019999999977,
+      "p100": 0.08949
+    }
+  },
+  "physical_residual_distribution_mjy_sr": {
+    "mean": 1.3052680316091954,
+    "median": 0.22849999999999998,
+    "std": 2.795208898420639,
+    "p90": 4.210950000000001,
+    "p99": 11.725579999999995
+  },
+  "performance_by_channel_coverage": {
+    "1": {
+      "count": 940,
+      "pct_of_total": 67.53,
+      "mean_chi2": 2e-06,
+      "median_chi2": 1e-06,
+      "p90_chi2": 5e-06,
+      "mean_physical_residual_mjy_sr": 0.2019
+    },
+    "2": {
+      "count": 338,
+      "pct_of_total": 24.28,
+      "mean_chi2": 0.001083,
+      "median_chi2": 0.000247,
+      "p90_chi2": 0.002215,
+      "mean_physical_residual_mjy_sr": 3.5335
+    },
+    "3": {
+      "count": 91,
+      "pct_of_total": 6.54,
+      "mean_chi2": 0.001239,
+      "median_chi2": 0.000526,
+      "p90_chi2": 0.002729,
+      "mean_physical_residual_mjy_sr": 3.6933
+    },
+    "4": {
+      "count": 23,
+      "pct_of_total": 1.65,
+      "mean_chi2": 0.001206,
+      "median_chi2": 0.000932,
+      "p90_chi2": 0.002493,
+      "mean_physical_residual_mjy_sr": 4.2046
+    }
+  },
+  "top_5_anomalous_candidates": [
+    {
+      "source_id": "SPX-J162.1760-69.7529",
+      "ra": 162.176213,
+      "dec": -69.75276,
+      "valid_channels_count": 2,
+      "anomaly_score_chi2": 0.08949,
+      "mean_physical_residual_mjy_sr": 53.7993,
+      "flux_scale_mjy_sr": 180.0097
+    },
+    {
+      "source_id": "SPX-J165.2329-69.1932",
+      "ra": 165.232843,
+      "dec": -69.193358,
+      "valid_channels_count": 2,
+      "anomaly_score_chi2": 0.016936,
+      "mean_physical_residual_mjy_sr": 19.2142,
+      "flux_scale_mjy_sr": 147.6822
+    },
+    {
+      "source_id": "SPX-J163.6309-69.4422",
+      "ra": 163.631762,
+      "dec": -69.442086,
+      "valid_channels_count": 3,
+      "anomaly_score_chi2": 0.015125,
+      "mean_physical_residual_mjy_sr": 15.7672,
+      "flux_scale_mjy_sr": 187.4518
+    },
+    {
+      "source_id": "SPX-J165.4147-68.8312",
+      "ra": 165.414536,
+      "dec": -68.831191,
+      "valid_channels_count": 2,
+      "anomaly_score_chi2": 0.013436,
+      "mean_physical_residual_mjy_sr": 16.9228,
+      "flux_scale_mjy_sr": 146.0204
+    },
+    {
+      "source_id": "SPX-J161.1193-68.9784",
+      "ra": 161.119968,
+      "dec": -68.978421,
+      "valid_channels_count": 2,
+      "anomaly_score_chi2": 0.012248,
+      "mean_physical_residual_mjy_sr": 27.7246,
+      "flux_scale_mjy_sr": 250.8551
+    }
+  ]
+}

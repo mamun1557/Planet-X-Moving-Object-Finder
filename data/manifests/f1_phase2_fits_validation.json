@@ -1,0 +1,4303 @@
+[
+  {
+    "filename": "level2_2026W30_1B_0003_1D1_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_1D1_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 66297600,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (9,)), ('VALUES', '>f4', (9, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 1,
+      "OBSID": "2026W30_1B_0003_1",
+      "EXPIDN": 202630102000311,
+      "DATE": "2026-08-11T09:30:53.689",
+      "DATE-OBS": "2026-07-20T00:26:21.423",
+      "DATE-BEG": "2026-07-20T00:26:21.423",
+      "DATE-AVG": "2026-07-20T00:27:18.982",
+      "DATE-END": "2026-07-20T00:28:16.540",
+      "MJD-OBS": 61241.018303507,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 165.685228888,
+      "CRVAL2": -69.5650822885,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 138113
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161449,
+      "nan_pixels": 151,
+      "min_flux_mjy_sr": -6287.04052734375,
+      "max_flux_mjy_sr": 2886.85888671875,
+      "mean_flux_mjy_sr": 0.8975583910942078,
+      "median_flux_mjy_sr": 0.3114137649536133,
+      "std_flux_mjy_sr": 11.690077781677246
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161449,
+      "min_variance": 1.3295497183207772e-06,
+      "max_variance": 242868.15625,
+      "median_variance": 0.000431213149568066,
+      "median_uncertainty": 0.020765671506524086
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 66272,
+      "flagged_pixels": 4095328,
+      "good_fraction": 0.015924644367550943
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 0.7348951697349548,
+      "max_um": 1.1262781620025635,
+      "mean_um": 0.9174260497093201,
+      "mean_bandwidth_um": 0.023428434506058693
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 165.685228888,
+      "crval2": -69.5650822885,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 165.69269799845495,
+      "center_dec_deg": -69.56395783939466,
+      "pixel_scale_arcsec": 6.1313047968557655,
+      "corner_footprint": [
+        [
+          168.04264475069556,
+          -67.31797368280584
+        ],
+        [
+          172.56746598482113,
+          -70.3873976272149
+        ],
+        [
+          162.71095391339458,
+          -71.78617093688786
+        ],
+        [
+          159.28956046827193,
+          -68.47908423973338
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D1",
+    "dither_id": 1,
+    "obs_id": "2026W30_1B_0003_1",
+    "date_obs": "2026-07-20T00:26:21.423",
+    "mjd_obs": 61241.018303507
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_1D2_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_1D2_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 66133440,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (11,)), ('Y', '>i4', (11,)), ('VALUES', '>f4', (11, 11, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 2,
+      "OBSID": "2026W30_1B_0003_1",
+      "EXPIDN": 202630102000312,
+      "DATE": "2026-08-11T06:08:06.526",
+      "DATE-OBS": "2026-07-20T00:26:21.423",
+      "DATE-BEG": "2026-07-20T00:26:21.423",
+      "DATE-AVG": "2026-07-20T00:27:18.982",
+      "DATE-END": "2026-07-20T00:28:16.540",
+      "MJD-OBS": 61241.018303507,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 170.835516004,
+      "CRVAL2": -73.060323879,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 135763
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161289,
+      "nan_pixels": 311,
+      "min_flux_mjy_sr": -495.51068115234375,
+      "max_flux_mjy_sr": 3648.069091796875,
+      "mean_flux_mjy_sr": 0.8302307724952698,
+      "median_flux_mjy_sr": 0.271011084318161,
+      "std_flux_mjy_sr": 14.177721977233887
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161289,
+      "min_variance": 5.342477038539073e-07,
+      "max_variance": 29394.9375,
+      "median_variance": 0.0003503067418932915,
+      "median_uncertainty": 0.01871648244559765
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 118184,
+      "flagged_pixels": 4043416,
+      "good_fraction": 0.028398692810457517
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 1.0859156847000122,
+      "max_um": 1.6676968336105347,
+      "mean_um": 1.3561427593231201,
+      "mean_bandwidth_um": 0.03266977146267891
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 170.835516004,
+      "crval2": -73.060323879,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 170.8421419759978,
+      "center_dec_deg": -73.05813092987025,
+      "pixel_scale_arcsec": 6.107073917011784,
+      "corner_footprint": [
+        [
+          173.11240663291883,
+          -70.7181484164365
+        ],
+        [
+          179.1250051145059,
+          -73.65376262593969
+        ],
+        [
+          167.78399384873362,
+          -75.39252655062147
+        ],
+        [
+          163.12845606236397,
+          -72.15288155483933
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D2",
+    "dither_id": 1,
+    "obs_id": "2026W30_1B_0003_1",
+    "date_obs": "2026-07-20T00:26:21.423",
+    "mjd_obs": 61241.018303507
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_1D3_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_1D3_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 67420800,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          451
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (14,)), ('VALUES', '>f4', (14, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 3,
+      "OBSID": "2026W30_1B_0003_1",
+      "EXPIDN": 202630102000313,
+      "DATE": "2026-08-11T08:30:49.819",
+      "DATE-OBS": "2026-07-20T00:26:21.423",
+      "DATE-BEG": "2026-07-20T00:26:21.423",
+      "DATE-AVG": "2026-07-20T00:27:18.982",
+      "DATE-END": "2026-07-20T00:28:16.540",
+      "MJD-OBS": 61241.018303507,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 178.094661346,
+      "CRVAL2": -76.4321621098,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 141918
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161059,
+      "nan_pixels": 541,
+      "min_flux_mjy_sr": -650.3372802734375,
+      "max_flux_mjy_sr": 16360.7490234375,
+      "mean_flux_mjy_sr": 0.6982786059379578,
+      "median_flux_mjy_sr": 0.18378295004367828,
+      "std_flux_mjy_sr": 18.273712158203125
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161059,
+      "min_variance": 2.266716414567327e-08,
+      "max_variance": 263391.34375,
+      "median_variance": 0.00025042047491297126,
+      "median_uncertainty": 0.015824679285287857
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 292990,
+      "flagged_pixels": 3868610,
+      "good_fraction": 0.07040321030372934
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 1.6162567138671875,
+      "max_um": 2.43906569480896,
+      "mean_um": 2.1294593811035156,
+      "mean_bandwidth_um": 0.049810972064733505
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 178.094661346,
+      "crval2": -76.4321621098,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 178.09512395255192,
+      "center_dec_deg": -76.42702287223084,
+      "pixel_scale_arcsec": 6.13084724315729,
+      "corner_footprint": [
+        [
+          179.88848545446518,
+          -73.97697316684062
+        ],
+        [
+          188.39466105905655,
+          -76.71298603844083
+        ],
+        [
+          175.44893068538028,
+          -78.90087889417454
+        ],
+        [
+          168.37733504043274,
+          -75.75280713144382
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D3",
+    "dither_id": 1,
+    "obs_id": "2026W30_1B_0003_1",
+    "date_obs": "2026-07-20T00:26:21.423",
+    "mjd_obs": 61241.018303507
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_1D4_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_1D4_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 66450240,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (13,)), ('Y', '>i4', (20,)), ('VALUES', '>f4', (20, 13, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 4,
+      "OBSID": "2026W30_1B_0003_1",
+      "EXPIDN": 202630102000314,
+      "DATE": "2026-08-11T10:50:07.323",
+      "DATE-OBS": "2026-07-20T00:26:21.423",
+      "DATE-BEG": "2026-07-20T00:26:21.423",
+      "DATE-AVG": "2026-07-20T00:27:18.982",
+      "DATE-END": "2026-07-20T00:28:16.540",
+      "MJD-OBS": 61241.018303507,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 165.624264634,
+      "CRVAL2": -69.5655929828,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 230098
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4159279,
+      "nan_pixels": 2321,
+      "min_flux_mjy_sr": -10038.037109375,
+      "max_flux_mjy_sr": 16033.7197265625,
+      "mean_flux_mjy_sr": 0.7446528077125549,
+      "median_flux_mjy_sr": 0.169716477394104,
+      "std_flux_mjy_sr": 17.736846923828125
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4159279,
+      "min_variance": 4.482862525634346e-09,
+      "max_variance": 58566616.0,
+      "median_variance": 0.0001901316863950342,
+      "median_uncertainty": 0.013788824900984764
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 16119,
+      "flagged_pixels": 4145481,
+      "good_fraction": 0.0038732698961937715
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 2.398031234741211,
+      "max_um": 3.8628580570220947,
+      "mean_um": 2.901501178741455,
+      "mean_bandwidth_um": 0.07878901809453964
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 165.624264634,
+      "crval2": -69.5655929828,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 165.632430237415,
+      "center_dec_deg": -69.56499409626842,
+      "pixel_scale_arcsec": 6.136732316238786,
+      "corner_footprint": [
+        [
+          168.00013981449612,
+          -67.31976661541779
+        ],
+        [
+          172.5091348878227,
+          -70.39588889484338
+        ],
+        [
+          162.63126854703663,
+          -71.7860628936838
+        ],
+        [
+          159.23100619999684,
+          -68.47237141831745
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D4",
+    "dither_id": 1,
+    "obs_id": "2026W30_1B_0003_1",
+    "date_obs": "2026-07-20T00:26:21.423",
+    "mjd_obs": 61241.018303507
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_1D5_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_1D5_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 68057280,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (11,)), ('Y', '>i4', (11,)), ('VALUES', '>f4', (11, 11, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 5,
+      "OBSID": "2026W30_1B_0003_1",
+      "EXPIDN": 202630102000315,
+      "DATE": "2026-08-11T07:25:25.003",
+      "DATE-OBS": "2026-07-20T00:26:21.423",
+      "DATE-BEG": "2026-07-20T00:26:21.423",
+      "DATE-AVG": "2026-07-20T00:27:18.982",
+      "DATE-END": "2026-07-20T00:28:16.540",
+      "MJD-OBS": 61241.018303507,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 170.775917128,
+      "CRVAL2": -73.0646492442,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 220710
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4160025,
+      "nan_pixels": 1575,
+      "min_flux_mjy_sr": -876.533935546875,
+      "max_flux_mjy_sr": 28960.376953125,
+      "mean_flux_mjy_sr": 1.0643105506896973,
+      "median_flux_mjy_sr": 0.2123228758573532,
+      "std_flux_mjy_sr": 39.227474212646484
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4160025,
+      "min_variance": 6.243844268283283e-07,
+      "max_variance": 1220892.25,
+      "median_variance": 0.001099246321246028,
+      "median_uncertainty": 0.03315488249063492
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 301838,
+      "flagged_pixels": 3859762,
+      "good_fraction": 0.07252931564782776
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 3.7983829975128174,
+      "max_um": 4.442564010620117,
+      "mean_um": 4.113039016723633,
+      "mean_bandwidth_um": 0.03675804287195206
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 170.775917128,
+      "crval2": -73.0646492442,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 170.7836884815522,
+      "center_dec_deg": -73.06266809995168,
+      "pixel_scale_arcsec": 6.113689644170345,
+      "corner_footprint": [
+        [
+          173.09777372894018,
+          -70.72413267738973
+        ],
+        [
+          179.06886781826873,
+          -73.67280863748341
+        ],
+        [
+          167.66909038370085,
+          -75.39402027830141
+        ],
+        [
+          163.0806592544418,
+          -72.14360844049368
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D5",
+    "dither_id": 1,
+    "obs_id": "2026W30_1B_0003_1",
+    "date_obs": "2026-07-20T00:26:21.423",
+    "mjd_obs": 61241.018303507
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_1D6_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_1D6_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 68996160,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (9,)), ('VALUES', '>f4', (9, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 6,
+      "OBSID": "2026W30_1B_0003_1",
+      "EXPIDN": 202630102000316,
+      "DATE": "2026-08-11T09:52:06.525",
+      "DATE-OBS": "2026-07-20T00:26:21.423",
+      "DATE-BEG": "2026-07-20T00:26:21.423",
+      "DATE-AVG": "2026-07-20T00:27:18.982",
+      "DATE-END": "2026-07-20T00:28:16.540",
+      "MJD-OBS": 61241.018303507,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 178.022042745,
+      "CRVAL2": -76.4419396312,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 241887
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4159848,
+      "nan_pixels": 1752,
+      "min_flux_mjy_sr": -714.4928588867188,
+      "max_flux_mjy_sr": 28779.388671875,
+      "mean_flux_mjy_sr": 1.3923660516738892,
+      "median_flux_mjy_sr": 0.3709167242050171,
+      "std_flux_mjy_sr": 40.23573303222656
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4159848,
+      "min_variance": 2.70751968400873e-07,
+      "max_variance": 971484.125,
+      "median_variance": 0.0024814591743052006,
+      "median_uncertainty": 0.04981424659490585
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 909183,
+      "flagged_pixels": 3252417,
+      "good_fraction": 0.21846957900807382
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 4.401752948760986,
+      "max_um": 5.0246148109436035,
+      "mean_um": 4.705481052398682,
+      "mean_bandwidth_um": 0.036610983312129974
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 178.022042745,
+      "crval2": -76.4419396312,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 178.0285126345285,
+      "center_dec_deg": -76.43899947935611,
+      "pixel_scale_arcsec": 6.13731196349757,
+      "corner_footprint": [
+        [
+          179.85013567829807,
+          -73.98766994676875
+        ],
+        [
+          188.3452955858785,
+          -76.73221638706714
+        ],
+        [
+          175.33890215859608,
+          -78.91408685763672
+        ],
+        [
+          168.30315921298092,
+          -75.75673401129798
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D6",
+    "dither_id": 1,
+    "obs_id": "2026W30_1B_0003_1",
+    "date_obs": "2026-07-20T00:26:21.423",
+    "mjd_obs": 61241.018303507
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_2D1_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_2D1_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 61888320,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (9,)), ('VALUES', '>f4', (9, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 1,
+      "OBSID": "2026W30_1B_0003_2",
+      "EXPIDN": 202630102000321,
+      "DATE": "2026-08-11T09:59:57.659",
+      "DATE-OBS": "2026-07-20T00:28:30.353",
+      "DATE-BEG": "2026-07-20T00:28:30.353",
+      "DATE-AVG": "2026-07-20T00:29:27.912",
+      "DATE-END": "2026-07-20T00:30:25.470",
+      "MJD-OBS": 61241.019795752,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 165.165129248,
+      "CRVAL2": -69.6410935883,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 36263
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161446,
+      "nan_pixels": 154,
+      "min_flux_mjy_sr": -5723.22998046875,
+      "max_flux_mjy_sr": 3132.061279296875,
+      "mean_flux_mjy_sr": 0.8837154507637024,
+      "median_flux_mjy_sr": 0.3035320043563843,
+      "std_flux_mjy_sr": 11.26366901397705
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161446,
+      "min_variance": 8.937903658079449e-06,
+      "max_variance": 218050.921875,
+      "median_variance": 0.0004163483972661197,
+      "median_uncertainty": 0.020404616370797157
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 75091,
+      "flagged_pixels": 4086509,
+      "good_fraction": 0.01804378123798539
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 0.7348951697349548,
+      "max_um": 1.1262781620025635,
+      "mean_um": 0.9174260497093201,
+      "mean_bandwidth_um": 0.023428434506058693
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 165.165129248,
+      "crval2": -69.6410935883,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 165.173189364268,
+      "center_dec_deg": -69.63995210495754,
+      "pixel_scale_arcsec": 6.131252454767671,
+      "corner_footprint": [
+        [
+          167.58186009001065,
+          -67.40118057530312
+        ],
+        [
+          172.05529728294258,
+          -70.48373755630425
+        ],
+        [
+          162.11803997453734,
+          -71.85286688862455
+        ],
+        [
+          158.77760546413174,
+          -68.53521560918846
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D1",
+    "dither_id": 2,
+    "obs_id": "2026W30_1B_0003_2",
+    "date_obs": "2026-07-20T00:28:30.353",
+    "mjd_obs": 61241.019795752
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_2D2_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_2D2_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 61355520,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (11,)), ('Y', '>i4', (11,)), ('VALUES', '>f4', (11, 11, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 2,
+      "OBSID": "2026W30_1B_0003_2",
+      "EXPIDN": 202630102000322,
+      "DATE": "2026-08-11T06:34:14.233",
+      "DATE-OBS": "2026-07-20T00:28:30.353",
+      "DATE-BEG": "2026-07-20T00:28:30.353",
+      "DATE-AVG": "2026-07-20T00:29:27.912",
+      "DATE-END": "2026-07-20T00:30:25.470",
+      "MJD-OBS": 61241.019795752,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 170.235284717,
+      "CRVAL2": -73.1515387513,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 31111
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161241,
+      "nan_pixels": 359,
+      "min_flux_mjy_sr": -1308.650634765625,
+      "max_flux_mjy_sr": 20491.97265625,
+      "mean_flux_mjy_sr": 0.8166128396987915,
+      "median_flux_mjy_sr": 0.2671174108982086,
+      "std_flux_mjy_sr": 17.169322967529297
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161241,
+      "min_variance": 6.1227201513247564e-06,
+      "max_variance": 555573.0625,
+      "median_variance": 0.0003424456808716059,
+      "median_uncertainty": 0.018505288287997246
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 133655,
+      "flagged_pixels": 4027945,
+      "good_fraction": 0.032116253364090734
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 1.0859156847000122,
+      "max_um": 1.6676968336105347,
+      "mean_um": 1.3561427593231201,
+      "mean_bandwidth_um": 0.03266977146267891
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 170.235284717,
+      "crval2": -73.1515387513,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 170.2421903960248,
+      "center_dec_deg": -73.14932848375493,
+      "pixel_scale_arcsec": 6.107104969692593,
+      "corner_footprint": [
+        [
+          172.59437085293894,
+          -70.81603309015833
+        ],
+        [
+          178.55435967788807,
+          -73.76813105048156
+        ],
+        [
+          167.07305687873938,
+          -75.47460707967153
+        ],
+        [
+          162.52509247661496,
+          -72.22081752660516
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D2",
+    "dither_id": 2,
+    "obs_id": "2026W30_1B_0003_2",
+    "date_obs": "2026-07-20T00:28:30.353",
+    "mjd_obs": 61241.019795752
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_2D4_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_2D4_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 59716800,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (13,)), ('Y', '>i4', (20,)), ('VALUES', '>f4', (20, 13, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 4,
+      "OBSID": "2026W30_1B_0003_2",
+      "EXPIDN": 202630102000324,
+      "DATE": "2026-08-11T08:47:41.615",
+      "DATE-OBS": "2026-07-20T00:28:30.354",
+      "DATE-BEG": "2026-07-20T00:28:30.354",
+      "DATE-AVG": "2026-07-20T00:29:27.913",
+      "DATE-END": "2026-07-20T00:30:25.471",
+      "MJD-OBS": 61241.019795764,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 165.106663765,
+      "CRVAL2": -69.6424391044,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 50495
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4159293,
+      "nan_pixels": 2307,
+      "min_flux_mjy_sr": -10856.044921875,
+      "max_flux_mjy_sr": 35692.2734375,
+      "mean_flux_mjy_sr": 0.6940697431564331,
+      "median_flux_mjy_sr": 0.16303621232509613,
+      "std_flux_mjy_sr": 23.150224685668945
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4159293,
+      "min_variance": 2.5571392114898117e-08,
+      "max_variance": 39692296.0,
+      "median_variance": 0.0001794593845261261,
+      "median_uncertainty": 0.013396245427429676
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 20052,
+      "flagged_pixels": 4141548,
+      "good_fraction": 0.004818339100346021
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 2.398031234741211,
+      "max_um": 3.8628580570220947,
+      "mean_um": 2.901501178741455,
+      "mean_bandwidth_um": 0.07878901809453964
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 165.106663765,
+      "crval2": -69.6424391044,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 165.11271214827167,
+      "center_dec_deg": -69.64080490566111,
+      "pixel_scale_arcsec": 6.136728554667672,
+      "corner_footprint": [
+        [
+          167.54017057512377,
+          -67.40271633703951
+        ],
+        [
+          171.9971915303498,
+          -70.4920109155773
+        ],
+        [
+          162.03535436974977,
+          -71.85247091564776
+        ],
+        [
+          158.7186825392745,
+          -68.52827789714227
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D4",
+    "dither_id": 2,
+    "obs_id": "2026W30_1B_0003_2",
+    "date_obs": "2026-07-20T00:28:30.354",
+    "mjd_obs": 61241.019795764
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_2D5_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_2D5_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 63766080,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (11,)), ('Y', '>i4', (11,)), ('VALUES', '>f4', (11, 11, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 5,
+      "OBSID": "2026W30_1B_0003_2",
+      "EXPIDN": 202630102000325,
+      "DATE": "2026-08-11T05:29:49.694",
+      "DATE-OBS": "2026-07-20T00:28:30.353",
+      "DATE-BEG": "2026-07-20T00:28:30.353",
+      "DATE-AVG": "2026-07-20T00:29:27.912",
+      "DATE-END": "2026-07-20T00:30:25.470",
+      "MJD-OBS": 61241.019795752,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 170.175678288,
+      "CRVAL2": -73.1558415532,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 44145
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4160036,
+      "nan_pixels": 1564,
+      "min_flux_mjy_sr": -2792.154296875,
+      "max_flux_mjy_sr": 30428.06640625,
+      "mean_flux_mjy_sr": 0.9497209191322327,
+      "median_flux_mjy_sr": 0.20367418229579926,
+      "std_flux_mjy_sr": 36.7617073059082
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4160036,
+      "min_variance": 3.230836000511772e-06,
+      "max_variance": 1204879.5,
+      "median_variance": 0.0010460881749168038,
+      "median_uncertainty": 0.03234328702092171
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 352555,
+      "flagged_pixels": 3809045,
+      "good_fraction": 0.08471621491733948
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 3.7983829975128174,
+      "max_um": 4.442564010620117,
+      "mean_um": 4.113039016723633,
+      "mean_bandwidth_um": 0.03675804287195206
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 170.175678288,
+      "crval2": -73.1558415532,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 170.18323860418317,
+      "center_dec_deg": -73.15370604459135,
+      "pixel_scale_arcsec": 6.113814395587409,
+      "corner_footprint": [
+        [
+          172.5794074478058,
+          -70.82194925518594
+        ],
+        [
+          178.49765578085075,
+          -73.7869568520496
+        ],
+        [
+          166.95781943374195,
+          -75.47559756604593
+        ],
+        [
+          162.47733754621825,
+          -72.21134025429981
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D5",
+    "dither_id": 2,
+    "obs_id": "2026W30_1B_0003_2",
+    "date_obs": "2026-07-20T00:28:30.353",
+    "mjd_obs": 61241.019795752
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_2D6_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_2D6_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 65931840,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (9,)), ('VALUES', '>f4', (9, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 6,
+      "OBSID": "2026W30_1B_0003_2",
+      "EXPIDN": 202630102000326,
+      "DATE": "2026-08-11T07:51:07.218",
+      "DATE-OBS": "2026-07-20T00:28:30.353",
+      "DATE-BEG": "2026-07-20T00:28:30.353",
+      "DATE-AVG": "2026-07-20T00:29:27.912",
+      "DATE-END": "2026-07-20T00:30:25.470",
+      "MJD-OBS": 61241.019795752,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 177.329486245,
+      "CRVAL2": -76.5530212546,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 43800
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4159844,
+      "nan_pixels": 1756,
+      "min_flux_mjy_sr": -721.359130859375,
+      "max_flux_mjy_sr": 109186.1953125,
+      "mean_flux_mjy_sr": 1.2204844951629639,
+      "median_flux_mjy_sr": 0.3584747314453125,
+      "std_flux_mjy_sr": 71.0594711303711
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4159844,
+      "min_variance": 5.650005050483742e-07,
+      "max_variance": 10657076.0,
+      "median_variance": 0.0023460681550204754,
+      "median_uncertainty": 0.048436228185892105
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 1039474,
+      "flagged_pixels": 3122126,
+      "good_fraction": 0.2497774894271434
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 4.401752948760986,
+      "max_um": 5.0246148109436035,
+      "mean_um": 4.705481052398682,
+      "mean_bandwidth_um": 0.036610983312129974
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 177.329486245,
+      "crval2": -76.5530212546,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 177.33573731221983,
+      "center_dec_deg": -76.55018897560134,
+      "pixel_scale_arcsec": 6.137261750030485,
+      "corner_footprint": [
+        [
+          179.27302774972532,
+          -74.10387846905056
+        ],
+        [
+          187.73304985006592,
+          -76.8692919149987
+        ],
+        [
+          174.47078331934463,
+          -79.01758531963611
+        ],
+        [
+          167.57700367938884,
+          -75.84037971532004
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D6",
+    "dither_id": 2,
+    "obs_id": "2026W30_1B_0003_2",
+    "date_obs": "2026-07-20T00:28:30.353",
+    "mjd_obs": 61241.019795752
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_3D1_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_3D1_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 61836480,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (9,)), ('VALUES', '>f4', (9, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 1,
+      "OBSID": "2026W30_1B_0003_3",
+      "EXPIDN": 202630102000331,
+      "DATE": "2026-08-11T07:57:34.767",
+      "DATE-OBS": "2026-07-20T00:30:39.285",
+      "DATE-BEG": "2026-07-20T00:30:39.285",
+      "DATE-AVG": "2026-07-20T00:31:36.844",
+      "DATE-END": "2026-07-20T00:32:34.402",
+      "MJD-OBS": 61241.021288021,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 164.641856525,
+      "CRVAL2": -69.7155606103,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 33266
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161456,
+      "nan_pixels": 144,
+      "min_flux_mjy_sr": -6016.80322265625,
+      "max_flux_mjy_sr": 3738.94580078125,
+      "mean_flux_mjy_sr": 0.8563897609710693,
+      "median_flux_mjy_sr": 0.3002508282661438,
+      "std_flux_mjy_sr": 11.19489860534668
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161456,
+      "min_variance": 5.920161427752646e-08,
+      "max_variance": 250016.328125,
+      "median_variance": 0.00041221443098038435,
+      "median_uncertainty": 0.020303064957261086
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 80564,
+      "flagged_pixels": 4081036,
+      "good_fraction": 0.019358900422914264
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 0.7348951697349548,
+      "max_um": 1.1262781620025635,
+      "mean_um": 0.9174260497093201,
+      "mean_bandwidth_um": 0.023428434506058693
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 164.641856525,
+      "crval2": -69.7155606103,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 164.64997439467166,
+      "center_dec_deg": -69.7143405913159,
+      "pixel_scale_arcsec": 6.131402577400851,
+      "corner_footprint": [
+        [
+          167.11780767169344,
+          -67.48286742615386
+        ],
+        [
+          171.53857579732485,
+          -70.57852980009268
+        ],
+        [
+          161.52136359889693,
+          -71.91771408362614
+        ],
+        [
+          158.2625639472974,
+          -68.58960387195744
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D1",
+    "dither_id": 3,
+    "obs_id": "2026W30_1B_0003_3",
+    "date_obs": "2026-07-20T00:30:39.285",
+    "mjd_obs": 61241.021288021
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_3D2_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_3D2_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 61318080,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (11,)), ('Y', '>i4', (11,)), ('VALUES', '>f4', (11, 11, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 2,
+      "OBSID": "2026W30_1B_0003_3",
+      "EXPIDN": 202630102000332,
+      "DATE": "2026-08-11T07:51:22.776",
+      "DATE-OBS": "2026-07-20T00:30:39.285",
+      "DATE-BEG": "2026-07-20T00:30:39.285",
+      "DATE-AVG": "2026-07-20T00:31:36.844",
+      "DATE-END": "2026-07-20T00:32:34.402",
+      "MJD-OBS": 61241.021288021,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 169.628174112,
+      "CRVAL2": -73.2405599119,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 31778
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161225,
+      "nan_pixels": 375,
+      "min_flux_mjy_sr": -502.0850524902344,
+      "max_flux_mjy_sr": 20557.474609375,
+      "mean_flux_mjy_sr": 0.8010241389274597,
+      "median_flux_mjy_sr": 0.26592183113098145,
+      "std_flux_mjy_sr": 17.240217208862305
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161225,
+      "min_variance": 1.3059630532552546e-07,
+      "max_variance": 557050.625,
+      "median_variance": 0.00034111831337213516,
+      "median_uncertainty": 0.01846938766539097
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 141172,
+      "flagged_pixels": 4020428,
+      "good_fraction": 0.03392252979623222
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 1.0859156847000122,
+      "max_um": 1.6676968336105347,
+      "mean_um": 1.3561427593231201,
+      "mean_bandwidth_um": 0.03266977146267891
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 169.628174112,
+      "crval2": -73.2405599119,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 169.6358998872398,
+      "center_dec_deg": -73.23873462383256,
+      "pixel_scale_arcsec": 6.107195516733435,
+      "corner_footprint": [
+        [
+          172.07115233923918,
+          -70.9123363028912
+        ],
+        [
+          177.97575069234352,
+          -73.880927898983
+        ],
+        [
+          166.35454831379772,
+          -75.55439423153105
+        ],
+        [
+          161.9177028865791,
+          -72.28689419259658
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D2",
+    "dither_id": 3,
+    "obs_id": "2026W30_1B_0003_3",
+    "date_obs": "2026-07-20T00:30:39.285",
+    "mjd_obs": 61241.021288021
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_3D3_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_3D3_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 63861120,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          451
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (14,)), ('VALUES', '>f4', (14, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 3,
+      "OBSID": "2026W30_1B_0003_3",
+      "EXPIDN": 202630102000333,
+      "DATE": "2026-08-11T06:53:45.750",
+      "DATE-OBS": "2026-07-20T00:30:39.284",
+      "DATE-BEG": "2026-07-20T00:30:39.284",
+      "DATE-AVG": "2026-07-20T00:31:36.843",
+      "DATE-END": "2026-07-20T00:32:34.402",
+      "MJD-OBS": 61241.021288009,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 176.694163874,
+      "CRVAL2": -76.6507320298,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 37649
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161113,
+      "nan_pixels": 487,
+      "min_flux_mjy_sr": -704.2620239257812,
+      "max_flux_mjy_sr": 15642.119140625,
+      "mean_flux_mjy_sr": 0.6159080862998962,
+      "median_flux_mjy_sr": 0.1775650829076767,
+      "std_flux_mjy_sr": 16.417299270629883
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161113,
+      "min_variance": 2.824233433784684e-06,
+      "max_variance": 330534.75,
+      "median_variance": 0.00024026102619245648,
+      "median_uncertainty": 0.015500355511903763
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 335237,
+      "flagged_pixels": 3826363,
+      "good_fraction": 0.08055483467896962
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 1.6162567138671875,
+      "max_um": 2.43906569480896,
+      "mean_um": 2.1294593811035156,
+      "mean_bandwidth_um": 0.049810972064733505
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 176.694163874,
+      "crval2": -76.6507320298,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 176.7008679279884,
+      "center_dec_deg": -76.64789965744916,
+      "pixel_scale_arcsec": 6.130858804435421,
+      "corner_footprint": [
+        [
+          178.72726351214072,
+          -74.20805916074141
+        ],
+        [
+          187.1603682254292,
+          -76.98602054762455
+        ],
+        [
+          173.70045651017708,
+          -79.10625842170083
+        ],
+        [
+          166.91877466685256,
+          -75.91812230368444
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D3",
+    "dither_id": 3,
+    "obs_id": "2026W30_1B_0003_3",
+    "date_obs": "2026-07-20T00:30:39.284",
+    "mjd_obs": 61241.021288009
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_3D4_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_3D4_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 59002560,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (13,)), ('Y', '>i4', (20,)), ('VALUES', '>f4', (20, 13, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 4,
+      "OBSID": "2026W30_1B_0003_3",
+      "EXPIDN": 202630102000334,
+      "DATE": "2026-08-11T09:12:05.402",
+      "DATE-OBS": "2026-07-20T00:30:39.285",
+      "DATE-BEG": "2026-07-20T00:30:39.285",
+      "DATE-AVG": "2026-07-20T00:31:36.844",
+      "DATE-END": "2026-07-20T00:32:34.402",
+      "MJD-OBS": 61241.021288021,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 164.582880026,
+      "CRVAL2": -69.7164325031,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 36733
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4159308,
+      "nan_pixels": 2292,
+      "min_flux_mjy_sr": -998.3341674804688,
+      "max_flux_mjy_sr": 72505.15625,
+      "mean_flux_mjy_sr": 0.6499395370483398,
+      "median_flux_mjy_sr": 0.16027989983558655,
+      "std_flux_mjy_sr": 38.09477996826172
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4159308,
+      "min_variance": 1.066659137904935e-06,
+      "max_variance": 46611568.0,
+      "median_variance": 0.00017648033099249005,
+      "median_uncertainty": 0.013284590095281601
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 22504,
+      "flagged_pixels": 4139096,
+      "good_fraction": 0.005407535563244906
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 2.398031234741211,
+      "max_um": 3.8628580570220947,
+      "mean_um": 2.901501178741455,
+      "mean_bandwidth_um": 0.07878901809453964
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 164.582880026,
+      "crval2": -69.7164325031,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 164.58929505695153,
+      "center_dec_deg": -69.71501011836114,
+      "pixel_scale_arcsec": 6.136523317727533,
+      "corner_footprint": [
+        [
+          167.0759992535279,
+          -67.48437425428303
+        ],
+        [
+          171.4792886032706,
+          -70.58664341374157
+        ],
+        [
+          161.43826173104475,
+          -71.91704248577913
+        ],
+        [
+          158.20420603033244,
+          -68.58252041629754
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D4",
+    "dither_id": 3,
+    "obs_id": "2026W30_1B_0003_3",
+    "date_obs": "2026-07-20T00:30:39.285",
+    "mjd_obs": 61241.021288021
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_3D5_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_3D5_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 63463680,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (11,)), ('Y', '>i4', (11,)), ('VALUES', '>f4', (11, 11, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 5,
+      "OBSID": "2026W30_1B_0003_3",
+      "EXPIDN": 202630102000335,
+      "DATE": "2026-08-11T05:51:25.969",
+      "DATE-OBS": "2026-07-20T00:30:39.285",
+      "DATE-BEG": "2026-07-20T00:30:39.285",
+      "DATE-AVG": "2026-07-20T00:31:36.844",
+      "DATE-END": "2026-07-20T00:32:34.402",
+      "MJD-OBS": 61241.021288021,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 169.569085841,
+      "CRVAL2": -73.2451338479,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 35340
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4160039,
+      "nan_pixels": 1561,
+      "min_flux_mjy_sr": -516.1885986328125,
+      "max_flux_mjy_sr": 25383.9453125,
+      "mean_flux_mjy_sr": 0.8060556650161743,
+      "median_flux_mjy_sr": 0.2013978809118271,
+      "std_flux_mjy_sr": 31.940704345703125
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4160039,
+      "min_variance": 5.736140451517713e-07,
+      "max_variance": 1219470.875,
+      "median_variance": 0.0010368903167545795,
+      "median_uncertainty": 0.032200779765844345
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 371400,
+      "flagged_pixels": 3790200,
+      "good_fraction": 0.08924452133794694
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 3.7983829975128174,
+      "max_um": 4.442564010620117,
+      "mean_um": 4.113039016723633,
+      "mean_bandwidth_um": 0.03675804287195206
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 169.569085841,
+      "crval2": -73.2451338479,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 169.57661025482767,
+      "center_dec_deg": -73.24293196527424,
+      "pixel_scale_arcsec": 6.113719806755429,
+      "corner_footprint": [
+        [
+          172.0559238736993,
+          -70.91827141595132
+        ],
+        [
+          177.9178440136008,
+          -73.89956486342444
+        ],
+        [
+          166.2384421776824,
+          -75.5551147636156
+        ],
+        [
+          161.86962929804127,
+          -72.27740052567557
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D5",
+    "dither_id": 3,
+    "obs_id": "2026W30_1B_0003_3",
+    "date_obs": "2026-07-20T00:30:39.285",
+    "mjd_obs": 61241.021288021
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_3D6_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_3D6_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 65764800,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (9,)), ('VALUES', '>f4', (9, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 6,
+      "OBSID": "2026W30_1B_0003_3",
+      "EXPIDN": 202630102000336,
+      "DATE": "2026-08-11T05:45:52.748",
+      "DATE-OBS": "2026-07-20T00:30:39.284",
+      "DATE-BEG": "2026-07-20T00:30:39.284",
+      "DATE-AVG": "2026-07-20T00:31:36.843",
+      "DATE-END": "2026-07-20T00:32:34.402",
+      "MJD-OBS": 61241.021288009,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 176.624060731,
+      "CRVAL2": -76.6626200135,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 42263
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4159853,
+      "nan_pixels": 1747,
+      "min_flux_mjy_sr": -1214.421630859375,
+      "max_flux_mjy_sr": 27021.8828125,
+      "mean_flux_mjy_sr": 0.9997459053993225,
+      "median_flux_mjy_sr": 0.357638418674469,
+      "std_flux_mjy_sr": 34.671844482421875
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4159853,
+      "min_variance": 1.8234877643408254e-06,
+      "max_variance": 914551.9375,
+      "median_variance": 0.0023426548577845097,
+      "median_uncertainty": 0.04840097948908806
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 1059473,
+      "flagged_pixels": 3102127,
+      "good_fraction": 0.254583093041138
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 4.401752948760986,
+      "max_um": 5.0246148109436035,
+      "mean_um": 4.705481052398682,
+      "mean_bandwidth_um": 0.036610983312129974
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 176.624060731,
+      "crval2": -76.6626200135,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 176.63185504621666,
+      "center_dec_deg": -76.65949602388247,
+      "pixel_scale_arcsec": 6.137201299818345,
+      "corner_footprint": [
+        [
+          178.6879573389527,
+          -74.21854993484659
+        ],
+        [
+          187.10851112847388,
+          -77.00494130254215
+        ],
+        [
+          173.58679207108108,
+          -79.11886152361276
+        ],
+        [
+          166.84347412117134,
+          -75.92163855964924
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D6",
+    "dither_id": 3,
+    "obs_id": "2026W30_1B_0003_3",
+    "date_obs": "2026-07-20T00:30:39.284",
+    "mjd_obs": 61241.021288009
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_4D1_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_4D1_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 61822080,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (9,)), ('VALUES', '>f4', (9, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 1,
+      "OBSID": "2026W30_1B_0003_4",
+      "EXPIDN": 202630102000341,
+      "DATE": "2026-08-11T05:55:57.768",
+      "DATE-OBS": "2026-07-20T00:32:48.215",
+      "DATE-BEG": "2026-07-20T00:32:48.215",
+      "DATE-AVG": "2026-07-20T00:33:45.774",
+      "DATE-END": "2026-07-20T00:34:43.333",
+      "MJD-OBS": 61241.022780266,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 164.114828541,
+      "CRVAL2": -69.7882407532,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 30795
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161440,
+      "nan_pixels": 160,
+      "min_flux_mjy_sr": -5925.58740234375,
+      "max_flux_mjy_sr": 3262.88671875,
+      "mean_flux_mjy_sr": 0.8068188428878784,
+      "median_flux_mjy_sr": 0.29358190298080444,
+      "std_flux_mjy_sr": 10.927788734436035
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161440,
+      "min_variance": 1.4188251498126192e-06,
+      "max_variance": 248836.390625,
+      "median_variance": 0.00040362245636060834,
+      "median_uncertainty": 0.020090356469154358
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 84882,
+      "flagged_pixels": 4076718,
+      "good_fraction": 0.020396482122260667
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 0.7348951697349548,
+      "max_um": 1.1262781620025635,
+      "mean_um": 0.9174260497093201,
+      "mean_bandwidth_um": 0.023428434506058693
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 164.114828541,
+      "crval2": -69.7882407532,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 164.12276743754623,
+      "center_dec_deg": -69.78706517393113,
+      "pixel_scale_arcsec": 6.131295811857163,
+      "corner_footprint": [
+        [
+          166.65022247582485,
+          -67.56322850016434
+        ],
+        [
+          171.01634733405683,
+          -70.67179805420177
+        ],
+        [
+          160.9197197896786,
+          -71.98058873950275
+        ],
+        [
+          157.74521010228585,
+          -68.64246134564924
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D1",
+    "dither_id": 4,
+    "obs_id": "2026W30_1B_0003_4",
+    "date_obs": "2026-07-20T00:32:48.215",
+    "mjd_obs": 61241.022780266
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_4D2_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_4D2_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 61562880,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (11,)), ('Y', '>i4', (11,)), ('VALUES', '>f4', (11, 11, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 2,
+      "OBSID": "2026W30_1B_0003_4",
+      "EXPIDN": 202630102000342,
+      "DATE": "2026-08-11T10:43:36.059",
+      "DATE-OBS": "2026-07-20T00:32:48.215",
+      "DATE-BEG": "2026-07-20T00:32:48.215",
+      "DATE-AVG": "2026-07-20T00:33:45.774",
+      "DATE-END": "2026-07-20T00:34:43.333",
+      "MJD-OBS": 61241.022780266,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 169.016159675,
+      "CRVAL2": -73.3284844192,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 34545
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161271,
+      "nan_pixels": 329,
+      "min_flux_mjy_sr": -2955.486328125,
+      "max_flux_mjy_sr": 21480.728515625,
+      "mean_flux_mjy_sr": 0.7834568619728088,
+      "median_flux_mjy_sr": 0.2597533166408539,
+      "std_flux_mjy_sr": 17.714740753173828
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161271,
+      "min_variance": 6.455068159993971e-06,
+      "max_variance": 577877.125,
+      "median_variance": 0.0003337149100843817,
+      "median_uncertainty": 0.018267866224050522
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 148889,
+      "flagged_pixels": 4012711,
+      "good_fraction": 0.0357768646674356
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 1.0859156847000122,
+      "max_um": 1.6676968336105347,
+      "mean_um": 1.3561427593231201,
+      "mean_bandwidth_um": 0.03266977146267891
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 169.016159675,
+      "crval2": -73.3284844192,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 169.02302819873415,
+      "center_dec_deg": -73.32633012901019,
+      "pixel_scale_arcsec": 6.106945460534088,
+      "corner_footprint": [
+        [
+          171.54252835695453,
+          -71.00720138516927
+        ],
+        [
+          177.38890708097307,
+          -73.99202161710804
+        ],
+        [
+          165.6279406350271,
+          -75.63196759011605
+        ],
+        [
+          161.3052527889217,
+          -72.35109931883213
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D2",
+    "dither_id": 4,
+    "obs_id": "2026W30_1B_0003_4",
+    "date_obs": "2026-07-20T00:32:48.215",
+    "mjd_obs": 61241.022780266
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_4D3_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_4D3_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 63864000,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          451
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (14,)), ('VALUES', '>f4', (14, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 3,
+      "OBSID": "2026W30_1B_0003_4",
+      "EXPIDN": 202630102000343,
+      "DATE": "2026-08-11T10:37:53.825",
+      "DATE-OBS": "2026-07-20T00:32:48.215",
+      "DATE-BEG": "2026-07-20T00:32:48.215",
+      "DATE-AVG": "2026-07-20T00:33:45.774",
+      "DATE-END": "2026-07-20T00:34:43.333",
+      "MJD-OBS": 61241.022780266,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 175.979473927,
+      "CRVAL2": -76.7581148606,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 36856
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4161124,
+      "nan_pixels": 476,
+      "min_flux_mjy_sr": -540.4334106445312,
+      "max_flux_mjy_sr": 14967.9501953125,
+      "mean_flux_mjy_sr": 0.6116920113563538,
+      "median_flux_mjy_sr": 0.17698326706886292,
+      "std_flux_mjy_sr": 16.247364044189453
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4161124,
+      "min_variance": 2.5392660063516814e-06,
+      "max_variance": 859763.8125,
+      "median_variance": 0.0002396850031800568,
+      "median_uncertainty": 0.015481763519346714
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 350502,
+      "flagged_pixels": 3811098,
+      "good_fraction": 0.08422289504036909
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 1.6162567138671875,
+      "max_um": 2.43906569480896,
+      "mean_um": 2.1294593811035156,
+      "mean_bandwidth_um": 0.049810972064733505
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 175.979473927,
+      "crval2": -76.7581148606,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 175.98631525585853,
+      "center_dec_deg": -76.7554161628732,
+      "pixel_scale_arcsec": 6.130770995107225,
+      "corner_footprint": [
+        [
+          178.1341688160664,
+          -74.32123467639052
+        ],
+        [
+          186.52396551824552,
+          -77.1202896019079
+        ],
+        [
+          172.80171727131307,
+          -79.20514651053342
+        ],
+        [
+          166.1770125306378,
+          -75.99737845545553
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D3",
+    "dither_id": 4,
+    "obs_id": "2026W30_1B_0003_4",
+    "date_obs": "2026-07-20T00:32:48.215",
+    "mjd_obs": 61241.022780266
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_4D4_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_4D4_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 59186880,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (13,)), ('Y', '>i4', (20,)), ('VALUES', '>f4', (20, 13, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 4,
+      "OBSID": "2026W30_1B_0003_4",
+      "EXPIDN": 202630102000344,
+      "DATE": "2026-08-11T07:14:18.470",
+      "DATE-OBS": "2026-07-20T00:32:48.215",
+      "DATE-BEG": "2026-07-20T00:32:48.215",
+      "DATE-AVG": "2026-07-20T00:33:45.774",
+      "DATE-END": "2026-07-20T00:34:43.333",
+      "MJD-OBS": 61241.022780266,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 164.055252851,
+      "CRVAL2": -69.7888238121,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 38626
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4159300,
+      "nan_pixels": 2300,
+      "min_flux_mjy_sr": -13738.1328125,
+      "max_flux_mjy_sr": 79149.5703125,
+      "mean_flux_mjy_sr": 0.640201210975647,
+      "median_flux_mjy_sr": 0.1580311805009842,
+      "std_flux_mjy_sr": 41.15483093261719
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4159300,
+      "min_variance": 3.810631312717305e-07,
+      "max_variance": 37669320.0,
+      "median_variance": 0.0001740132283885032,
+      "median_uncertainty": 0.013191407546401024
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 24835,
+      "flagged_pixels": 4136765,
+      "good_fraction": 0.005967656670511342
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 2.398031234741211,
+      "max_um": 3.8628580570220947,
+      "mean_um": 2.901501178741455,
+      "mean_bandwidth_um": 0.07878901809453964
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 164.055252851,
+      "crval2": -69.7888238121,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 164.06183261374602,
+      "center_dec_deg": -69.78754988269147,
+      "pixel_scale_arcsec": 6.136416391741072,
+      "corner_footprint": [
+        [
+          166.60833268528813,
+          -67.56455648684742
+        ],
+        [
+          170.956270769002,
+          -70.67975528463296
+        ],
+        [
+          160.83616383405493,
+          -71.97968647746963
+        ],
+        [
+          157.68764752015116,
+          -68.63524900822031
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D4",
+    "dither_id": 4,
+    "obs_id": "2026W30_1B_0003_4",
+    "date_obs": "2026-07-20T00:32:48.215",
+    "mjd_obs": 61241.022780266
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_4D5_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_4D5_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 63777600,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (11,)), ('Y', '>i4', (11,)), ('VALUES', '>f4', (11, 11, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 5,
+      "OBSID": "2026W30_1B_0003_4",
+      "EXPIDN": 202630102000345,
+      "DATE": "2026-08-11T09:29:44.566",
+      "DATE-OBS": "2026-07-20T00:32:48.215",
+      "DATE-BEG": "2026-07-20T00:32:48.215",
+      "DATE-AVG": "2026-07-20T00:33:45.774",
+      "DATE-END": "2026-07-20T00:34:43.333",
+      "MJD-OBS": 61241.022780266,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 168.959308356,
+      "CRVAL2": -73.3316318638,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 39411
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4160011,
+      "nan_pixels": 1589,
+      "min_flux_mjy_sr": -515.6839599609375,
+      "max_flux_mjy_sr": 29139.162109375,
+      "mean_flux_mjy_sr": 0.7818036079406738,
+      "median_flux_mjy_sr": 0.1991540789604187,
+      "std_flux_mjy_sr": 34.373779296875
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4160011,
+      "min_variance": 1.586558937560767e-07,
+      "max_variance": 1174721.5,
+      "median_variance": 0.001029257895424962,
+      "median_uncertainty": 0.032082051038742065
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 389199,
+      "flagged_pixels": 3772401,
+      "good_fraction": 0.09352148212226066
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 3.7983829975128174,
+      "max_um": 4.442564010620117,
+      "mean_um": 4.113039016723633,
+      "mean_bandwidth_um": 0.03675804287195206
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 168.959308356,
+      "crval2": -73.3316318638,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 168.96320106499525,
+      "center_dec_deg": -73.33033465687032,
+      "pixel_scale_arcsec": 6.113678088570085,
+      "corner_footprint": [
+        [
+          171.527327702156,
+          -71.01300862983051
+        ],
+        [
+          177.33013525835239,
+          -74.01056783011838
+        ],
+        [
+          165.5108514595045,
+          -75.63241065395887
+        ],
+        [
+          161.25741587608243,
+          -72.34135171280731
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D5",
+    "dither_id": 4,
+    "obs_id": "2026W30_1B_0003_4",
+    "date_obs": "2026-07-20T00:32:48.215",
+    "mjd_obs": 61241.022780266
+  },
+  {
+    "filename": "level2_2026W30_1B_0003_4D6_spx_l2b-v27-2026-222.fits",
+    "filepath": "data\\spherex\\qr3\\level2\\level2_2026W30_1B_0003_4D6_spx_l2b-v27-2026-222.fits",
+    "file_size_bytes": 65787840,
+    "is_readable": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "type": "PrimaryHDU",
+        "shape": null,
+        "dtype": null
+      },
+      {
+        "index": 1,
+        "name": "IMAGE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 2,
+        "name": "FLAGS",
+        "type": "CompImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": "int32"
+      },
+      {
+        "index": 3,
+        "name": "VARIANCE",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 4,
+        "name": "ZODI",
+        "type": "ImageHDU",
+        "shape": [
+          2040,
+          2040
+        ],
+        "dtype": ">f4"
+      },
+      {
+        "index": 5,
+        "name": "EPSF",
+        "type": "BinTableHDU",
+        "shape": [
+          441
+        ],
+        "dtype": "(numpy.record, [('BINX', '>i4'), ('BINY', '>i4'), ('XCENTER', '>f4'), ('YCENTER', '>f4'), ('XWIDTH', '>f4'), ('YWIDTH', '>f4'), ('NSTAR', '>i4'), ('NEFF_MEAN', '>f4'), ('CWAVE', '>f4'), ('CBAND', '>f4'), ('EPSF', '>f8', (33, 33))])"
+      },
+      {
+        "index": 6,
+        "name": "WCS-WAVE",
+        "type": "BinTableHDU",
+        "shape": [
+          1
+        ],
+        "dtype": "(numpy.record, [('X', '>i4', (9,)), ('Y', '>i4', (9,)), ('VALUES', '>f4', (9, 9, 2))])"
+      }
+    ],
+    "primary_header": {
+      "SIMPLE": true,
+      "BITPIX": 8,
+      "NAXIS": 0,
+      "EXTEND": true,
+      "VERSION": "7.0.5"
+    },
+    "sci_header": {
+      "EXTNAME": "IMAGE",
+      "BUNIT": "MJy / sr",
+      "DETECTOR": 6,
+      "OBSID": "2026W30_1B_0003_4",
+      "EXPIDN": 202630102000346,
+      "DATE": "2026-08-11T06:11:25.213",
+      "DATE-OBS": "2026-07-20T00:32:48.215",
+      "DATE-BEG": "2026-07-20T00:32:48.215",
+      "DATE-AVG": "2026-07-20T00:33:45.774",
+      "DATE-END": "2026-07-20T00:34:43.333",
+      "MJD-OBS": 61241.022780266,
+      "TIMESYS": "UTC",
+      "RADESYS": "ICRS",
+      "CRVAL1": 175.90717353,
+      "CRVAL2": -76.7698244875,
+      "CRPIX1": 1020.5,
+      "CRPIX2": 1020.5,
+      "CTYPE1": "RA---TAN-SIP",
+      "CTYPE2": "DEC--TAN-SIP",
+      "CDELT1": 1.0,
+      "CDELT2": 1.0,
+      "TSAMP": 1.5349,
+      "L2 N_TRANSIENT": 42469
+    },
+    "science_stats": {
+      "shape": [
+        2040,
+        2040
+      ],
+      "dtype": ">f4",
+      "total_pixels": 4161600,
+      "finite_pixels": 4159859,
+      "nan_pixels": 1741,
+      "min_flux_mjy_sr": -713.8154296875,
+      "max_flux_mjy_sr": 104237.6171875,
+      "mean_flux_mjy_sr": 1.0315651893615723,
+      "median_flux_mjy_sr": 0.3569503426551819,
+      "std_flux_mjy_sr": 67.20137786865234
+    },
+    "uncertainty_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "finite_pixels": 4159859,
+      "min_variance": 1.790931719369837e-06,
+      "max_variance": 10201101.0,
+      "median_variance": 0.002338200807571411,
+      "median_uncertainty": 0.048354946076869965
+    },
+    "dq_stats": {
+      "present": true,
+      "shape": [
+        2040,
+        2040
+      ],
+      "nominal_good_pixels": 1075350,
+      "flagged_pixels": 3086250,
+      "good_fraction": 0.2583982122260669
+    },
+    "wavelength_stats": {
+      "present": true,
+      "min_um": 4.401752948760986,
+      "max_um": 5.0246148109436035,
+      "mean_um": 4.705481052398682,
+      "mean_bandwidth_um": 0.036610983312129974
+    },
+    "wcs_info": {
+      "is_valid": true,
+      "ctype1": "RA---TAN-SIP",
+      "ctype2": "DEC--TAN-SIP",
+      "crval1": 175.90717353,
+      "crval2": -76.7698244875,
+      "crpix1": 1020.5,
+      "crpix2": 1020.5,
+      "center_ra_deg": 175.91637415547555,
+      "center_dec_deg": -76.76680922353997,
+      "pixel_scale_arcsec": 6.137035887012594,
+      "corner_footprint": [
+        [
+          178.0939323824969,
+          -74.33167825389376
+        ],
+        [
+          186.4700133128717,
+          -77.13917007518148
+        ],
+        [
+          172.68546306867825,
+          -79.2173268401098
+        ],
+        [
+          166.100530445934,
+          -76.000732461536
+        ]
+      ]
+    },
+    "validation_status": "VALID_SCIENCE_FITS",
+    "errors": [],
+    "num_hdus": 7,
+    "detector_id": "D6",
+    "dither_id": 4,
+    "obs_id": "2026W30_1B_0003_4",
+    "date_obs": "2026-07-20T00:32:48.215",
+    "mjd_obs": 61241.022780266
+  }
+]

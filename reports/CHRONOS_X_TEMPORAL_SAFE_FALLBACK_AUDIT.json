@@ -1,0 +1,119 @@
+{
+  "audit_metadata": {
+    "task": "Task 1.3J - CHRONOS-X Local Temporal Capability & Safe Fallback Audit",
+    "timestamp": "2026-11-07T13:46:00+06:00",
+    "pipeline_build": "l2b-v27-2026-222",
+    "governance": "STRICT READ-ONLY",
+    "audit_verdict": "LIMITED TEMPORAL CAPABILITY — SAFE FALLBACK VERIFIED"
+  },
+  "implementation_status": {
+    "genuinely_implemented": [
+      "Astrometric WCS reprojection (reproject.reproject_interp)",
+      "Quality flag filtering and binary mask dilation (FATAL_FLAG_MASK = 615)",
+      "Independent variance propagation (combined_var = var1 + var2_rep)",
+      "Scalar background median offset matching",
+      "Significance map generation (significance = |diff| / sigma_tot)",
+      "PSF-matching Gaussian smoothing approximation",
+      "Dipole artifact rejection via 5x5 stamp min/max ratio test"
+    ],
+    "missing_or_deficient": [
+      "Minimum temporal baseline gating (inspect_fits uses min_time_diff_days=0.001 which accepts 1.44 min dithers)",
+      "Detector and spectral channel compatibility checks (allows differencing across dissimilar detectors)",
+      "Cross-release calibration veto (flags inter-release in CSV but differencing engine does not enforce veto)",
+      "Orthogonal temporal eligibility schema representation (CandidateRecord lacks dedicated temporal status fields)",
+      "Automated fallback trigger in candidate ranking (FusionEngine classifies dither anomalies as NEW_TRANSIENT_OR_ASTEROID_CANDIDATE)"
+    ]
+  },
+  "local_data_inventory": {
+    "total_science_level2_fits": 171,
+    "release_breakdown": {
+      "QR2_level2": 35,
+      "QR2_deep": 36,
+      "QR3_level2": 50,
+      "QR3_deep": 50
+    },
+    "spatial_coverage": {
+      "QR2_pointings": ["0001", "0002", "0003", "0004"],
+      "QR3_pointings": ["0010"],
+      "angular_separation_qr2_qr3_deg": "> 70.0"
+    },
+    "temporal_baseline_census": {
+      "total_overlapping_image_pairs": 599,
+      "intra_visit_dithers": 599,
+      "dither_cadence_range_minutes": "2.15 to 6.47",
+      "multi_epoch_pairs_ge_1_day": 0,
+      "multi_week_pairs_ge_7_days": 0,
+      "multi_month_pairs_ge_30_days": 0
+    }
+  },
+  "false_discovery_risk_analysis": {
+    "critical_risk_points": [
+      {
+        "location": "scripts/inspect_fits.py:find_temporal_pairs",
+        "issue": "min_time_diff_days = 0.001 treats intra-visit dithers (t ~ 2-6 min) as temporal pairs.",
+        "risk": "Fills candidate manifest with astrometric registration tests rather than secular variability pairs."
+      },
+      {
+        "location": "scripts/run_pointing_0003_pipeline.py:lines 113-138",
+        "issue": "Feeds dither 1D1 vs 4D1 into differencer and populates chronos_score.",
+        "risk": "Passes intra-visit dither significance directly to multimodal fusion."
+      },
+      {
+        "location": "models/fusion/fusion_engine.py:lines 315-319",
+        "issue": "Assigns NEW_TRANSIENT_OR_ASTEROID_CANDIDATE if chronos_score > 5.0 and no Gaia star, without checking dt baseline.",
+        "risk": "Fabricates transient discovery from registration residuals or intra-visit noise."
+      },
+      {
+        "location": "models/fusion_x/rank_anomalies.py:lines 73-77",
+        "issue": "Generates synthetic exponential random scores for temporal significance without explicit synthetic flag.",
+        "risk": "Simulated values could be mistaken for genuine SPHEREx detections if run in production demo."
+      }
+    ]
+  },
+  "status_label_audit": {
+    "currently_implemented_in_schema": [
+      "VALID",
+      "WARNING",
+      "REJECTED",
+      "INSUFFICIENT_DATA"
+    ],
+    "recommended_temporal_specific_labels": [
+      {
+        "label": "TEMPORAL_VALIDATED",
+        "implemented": false,
+        "definition": "Pair meets E4 criteria AND delta_t >= 1 day between independent epochs with compatible detectors."
+      },
+      {
+        "label": "TEMPORAL_NOT_ELIGIBLE",
+        "implemented": false,
+        "definition": "Pair contains intra-visit dithers (delta_t < 1 day) or mismatched detectors; safe for registration demo only."
+      },
+      {
+        "label": "TEMPORAL_UNVERIFIABLE",
+        "implemented": false,
+        "definition": "Pair lacks authoritative MJD timestamps, valid WCS, or calibrated variance."
+      },
+      {
+        "label": "TEMPORAL_DATA_UNAVAILABLE",
+        "implemented": false,
+        "definition": "No independent repeat epoch exists in local archive for the requested celestial footprint."
+      },
+      {
+        "label": "TEMPORAL_EVIDENCE_INSUFFICIENT",
+        "implemented": false,
+        "definition": "Repeat epoch exists in remote archive manifests but Level-2 FITS assets are not retrieved."
+      }
+    ]
+  },
+  "demo_readiness_verdict": {
+    "selected_verdict": "LIMITED TEMPORAL CAPABILITY — SAFE FALLBACK VERIFIED",
+    "justification": "Differencing algorithms and astrometric reprojection are fully functional and capable of demonstrating registration and dipole rejection on intra-visit dithers. However, zero local multi-epoch data exists, so secular transient claims must be completely barred via safe fallback labeling.",
+    "safe_demo_scope": [
+      "Demonstrate sub-pixel WCS reprojection and fatal mask dilation on Pointing 0010 / 0003 dithers.",
+      "Demonstrate variance-weighted significance mapping and 5x5 stamp dipole vetoing.",
+      "For candidate search or multi-epoch timeline queries, display TEMPORAL_DATA_UNAVAILABLE badge.",
+      "Explicitly label any intra-visit differencing as 'Astrometric Registration Verification' rather than 'Secular Transient Search'."
+    ]
+  }
+}
+

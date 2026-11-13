@@ -1,0 +1,117 @@
+{
+  "manifest_version": "1.0",
+  "pipeline_build": "l2b-v27-2026-222",
+  "timestamp_utc": "2026-11-08T16:49:47Z",
+  "governance": "FROZEN_FOR_HOLDOUT_EVALUATION",
+  "policies": {
+    "BASELINE_UNMASKED": {
+      "policy_id": "POL_00_BASELINE",
+      "name": "BASELINE_UNMASKED",
+      "type": "NO_MASKING",
+      "dilation_radius_pixels": 0.0,
+      "central_aperture_protection": false,
+      "central_protection_radius_pixels": 0.0,
+      "magnitude_scaled": false,
+      "parameters": {},
+      "provenance": "Original production ASTROVISION inference contract"
+    },
+    "FIXED_1PX": {
+      "policy_id": "POL_01_FIXED_1PX",
+      "name": "FIXED_1PX",
+      "type": "FIXED_CIRCULAR_DILATION",
+      "dilation_radius_pixels": 1.0,
+      "dilation_radius_arcsec": 6.215,
+      "central_aperture_protection": false,
+      "central_protection_radius_pixels": 0.0,
+      "magnitude_scaled": false,
+      "parameters": {
+        "radius": 1.0
+      },
+      "provenance": "Task 4.14 / Task 4.15 Master Shadow Grid"
+    },
+    "FIXED_2PX": {
+      "policy_id": "POL_02_FIXED_2PX",
+      "name": "FIXED_2PX",
+      "type": "FIXED_CIRCULAR_DILATION",
+      "dilation_radius_pixels": 2.0,
+      "dilation_radius_arcsec": 12.43,
+      "central_aperture_protection": false,
+      "central_protection_radius_pixels": 0.0,
+      "magnitude_scaled": false,
+      "parameters": {
+        "radius": 2.0
+      },
+      "provenance": "Task 4.15 Authoritative Recommended Setting"
+    },
+    "FIXED_3PX": {
+      "policy_id": "POL_03_FIXED_3PX",
+      "name": "FIXED_3PX",
+      "type": "FIXED_CIRCULAR_DILATION",
+      "dilation_radius_pixels": 3.0,
+      "dilation_radius_arcsec": 18.645,
+      "central_aperture_protection": false,
+      "central_protection_radius_pixels": 0.0,
+      "magnitude_scaled": false,
+      "parameters": {
+        "radius": 3.0
+      },
+      "provenance": "Task 4.15 Master Shadow Grid (Aggressive)"
+    },
+    "ADAPTIVE_A_MAGNITUDE_AWARE": {
+      "policy_id": "POL_04_ADAPTIVE_A",
+      "name": "ADAPTIVE_A_MAGNITUDE_AWARE",
+      "type": "OPTICAL_MAGNITUDE_SCALED_ADAPTIVE",
+      "central_aperture_protection": true,
+      "central_protection_radius_pixels": 1.2,
+      "magnitude_scaled": true,
+      "parameters": {
+        "faint_tier": {
+          "g_min": 18.0,
+          "radius_pixels": 1.0
+        },
+        "intermediate_tier": {
+          "g_min": 15.0,
+          "g_max": 18.0,
+          "radius_pixels": 2.0
+        },
+        "bright_tier": {
+          "g_min": 12.0,
+          "g_max": 15.0,
+          "radius_pixels": 3.0
+        },
+        "ultrabright_tier": {
+          "g_max": 12.0,
+          "radius_pixels": 4.0
+        }
+      },
+      "provenance": "Task 4.19C Candidate Policy A"
+    },
+    "ADAPTIVE_B_FLUX_QUALITY_AWARE": {
+      "policy_id": "POL_05_ADAPTIVE_B",
+      "name": "ADAPTIVE_B_FLUX_QUALITY_AWARE",
+      "type": "MULTI_CATALOG_INFRARED_SCALED_ADAPTIVE",
+      "central_aperture_protection": true,
+      "central_protection_radius_pixels": 1.2,
+      "magnitude_scaled": true,
+      "parameters": {
+        "infrared_bright_tier": {
+          "j_max": 12.0,
+          "w1_max": 12.0,
+          "radius_pixels": 4.0
+        },
+        "optical_bright_tier": {
+          "g_max": 15.0,
+          "radius_pixels": 3.0
+        },
+        "optical_intermediate_tier": {
+          "g_max": 18.0,
+          "radius_pixels": 2.0
+        },
+        "default_faint_tier": {
+          "radius_pixels": 1.0
+        }
+      },
+      "provenance": "Task 4.19C Candidate Policy B"
+    }
+  }
+}

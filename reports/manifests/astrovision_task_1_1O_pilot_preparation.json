@@ -1,0 +1,256 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA-X_PHASE3_TASK_1.1O",
+    "title": "Five-Pointing Controlled Pilot Benchmark Preparation Manifest",
+    "timestamp_utc": "2026-11-06T17:18:30Z",
+    "role": "Principal Astronomical Data Scientist, SPHEREx Scientific Validation Engineer, Cross-Matching Specialist, Benchmark Governance Architect",
+    "verdict": "PASS — PILOT PREPARATION COMPLETE; READY FOR INDEPENDENT AUDIT",
+    "astrovision_status": "FAIL — NOT CERTIFIED",
+    "campaign_status": "BLOCKED"
+  },
+  "authoritative_dataset": {
+    "pointings": ["0001", "0002", "0008", "0009", "0010"],
+    "total_fits_products": 120,
+    "pipeline_build": "l2b-v27-2026-222",
+    "planning_period": "2026W30_1B",
+    "ingestion_manifest": "reports/manifests/astrovision_multipointing_ingestion_manifest.json",
+    "ingestion_manifest_sha256": "0e2b4c69dd6cfb9aa132b8f8d5eb77e0d3e278c3e286de6a8ec1aa690eeb0a33",
+    "independent_audit_report": "reports/ASTROVISION_TASK_1_1N_INDEPENDENT_DATASET_AUDIT.md",
+    "independent_audit_sha256": "a580e0452fa63a4da95e7d6b4849057fba7723badbad6bc0ba36fba87c11f9ed"
+  },
+  "protected_historical_assets": {
+    "checkpoints/astrovision_spatial_v2.pt": {
+      "sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+      "status": "MATCH"
+    },
+    "data/processed/validation/pointing_0003_final_validated_catalogue.csv": {
+      "sha256": "ce1416bb0d5fcffe6fbc7a3115cb0e90e76dc0cf40fb04d87ba1ab5f3ebb8f2b",
+      "status": "MATCH"
+    },
+    "data/processed/validation/astrovision_injection_manifest.csv": {
+      "sha256": "339d5c58a12122f0e185838730f91a45cbd0d2a83f5df4a51fc83ada30d58978",
+      "status": "MATCH"
+    },
+    "data/processed/validation/astrovision_injection_results.csv": {
+      "sha256": "22ecaf448e1f01318fad333ee593d00c307a682989ac75b88b2416b380c79c5c",
+      "status": "MATCH"
+    },
+    "reports/figures/astrovision/benchmark_metrics.json": {
+      "sha256": "5f8fd6bc1313b8f01cc34f8adfcbac959a295902f8b6b99d2c9c7d4fb9ea386c",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_BENCHMARK_INDEPENDENT_AUDIT.md": {
+      "sha256": "dd42430dbff8849d347b2dd0edf8adf01f7b7e6bc8237a1ffb7caedf0b656688",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_SPATIAL_INJECTION_BENCHMARK.md": {
+      "sha256": "5cb9888f3ce42ece238c9405f9e9c80c5f127d741f99845cb1d9435852258698",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_BENCHMARK_V2_INDEPENDENT_IMPLEMENTATION_AUDIT.md": {
+      "sha256": "db9aba61098b520db891ba29d0770315b8c069d24359bb50aec6217bbe1aa808",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_PAIRED_RESIDUAL_REMEDIATION.md": {
+      "sha256": "d3c529c951803023953c6d87814c98e812ed418ddbb28b3f62c4db2877c146bc",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_PAIRED_RESIDUAL_INDEPENDENT_AUDIT.md": {
+      "sha256": "13b0f22088067a814259a50cc469d6b4f533f57590610f37cc98781f8e222985",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_CONTROLLED_BENCHMARK_PROTOCOL.md": {
+      "sha256": "764631f2abaf8ca8a192a9a600af0000ba7436750ec48a3191591eec7ff93b88",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_EXPOSURE_LEVEL_PARTITION_AUDIT.md": {
+      "sha256": "5c26abb6da8f72b33799f2ce628db863d68c5517a41038a2f687b2bff546bf18",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_CONTROLLED_CAMPAIGN_READINESS_INDEPENDENT_AUDIT.md": {
+      "sha256": "22c9e464c30b2204bd6fd71633aeaa009265f995bb5d9e5276eee609fd318278",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_TASK_1_1H_REMEDIATION.md": {
+      "sha256": "950e361cccdb4c342cf10267d8f61fd38644cf97001860a794c7465f80e94e03",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_TASK_1_1H_DRYRUN_AUDIT.md": {
+      "sha256": "74653153b17f110ba60578b2141ef1d205277b6fa4980178f0ac5ab542d0fd4f",
+      "status": "MATCH"
+    },
+    "reports/ASTROVISION_TASK_1_1I_INDEPENDENT_REAUDIT.md": {
+      "sha256": "7db57a54de5d9346ff46f8144868b93ed67544e2c9413d906852c3a79e86167a",
+      "status": "MATCH"
+    }
+  },
+  "source_catalogues": {
+    "0001": {
+      "path": "data/processed/pilot_catalogues/pointing_0001_source_catalogue.csv",
+      "sha256": "10ffce68f8018dd0bae0fc402d93dabb8d347d6d10ae030cace2bbe42da1b887",
+      "total_sources": 7500,
+      "pm_propagated_count": 7450,
+      "pm_propagated_pct": 99.3,
+      "tmass_matched_count": 4803,
+      "tmass_matched_pct": 64.0,
+      "category_breakdown": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 5685,
+        "UNCERTAIN_OR_LOW_QUALITY": 857,
+        "BLENDED_CROWDED": 813,
+        "EXTENDED": 107,
+        "SATURATED_OR_CONTAMINATED": 38
+      }
+    },
+    "0002": {
+      "path": "data/processed/pilot_catalogues/pointing_0002_source_catalogue.csv",
+      "sha256": "90ac516056851bbc90d01987f2ab5f93ee055fb70903e0672e224c4643b2eac0",
+      "total_sources": 7500,
+      "pm_propagated_count": 7443,
+      "pm_propagated_pct": 99.2,
+      "tmass_matched_count": 4665,
+      "tmass_matched_pct": 62.2,
+      "category_breakdown": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 5377,
+        "BLENDED_CROWDED": 1254,
+        "UNCERTAIN_OR_LOW_QUALITY": 748,
+        "EXTENDED": 93,
+        "SATURATED_OR_CONTAMINATED": 28
+      }
+    },
+    "0008": {
+      "path": "data/processed/pilot_catalogues/pointing_0008_source_catalogue.csv",
+      "sha256": "c2831981623291deeff88af1e93205510bbc582742774f7fd017cb534305a597",
+      "total_sources": 7500,
+      "pm_propagated_count": 7381,
+      "pm_propagated_pct": 98.4,
+      "tmass_matched_count": 6141,
+      "tmass_matched_pct": 81.9,
+      "category_breakdown": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 5695,
+        "UNCERTAIN_OR_LOW_QUALITY": 1003,
+        "BLENDED_CROWDED": 556,
+        "EXTENDED": 149,
+        "SATURATED_OR_CONTAMINATED": 97
+      }
+    },
+    "0009": {
+      "path": "data/processed/pilot_catalogues/pointing_0009_source_catalogue.csv",
+      "sha256": "52e0fc53088100ca578d754c43e327874cfa1a60274548c792d2283261ccf629",
+      "total_sources": 7500,
+      "pm_propagated_count": 7442,
+      "pm_propagated_pct": 99.2,
+      "tmass_matched_count": 5214,
+      "tmass_matched_pct": 69.5,
+      "category_breakdown": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 3728,
+        "BLENDED_CROWDED": 1975,
+        "UNCERTAIN_OR_LOW_QUALITY": 1601,
+        "EXTENDED": 146,
+        "SATURATED_OR_CONTAMINATED": 50
+      }
+    },
+    "0010": {
+      "path": "data/processed/pilot_catalogues/pointing_0010_source_catalogue.csv",
+      "sha256": "33830db045a67d18cd94bce27a8837bb268079fcfa06a015f9b149916815cfa8",
+      "total_sources": 7500,
+      "pm_propagated_count": 7435,
+      "pm_propagated_pct": 99.1,
+      "tmass_matched_count": 5615,
+      "tmass_matched_pct": 74.9,
+      "category_breakdown": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 4736,
+        "UNCERTAIN_OR_LOW_QUALITY": 1367,
+        "BLENDED_CROWDED": 1174,
+        "EXTENDED": 156,
+        "SATURATED_OR_CONTAMINATED": 67
+      }
+    }
+  },
+  "mask_diagnostics": {
+    "0001": {
+      "path": "data/processed/pilot_masks/pointing_0001_mask_diagnostics.json",
+      "sha256": "d5b5c1f2e3cc0b59b380b95bc8bf228be14f96409fe74dbb10166299d251f2f8",
+      "exposures_evaluated": 24,
+      "mean_usable_fraction": 0.8887,
+      "mean_density_per_deg2": 89.3
+    },
+    "0002": {
+      "path": "data/processed/pilot_masks/pointing_0002_mask_diagnostics.json",
+      "sha256": "2f280cbdd634816c21469e0004ff97858c70f3f22ae161b9795dbece30ec5d81",
+      "exposures_evaluated": 24,
+      "mean_usable_fraction": 0.8772,
+      "mean_density_per_deg2": 157.8
+    },
+    "0008": {
+      "path": "data/processed/pilot_masks/pointing_0008_mask_diagnostics.json",
+      "sha256": "17398584c54e5e91ae9c264264fe0901e8ce4a7e7135e691b35b6c310fb4668b",
+      "exposures_evaluated": 24,
+      "mean_usable_fraction": 0.8714,
+      "mean_density_per_deg2": 138.9
+    },
+    "0009": {
+      "path": "data/processed/pilot_masks/pointing_0009_mask_diagnostics.json",
+      "sha256": "bf4ace351df5a690757d5e90cb54e3d3c7c25a075e7a9b64219a5578762744ce",
+      "exposures_evaluated": 24,
+      "mean_usable_fraction": 0.8726,
+      "mean_density_per_deg2": 138.6
+    },
+    "0010": {
+      "path": "data/processed/pilot_masks/pointing_0010_mask_diagnostics.json",
+      "sha256": "7e17d7c1b84b6ad836ddbc2245fb0a7f1b7ca1a43a085d77ceabfa1d2fc21422",
+      "exposures_evaluated": 24,
+      "mean_usable_fraction": 0.8742,
+      "mean_density_per_deg2": 139.5
+    }
+  },
+  "five_partition_manifest": {
+    "path": "reports/manifests/astrovision_five_partition_pilot_manifest.csv",
+    "sha256": "c1d83662b311f3f89efbe90f3c0ebd702c0ee58bcfae880dcd5d25e42eee0c0b",
+    "random_seed": 42,
+    "total_trials": 2500,
+    "partition_breakdown": {
+      "CALIBRATION_CONTROL": 500,
+      "CALIBRATION_INJECTION": 500,
+      "EVALUATION_CONTROL": 500,
+      "EVALUATION_POINT_SOURCE_INJECTION": 500,
+      "EVALUATION_EXTENDED_SOURCE_INJECTION": 500
+    },
+    "pointing_allocation": {
+      "calibration_pointings": ["0001", "0008"],
+      "calibration_fits_count": 48,
+      "evaluation_pointings": ["0002", "0009", "0010"],
+      "evaluation_fits_count": 72,
+      "cross_boundary_leakage_trials": 0,
+      "cross_boundary_pointing_overlap": []
+    }
+  },
+  "pilot_protocol": {
+    "path": "reports/ASTROVISION_CONTROLLED_PILOT_PROTOCOL_V3.md",
+    "sha256": "77200d92421a3cd80b41fd8ba5f38d5e8dab7ce410cccd17e541bc447f44a1b2",
+    "version": "3.0"
+  },
+  "statistical_limitations": {
+    "P_cal": 2,
+    "P_eval": 3,
+    "G_eval": 3,
+    "unique_cluster_bootstrap_multisets": 10,
+    "bootstrap_degeneracy_acknowledged": true,
+    "confidence_interval_precision_guarantee": "NONE (PILOT BOUNDS ONLY; N_multisets=10)"
+  },
+  "verification_suite": {
+    "pilot_tests": "tests/test_pilot_preparation_and_partitioning.py",
+    "pilot_tests_passed": 10,
+    "repository_tests_total": 74,
+    "repository_tests_passed": 74,
+    "repository_tests_failed": 0
+  },
+  "strict_governance_audit": {
+    "model_forward_passes": 0,
+    "injection_trials_executed": 0,
+    "campaign_execution": 0,
+    "model_retraining": 0,
+    "p0003_catalogue_mutated": false,
+    "checkpoint_mutated": false
+  }
+}
+

@@ -1,0 +1,5 @@
+source_id,pointing_id,cohort_role,score_without_sidecar,score_with_sidecar,abs_score_delta,score_invariance_verified,evidence_state_in_metadata,evidence_state_in_summary,limitation_code_in_metadata
+SRC_REAL_P0008,P0008,Calibration/Control,0.37252,0.37252,0.0,True,SUPPORTED_PHOTOSPHERIC_CONSISTENCY,True,False
+SYNTH_P0002_TEST,P0002,Blind Evaluation,0.38558,0.38558,0.0,True,UNVERIFIABLE,True,True
+SYNTH_P0009_TEST,P0009,Blind Evaluation,0.38558,0.38558,0.0,True,UNVERIFIABLE,True,True
+SYNTH_P0010_TEST,P0010,Blind Evaluation,0.38558,0.38558,0.0,True,UNVERIFIABLE,True,True

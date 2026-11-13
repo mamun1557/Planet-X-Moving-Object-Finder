@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "RA_WRAPAROUND_MERIDIAN",
+  "scenario_notes": "Cross-meridian RA wraparound from 359.985 deg to ~0.015 deg",
+  "ground_truth_epoch_a": {
+    "ra_deg": 359.985,
+    "dec_deg": 5.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-07T00:00:00.000Z",
+    "mjd": 61228.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 0.015115,
+    "dec_deg": 5.0,
+    "pixel_x": 45.58,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-10T00:00:00.000Z",
+    "mjd": 61231.0
+  },
+  "ground_truth_delta_ra_arcsec": 108.0,
+  "ground_truth_delta_dec_arcsec": 0.0,
+  "ground_truth_angular_displacement_arcsec": 108.0,
+  "ground_truth_position_angle_deg": 90.0,
+  "ground_truth_dt_days": 3.0,
+  "ground_truth_dt_hours": 72.0,
+  "ground_truth_motion_rate_arcsec_per_day": 36.0,
+  "ground_truth_motion_rate_arcsec_per_hour": 1.5,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

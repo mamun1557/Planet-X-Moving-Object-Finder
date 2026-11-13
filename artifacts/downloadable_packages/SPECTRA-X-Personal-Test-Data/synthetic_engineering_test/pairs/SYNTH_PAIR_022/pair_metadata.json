@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_022",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_LOW_SNR_FAINT_TARGET",
+  "target_coordinates": {
+    "ra_deg": 135.0,
+    "dec_deg": -10.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-23T00:00:00.000Z",
+    "mjd": 61244.0,
+    "crval1_deg": 135.0,
+    "crval2_deg": -10.0,
+    "wcs_valid": true,
+    "sha256": "DC20556D10F46BB336E3C2723AD578E8D01142B0B491BCD78CE579A92D671F5A"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-26T00:00:00.000Z",
+    "mjd": 61247.0,
+    "crval1_deg": 135.0,
+    "crval2_deg": -10.0,
+    "wcs_valid": true,
+    "sha256": "F3EA280A221EDE3276F60FB5D29606BF4FCEBD90F572190FB2EAB36234376F2E"
+  },
+  "time_separation_minutes": 4320.0,
+  "time_separation_days": 3.0,
+  "synthetic_displacement_arcsec": 8.0,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "LOW_SNR_FAINT_TARGET",
+    "scenario_notes": "Low-SNR faint source embedded in elevated Poisson noise",
+    "ground_truth_epoch_a": {
+      "ra_deg": 135.0,
+      "dec_deg": -10.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-23T00:00:00.000Z",
+      "mjd": 61244.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 135.001954,
+      "dec_deg": -9.998889,
+      "pixel_x": 61.88,
+      "pixel_y": 63.65,
+      "timestamp_utc": "2026-07-26T00:00:00.000Z",
+      "mjd": 61247.0
+    },
+    "ground_truth_delta_ra_arcsec": 6.9282,
+    "ground_truth_delta_dec_arcsec": 4.0,
+    "ground_truth_angular_displacement_arcsec": 8.0,
+    "ground_truth_position_angle_deg": 60.0,
+    "ground_truth_dt_days": 3.0,
+    "ground_truth_dt_hours": 72.0,
+    "ground_truth_motion_rate_arcsec_per_day": 2.6667,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.1111,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of LOW_SNR_FAINT_TARGET displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

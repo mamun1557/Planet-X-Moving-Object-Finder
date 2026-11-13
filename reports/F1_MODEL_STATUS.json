@@ -1,0 +1,191 @@
+{
+  "audit_metadata": {
+    "project": "SPECTRA-X / F1",
+    "audit_timestamp_utc": "2026-11-02T19:17:19.969105",
+    "audit_phase": "Comprehensive Forensic Audit, Scientific Validation & Masked Retraining",
+    "global_dataset_volume_gb": 5.2599,
+    "total_fits_files": 177,
+    "level2_science_fits": 32,
+    "hardware_environment": "NVIDIA GeForce RTX 5060 (CUDA 12.8 / 13.2)"
+  },
+  "models": {
+    "ASTROVISION": {
+      "model_name": "ASTROVISION",
+      "modality": "Spatial Infrared Morphological Anomaly Detection",
+      "implementation_status": "IMPLEMENTED",
+      "checkpoint_availability": "VERIFIED",
+      "checkpoint_path": "checkpoints/astrovision_latest.pt",
+      "checkpoint_size_bytes": 3437397,
+      "architecture": "AstroVisionAutoencoder (4-stage Conv2d-ConvTranspose2d, latent_dim=128, params=854,465)",
+      "training_status": "TRAINED",
+      "training_samples_actual": 160,
+      "patch_dimensions": "128 x 128 pixels",
+      "training_epochs": 5,
+      "initial_training_loss": "NOT_RECORDED (Logs unpersisted in original run)",
+      "final_training_loss": "NOT_RECORDED (Logs unpersisted in original run)",
+      "optimizer": "Adam (lr=0.001)",
+      "validation_status": "VALIDATED_SYNTHETIC_ONLY",
+      "independent_test_status": "EVALUATED_POINTING_0003",
+      "data_leakage_audit_status": "LEAKAGE_IDENTIFIED_IN_LEGACY_TRAINING",
+      "leakage_findings": "train_astrovision.py sampled 160 random patches across all 32 files without pointing-level splits. Pointing 0003 was subsequently evaluated in task6_7_9_10_evaluation.py, but checkpoint evaluated was randomly initialized because task6 looked for non-existent astrovision_spatial_ae.pt instead of astrovision_latest.pt.",
+      "scientific_validation_status": "DEVELOPMENT_READY",
+      "readiness_classification": "DEVELOPMENT_READY",
+      "metrics": {
+        "independent_test_recon_loss_mean": 796.97,
+        "synthetic_10sigma_injection_auroc": 0.5116,
+        "real_world_discovery_precision": "NOT_AVAILABLE",
+        "real_world_discovery_recall": "NOT_AVAILABLE",
+        "real_world_discovery_f1": "NOT_AVAILABLE"
+      },
+      "evidence_files": [
+        "models/astrovision/model.py",
+        "models/astrovision/train_astrovision.py",
+        "checkpoints/astrovision_latest.pt",
+        "reports/second_pass_audit/model_evaluation_report.md"
+      ]
+    },
+    "SPECTRA": {
+      "model_name": "SPECTRA",
+      "modality": "102-Channel Spectrophotometric SED Anomaly Detection",
+      "implementation_status": "IMPLEMENTED",
+      "checkpoint_availability": "VERIFIED",
+      "legacy_checkpoint_path": "checkpoints/spectra_latest.pt",
+      "legacy_checkpoint_size_bytes": 100805,
+      "retrained_checkpoint_path": "checkpoints/spectra_masked_ae_v2.pt",
+      "retrained_checkpoint_size_bytes": 126939,
+      "architecture": "MaskedSpectralAutoencoder (102-flux + 102-mask in -> 64 -> 16 latent -> 64 -> 102 recon, params=30,326)",
+      "training_status": "TRAINED",
+      "training_sample_count": 2416,
+      "validation_sample_count": 1249,
+      "independent_test_sample_count": 1392,
+      "training_epochs": 25,
+      "initial_training_loss": 0.311103,
+      "final_training_loss": 0.000591,
+      "best_val_loss": 0.001044,
+      "optimizer": "AdamW (lr=0.001, CosineAnnealing)",
+      "hardware": "NVIDIA GeForce RTX 5060 (CUDA)",
+      "validation_status": "VALIDATED",
+      "independent_test_status": "VALIDATED_POINTING_0003",
+      "data_leakage_audit_status": "VERIFIED_ZERO_LEAKAGE",
+      "leakage_findings": "Pointing 0001 (Train: 2,416 sources), Pointing 0004 (Val: 1,249 sources), and Pointing 0003 (Test: 1,392 sources) are completely isolated across sky positions separated by > 50 degrees. Zero source-level, observation-level, dither-level, or sky-region leakage.",
+      "scientific_validation_status": "DEVELOPMENT_READY",
+      "readiness_classification": "DEVELOPMENT_READY",
+      "metrics": {
+        "independent_test_masked_chi2_mean": 0.000365,
+        "independent_test_masked_chi2_median": 2e-06,
+        "independent_test_90th_percentile": 0.000767,
+        "negative_control_3sigma_fp_rate": 0.0057,
+        "negative_control_5sigma_fp_rate": 0.0029,
+        "synthetic_injection_auroc": 0.9398,
+        "synthetic_injection_auprc": 0.9464,
+        "synthetic_injection_f1": 0.8523,
+        "synthetic_injection_precision": 0.9203,
+        "synthetic_injection_recall": 0.7937,
+        "synthetic_injection_fpr": 0.0521,
+        "real_world_discovery_precision": "NOT_AVAILABLE",
+        "real_world_discovery_recall": "NOT_AVAILABLE",
+        "real_world_discovery_f1": "NOT_AVAILABLE"
+      },
+      "evidence_files": [
+        "models/spectra/model.py",
+        "models/spectra/train_masked_spectra.py",
+        "models/spectra/evaluate_spectra.py",
+        "models/spectra/spectral_injection_test.py",
+        "checkpoints/spectra_masked_ae_v2.pt",
+        "checkpoints/spectra_masked_ae_v2_training_meta.json",
+        "reports/spectra_independent_eval_summary.json",
+        "reports/spectra_injection_benchmark_summary.json"
+      ]
+    },
+    "CHRONOS-X": {
+      "model_name": "CHRONOS-X",
+      "modality": "Multi-Epoch Image Differencing & Transient Detection",
+      "implementation_status": "IMPLEMENTED",
+      "checkpoint_availability": "NOT_APPLICABLE (Deterministic Mathematical Pipeline)",
+      "architecture": "ChronosTemporalDifferencer (WCS reprojection, defect dilation, variance differencing, dipole veto)",
+      "training_status": "NOT_APPLICABLE (Non-ML Algorithm)",
+      "training_sample_count": 0,
+      "pairs_evaluated": 44,
+      "intra_release_dither_pairs": 44,
+      "genuine_distinct_observation_epoch_pairs": 0,
+      "qr2_vs_qr3_comparison_pairs": 0,
+      "validation_status": "VALIDATION_PENDING",
+      "independent_test_status": "VALIDATION_PENDING",
+      "data_leakage_audit_status": "NO_LEAKAGE (Algorithm operates per image pair)",
+      "leakage_findings": "All 44 evaluated pairs are short-cadence (~2.1 min) intra-pointing dither steps. Zero multi-month repeat visits exist in local data. QR2 vs QR3 pairs rejected due to calibration mismatch.",
+      "scientific_validation_status": "VALIDATION_PENDING",
+      "readiness_classification": "VALIDATION_PENDING",
+      "metrics": {
+        "static_source_background_null_chi2": 1.08,
+        "instrumental_152sigma_artifact_reproduced": true,
+        "real_transient_discovery_precision": "NOT_AVAILABLE",
+        "real_transient_discovery_recall": "NOT_AVAILABLE",
+        "real_transient_discovery_f1": "NOT_AVAILABLE"
+      },
+      "evidence_files": [
+        "models/chronos_x/model.py",
+        "models/chronos_x/run_temporal_differencing.py",
+        "reports/second_pass_audit/temporal_validation_report.md",
+        "reports/second_pass_audit/temporal_pair_audit.csv"
+      ]
+    },
+    "MOTION-X": {
+      "model_name": "MOTION-X",
+      "modality": "Astrometric Cross-Matching & Solar System Kinematics",
+      "implementation_status": "IMPLEMENTED",
+      "checkpoint_availability": "NOT_APPLICABLE (Deterministic Mathematical Cross-Matcher)",
+      "architecture": "MotionXValidator (Gaia DR3 astrometry, JPL Horizons ephemerides matching)",
+      "training_status": "NOT_APPLICABLE (Non-ML Algorithm)",
+      "training_sample_count": 0,
+      "sources_processed": 5000,
+      "gaia_crossmatch_count": 5000,
+      "valid_movement_candidates": 0,
+      "known_asteroid_recovery_count": 0,
+      "validation_status": "VALIDATION_PENDING",
+      "independent_test_status": "VALIDATION_PENDING",
+      "data_leakage_audit_status": "NO_LEAKAGE (Classical catalog matching)",
+      "leakage_findings": "Horizons query syntax omitted ';' suffix, querying Mercury/Venus/Mars instead of Ceres/Pallas/Vesta. Astrometric matching verified at 0.08 arcsec against Gaia DR3, but zero small bodies fell in SPHEREx fields.",
+      "scientific_validation_status": "VALIDATION_PENDING",
+      "readiness_classification": "VALIDATION_PENDING",
+      "metrics": {
+        "gaia_astrometric_precision_arcsec": 0.08,
+        "known_asteroid_recovery_rate": "NOT_AVAILABLE (0 in FOV)",
+        "fast_mover_discovery_precision": "NOT_AVAILABLE"
+      },
+      "evidence_files": [
+        "models/motion_x/model.py",
+        "models/motion_x/validate_motion.py",
+        "reports/second_pass_audit/motion_validation_report.md",
+        "reports/second_pass_audit/motion_crossmatch_audit.csv"
+      ]
+    },
+    "FUSION-X": {
+      "model_name": "FUSION-X",
+      "modality": "Multimodal Candidate Ranking & Co-Pilot Decision Engine",
+      "implementation_status": "IMPLEMENTED",
+      "checkpoint_availability": "NOT_AVAILABLE (Untrained Network / Rule Heuristic)",
+      "architecture": "FusionRanker (Heuristic MLP + classify_candidate decision rules)",
+      "training_status": "NOT_STARTED (Heuristic Implementation)",
+      "training_sample_count": 0,
+      "labeled_samples_count": 0,
+      "feature_count": 6,
+      "validation_status": "VALIDATION_PENDING",
+      "independent_test_status": "NOT_AVAILABLE",
+      "data_leakage_audit_status": "NOT_APPLICABLE (Heuristic ranker)",
+      "leakage_findings": "Current implementation runs random synthetic demonstration features through an uninitialized PyTorch module and assigns rule-based tags. No supervised training has occurred.",
+      "scientific_validation_status": "VALIDATION_PENDING",
+      "readiness_classification": "DEVELOPMENT_READY",
+      "metrics": {
+        "multimodal_ranking_consistency": "100% (on deterministic benchmark)",
+        "supervised_anomaly_ranking_ndcg": "NOT_AVAILABLE",
+        "supervised_anomaly_ranking_auc": "NOT_AVAILABLE"
+      },
+      "evidence_files": [
+        "models/fusion_x/model.py",
+        "models/fusion_x/rank_anomalies.py",
+        "data/processed/training_samples/fused_anomaly_rankings.csv",
+        "reports/second_pass_audit/fusion_validation_report.md"
+      ]
+    }
+  }
+}

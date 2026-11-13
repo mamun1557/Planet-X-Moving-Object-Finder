@@ -1,0 +1,34 @@
+catalog_subsystem,measurement_or_parameter,valid_count,marginal_count,invalid_count,unavailable_count,total_cohort,valid_pct,quality_assessment_criteria,scientific_applicability_status
+Gaia DR3 Astrometry,source_id,3206,0,0,0,3206,100.00,Native 64-bit integer Gaia DR3 identifier present with zero nulls,USABLE_AS_PRIMARY_KEY
+Gaia DR3 Astrometry,ra_dec_icrs,3206,0,0,0,3206,100.00,Astrometric position at epoch J2016.0 with sub-milliarcsecond precision,USABLE_FOR_COORDINATE_CROSSMATCH
+Gaia DR3 Astrometry,proper_motion_pmra_pmdec,3206,0,0,0,3206,100.00,Full proper motion vector measured in mas/yr,USABLE_FOR_EPOCH_PROPAGATION
+Gaia DR3 Astrometry,parallax,3084,0,122,0,3206,96.19,3084 sources with positive parallax; 122 sources with negative/zero parallax,USABLE_FOR_DISTANCE_ESTIMATION
+Gaia DR3 Astrometry,ruwe,3126,80,0,0,3206,97.50,3126 sources with RUWE <= 1.20 (single star); 80 sources with 1.20 < RUWE <= 1.40 (acceptable); 0 with RUWE > 1.40,USABLE_AS_MORPHOLOGY_FILTER
+Gaia DR3 Astrometry,astrometric_excess_noise,3206,0,0,0,3206,100.00,Astrometric excess noise in mas; median 0.00 mas; max 1.98 mas,USABLE_FOR_BINARITY_SCREENING
+Gaia DR3 Photometry,phot_g_mean_mag,3206,0,0,0,3206,100.00,Complete G-band photometry in range [11.54 19.50] mag; zero nulls,USABLE_FOR_OPTICAL_ANCHOR
+Gaia DR3 Photometry,phot_bp_mean_mag,3206,0,0,0,3206,100.00,Complete BP-band photometry in range [11.87 21.59] mag; zero nulls,USABLE_FOR_OPTICAL_COLOR
+Gaia DR3 Photometry,phot_rp_mean_mag,3206,0,0,0,3206,100.00,Complete RP-band photometry in range [10.74 19.49] mag; zero nulls,USABLE_FOR_OPTICAL_COLOR
+Gaia DR3 XP,has_xp_continuous,0,0,0,3206,3206,0.00,Field absent in local files; no Hermite basis spectra available locally,UNAVAILABLE_IN_LOCAL_FILES
+Gaia DR3 XP,has_xp_sampled,0,0,0,3206,3206,0.00,Field absent in local files; no sampled XP spectra available locally,UNAVAILABLE_IN_LOCAL_FILES
+Gaia DR3 XP,xp_flux_vectors,0,0,0,3206,3206,0.00,Low-resolution optical spectrophotometry (336-1020 nm) not ingested,UNAVAILABLE_IN_LOCAL_FILES
+Gaia DR3 Apsis,teff_gspphot,0,0,0,3206,3206,0.00,Astrophysical effective temperature estimate absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+Gaia DR3 Apsis,logg_gspphot,0,0,0,3206,3206,0.00,Surface gravity parameter absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+Gaia DR3 Apsis,mh_gspphot,0,0,0,3206,3206,0.00,Metallicity estimate absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+Gaia DR3 Apsis,ag_gspphot,0,0,0,3206,3206,0.00,Interstellar extinction parameter absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+Gaia DR3 Photometry,phot_variable_flag,0,0,0,3206,3206,0.00,Variability classification absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+2MASS PSC,tmass_id,2624,0,0,582,3206,81.85,Cross-match identifier present for 2624 sources; 582 sources too faint (non-matches),USABLE_AS_JOIN_KEY_ONLY
+2MASS PSC,tmass_dist_arcsec,2486,129,9,582,3206,77.54,2486 <= 0.5 arcsec; 129 in (0.5 1.0] arcsec; 9 > 1.0 arcsec; 582 non-matches,USABLE_AS_MATCH_METRIC
+2MASS PSC,j_m_photometry,0,0,0,3206,3206,0.00,J-band flux/magnitude measurements absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+2MASS PSC,h_m_photometry,0,0,0,3206,3206,0.00,H-band flux/magnitude measurements absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+2MASS PSC,ks_m_photometry,0,0,0,3206,3206,0.00,Ks-band flux/magnitude measurements absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+2MASS PSC,ph_qual_2mass,0,0,0,3206,3206,0.00,Photometric quality flags (AAA etc) absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,allwise_designation,0,0,0,3206,3206,0.00,Pointing 0008 was never cross-matched to ALLWISE locally (P0003 only),UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,w1mpro_photometry,0,0,0,3206,3206,0.00,W1 band magnitude (3.4 um) absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,w2mpro_photometry,0,0,0,3206,3206,0.00,W2 band magnitude (4.6 um) absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,w3mpro_photometry,0,0,0,3206,3206,0.00,W3 band magnitude (12 um) absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,w4mpro_photometry,0,0,0,3206,3206,0.00,W4 band magnitude (22 um) absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,cc_flags,0,0,0,3206,3206,0.00,Contamination and confusion flags absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,ext_flg,0,0,0,3206,3206,0.00,Extended source flag absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,var_flg,0,0,0,3206,3206,0.00,WISE variability flags absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+ALLWISE,ph_qual_allwise,0,0,0,3206,3206,0.00,ALLWISE photometric quality flags absent in local files,UNAVAILABLE_IN_LOCAL_FILES
+

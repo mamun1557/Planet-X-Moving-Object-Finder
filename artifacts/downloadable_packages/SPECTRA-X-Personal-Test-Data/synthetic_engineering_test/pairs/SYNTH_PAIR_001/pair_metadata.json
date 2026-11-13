@@ -1,0 +1,68 @@
+{
+  "pair_id": "SYNTH_PAIR_001",
+  "dataset_class": "SYNTHETIC_ENGINEERING_TEST",
+  "pointing_id": "SYNTHETIC_TEST_FIELD",
+  "detector": "SIMULATED_BAND_1",
+  "target_name": "SYN_MAIN_BELT_ASTEROID_SLOW",
+  "target_coordinates": {
+    "ra_deg": 150.0,
+    "dec_deg": 10.0
+  },
+  "obs_a": {
+    "filename": "obs_a.fits",
+    "timestamp_utc": "2026-07-02T00:00:00.000Z",
+    "mjd": 61223.0,
+    "crval1_deg": 150.0,
+    "crval2_deg": 10.0,
+    "wcs_valid": true,
+    "sha256": "CB9AB259BEC7CFE27809AC947C6DC73BEC7AAE8B525BB0BB1A970DFDC8C1E542"
+  },
+  "obs_b": {
+    "filename": "obs_b.fits",
+    "timestamp_utc": "2026-07-04T00:00:00.000Z",
+    "mjd": 61225.0,
+    "crval1_deg": 150.0,
+    "crval2_deg": 10.0,
+    "wcs_valid": true,
+    "sha256": "C938E90D4B08C16A54011AA62E9843D218714D944CE9CC1EBD8DFB1412A2D743"
+  },
+  "time_separation_minutes": 2880.0,
+  "time_separation_days": 2.0,
+  "synthetic_displacement_arcsec": 4.8,
+  "scientific_eligibility": "TEMPORALLY_ELIGIBLE_REQUIRES_FURTHER_VALIDATION",
+  "is_secular_motion_eligible": true,
+  "has_ground_truth_motion": true,
+  "synthetic_ground_truth_motion": {
+    "is_synthetic": true,
+    "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+    "target_type": "MAIN_BELT_ASTEROID_SLOW",
+    "scenario_notes": "Typical slow MBA shift (2.4 arcsec/day)",
+    "ground_truth_epoch_a": {
+      "ra_deg": 150.0,
+      "dec_deg": 10.0,
+      "pixel_x": 63.0,
+      "pixel_y": 63.0,
+      "timestamp_utc": "2026-07-02T00:00:00.000Z",
+      "mjd": 61223.0
+    },
+    "ground_truth_epoch_b": {
+      "ra_deg": 150.000957,
+      "dec_deg": 10.000943,
+      "pixel_x": 62.45,
+      "pixel_y": 63.55,
+      "timestamp_utc": "2026-07-04T00:00:00.000Z",
+      "mjd": 61225.0
+    },
+    "ground_truth_delta_ra_arcsec": 3.3941,
+    "ground_truth_delta_dec_arcsec": 3.3941,
+    "ground_truth_angular_displacement_arcsec": 4.8,
+    "ground_truth_position_angle_deg": 45.0,
+    "ground_truth_dt_days": 2.0,
+    "ground_truth_dt_hours": 48.0,
+    "ground_truth_motion_rate_arcsec_per_day": 2.4,
+    "ground_truth_motion_rate_arcsec_per_hour": 0.1,
+    "astrometric_coordinate_uncertainty_arcsec": 0.05
+  },
+  "intended_test_purpose": "Algorithmic verification of MAIN_BELT_ASTEROID_SLOW displacement and rate calculation.",
+  "scientific_disclaimer": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION. Suitable strictly for software calibration and mathematical unit testing."
+}

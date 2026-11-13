@@ -1,0 +1,86 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 3, Task 1.3H",
+    "task_name": "Authoritative SPHEREx Archive Metadata Discovery & NEP Revisit Search",
+    "timestamp_utc": "2026-11-07T07:21:06.814508+00:00",
+    "governance": "ZERO FITS DOWNLOAD / ZERO NETWORK BYPASS / STRICT READ-ONLY",
+    "api_specification": "IVOA SIAv2 / IRSA SPHEREx Data Access Documentation",
+    "executive_verdict": "ARCHIVE QUERY FAILED \u2014 NEP REVISITS REMAIN UNVERIFIED"
+  },
+  "queries_executed": [
+    {
+      "query_id": "IRSA_SIA2_QR3_WIDE",
+      "collection": "spherex_qr3",
+      "endpoint": "https://irsa.ipac.caltech.edu/SIA",
+      "query_url": "https://irsa.ipac.caltech.edu/SIA?COLLECTION=spherex_qr3&POS=CIRCLE+270.0+66.56+5.0&TIME=2026-07-27%2F2026-08-10&FORMAT=image%2Ffits&RESPONSEFORMAT=votable",
+      "parameters": {
+        "COLLECTION": "spherex_qr3",
+        "POS": "CIRCLE 270.0 66.56 5.0",
+        "TIME": "2026-07-27/2026-08-10",
+        "FORMAT": "image/fits",
+        "RESPONSEFORMAT": "votable"
+      },
+      "execution_timestamp_utc": "2026-11-07T07:21:06.794474+00:00",
+      "elapsed_seconds": 0.0186,
+      "query_status": "FAILED",
+      "http_status_code": null,
+      "error_type": "URLError",
+      "error_message": "[Errno 11001] getaddrinfo failed",
+      "records_returned": 0,
+      "pagination_overflow_detected": false,
+      "is_truncated": false,
+      "network_isolation_boundary": "Standard Sandbox Mode (network access isolated; outbound WAN getaddrinfo failed)"
+    },
+    {
+      "query_id": "IRSA_SIA2_QR3_DEEP",
+      "collection": "spherex_qr3_deep",
+      "endpoint": "https://irsa.ipac.caltech.edu/SIA",
+      "query_url": "https://irsa.ipac.caltech.edu/SIA?COLLECTION=spherex_qr3_deep&POS=CIRCLE+270.0+66.56+5.0&TIME=2026-07-27%2F2026-08-10&FORMAT=image%2Ffits&RESPONSEFORMAT=votable",
+      "parameters": {
+        "COLLECTION": "spherex_qr3_deep",
+        "POS": "CIRCLE 270.0 66.56 5.0",
+        "TIME": "2026-07-27/2026-08-10",
+        "FORMAT": "image/fits",
+        "RESPONSEFORMAT": "votable"
+      },
+      "execution_timestamp_utc": "2026-11-07T07:21:06.813004+00:00",
+      "elapsed_seconds": 0.0008,
+      "query_status": "FAILED",
+      "http_status_code": null,
+      "error_type": "URLError",
+      "error_message": "[Errno 11001] getaddrinfo failed",
+      "records_returned": 0,
+      "pagination_overflow_detected": false,
+      "is_truncated": false,
+      "network_isolation_boundary": "Standard Sandbox Mode (network access isolated; outbound WAN getaddrinfo failed)"
+    },
+    {
+      "query_id": "IRSA_SIA2_QR2_WIDE_INVESTIGATION",
+      "collection": "spherex_qr2",
+      "endpoint": "https://irsa.ipac.caltech.edu/SIA",
+      "query_url": "https://irsa.ipac.caltech.edu/SIA?COLLECTION=spherex_qr2&POS=CIRCLE+270.0+66.56+5.0&TIME=2025-04-20%2F2025-05-20&FORMAT=image%2Ffits&RESPONSEFORMAT=votable",
+      "parameters": {
+        "COLLECTION": "spherex_qr2",
+        "POS": "CIRCLE 270.0 66.56 5.0",
+        "TIME": "2025-04-20/2025-05-20",
+        "FORMAT": "image/fits",
+        "RESPONSEFORMAT": "votable"
+      },
+      "execution_timestamp_utc": "2026-11-07T07:21:06.813004+00:00",
+      "elapsed_seconds": 0.0008,
+      "query_status": "FAILED",
+      "http_status_code": null,
+      "error_type": "URLError",
+      "error_message": "[Errno 11001] getaddrinfo failed",
+      "records_returned": 0,
+      "pagination_overflow_detected": false,
+      "is_truncated": false,
+      "network_isolation_boundary": "Standard Sandbox Mode (network access isolated; outbound WAN getaddrinfo failed)"
+    }
+  ],
+  "archive_unreachable_analysis": {
+    "endpoint": "https://irsa.ipac.caltech.edu/SIA",
+    "root_cause": "Network isolation within standard sandbox environment prevents outbound DNS resolution (getaddrinfo failed [Errno 11001])",
+    "governance_compliance": "In accordance with Section 2 mandatory API restrictions (\"If the endpoint is unreachable, record the exact error and stop remote querying. Do not attempt alternate routes to evade a failed connection\"), remote querying terminated immediately without network bypass attempts."
+  }
+}

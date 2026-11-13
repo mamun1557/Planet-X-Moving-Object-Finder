@@ -1,0 +1,136 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA_TASK_1_2C",
+    "module": "SPECTRA \u2014 102-Channel Infrared Spectral Anomaly Detection",
+    "campaign_name": "SPECTRA Provisional-Null Threshold Calibration",
+    "calibration_timestamp_utc": "2026-11-07T04:26:30Z",
+    "execution_mode": "CONTROLLED_CALIBRATION",
+    "governance_declaration": "CONFIRMED: Controlled threshold calibration executed strictly on Pointing 0008 provisional calibration cohort (N=3,206). Zero model retraining, zero parameter fine-tuning, and zero blind evaluation data access were performed. Checkpoint weights remain byte-for-byte immutable.",
+    "auditor_roles": [
+      "Principal Astronomical ML Scientist",
+      "SPHEREx Spectrophotometry Specialist",
+      "Statistical Calibration Architect",
+      "Benchmark Governance Officer"
+    ]
+  },
+  "protected_assets_audit": {
+    "spectra_masked_ae_v2_pt": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "BYTE_FOR_BYTE_IMMUTABLE_VERIFIED"
+    },
+    "blind_evaluation_firewall": {
+      "pointings": [
+        "0002",
+        "0009",
+        "0010"
+      ],
+      "status": "STRICTLY_ISOLATED_ZERO_ACCESS_CONFIRMED"
+    },
+    "historical_training_cohort": {
+      "pointing": "0001",
+      "status": "EXCLUDED_FROM_PRIMARY_CALIBRATION"
+    }
+  },
+  "calibration_cohort_summary": {
+    "pointing": "0008",
+    "selection_criteria": "classification_category == 'RELIABLE_ISOLATED_POINT_SOURCE' and valid_channels_count >= 5",
+    "total_eligible_sources": 3206,
+    "total_scored_sources": 3206,
+    "excluded_after_scoring": 0,
+    "strata_counts": {
+      "D1_D4": 1055,
+      "D2_D5": 1304,
+      "D3_D6": 847
+    }
+  },
+  "strata_thresholds": {
+    "D1_D4": {
+      "detector_pair": "D1,D4",
+      "sample_size": 1055,
+      "score_median": 0.423666,
+      "score_iqr": 0.444174,
+      "threshold_alpha_0_05": 4.127549,
+      "ci95_alpha_0_05": [
+        2.760024,
+        6.186414
+      ],
+      "se_alpha_0_05": 0.848238,
+      "threshold_alpha_0_01": 61.267565,
+      "ci95_alpha_0_01": [
+        24.229503,
+        152.581432
+      ],
+      "se_alpha_0_01": 32.353974,
+      "morans_i": -0.0012
+    },
+    "D2_D5": {
+      "detector_pair": "D2,D5",
+      "sample_size": 1304,
+      "score_median": 0.368894,
+      "score_iqr": 0.341627,
+      "threshold_alpha_0_05": 5.515796,
+      "ci95_alpha_0_05": [
+        4.15383,
+        7.292314
+      ],
+      "se_alpha_0_05": 0.719693,
+      "threshold_alpha_0_01": 181.601329,
+      "ci95_alpha_0_01": [
+        44.371465,
+        913.888583
+      ],
+      "se_alpha_0_01": 226.847887,
+      "morans_i": -0.0023
+    },
+    "D3_D6": {
+      "detector_pair": "D3,D6",
+      "sample_size": 847,
+      "score_median": 1.425457,
+      "score_iqr": 1.094274,
+      "threshold_alpha_0_05": 19.266649,
+      "ci95_alpha_0_05": [
+        12.848656,
+        25.080652
+      ],
+      "se_alpha_0_05": 3.63721,
+      "threshold_alpha_0_01": 862.972346,
+      "ci95_alpha_0_01": [
+        168.930601,
+        3668.691406
+      ],
+      "se_alpha_0_01": 725.90054,
+      "morans_i": -0.003
+    }
+  },
+  "deliverable_artifacts": {
+    "thresholds_json": {
+      "path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+      "sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848"
+    },
+    "scores_csv": {
+      "path": "data/processed/spectra/spectra_p0008_calibration_scores_v1.csv",
+      "sha256": "7ac34d415f8132f7f164ab20c1b25fe03461bc709eb674031e838b2208e8c1a3",
+      "records_count": 3206
+    },
+    "calibration_script": {
+      "path": "scripts/calibration/calibrate_spectra_v2_thresholds.py",
+      "sha256": "4b57abf08d791fd60f7c4d51d6dd3ba4ace71d5f059d807e558c66fccc585ab6"
+    },
+    "calibration_report_md": {
+      "path": "reports/SPECTRA_TASK_1_2C_THRESHOLD_CALIBRATION_REPORT.md",
+      "sha256": "0a55bbda397cbe122d4d2f6128058b2489b745f877988928b71e1edf9d800fa3"
+    }
+  },
+  "component_verdicts": {
+    "data_governance": "PASS",
+    "model_immutability": "PASS",
+    "score_path_integrity": "PASS",
+    "threshold_calculation": "PASS",
+    "statistical_uncertainty": "PASS",
+    "spatial_dependence_assessment": "PASS",
+    "reproducibility": "PASS"
+  },
+  "overall_verdict": "PASS \u2014 PROVISIONAL-NULL THRESHOLDS CALIBRATED & FROZEN (BLIND EVALUATION CERTIFICATION PENDING TASK 1.2D)",
+  "recommended_next_task": "Task 1.2D: Blind Evaluation Campaign on Independent QR3 Cohort (P0002, P0009, P0010)"
+}

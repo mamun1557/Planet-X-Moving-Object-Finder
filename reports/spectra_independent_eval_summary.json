@@ -1,0 +1,66 @@
+{
+  "dataset": "Pointing_0003_Independent_Test",
+  "total_sources_evaluated": 1392,
+  "overall_recon_error": {
+    "mean": 0.0003653290729541885,
+    "median": 2.188586677220883e-06,
+    "std": 0.0026377271471525856,
+    "p90": 0.0007669040060136474,
+    "p99": 0.005025837374851085
+  },
+  "coverage_stratification": {
+    "1": {
+      "count": 940,
+      "mean_loss": 2e-06,
+      "median_loss": 1e-06,
+      "std_loss": 3e-06
+    },
+    "2": {
+      "count": 338,
+      "mean_loss": 0.001082,
+      "median_loss": 0.000247,
+      "std_loss": 0.005117
+    },
+    "3": {
+      "count": 91,
+      "mean_loss": 0.001239,
+      "median_loss": 0.000526,
+      "std_loss": 0.00223
+    },
+    "4": {
+      "count": 23,
+      "mean_loss": 0.001206,
+      "median_loss": 0.000932,
+      "std_loss": 0.001161
+    }
+  },
+  "brightness_stratification": {
+    "Faint": {
+      "count": 464,
+      "scale_range": "91.5 - 133.0",
+      "mean_loss": 0.00017,
+      "median_loss": 2e-06
+    },
+    "Moderate": {
+      "count": 464,
+      "scale_range": "133.1 - 175.4",
+      "mean_loss": 0.000419,
+      "median_loss": 3e-06
+    },
+    "Bright": {
+      "count": 464,
+      "scale_range": "175.5 - 432.4",
+      "mean_loss": 0.000507,
+      "median_loss": 2e-06
+    }
+  },
+  "negative_control": {
+    "3_sigma_threshold": 0.007915370028134978,
+    "3_sigma_fp_count": 8,
+    "3_sigma_fp_rate": 0.005747126436781609,
+    "5_sigma_threshold": 0.013190824322440148,
+    "5_sigma_fp_count": 4,
+    "5_sigma_fp_rate": 0.0028735632183908046
+  },
+  "real_world_discovery_labels": "NOT_AVAILABLE (No ground-truth labels for Pointing 0003)"
+}

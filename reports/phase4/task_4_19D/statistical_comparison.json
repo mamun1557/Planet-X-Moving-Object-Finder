@@ -1,0 +1,42 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.19D Independent Holdout Audit",
+    "timestamp_utc": "2026-11-08T16:49:47Z",
+    "holdout_availability_status": "INDEPENDENT_HOLDOUT_UNAVAILABLE",
+    "leakage_determination": "EVALUATION_COHORT_DATA_LEAKAGE_CONFIRMED"
+  },
+  "paired_statistical_tests": {
+    "baseline_vs_adaptive_a": {
+      "mcnemar_chi2": 34.0,
+      "mcnemar_p_value": 5.511207251989962e-09,
+      "false_alarms_suppressed": 34,
+      "spurious_new_alarms": 0,
+      "statistical_significance": "OVERWHELMINGLY_SIGNIFICANT"
+    },
+    "baseline_vs_fixed_2px": {
+      "mcnemar_chi2": 29.0,
+      "mcnemar_p_value": 7.23782987174e-08,
+      "false_alarms_suppressed": 29,
+      "spurious_new_alarms": 0,
+      "statistical_significance": "OVERWHELMINGLY_SIGNIFICANT"
+    },
+    "fixed_2px_vs_adaptive_a": {
+      "mcnemar_chi2": 5.0,
+      "mcnemar_p_value": 0.025347318677468325,
+      "incremental_suppressed": 5,
+      "statistical_significance": "MARGINALLY_SIGNIFICANT"
+    }
+  },
+  "generalization_assessment": {
+    "in_sample_empirical_fpr_pct": {
+      "baseline": 9.0,
+      "fixed_1px": 4.2,
+      "fixed_2px": 3.2,
+      "fixed_3px": 2.4,
+      "adaptive_a": 2.2,
+      "adaptive_b": 1.8
+    },
+    "holdout_generalization_status": "UNPROVEN_DUE_TO_HOLDOUT_UNAVAILABILITY",
+    "scientific_recommendation": "Maintain all adaptive masking strictly in shadow mode until external flight observations (e.g. Day-1 flight pointings) become available for genuine blind validation."
+  }
+}

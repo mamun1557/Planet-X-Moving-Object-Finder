@@ -1,0 +1,20 @@
+{
+  "checkpoint_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+  "n_trials_total": 423,
+  "n_controls": 97,
+  "n_point_injections": 162,
+  "n_extended_injections": 164,
+  "locked_detection_threshold_tau": 169.0978243724823,
+  "empirical_fpr_on_controls": 0.10309278350515463,
+  "global_precision": 0.9473684210526315,
+  "global_recall": 0.5521472392638037,
+  "global_f1": 0.6976744186046512,
+  "auroc": 0.7356745303902346,
+  "auprc": 0.9345564489469551,
+  "point_source_c50_snr": 8.306116794353553,
+  "point_source_c90_snr": 13.068232530167302,
+  "extended_source_c50_snr": 10.733369881203933,
+  "extended_source_c90_snr": 18.925886783676965,
+  "point_source_median_radial_error_arcsec": 1.3269122406239506,
+  "point_source_68th_radial_error_arcsec": 1.613309946610025
+}

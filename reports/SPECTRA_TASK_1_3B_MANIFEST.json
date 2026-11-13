@@ -1,0 +1,107 @@
+{
+  "task_id": "SPECTRA-X / F1 — Phase 3, Task 1.3B",
+  "task_name": "SPECTRA Engine Boundary Finalization & Contract Documentation",
+  "pipeline_build": "l2b-v27-2026-222",
+  "contract_version": "SPECTRA_FUSION_EVIDENCE_V1",
+  "sidecar_contract_version": "CONTINUUM_SIDECAR_EVIDENCE_V1",
+  "timestamp_utc": "2026-11-07T11:17:30Z",
+  "status": "PASS — ENGINE BOUNDARY FINALIZED",
+  "frozen_scientific_assets": {
+    "checkpoint": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "size_bytes": 382177,
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "provisional_thresholds": {
+      "path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+      "size_bytes": 12978,
+      "sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "calibration_scores": {
+      "path": "data/processed/spectra/spectra_p0008_calibration_scores_v1.csv",
+      "size_bytes": 446446,
+      "sha256": "7ac34d415f8132f7f164ab20c1b25fe03461bc709eb674031e838b2208e8c1a3",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "multi_pointing_spectra": {
+      "path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "size_bytes": 332189097,
+      "sha256": "8a96617cfe5d5152e720ee0c3890a7b8c7025ab2bfb3c682e08743affe6858e0",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  },
+  "authoritative_engine_modules": {
+    "spectra_engine/__init__.py": {
+      "size_bytes": 1588,
+      "sha256": "81d38b8f7f4fd63190956e3fba2240942fcb6cbcc7535fd68c8774b958514797",
+      "role": "authoritative_package_root"
+    },
+    "spectra_engine/fusion_contract.py": {
+      "size_bytes": 10754,
+      "sha256": "afeab483f32ca382e5de112998d3e5c0287c7d40aff7a7f0e9d5381e7e186f22",
+      "role": "authoritative_contract_specification"
+    },
+    "spectra_engine/spectra_evidence_adapter.py": {
+      "size_bytes": 19651,
+      "sha256": "a6f5d5046e33238ba3a6bc9119fc899bbd735e30fe0b171e86b5ab9fbe5ff5b8",
+      "role": "authoritative_evidence_adapter"
+    },
+    "spectra_engine/continuum_sidecar_interface.py": {
+      "size_bytes": 2299,
+      "sha256": "d24a68a8c85e2d614bcb336c144af09938593b688f76b52fd0567b5f7eda7fd1",
+      "role": "authoritative_sidecar_interface"
+    }
+  },
+  "backward_compatibility_shims": {
+    "models/spectra/__init__.py": {
+      "size_bytes": 1079,
+      "sha256": "d34b98c93df1886367af07e8ec9f1355ab2abbbe241e64e1a1a124b283946e1d",
+      "role": "compatibility_reexport_root"
+    },
+    "models/spectra/fusion_contract.py": {
+      "size_bytes": 1252,
+      "sha256": "9f3b87e4bc2aac6d33bc5585c613222866682d57196757d0168ebd2b138dfc99",
+      "role": "compatibility_reexport_contract"
+    },
+    "models/spectra/spectra_evidence_adapter.py": {
+      "size_bytes": 414,
+      "sha256": "5926c43e9fc2dd7abe0b02fd0af59011e5fba89efbf8497e37a8650264a1a465",
+      "role": "compatibility_reexport_adapter"
+    },
+    "models/spectra/continuum_sidecar_interface.py": {
+      "size_bytes": 569,
+      "sha256": "cdc8d64e46cba5a2600eafcfe439090e90cded94ed9aed25c457add2f61f61c7",
+      "role": "compatibility_reexport_sidecar"
+    }
+  },
+  "test_suites": {
+    "tests/test_spectra_task_1_3b_engine_boundary.py": {
+      "size_bytes": 10121,
+      "sha256": "fbe25d9b7c903cc86dc98c67ee7541157e93720df710dc584444489599f45b67",
+      "tests_passed": 8,
+      "status": "ALL_PASSED"
+    },
+    "tests/test_spectra_task_1_3a_fusion_contract.py": {
+      "tests_passed": 18,
+      "status": "ALL_PASSED"
+    },
+    "full_spectra_regression": {
+      "tests_selected": 61,
+      "tests_passed": 61,
+      "status": "ALL_PASSED"
+    }
+  },
+  "architectural_audit": {
+    "dependency_direction": "Application / API -> spectra_engine -> scientific implementation",
+    "spectra_engine_imports_models_spectra": false,
+    "spectra_engine_external_framework_deps": [],
+    "backward_compatibility_object_identity_verified": true,
+    "normalization_formula_invariant": true,
+    "empirical_percentile_preserved": true,
+    "iqr_scaled_deviation_clarified": true,
+    "zero_iqr_defensive_guard_implemented": true
+  }
+}
+

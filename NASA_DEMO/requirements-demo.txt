@@ -1,0 +1,27 @@
+# =====================================================================
+# SPECTRA-X NASA Demo — Minimal Runtime Dependencies
+# NASA Space Apps Challenge 2026 — F1 V2.1 Pipeline (l2b-v27-2026-222)
+# Compatible with Python 3.12 on 64-bit Windows
+# =====================================================================
+
+# Core Numerical & Scientific Computing
+numpy>=2.0.0,<3.0.0
+scipy>=1.13.0
+pandas>=2.2.0
+
+# Astronomy, FITS & Coordinate Processing
+astropy>=6.0.0
+
+# Image Processing & Visualization
+matplotlib>=3.8.0
+pillow>=10.0.0
+pyyaml>=6.0.0
+
+# Machine Learning & Deep Learning Inference (PyTorch)
+# PyTorch automatically utilizes NVIDIA CUDA GPU if drivers and hardware
+# are present; otherwise, it gracefully falls back to CPU tensor execution.
+torch>=2.2.0
+
+# Verification & Test Runner
+pytest>=8.0.0
+

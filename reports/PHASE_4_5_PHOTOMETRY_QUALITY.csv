@@ -1,0 +1,11 @@
+photometric_band,catalog_origin,planned_pilot_targets,retrieved_valid_fluxes,retrieved_upper_limits,retrieved_quality_flagged,unretrieved_due_to_network,quality_assessment_status,notes
+Gaia G,Gaia DR3,25,0,0,0,25,BLOCKED_BY_NETWORK,Optical broadband anchor; remote TAP query blocked by sandbox DNS
+Gaia BP,Gaia DR3,25,0,0,0,25,BLOCKED_BY_NETWORK,Optical blue color; remote TAP query blocked by sandbox DNS
+Gaia RP,Gaia DR3,25,0,0,0,25,BLOCKED_BY_NETWORK,Optical red color; remote TAP query blocked by sandbox DNS
+Gaia XP Spectra,Gaia DR3,25,0,0,0,25,BLOCKED_BY_NETWORK,Low-res spectrophotometry; remote TAP query blocked by sandbox DNS
+2MASS J,2MASS PSC,25,0,0,0,25,BLOCKED_BY_NETWORK,Near-IR 1.25 um; remote IRSA query blocked by sandbox DNS
+2MASS H,2MASS PSC,25,0,0,0,25,BLOCKED_BY_NETWORK,Near-IR 1.65 um; remote IRSA query blocked by sandbox DNS
+2MASS Ks,2MASS PSC,25,0,0,0,25,BLOCKED_BY_NETWORK,Near-IR 2.16 um; remote IRSA query blocked by sandbox DNS
+ALLWISE W1,ALLWISE,25,0,0,0,25,BLOCKED_BY_NETWORK,Mid-IR 3.4 um; remote IRSA query blocked by sandbox DNS
+ALLWISE W2,ALLWISE,25,0,0,0,25,BLOCKED_BY_NETWORK,Mid-IR 4.6 um; remote IRSA query blocked by sandbox DNS
+

@@ -1,0 +1,5 @@
+cohort_name,pointings,sample_size_n,control_cutouts_count,injection_cutouts_count,level2_fits_available,external_wcs_crossmatch_available,historical_usage,holdout_eligibility_status,justification
+PILOT_CALIBRATION_COHORT,"P0001, P0008",1000,500,500,True,False,Model threshold calibration (Task 4.11 / Task 4.12),INELIGIBLE_CALIBRATION_POLLUTED,Used to establish detector thresholds tau; no Task 4.19B external catalog crossmatches exist on disk.
+PILOT_BLIND_EVALUATION_COHORT,"P0002, P0009, P0010",1500,500,1000,True,True,Primary benchmark evaluation and Task 4.19C policy parameter derivation,INELIGIBLE_EVALUATION_LEAKED,"Directly influenced Task 4.19C policy formulation, threshold selection, and magnitude tiers."
+QUICK_RELEASE_ARCHIVE_QR2_QR3,"P0003, P0004, P0005 (Legacy)",195,0,0,True,False,Legacy SPECTRA / CHRONOS validation (Build l2b-v20-2025-240),INELIGIBLE_PIPELINE_MISMATCH,Obsolete pipeline build (v20 vs v27); lacks standardized ASTROVISION evaluation trial metadata.
+EXTERNAL_REAL_SKY_OBSERVATIONS,None available,0,0,0,False,False,None,INDEPENDENT_HOLDOUT_UNAVAILABLE,No unobserved SPHEREx observations exist in the active workspace.

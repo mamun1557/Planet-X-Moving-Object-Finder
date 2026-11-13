@@ -1,0 +1,31 @@
+{
+  "is_synthetic": true,
+  "synthetic_engineering_label": "SYNTHETIC_ENGINEERING_TEST \u2014 NOT REAL SPHEREX OBSERVATION",
+  "target_type": "CROWDED_FIELD_SIMULATION",
+  "scenario_notes": "Synthetic moving source surrounded by stationary companion stars",
+  "ground_truth_epoch_a": {
+    "ra_deg": 270.0,
+    "dec_deg": -29.0,
+    "pixel_x": 63.0,
+    "pixel_y": 63.0,
+    "timestamp_utc": "2026-07-24T00:00:00.000Z",
+    "mjd": 61245.0
+  },
+  "ground_truth_epoch_b": {
+    "ra_deg": 270.004401,
+    "dec_deg": -29.002222,
+    "pixel_x": 60.77,
+    "pixel_y": 61.71,
+    "timestamp_utc": "2026-07-29T00:00:00.000Z",
+    "mjd": 61250.0
+  },
+  "ground_truth_delta_ra_arcsec": 13.8564,
+  "ground_truth_delta_dec_arcsec": -8.0,
+  "ground_truth_angular_displacement_arcsec": 15.9999,
+  "ground_truth_position_angle_deg": 120.0,
+  "ground_truth_dt_days": 5.0,
+  "ground_truth_dt_hours": 120.0,
+  "ground_truth_motion_rate_arcsec_per_day": 3.2,
+  "ground_truth_motion_rate_arcsec_per_hour": 0.1333,
+  "astrometric_coordinate_uncertainty_arcsec": 0.05
+}

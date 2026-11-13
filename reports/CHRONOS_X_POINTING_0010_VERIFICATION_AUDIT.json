@@ -1,0 +1,98 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 3, Task 1.3F",
+    "title": "Pointing 0010 Manifest & Coordinate Verification Audit",
+    "governance": "STRICT READ-ONLY",
+    "date": "2026-11-07",
+    "executive_verdict": "MANIFEST-ONLY CANDIDATES \u2014 NOT SCIENTIFICALLY VERIFIED"
+  },
+  "coordinate_verification": {
+    "equatorial_mean_center": {
+      "ra_deg": 272.9433,
+      "dec_deg": 66.5712,
+      "frame": "ICRS (J2000)"
+    },
+    "ecliptic_recalculation": {
+      "system": "BarycentricTrueEcliptic",
+      "mean_ecliptic_lon_lambda_deg": 337.5235,
+      "mean_ecliptic_lat_beta_deg": 86.9037,
+      "detector_2_5_lat_beta_deg": 88.7881,
+      "detector_1_4_lat_beta_deg": 85.985,
+      "detector_3_6_lat_beta_deg": 85.9368,
+      "separation_from_nep_deg": {
+        "detector_2_5_mean": 1.2119,
+        "overall_mean": 3.0883,
+        "min_sep": 1.1894,
+        "max_sep": 4.1489
+      }
+    },
+    "astronomical_interpretation": {
+      "nep_location_confirmed": true,
+      "continuous_viewing_zone_confirmed": true,
+      "prior_error_identified": "Prior Task 1.3E report conflated equatorial declination delta = +66.57 deg with ecliptic latitude beta = +66.57 deg. The actual ecliptic latitude is beta = +85.9 deg to +88.8 deg."
+    }
+  },
+  "observation_inventory_pointing_0010": {
+    "local_storage_files": 24,
+    "local_planning_period": "2026W30_1B",
+    "local_dithers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "local_detectors": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "remote_manifest_0010_qr3_weeks_30_31_32": 0,
+    "remote_manifest_0010_qr2_week_19": 4
+  },
+  "temporal_baseline_audit": {
+    "reported_7_day_baseline": {
+      "status": "UNVERIFIABLE",
+      "evidence_level": "UNVERIFIABLE",
+      "reason": "Pointing 0010 does not exist in 2026W31 manifest or archive inventory"
+    },
+    "reported_14_day_baseline": {
+      "status": "UNVERIFIABLE",
+      "evidence_level": "UNVERIFIABLE",
+      "reason": "Pointing 0010 does not exist in 2026W32 manifest or archive inventory"
+    },
+    "reported_18_day_baseline": {
+      "status": "UNVERIFIABLE",
+      "evidence_level": "UNVERIFIABLE",
+      "reason": "Pointing 0010 does not exist in 2026W32 manifest or archive inventory"
+    },
+    "local_intra_visit_dithers": {
+      "status": "TIMESTAMP-VERIFIED",
+      "evidence_level": "E3",
+      "baseline_range_sec": [
+        128.93,
+        386.79
+      ],
+      "baseline_range_min": [
+        2.15,
+        6.45
+      ],
+      "pair_count_same_detector": 36
+    }
+  },
+  "evidence_level_census": {
+    "E0_manifest_candidate_only": 1,
+    "E1_exact_timestamp_verified": 240,
+    "E2_same_detector_compatible_band": 0,
+    "E3_wcs_footprint_verified": 36,
+    "E4_calibration_quality_verified": 0,
+    "UNVERIFIABLE_hypothesized": 4
+  },
+  "eligibility_verdict": {
+    "total_pairs_evaluated": 281,
+    "eligible_for_chronos_x_evaluation": 0,
+    "justification": "Zero multi-epoch pairs verified. 36 intra-visit dither pairs reach E3 but are physically disqualified due to sub-visit temporal baselines (dt < 7 min). Hypothesized 7-, 14-, and 18-day candidates have zero manifest or timestamp evidence."
+  }
+}

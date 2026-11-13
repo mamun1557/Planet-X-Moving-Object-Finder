@@ -1,0 +1,35 @@
+{
+  "task_id": "Phase 4, Task 4.4",
+  "audit_name": "Scientific Validation Environment — Asset Integrity Verification",
+  "pipeline_build": "l2b-v27-2026-222",
+  "verification_timestamp_utc": "2026-11-07T22:40:00Z",
+  "governance_mode": "FROZEN_ASSET_IMMUTABILITY",
+  "overall_status": "ALL_ASSETS_VERIFIED_PRISTINE",
+  "protected_assets": {
+    "checkpoints/spectra_masked_ae_v2.pt": {
+      "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "computed_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "size_bytes": 382177,
+      "last_modified_timestamp": "2026-11-03T01:14:16.673869",
+      "match_status": "VERIFIED_MATCH",
+      "description": "Pre-trained 102-channel masked spectral autoencoder weights and optimizer state"
+    },
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": {
+      "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "computed_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "size_bytes": 12978,
+      "last_modified_timestamp": "2026-11-07T04:26:21.186757",
+      "match_status": "VERIFIED_MATCH",
+      "description": "Point 0008 calibration cohort spectral anomaly reconstruction loss thresholds"
+    },
+    "checkpoints/astrovision_spatial_v3.pt": {
+      "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "computed_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+      "size_bytes": 3436965,
+      "last_modified_timestamp": "2026-11-07T01:57:47.436633",
+      "match_status": "VERIFIED_MATCH",
+      "description": "Pre-trained 128x128 spatial masked convolutional autoencoder weights"
+    }
+  }
+}
+

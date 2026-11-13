@@ -1,0 +1,68 @@
+{
+  "task_id": "Phase 4, Task 4.19B",
+  "timestamp_utc": "2026-11-08T16:17:30Z",
+  "protected_production_assets": {
+    "checkpoints/astrovision_spatial_v3.pt": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+    "checkpoints/spectra_masked_ae_v2.pt": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848"
+  },
+  "raw_acquired_catalogs": {
+    "data/external_catalogs/task_4_19B/gaia_dr3_raw_acquired.csv": "2FB1A4B66490D843C334732F6D9FA30FB25A700A9805FF99D7AF14BED1AF0265",
+    "data/external_catalogs/task_4_19B/catwise2020_raw_fps.csv": "A26588F1E737463F20675BC71E506CC2BA30638BC01C13096F6A77D8644990B1",
+    "data/external_catalogs/task_4_19B/twomass_raw_fps.csv": "3A1C5646C23C61466A4D1F69B07D80F5D465DBE5D33458D87774049AB3BE78AE"
+  },
+  "task_deliverables": {
+    "catalog_acquisition_failures.csv": {
+      "size_bytes": 545,
+      "sha256": "195E5FE2498D63A2DF8B6207BD1F268C389642CC0A0A92C3D2ED84B3ADEB447B"
+    },
+    "catalog_acquisition_manifest.json": {
+      "size_bytes": 45065,
+      "sha256": "971A84D5F9608A82C64C4BDB5A4DC4804FD25B39C35E2DF86CFEFEAED1E9CC01"
+    },
+    "catalog_combination_coverage.csv": {
+      "size_bytes": 699,
+      "sha256": "51ED2B2A9C9DA202CFE60E4545811FEC4456F31F42197124979F8846F3A6D47D"
+    },
+    "catalog_source_records.csv": {
+      "size_bytes": 212332227,
+      "sha256": "277FB6386480249EA59B202972BD8CC4875CCA3B53499C4FC88A6486CE17C0DC"
+    },
+    "cutout_coverage_summary.csv": {
+      "size_bytes": 298717,
+      "sha256": "33BCB280149F701C724EED1F180AE55AFA0332A68D78100A86D38D55B4CBF773"
+    },
+    "detector_stratified_coverage.csv": {
+      "size_bytes": 1523,
+      "sha256": "245F11A48784ADA31288AB850140E6B77D59D65DCD347C4AC9AE680EE25A5052"
+    },
+    "exact_footprint_crossmatch.csv": {
+      "size_bytes": 179481536,
+      "sha256": "AB0F6585B174B3E86F0A9A53ED1C96B683A3DDB1043699826548CFAB00BB1705"
+    },
+    "false_positive_external_evidence_audit.csv": {
+      "size_bytes": 8372,
+      "sha256": "DF8CD93B1CF105CDC2F3FBAA4A9C315FD028317EBBD1F86FC9A264AF587C138E"
+    },
+    "geometry_reconciliation.md": {
+      "size_bytes": 8316,
+      "sha256": "FD5CA0DF765C7A449B9522C7191ABF810D1A57CA248A9D40B434A4082DB65743"
+    },
+    "reproducibility_instructions.md": {
+      "size_bytes": 6067,
+      "sha256": "D880986285281FBF7C03BE054E53B75159AB7D72449F0C899CEACC294FCBB66A"
+    },
+    "scientific_limitations.md": {
+      "size_bytes": 10985,
+      "sha256": "8CAFF7D1AC440F0FF78714E690E3EF8283FD3C9F7B9BB7433679CAD1D3204D1A"
+    },
+    "task_4_19A_projection_verification.csv": {
+      "size_bytes": 543,
+      "sha256": "8F95EC72D4785372B04767021EF8380A5E5003374C480CB96C5FA78E14EA54A7"
+    },
+    "task_4_19B_closeout_report.md": {
+      "size_bytes": 24143,
+      "sha256": "3E7E87B557C2B37AB9A59690E8FA0846FAE14585D62451A610831BFB897F79F4"
+    }
+  }
+}

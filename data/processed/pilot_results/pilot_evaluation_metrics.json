@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-11-06T18:23:07.763433+00:00",
+    "total_evaluation_trials": 1500,
+    "evaluation_pointings": [
+      "0002",
+      "0009",
+      "0010"
+    ],
+    "calibration_pointings": [
+      "0001",
+      "0008"
+    ],
+    "statistical_model": "G_eval=3 Pointing Clusters (10 unique multisets)"
+  },
+  "overall_metrics": {
+    "evaluation_fpr": 0.086,
+    "point_source_auroc": 0.6861,
+    "point_source_auroc_bootstrap_range": [
+      0.6143,
+      0.7388
+    ],
+    "point_source_auprc": 0.608,
+    "point_source_recovery_fraction": 0.188,
+    "extended_source_auroc": 0.5704,
+    "extended_source_auroc_bootstrap_range": [
+      0.4599,
+      0.6358
+    ],
+    "extended_source_auprc": 0.5391,
+    "extended_source_recovery_fraction": 0.152
+  },
+  "detector_metrics": {
+    "D1": {
+      "fpr": 0.1905,
+      "point_source_auroc": 0.7188,
+      "point_source_recovery": 0.4405,
+      "extended_source_auroc": 0.6087,
+      "extended_source_recovery": 0.2738
+    },
+    "D2": {
+      "fpr": 0.0595,
+      "point_source_auroc": 0.6835,
+      "point_source_recovery": 0.0595,
+      "extended_source_auroc": 0.4957,
+      "extended_source_recovery": 0.0357
+    },
+    "D3": {
+      "fpr": 0.0602,
+      "point_source_auroc": 0.7216,
+      "point_source_recovery": 0.1687,
+      "extended_source_auroc": 0.5992,
+      "extended_source_recovery": 0.2048
+    },
+    "D4": {
+      "fpr": 0.1084,
+      "point_source_auroc": 0.4776,
+      "point_source_recovery": 0.0482,
+      "extended_source_auroc": 0.3041,
+      "extended_source_recovery": 0.0602
+    },
+    "D5": {
+      "fpr": 0.0361,
+      "point_source_auroc": 0.7596,
+      "point_source_recovery": 0.0602,
+      "extended_source_auroc": 0.6847,
+      "extended_source_recovery": 0.0964
+    },
+    "D6": {
+      "fpr": 0.0602,
+      "point_source_auroc": 0.8763,
+      "point_source_recovery": 0.3494,
+      "extended_source_auroc": 0.775,
+      "extended_source_recovery": 0.241
+    }
+  },
+  "pointing_metrics": {
+    "0002": {
+      "fpr": 0.0893,
+      "point_source_auroc": 0.7388,
+      "point_source_recovery": 0.2321,
+      "extended_source_recovery": 0.1905
+    },
+    "0009": {
+      "fpr": 0.119,
+      "point_source_auroc": 0.7025,
+      "point_source_recovery": 0.1845,
+      "extended_source_recovery": 0.1726
+    },
+    "0010": {
+      "fpr": 0.0488,
+      "point_source_auroc": 0.6143,
+      "point_source_recovery": 0.1463,
+      "extended_source_recovery": 0.0915
+    }
+  },
+  "cluster_bootstrap_multisets_aurocs_pt": [
+    0.7388,
+    0.7257,
+    0.7001,
+    0.7136,
+    0.6861,
+    0.6586,
+    0.7025,
+    0.673,
+    0.6436,
+    0.6143
+  ],
+  "cluster_bootstrap_multisets_aurocs_ext": [
+    0.6358,
+    0.6258,
+    0.5783,
+    0.6169,
+    0.5704,
+    0.5197,
+    0.6092,
+    0.5636,
+    0.5139,
+    0.4599
+  ]
+}

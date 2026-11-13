@@ -1,0 +1,144 @@
+{
+  "manifest_type": "SPECTRA_FINAL_QUALIFICATION_AUDIT_MANIFEST",
+  "version": "1.0.0",
+  "task_id": "SPECTRA_TASK_1_2E",
+  "audit_type": "STRICT_READ_ONLY_QUALIFICATION_AUDIT",
+  "pipeline_build": "l2b-v27-2026-222",
+  "audit_timestamp_utc": "2026-11-06T23:05:00Z",
+  "governance_declaration": "STRICT_READ_ONLY_NO_RETRAINING_NO_THRESHOLD_MODIFICATION",
+  "overall_qualification_decision": {
+    "verdict": "PARTIAL",
+    "qualification_scope": "QUALIFIED_FOR_DOWNSTREAM_FUSION_X_UNDER_RESTRICTIVE_CONTRACT",
+    "discovery_certification": "NOT_CERTIFIED_FOR_UNATTENDED_AUTONOMOUS_DISCOVERY",
+    "justification": "Stable multi-pointing calibration transfer and strong localized line sensitivity (AUROC 0.7071, PAH recovery 72.88%), bounded by weak broad continuum excess recovery (12.13%) and unverified ground-truth astrophysical normality labels."
+  },
+  "inspected_prerequisite_artifacts": {
+    "model_checkpoint": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "size_bytes": 382177,
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "phase3_multpointing_spectra": {
+      "path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "size_bytes": 332189097,
+      "sha256": "8a96617cfe5d5152e720ee0c3890a7b8c7025ab2bfb3c682e08743affe6858e0",
+      "status": "VERIFIED_ACCESSIBLE"
+    },
+    "phase3_multpointing_coverage": {
+      "path": "data/processed/spectra/phase3_multpointing_coverage_v1.csv",
+      "size_bytes": 3293848,
+      "sha256": "c8153bf0b0f07f4bde753b12309d06613fed6a90527cfd2409d7438218262c30",
+      "status": "VERIFIED_ACCESSIBLE"
+    },
+    "p0008_calibration_scores": {
+      "path": "data/processed/spectra/spectra_p0008_calibration_scores_v1.csv",
+      "size_bytes": 446446,
+      "sha256": "7ac34d415f8132f7f164ab20c1b25fe03461bc709eb674031e838b2208e8c1a3",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "frozen_provisional_thresholds": {
+      "path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+      "size_bytes": 12978,
+      "sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "evaluation_scores": {
+      "path": "data/processed/spectra/spectra_evaluation_scores_v1.csv",
+      "size_bytes": 1620798,
+      "sha256": "7f0d977cd63a1f1086a3232fca3bfda5c7b0e5df64136d8245b9b8e876285b25",
+      "status": "VERIFIED_CONSISTENT"
+    },
+    "evaluation_synthetic_injections": {
+      "path": "data/processed/spectra/spectra_evaluation_synthetic_injections_v1.csv",
+      "size_bytes": 801816,
+      "sha256": "4247db17fa23fd870b33b2005f2d743a1cdc60170f667a2e5ad47aa1b313203e",
+      "status": "VERIFIED_CONSISTENT"
+    },
+    "evaluation_metrics_json": {
+      "path": "data/processed/spectra/spectra_v2_blind_evaluation_metrics_v1.json",
+      "size_bytes": 18407,
+      "sha256": "37e4ab82e61d55113bf6e08df3eea96b29a8ef2823d1f191953b48b0aef9fabb",
+      "status": "VERIFIED_CONSISTENT"
+    }
+  },
+  "module_level_verdicts": {
+    "data_provenance_and_integrity": "PASS",
+    "102_channel_extraction_and_coverage": "PARTIAL",
+    "model_architecture_and_implementation": "PASS",
+    "calibration_cohort_validity": "PARTIAL",
+    "threshold_calibration": "PASS",
+    "blind_evaluation_independence": "PASS",
+    "synthetic_anomaly_discrimination": "PARTIAL",
+    "real_source_threshold_transfer": "PASS",
+    "detector_stratum_consistency": "PARTIAL",
+    "scientific_generalization": "EXPLORATORY",
+    "reproducibility_and_provenance": "PASS",
+    "suitability_for_downstream_fusion_x": "PASS"
+  },
+  "reconciled_benchmark_metrics": {
+    "total_evaluation_sources": 9500,
+    "evaluation_pointings": ["0002", "0009", "0010"],
+    "real_exceedance_at_q95": {
+      "D1_D4": 0.0611731843575419,
+      "D2_D5": 0.07067448680351907,
+      "D3_D6": 0.055776892430278883,
+      "global": 0.06315789473684211
+    },
+    "real_exceedance_at_q99": {
+      "D1_D4": 0.016201117318435754,
+      "D2_D5": 0.011143695014662757,
+      "D3_D6": 0.007171314741035857,
+      "global": 0.012
+    },
+    "synthetic_benchmark": {
+      "total_trials": 6000,
+      "template_sources": 1500,
+      "positive_prevalence": 0.75,
+      "random_baseline_auprc": 0.75,
+      "global_auroc": 0.7070622222222223,
+      "global_auroc_clustered_ci_95": [0.6979, 0.7169],
+      "global_auprc": 0.8527978369474026,
+      "global_auprc_clustered_ci_95": [0.8464, 0.8605],
+      "recovery_at_q95": 0.19444444444444445,
+      "recovery_at_q99": 0.03177777777777778,
+      "family_recovery_q95": {
+        "PAH_3_3UM_EMISSION": 0.7288135593220338,
+        "LOCALIZED_EMISSION_LINE": 0.30742539902845245,
+        "ABSORPTION_TROUGH": 0.138,
+        "BROAD_IR_EXCESS": 0.12133333333333333
+      }
+    }
+  },
+  "fusion_x_contract_requirements": {
+    "consumed_signal": "stratum_normalized_percentile_rank",
+    "prohibit_raw_cross_stratum_pooling": true,
+    "require_cross_modal_confirmation": true,
+    "min_valid_channels": 5,
+    "sidecar_recommendation": "Dedicated continuum color-color excess sidecar required for dust continuum anomalies."
+  },
+  "remaining_certification_blockers": [
+    "Ground-truth spectroscopic normality confirmation for calibration and evaluation sources.",
+    "Specialized continuum-fitting sidecar for broad infrared excess and absorption troughs.",
+    "Expanded survey validation across crowded galactic plane fields and high zodiacal dust gradients.",
+    "Edge-channel artifact suppression in Level-2 extraction pipeline."
+  ],
+  "automated_test_suite_status": {
+    "total_tests_executed": 35,
+    "tests_passed": 35,
+    "tests_failed": 0,
+    "pass_rate": 1.0
+  },
+  "output_artifacts": {
+    "final_qualification_report": {
+      "path": "reports/SPECTRA_TASK_1_2E_FINAL_QUALIFICATION_REPORT.md",
+      "size_bytes": 27364,
+      "sha256": "78687a12666dace9d37a590128cc5c899da82f8b6718e6eacda528439e6caacb"
+    },
+    "evidence_matrix_csv": {
+      "path": "reports/SPECTRA_TASK_1_2E_EVIDENCE_MATRIX.csv",
+      "size_bytes": 4009,
+      "sha256": "17b990391abe608e592020ae27dd82656db1b98d13b46737155e4876979297e8"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-11-09T16:33:01.459Z",
+  "tasks": {
+    "Task_A_Production_Launch": {
+      "status": "PASS",
+      "startupDurationMs": 3727,
+      "statusPayload": {
+        "status": "HEALTHY",
+        "system": "ONLINE",
+        "pipeline": "l2b-v27-2026-222",
+        "pipeline_build": "l2b-v27-2026-222",
+        "active_pointing": "0003",
+        "mission": "NASA SPHEREx / SPECTRA-X",
+        "dataset_cohort": "Pointing 0003 Independent Real-Sky Test Set (N=1,392)",
+        "candidates_loaded": 1392,
+        "total_candidates": 1392,
+        "fits_dithers_loaded": 23,
+        "models": {
+          "astrovision_spatial": "INSTANTIATED",
+          "spectra_v2": "INSTANTIATED",
+          "chronos_x": "INSTANTIATED",
+          "motion_x": "INSTANTIATED",
+          "fusion_x": "INSTANTIATED"
+        },
+        "data_paths": {
+          "candidates": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\data/processed/candidates/pointing_0003_candidates.csv",
+          "spectra": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\data/processed/spectral_features/independent_test_assembled_spectra.csv"
+        },
+        "protected_checkpoints_status": "FROZEN_VALIDATED",
+        "mode": "PROTOTYPE_DEMONSTRATION"
+      }
+    },
+    "Task_B1_Dashboard": {
+      "status": "PASS",
+      "title": "SPECTRA-X | SPHEREx Interactive Anomaly Observatory",
+      "headerTitle": "SPECTRA-X OBSERVATORY",
+      "badgeText": "BACKEND ONLINE",
+      "pointingBadge": "FIELD: P0003"
+    },
+    "Task_B2_Candidate_Explorer": {
+      "status": "PASS",
+      "totalCandidates": 1392,
+      "emptySearchHandled": true,
+      "paginationVerified": true
+    },
+    "Task_B3_FITS_Viewer": {
+      "status": "PASS",
+      "imagesCount": 5
+    },
+    "Task_B4_Blink_Viewer": {
+      "status": "PASS",
+      "pauseWorked": true,
+      "stepToggled": true
+    },
+    "Task_B5_Difference_Viewer": {
+      "status": "PASS",
+      "diffRendered": true
+    },
+    "Task_B6_Spectral_Viewer": {
+      "status": "PASS",
+      "channelCount": 102,
+      "svgPaths": 2,
+      "reconstructionCurvePresent": true
+    },
+    "Task_B7_Five_Module_Evidence": {
+      "status": "PASS",
+      "moduleCount": 5,
+      "astrovisionArchitecture": "Neural Inference (Mask-Aware Partial-Conv Spatial Autoencoder V3)",
+      "fusionType": "Unsupervised Heuristic Priority Index (Non-Bayesian)"
+    },
+    "Task_B8_Human_Review": {
+      "status": "PASS",
+      "confirmation": "Review saved for SPX-J163.6309-69.4422",
+      "auditHistoryCount": 0
+    },
+    "Task_E_Review_Persistence_Restart": {
+      "status": "PASS",
+      "persistedOnDisk": true
+    },
+    "Task_G_Responsive_Layout": {
+      "status": "PASS",
+      "viewportsTested": [
+        "1440x900",
+        "1280x720",
+        "390x844"
+      ],
+      "overflowContained": true
+    },
+    "Task_I_Judge_Demo_Rehearsal": {
+      "status": "PASS",
+      "durationSeconds": 32.611,
+      "workflowStepsCompleted": 11
+    }
+  },
+  "screenshots": [
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\01_dashboard_launch.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\02_candidate_explorer_search.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\03_candidate_explorer_empty.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\04_fits_and_blink_view.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\05_calibrated_difference_significance.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\06_102ch_sed_viewer.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\07_five_module_evidence.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\08_human_review_submitted.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\09_review_persisted_after_restart.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\10_viewport_1440x900_desktop.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\11_viewport_1280x720_laptop.png",
+    "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\reports\\phase4\\task_4_28C\\screenshots\\12_viewport_390x844_mobile.png"
+  ],
+  "errors": [],
+  "frameRates": {
+    "BlinkViewer": true
+  },
+  "demoRehearsalDurationSec": 32.611
+}

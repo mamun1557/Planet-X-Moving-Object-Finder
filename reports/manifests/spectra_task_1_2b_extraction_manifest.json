@@ -1,0 +1,219 @@
+{
+  "manifest_metadata": {
+    "task_id": "SPECTRA_TASK_1_2B",
+    "module": "SPECTRA \u2014 102-Channel Infrared Spectral Anomaly Detection",
+    "campaign_name": "Multi-Pointing Spectral Extraction & Catalog Assembly",
+    "execution_timestamp_utc": "2026-11-07T03:29:13Z",
+    "execution_mode": "CONTROLLED_EXTRACTION_ONLY",
+    "governance_declaration": "CONFIRMED: Controlled data extraction only. Zero model training, zero model retraining, zero threshold calibration, and zero forward evaluation against ground truth were performed. Model checkpoints remain byte-for-byte immutable.",
+    "auditor_roles": [
+      "Scientific Data Engineer",
+      "SPHEREx Spectrophotometry Specialist",
+      "Provenance and Data Governance Officer",
+      "Independent Astronomical Benchmark Auditor"
+    ]
+  },
+  "protected_assets_audit": {
+    "spectra_masked_ae_v2_pt": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "FROZEN_BYTE_FOR_BYTE_VERIFIED"
+    },
+    "spectra_masked_ae_v2_training_meta_json": {
+      "path": "checkpoints/spectra_masked_ae_v2_training_meta.json",
+      "sha256": "80d0d65a00cbad8f2bde844d30a7aaa839c461789de3bc58c4fee895ca9f4f2c",
+      "status": "FROZEN_BYTE_FOR_BYTE_VERIFIED"
+    },
+    "historical_reports_and_manifests": "PRESERVED_IMMUTABLE"
+  },
+  "input_dataset_inventory": {
+    "total_fits_expected": 120,
+    "total_fits_processed": 120,
+    "missing_files_count": 0,
+    "corrupt_files_count": 0,
+    "pointings": {
+      "0001": {
+        "role": "CALIBRATION",
+        "fits_files": 24,
+        "catalog_sources": 7500
+      },
+      "0008": {
+        "role": "CALIBRATION",
+        "fits_files": 24,
+        "catalog_sources": 7500
+      },
+      "0002": {
+        "role": "EVALUATION",
+        "fits_files": 24,
+        "catalog_sources": 7500
+      },
+      "0009": {
+        "role": "EVALUATION",
+        "fits_files": 24,
+        "catalog_sources": 7500
+      },
+      "0010": {
+        "role": "EVALUATION",
+        "fits_files": 24,
+        "catalog_sources": 7500
+      }
+    },
+    "calibration_channels_product": {
+      "path": "data/spherex/qr3/calibration/spectral_channels_spx_cal-sch-v2-2026-229.fits",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "extraction_results": {
+    "total_catalog_sources_evaluated": 37500,
+    "total_valid_measurements": 184888,
+    "total_sources_with_coverage": 26455,
+    "total_sources_multi_detector": 26050,
+    "total_sources_single_detector": 405,
+    "total_sources_zero_coverage": 11045,
+    "sparsity_distribution": {
+      "sources_0_channels": 11045,
+      "sources_1_channel": 248,
+      "sources_2_channels": 2057,
+      "sources_3_to_4_channels": 2101,
+      "sources_5_to_10_channels": 22049,
+      "sources_gt_10_channels": 0,
+      "mean_channels_observed_sources": 6.82,
+      "median_channels_observed_sources": 8.0,
+      "max_channels_observed": 8
+    },
+    "partition_breakdown": {
+      "calibration_cohort": {
+        "pointings": [
+          "0001",
+          "0008"
+        ],
+        "fits_files": 48,
+        "catalog_sources": 15000,
+        "sources_with_coverage": 9377,
+        "sources_multi_detector": 9160,
+        "sources_single_detector": 217,
+        "sources_zero_coverage": 5623,
+        "valid_measurements": 62035
+      },
+      "evaluation_cohort": {
+        "pointings": [
+          "0002",
+          "0009",
+          "0010"
+        ],
+        "fits_files": 72,
+        "catalog_sources": 22500,
+        "sources_with_coverage": 17078,
+        "sources_multi_detector": 16890,
+        "sources_single_detector": 188,
+        "sources_zero_coverage": 5422,
+        "valid_measurements": 122853
+      },
+      "partition_isolation_audit": {
+        "source_id_overlap_count": 0,
+        "spatial_overlap_detected": false,
+        "partition_leakage": false
+      }
+    },
+    "detector_coverage_summary": {
+      "D1": {
+        "files": 20,
+        "sources": 9030,
+        "measurements": 31739,
+        "wavelength_range_um": [
+          0.73703,
+          1.12134
+        ],
+        "rejected_flags": 471
+      },
+      "D2": {
+        "files": 20,
+        "sources": 9943,
+        "measurements": 35203,
+        "wavelength_range_um": [
+          1.08943,
+          1.66082
+        ],
+        "rejected_flags": 487
+      },
+      "D3": {
+        "files": 20,
+        "sources": 7170,
+        "measurements": 25188,
+        "wavelength_range_um": [
+          1.62059,
+          2.42768
+        ],
+        "rejected_flags": 412
+      },
+      "D4": {
+        "files": 20,
+        "sources": 9100,
+        "measurements": 32003,
+        "wavelength_range_um": [
+          2.40146,
+          3.84812
+        ],
+        "rejected_flags": 439
+      },
+      "D5": {
+        "files": 20,
+        "sources": 10002,
+        "measurements": 35313,
+        "wavelength_range_um": [
+          3.80315,
+          4.43673
+        ],
+        "rejected_flags": 311
+      },
+      "D6": {
+        "files": 20,
+        "sources": 7260,
+        "measurements": 25442,
+        "wavelength_range_um": [
+          4.40505,
+          5.01931
+        ],
+        "rejected_flags": 276
+      }
+    },
+    "rejections_audit": {
+      "fatal_flags": 2396,
+      "edge_proximity": 6855,
+      "low_aperture_area": 106,
+      "nan_flux": 0
+    }
+  },
+  "deliverable_artifacts": {
+    "spectra_csv": {
+      "path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "sha256": "8a96617cfe5d5152e720ee0c3890a7b8c7025ab2bfb3c682e08743affe6858e0",
+      "records": 37500
+    },
+    "coverage_csv": {
+      "path": "data/processed/spectra/phase3_multpointing_coverage_v1.csv",
+      "sha256": "c8153bf0b0f07f4bde753b12309d06613fed6a90527cfd2409d7438218262c30",
+      "records": 37500
+    },
+    "extraction_manifest_json": {
+      "path": "data/processed/spectra/phase3_multpointing_extraction_manifest_v1.json",
+      "sha256": "e9fa9cfee57a99850d1ef617e0a875aac473530cfa76c416a52802180c87e777"
+    },
+    "audit_report_md": {
+      "path": "reports/SPECTRA_TASK_1_2B_MULTIPOINTING_EXTRACTION_REPORT.md",
+      "sha256": "46b4bd851eb12596b924c98f082c7919db630867609b2db4b9b88742cc865782"
+    }
+  },
+  "component_verdicts": {
+    "input_integrity": "PASS",
+    "extraction_correctness": "PASS",
+    "data_provenance": "PASS",
+    "detector_coverage": "PASS",
+    "102_channel_integrity": "PASS",
+    "source_matching": "PASS",
+    "partition_isolation": "PASS",
+    "output_reproducibility": "PASS"
+  },
+  "overall_verdict": "PASS \u2014 EXTRACTION VALIDATED (SPECTRA MODEL CERTIFICATION DEFERRED)",
+  "recommended_next_task": "Task 1.2C: Multi-Pointing Null-Control Calibration & Threshold Selection on Calibration Cohort (P0001, P0008)"
+}

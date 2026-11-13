@@ -1,0 +1,8 @@
+partition_name,pointing_id,sample_count,target_module,source_type,quarantine_status,leakage_prevention
+SPECTRA_EXPERIMENTAL_TRAIN,0001,2416,SPECTRA,REAL_SPHEREX_SPECTRA,CALIBRATION_PILOT_ISOLATED,"Strictly separated from evaluation pointings P0002, P0009, P0010; spatial coordinates isolated."
+SPECTRA_EXPERIMENTAL_VAL,0004,1249,SPECTRA,REAL_SPHEREX_SPECTRA,SCIENCE_FIELD_ISOLATED,Disjoint ecliptic latitude field (-60.4 deg); zero overlap with training or evaluation pointings.
+SPECTRA_INDEPENDENT_TEST,0003,1392,SPECTRA,REAL_SPHEREX_SPECTRA,INDEPENDENT_HELD_OUT_FIELD,"Completely untouched southern deep pointing (-63.4 deg); zero overlap with P0001, P0004, or P0008."
+SPECTRA_SYNTHETIC_BENCHMARK_ANOMALIES,0003_INJECTIONS,160,SPECTRA,SYNTHETIC_ANOMALY_INJECTIONS,CONTROLLED_BENCHMARK_ONLY,"PAH lines, absorption troughs, spikes, and broad IR excess injected into 160 distinct base spectra."
+SPECTRA_SYNTHETIC_BENCHMARK_CONTROLS,0003_CONTROLS,211,SPECTRA,REAL_NEGATIVE_CONTROLS,CONTROLLED_BENCHMARK_ONLY,Nominal stellar spectra and channel dropouts with zero injected anomaly signals.
+ASTROVISION_FROZEN_TRAIN,"0003, 0004, 0005, 1B, 4B",1200,ASTROVISION,REAL_SPHEREX_LEVEL2_PATCHES,FROZEN_BASELINE_PRESERVED,"35 non-evaluation science files; zero access to P0002, P0009, P0010 or calibration P0001, P0008."
+QUARANTINED_BLIND_EVALUATION_COHORT,"0002, 0009, 0010",1500,ALL_MODULES,SPHEREx_LEVEL2_CUTOUTS,FIREWALLED_BLIND_EVALUATION,"Strictly forbidden from training, validation, or hyperparameter selection in all pipelines."

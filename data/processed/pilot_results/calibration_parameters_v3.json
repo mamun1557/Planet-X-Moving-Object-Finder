@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "model_version": "ASTROVISION_V3",
+    "checkpoint_path": "checkpoints/astrovision_spatial_v3.pt",
+    "checkpoint_sha256": "",
+    "calibration_pointings": [
+      "0001",
+      "0008"
+    ],
+    "calibration_sample_size": 500,
+    "nominal_alpha": 0.05
+  },
+  "detector_thresholds_v3": {
+    "D1": {
+      "tau_peak_chi2_alpha_0_05": 186.2904,
+      "tau_point_integrated_alpha_0_05": 373.0434,
+      "tau_extended_integrated_alpha_0_05": 1922.7729,
+      "null_sample_count": 84,
+      "peak_chi2_median": 7.5264,
+      "pt_integrated_median": 29.1177,
+      "ext_integrated_median": 268.388
+    },
+    "D2": {
+      "tau_peak_chi2_alpha_0_05": 2536.2963,
+      "tau_point_integrated_alpha_0_05": 3752.3552,
+      "tau_extended_integrated_alpha_0_05": 23012.3148,
+      "null_sample_count": 84,
+      "peak_chi2_median": 8.7754,
+      "pt_integrated_median": 30.1536,
+      "ext_integrated_median": 232.7853
+    },
+    "D3": {
+      "tau_peak_chi2_alpha_0_05": 999.7611,
+      "tau_point_integrated_alpha_0_05": 1735.2102,
+      "tau_extended_integrated_alpha_0_05": 34018.427,
+      "null_sample_count": 83,
+      "peak_chi2_median": 10.712,
+      "pt_integrated_median": 37.0267,
+      "ext_integrated_median": 298.7011
+    },
+    "D4": {
+      "tau_peak_chi2_alpha_0_05": 633.7253,
+      "tau_point_integrated_alpha_0_05": 747.4456,
+      "tau_extended_integrated_alpha_0_05": 8275.964,
+      "null_sample_count": 83,
+      "peak_chi2_median": 8.7188,
+      "pt_integrated_median": 26.1916,
+      "ext_integrated_median": 144.0842
+    },
+    "D5": {
+      "tau_peak_chi2_alpha_0_05": 91.8464,
+      "tau_point_integrated_alpha_0_05": 180.5691,
+      "tau_extended_integrated_alpha_0_05": 7012.1488,
+      "null_sample_count": 83,
+      "peak_chi2_median": 5.5511,
+      "pt_integrated_median": 24.7015,
+      "ext_integrated_median": 104.1086
+    },
+    "D6": {
+      "tau_peak_chi2_alpha_0_05": 197.3499,
+      "tau_point_integrated_alpha_0_05": 356.3344,
+      "tau_extended_integrated_alpha_0_05": 2186.0833,
+      "null_sample_count": 83,
+      "peak_chi2_median": 5.7998,
+      "pt_integrated_median": 24.1288,
+      "ext_integrated_median": 102.7746
+    }
+  }
+}

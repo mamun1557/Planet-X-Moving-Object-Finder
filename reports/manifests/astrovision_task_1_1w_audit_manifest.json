@@ -1,0 +1,136 @@
+{
+  "manifest_metadata": {
+    "task_id": "TASK_1_1W",
+    "campaign_name": "ASTROVISION_PROVENANCE_BANDPASS_STATISTICAL_CONSISTENCY_AUDIT",
+    "audit_timestamp_utc": "2026-11-07T02:53:00Z",
+    "execution_mode": "STRICT_READ_ONLY",
+    "read_only_declaration": "CONFIRMED: Zero model checkpoints, weights, source code, metadata, calibration files, FITS images, trial definitions, or results were modified during this audit.",
+    "auditor_roles": [
+      "Principal Scientific Integrity Auditor",
+      "Astronomical ML Benchmark Statistician",
+      "SPHEREx Instrument Data Specialist"
+    ],
+    "parent_tasks": {
+      "task_1_1u_remediation_report": "reports/ASTROVISION_TASK_1_1U_REMEDIATION_REPORT.md",
+      "task_1_1u_manifest": "reports/manifests/astrovision_task_1_1u_remediation_manifest.json",
+      "task_1_1v_qualification_report": "reports/ASTROVISION_TASK_1_1V_INDEPENDENT_QUALIFICATION_REPORT.md",
+      "task_1_1v_manifest": "reports/manifests/astrovision_task_1_1v_qualification_manifest.json"
+    },
+    "report_path": "reports/ASTROVISION_TASK_1_1W_PROVENANCE_BANDPASS_STATISTICAL_AUDIT.md",
+    "report_sha256": "8c10ad90ebfefbfa06fc9ab2749f2576c28cb2b8a745da79e543a56f41e5d9b5"
+  },
+  "asset_hash_verification": {
+    "v2_model_checkpoint": {
+      "path": "checkpoints/astrovision_spatial_v2.pt",
+      "expected_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+      "recomputed_sha256": "f65c0f139a5e1fa5073707eb006145d6a380637a42599d7ea061724f64080557",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "v3_model_checkpoint": {
+      "path": "checkpoints/astrovision_spatial_v3.pt",
+      "expected_sha256": "3b608e496f43c2648c9dc8236e1a7f5b5ed4b7906cf900468c65c67016042d99",
+      "recomputed_sha256": "3b608e496f43c2648c9dc8236e1a7f5b5ed4b7906cf900468c65c67016042d99",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "v3_metadata_json": {
+      "path": "checkpoints/astrovision_spatial_v3.json",
+      "task_1_1u_machine_manifest_sha256": "70e9954752c0b4317635627d9d21180882ad36e38d5435f8c326260f58f8d188",
+      "task_1_1u_prose_report_cited_sha256": "07aeb7ff3d47a46cbf9cf9d40b490f23d8c1c46ae28549e54a39775089bf80ee",
+      "recomputed_on_disk_sha256": "70e9954752c0b4317635627d9d21180882ad36e38d5435f8c326260f58f8d188",
+      "status": "PROVENANCE_RECONCILED",
+      "resolution_note": "Machine manifest contains true dynamically hashed signature; prose report citation was clerical transcription error."
+    },
+    "v3_calibration_json": {
+      "path": "data/processed/pilot_results/calibration_parameters_v3.json",
+      "task_1_1u_machine_manifest_sha256": "aabe0d15d0e8d559cc82897e9c669f0f5f5785ab32e111123ac321a258ccf706",
+      "task_1_1u_prose_report_cited_sha256": "a9ef27dd8cb069b2d86a147053bbf1fe6ecf2dd478c95a2879aeb69c687e1451",
+      "recomputed_on_disk_sha256": "aabe0d15d0e8d559cc82897e9c669f0f5f5785ab32e111123ac321a258ccf706",
+      "status": "PROVENANCE_RECONCILED",
+      "resolution_note": "Machine manifest contains true dynamically hashed signature; prose report citation was clerical transcription error."
+    },
+    "pilot_evaluation_results_v2_csv": {
+      "path": "data/processed/pilot_results/astrovision_pilot_trial_results.csv",
+      "recomputed_sha256": "4afddbb31d9f1b579d711712da431bf1c19701d7a63d25e9a06995a71c9d523f",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "pilot_evaluation_results_v3_csv": {
+      "path": "data/processed/pilot_results/astrovision_v3_evaluation_trial_results.csv",
+      "recomputed_sha256": "c088a320e459f9ad5e0a488de32a2a8307b2bee3f820e477abc9e2354cb48193",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  },
+  "bandpass_verification": {
+    "authoritative_sources": [
+      "spectral_channels_spx_cal-sch-v2-2026-229.fits",
+      "spectral_wcs_D1_spx_cal-swcs-v5-2026-191.fits through spectral_wcs_D6_spx_cal-swcs-v5-2026-191.fits",
+      "reports/spectral_channel_audit.md",
+      "SPHEREx Explanatory Supplement (Caltech/IPAC)"
+    ],
+    "official_bandpass_grid_microns": {
+      "D1": "0.7430 - 1.1160",
+      "D2": "1.0990 - 1.6510",
+      "D3": "1.6360 - 2.4400",
+      "D4": "2.4220 - 3.8270",
+      "D5": "3.8144 - 4.4264",
+      "D6": "4.4184 - 5.0094"
+    },
+    "discrepancy_reconciliation": {
+      "d4_boundary": "Task 1.1U reported 2.42-3.48 um due to digit transposition; official bandpass is 2.42-3.83 um, matching Task 1.1V.",
+      "pipeline_impact": "ZERO_IMPACT (Spatial pipeline routes cutouts by integer detector number, not continuous dispersion wavelength)"
+    }
+  },
+  "statistical_methods_reproduction": {
+    "point_auroc_intra_model_mwu": {
+      "reported_p_value": 3.40e-62,
+      "reproduced_p_value": 3.40e-62,
+      "u_statistic": 201003.5,
+      "test_type": "Mann-Whitney U positive-vs-negative discrimination test",
+      "status": "REPRODUCED_EXACT"
+    },
+    "paired_auroc_difference_bootstrap": {
+      "delta_auroc": 0.1179,
+      "std_error": 0.0148,
+      "z_score": 7.98,
+      "p_value": 1.55e-15,
+      "ci_95": [0.0887, 0.1464],
+      "test_type": "Paired non-parametric bootstrap (B=5,000 iterations)",
+      "status": "VERIFIED"
+    },
+    "point_recovery_mcnemar_test": {
+      "reported_p_value": 7.53e-10,
+      "reproduced_p_value": 7.53e-10,
+      "chi2_statistic": 37.88,
+      "b_v2_miss_v3_hit": 91,
+      "c_v2_hit_v3_miss": 24,
+      "status": "REPRODUCED_EXACT"
+    },
+    "observational_unit_limitation": "Trials are clustered within K=3 pointings (0002, 0009, 0010). Extreme trial-level p-values do not prove sky-wide astronomical population generalization."
+  },
+  "false_positive_control_status": {
+    "target_nominal_alpha": 0.05,
+    "observed_evaluation_fpr_peak": 0.0900,
+    "observed_evaluation_fpr_pt_int": 0.0920,
+    "wilson_ci_95_peak": [0.0679, 0.1183],
+    "wilson_ci_95_pt_int": [0.0697, 0.1205],
+    "target_achieved": false,
+    "primary_failure_driver": "Detector 1 (FPR 22.62%-25.00%) and Pointing 0009 (FPR 14.29%-14.88%)",
+    "verdict": "FAIL — 5% false-alarm budget is violated on untouched evaluation cohort"
+  },
+  "governance_findings": {
+    "v3_checkpoint_integrity": "PASS",
+    "metadata_and_calibration_provenance": "PASS",
+    "partition_isolation_and_leakage": "PASS",
+    "detector_bandpass_correctness": "PASS",
+    "statistical_method_validity": "PARTIAL",
+    "false_positive_rate_control": "FAIL",
+    "point_source_detection_evidence": "PARTIAL",
+    "extended_source_detection_evidence": "EXPLORATORY",
+    "generalization_beyond_eval_pointings": "EXPLORATORY",
+    "unattended_pipeline_readiness": "FAIL"
+  },
+  "final_scientific_verdict": {
+    "status": "PARTIAL — NOT CERTIFIED FOR UNATTENDED PIPELINE INGESTION",
+    "deployment_authorization": "SUPERVISED_HUMAN_IN_THE_LOOP_SCREENING_ONLY"
+  }
+}
+

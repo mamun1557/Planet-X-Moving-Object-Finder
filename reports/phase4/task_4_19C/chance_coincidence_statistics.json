@@ -1,0 +1,112 @@
+{
+  "mission": "SPECTRA-X Task 4.19C Chance Coincidence & Null Model Audit",
+  "timestamp_utc": "2026-11-08T16:34:18Z",
+  "cohort_sizes": {
+    "false_positive_cutouts": 45,
+    "null_control_cutouts": 500,
+    "random_position_trials": 45000,
+    "shifted_coordinate_trials": 2880
+  },
+  "primary_outcome": {
+    "metric": "Proportion of Cutouts with External Catalog Counterpart <= 1 Native Pixel",
+    "false_positives_n": 36,
+    "false_positives_pct": 80.0,
+    "false_positives_95_ci": [
+      66.18,
+      89.1
+    ],
+    "null_controls_n": 148,
+    "null_controls_pct": 29.6,
+    "null_controls_95_ci": [
+      25.77,
+      33.74
+    ],
+    "d1_random_position_null_pct": 40.92,
+    "d2_shifted_coordinate_null_pct": 40.9,
+    "odds_ratio_vs_null_controls": 9.514,
+    "fisher_exact_p_value": 3.812420297475464e-11,
+    "mc_permutation_p_value": 0.0,
+    "verdict": "CHANCE_COINCIDENCE_DECISIVELY_REJECTED"
+  },
+  "secondary_outcomes": {
+    "within_2px": {
+      "fp_pct": 95.56,
+      "ctrl_pct": 55.6,
+      "odds_ratio": 17.169,
+      "fisher_p": 1.2474681358200079e-08
+    },
+    "within_2_4px_15_arcsec": {
+      "fp_pct": 95.56,
+      "ctrl_pct": 62.8,
+      "odds_ratio": 12.736,
+      "fisher_p": 9.223435971321537e-07
+    },
+    "within_3px": {
+      "fp_pct": 97.78,
+      "ctrl_pct": 75.8,
+      "odds_ratio": 14.047,
+      "fisher_p": 0.0001362960804286103
+    },
+    "median_nearest_source_distance_pixels": {
+      "false_positives": 0.451,
+      "null_controls": 1.813,
+      "d1_random_positions": 1.147,
+      "d2_shifted_coordinates": 1.148,
+      "mann_whitney_u_statistic": 4134.0,
+      "mann_whitney_p_value": 1.014380028820161e-12,
+      "kolmogorov_smirnov_stat": 0.526,
+      "kolmogorov_smirnov_p_value": 4.144289099517922e-11
+    }
+  },
+  "multiple_testing_benjamini_hochberg": {
+    "mc_permutation_test": {
+      "raw_p": 0.0,
+      "rank": 1,
+      "crit_val_alpha_0_05": 0.007142857142857143,
+      "adjusted_p_bh": 0.0,
+      "significant_at_0_05": true
+    },
+    "mann_whitney_u_distance": {
+      "raw_p": 1.014380028820161e-12,
+      "rank": 2,
+      "crit_val_alpha_0_05": 0.014285714285714285,
+      "adjusted_p_bh": 3.5503301008705635e-12,
+      "significant_at_0_05": true
+    },
+    "primary_1px_fisher": {
+      "raw_p": 3.812420297475464e-11,
+      "rank": 3,
+      "crit_val_alpha_0_05": 0.02142857142857143,
+      "adjusted_p_bh": 8.895647360776082e-11,
+      "significant_at_0_05": true
+    },
+    "kolmogorov_smirnov_distance": {
+      "raw_p": 4.144289099517922e-11,
+      "rank": 4,
+      "crit_val_alpha_0_05": 0.02857142857142857,
+      "adjusted_p_bh": 7.252505924156364e-11,
+      "significant_at_0_05": true
+    },
+    "secondary_2px_fisher": {
+      "raw_p": 1.2474681358200079e-08,
+      "rank": 5,
+      "crit_val_alpha_0_05": 0.03571428571428572,
+      "adjusted_p_bh": 1.746455390148011e-08,
+      "significant_at_0_05": true
+    },
+    "secondary_2_4px_fisher": {
+      "raw_p": 9.223435971321537e-07,
+      "rank": 6,
+      "crit_val_alpha_0_05": 0.04285714285714286,
+      "adjusted_p_bh": 1.0760675299875127e-06,
+      "significant_at_0_05": true
+    },
+    "secondary_3px_fisher": {
+      "raw_p": 0.0001362960804286103,
+      "rank": 7,
+      "crit_val_alpha_0_05": 0.05,
+      "adjusted_p_bh": 0.0001362960804286103,
+      "significant_at_0_05": true
+    }
+  }
+}

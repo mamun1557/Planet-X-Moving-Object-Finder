@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "pipeline_build": "l2b-v27-2026-222",
+    "target_module": "ASTROVISION_V3",
+    "calibration_pointings": [
+      "0001",
+      "0008"
+    ],
+    "total_calibration_controls": 500,
+    "total_calibration_injections": 500,
+    "nominal_alpha_target": 0.05,
+    "pooled_reference_threshold": 683.1643,
+    "governance": "STRICT_READ_ONLY_SHADOW_ONLY"
+  },
+  "detector_candidates": {
+    "D1": {
+      "detector_id": "D1",
+      "production_baseline_tau": 186.2904,
+      "empirical_raw_tau": 593.654,
+      "pooled_reference_tau": 683.1643,
+      "shrinkage_lambda": 0.5,
+      "calibrated_tau": 638.4091,
+      "state": "STATE_B_POOLED_SHRINKAGE",
+      "n_controls": 84,
+      "n_point_injections": 84,
+      "n_extended_injections": 0,
+      "bootstrap_cv": 0.7269,
+      "rationale": "High near-infrared crowding; CV exceeds 0.50 stability bound; shrunk toward pooled."
+    },
+    "D2": {
+      "detector_id": "D2",
+      "production_baseline_tau": 2536.2963,
+      "empirical_raw_tau": 2536.2963,
+      "pooled_reference_tau": 683.1643,
+      "shrinkage_lambda": 0.5,
+      "calibrated_tau": 2536.2963,
+      "state": "STATE_C_INSUFFICIENT_SAMPLE_FALLBACK",
+      "n_controls": 84,
+      "n_point_injections": 84,
+      "n_extended_injections": 0,
+      "bootstrap_cv": 1.1554,
+      "rationale": "Severe outlier skew in Pointing 1; CV=1.15 exceeds stability bound; fallback to baseline to prevent uncalibrated false alarms in crowded fields."
+    },
+    "D3": {
+      "detector_id": "D3",
+      "production_baseline_tau": 999.7611,
+      "empirical_raw_tau": 999.7611,
+      "pooled_reference_tau": 683.1643,
+      "shrinkage_lambda": 0.497,
+      "calibrated_tau": 999.7611,
+      "state": "STATE_C_INSUFFICIENT_SAMPLE_FALLBACK",
+      "n_controls": 83,
+      "n_point_injections": 83,
+      "n_extended_injections": 0,
+      "bootstrap_cv": 2.9397,
+      "rationale": "Extreme outlier in calibration controls (CV=2.94); empirical percentile unstable; fallback to verified baseline."
+    },
+    "D4": {
+      "detector_id": "D4",
+      "production_baseline_tau": 633.7253,
+      "empirical_raw_tau": 634.1915,
+      "pooled_reference_tau": 683.1643,
+      "shrinkage_lambda": 0.497,
+      "calibrated_tau": 658.8245,
+      "state": "STATE_B_POOLED_SHRINKAGE",
+      "n_controls": 83,
+      "n_point_injections": 83,
+      "n_extended_injections": 0,
+      "bootstrap_cv": 4.3314,
+      "rationale": "Mid-infrared band; empirical percentile close to baseline (634.19 vs 633.73); shrinkage stabilizes threshold at 658.82."
+    },
+    "D5": {
+      "detector_id": "D5",
+      "production_baseline_tau": 91.8464,
+      "empirical_raw_tau": 91.8464,
+      "pooled_reference_tau": 683.1643,
+      "shrinkage_lambda": 0.497,
+      "calibrated_tau": 91.8464,
+      "state": "STATE_C_INSUFFICIENT_SAMPLE_FALLBACK",
+      "n_controls": 83,
+      "n_point_injections": 83,
+      "n_extended_injections": 0,
+      "bootstrap_cv": 3.4064,
+      "rationale": "Thermal background regime; pooling would inflate threshold 4x and destroy faint anomaly recovery (59% -> 13%); fallback to baseline strictly preserved."
+    },
+    "D6": {
+      "detector_id": "D6",
+      "production_baseline_tau": 197.3499,
+      "empirical_raw_tau": 197.7276,
+      "pooled_reference_tau": 683.1643,
+      "shrinkage_lambda": 0.497,
+      "calibrated_tau": 197.3499,
+      "state": "STATE_C_INSUFFICIENT_SAMPLE_FALLBACK",
+      "n_controls": 83,
+      "n_point_injections": 83,
+      "n_extended_injections": 0,
+      "bootstrap_cv": 1.0138,
+      "rationale": "Long-wavelength thermal channel; pooling would inflate threshold and kill sensitivity; baseline threshold preserved."
+    }
+  },
+  "pooled_candidate": {
+    "detector_id": "POOLED",
+    "production_baseline_tau": 683.1643,
+    "empirical_raw_tau": 683.1643,
+    "pooled_reference_tau": 683.1643,
+    "shrinkage_lambda": 1.0,
+    "calibrated_tau": 683.1643,
+    "state": "STATE_B_POOLED_SHRINKAGE",
+    "n_controls": 500,
+    "n_point_injections": 500,
+    "n_extended_injections": 0,
+    "bootstrap_cv": 0.4481,
+    "rationale": "Pooled 95th percentile across all detectors (N=500)."
+  }
+}

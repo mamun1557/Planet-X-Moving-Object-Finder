@@ -1,0 +1,94 @@
+{
+  "manifest_type": "SPECTRA_FUSION_CONTRACT_IMPLEMENTATION_MANIFEST",
+  "version": "1.0.0",
+  "task_id": "SPECTRA_TASK_1_3A",
+  "contract_identity": "SPECTRA_FUSION_EVIDENCE_V1",
+  "pipeline_build": "l2b-v27-2026-222",
+  "execution_timestamp_utc": "2026-11-07T04:35:00Z",
+  "governance_mode": "CONTROLLED_IMPLEMENTATION_FROZEN_SCIENTIFIC_ASSETS",
+  "scientific_verdict": {
+    "task_verdict": "PASS — CONTRACT IMPLEMENTED AND VALIDATED",
+    "spectra_scientific_status": "PARTIAL (UNCHANGED)",
+    "fusion_certification_status": "NOT CERTIFIED FOR UNATTENDED AUTONOMOUS DISCOVERY",
+    "justification": "Contract and adapter successfully implement cryptographic verification, deterministic stratum-normalized percentile and Z-score mapping, strict channel coverage gates, and anti-fabrication safeguards. Passing contract validation tests does not upgrade SPECTRA's underlying scientific partial status."
+  },
+  "verified_immutable_scientific_assets": {
+    "checkpoint": {
+      "path": "checkpoints/spectra_masked_ae_v2.pt",
+      "size_bytes": 382177,
+      "sha256": "6ecada80ba30ec803af2cf21ba58d72e8209789b4f5da68a22e60134a3b5a938",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "provisional_thresholds": {
+      "path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+      "size_bytes": 12978,
+      "sha256": "d40292972aafb9d3948249bd402a178eeadb20de5e37c02c227ac841974ab848",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "calibration_scores": {
+      "path": "data/processed/spectra/spectra_p0008_calibration_scores_v1.csv",
+      "size_bytes": 446446,
+      "sha256": "7ac34d415f8132f7f164ab20c1b25fe03461bc709eb674031e838b2208e8c1a3",
+      "status": "VERIFIED_IMMUTABLE"
+    },
+    "master_spectra_extraction": {
+      "path": "data/processed/spectra/phase3_multpointing_spectra_v1.csv",
+      "size_bytes": 332189097,
+      "sha256": "8a96617cfe5d5152e720ee0c3890a7b8c7025ab2bfb3c682e08743affe6858e0",
+      "status": "VERIFIED_IMMUTABLE"
+    }
+  },
+  "implemented_code_deliverables": {
+    "fusion_contract_schema": {
+      "path": "models/spectra/fusion_contract.py",
+      "size_bytes": 9452,
+      "sha256": "2b7a4e975f874d9fa63bb03f2d55a5bbe0c73dd60b4bea3bdd1e227ca1468d2b"
+    },
+    "spectra_evidence_adapter": {
+      "path": "models/spectra/spectra_evidence_adapter.py",
+      "size_bytes": 18702,
+      "sha256": "65da3e1149fe83e2e1fcf02f6461ad12da6d74b7c5eb66b7551d0ec149cd6c61"
+    },
+    "continuum_sidecar_spec": {
+      "path": "models/spectra/continuum_sidecar_interface.py",
+      "size_bytes": 2162,
+      "sha256": "33b99c16ea5a49689ec7e5423b39a6a3821acd3ae5ead2cab96806ed2b8a440f"
+    },
+    "models_spectra_init": {
+      "path": "models/spectra/__init__.py",
+      "size_bytes": 931,
+      "sha256": "0c217e6a98b9be26e9a7533b25651ed5e529ff1a06a45b1f4091d0dfc58132ef"
+    },
+    "spectra_engine_init": {
+      "path": "spectra_engine/__init__.py",
+      "size_bytes": 1033,
+      "sha256": "54cb2d04ae3d83e3c0472880c6942b02b84c89357eb81edcb93246d95b6c51c9"
+    },
+    "contract_test_suite": {
+      "path": "tests/test_spectra_task_1_3a_fusion_contract.py",
+      "size_bytes": 14819,
+      "sha256": "b9b36dff664188e74da355e5b8e211f0ecb49009060dd378dee9b12bff292a83"
+    }
+  },
+  "documentation_deliverables": {
+    "implementation_report": {
+      "path": "reports/SPECTRA_TASK_1_3A_FUSION_CONTRACT_REPORT.md",
+      "size_bytes": 19693,
+      "sha256": "bf202326aac52dc4ccd6af653c318d7a20a95b086b6a1dfcfc28f60ddbbb1067"
+    }
+  },
+  "test_execution_summary": {
+    "task_1_3a_tests": {
+      "total": 18,
+      "passed": 18,
+      "failed": 0,
+      "execution_time_seconds": 0.91
+    },
+    "cumulative_spectra_regression": {
+      "total": 53,
+      "passed": 53,
+      "failed": 0,
+      "execution_time_seconds": 18.50
+    }
+  }
+}

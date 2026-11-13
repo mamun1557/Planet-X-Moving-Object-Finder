@@ -1,0 +1,63 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.7",
+    "title": "Continuum Sidecar Integration & Evidence-Governance Validation Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T18:26:33Z",
+    "audit_type": "CONTROLLED_SCIENTIFIC_ENGINE_INTEGRATION_AND_GOVERNANCE_VALIDATION",
+    "governance": "STRICT_PROVENANCE_COHORT_ISOLATION_READ_ONLY_FROZEN_ASSETS",
+    "final_verdict": "INTEGRATION_COMPLETE_WITH_LIMITATIONS"
+  },
+  "contract_audit": {
+    "contract_version": "CONTINUUM_SIDECAR_EVIDENCE_V1",
+    "package_location": "spectra_engine/continuum_sidecar_interface.py",
+    "concrete_engine_location": "spectra_engine/continuum_sidecar_engine.py",
+    "total_contract_fields": 23,
+    "phase_3_fields_preserved": 10,
+    "phase_4_fields_added": 13,
+    "backward_compatibility_status": "100%_BACKWARD_COMPATIBLE"
+  },
+  "downstream_fusion_audit": {
+    "module": "models/fusion/fusion_engine.py",
+    "method": "FusionEngine.evaluate_source",
+    "pilot_sources_audited": 25,
+    "max_score_delta": 0.0,
+    "missing_sidecar_penalty": 0.0,
+    "evidence_attachment_rate": "100% (25/25 pilot sources)",
+    "weight_rebalancing_altered": false,
+    "baseline_spectra_score_altered": false
+  },
+  "fail_closed_rules_enforced": [
+    "RULE_1: Contract version mismatch raises ValueError immediately.",
+    "RULE_2: Source ID mismatch between candidate and sidecar raises ValueError.",
+    "RULE_3: Null/negative/NaN uncertainties on empirical detections raise ValueError.",
+    "RULE_4: Upper-limit records (is_upper_limit=True) cannot claim color_excess_detected=True.",
+    "RULE_5: Ambiguous counterpart records (counterpart_ambiguity=True) cannot claim color_excess_detected=True.",
+    "RULE_6: Non-confirmatory evidence states (QUALITY_FLAGGED, INSUFFICIENT_PHOTOMETRY, AMBIGUOUS_COUNTERPART, UNVERIFIABLE) cannot claim color_excess_detected=True."
+  ],
+  "test_suite_verification": {
+    "total_tests_executed": 204,
+    "passed_tests": 204,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "regression_status": "ZERO_REGRESSIONS",
+    "focused_integration_test_file": "tests/test_continuum_sidecar_integration.py",
+    "focused_tests_count": 20
+  },
+  "scientific_limitations_acknowledged": [
+    "EMPIRICAL_COLOR_BASELINE_ONLY",
+    "INDEPENDENT_ERROR_QUADRATURE_ASSUMPTION",
+    "PRELIMINARY_FLUX_SCALE_CONSISTENCY_CHECK",
+    "BLIND_COHORT_UNVERIFIED_BASELINE",
+    "CONTINUUM_SENSITIVITY_LIMITED",
+    "NON_AUTONOMOUS_CO_PILOT_ONLY"
+  ],
+  "protected_assets_audit": {
+    "all_verified": true,
+    "hashes": {
+      "spectra_masked_ae_v2.pt": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+      "spectra_v2_provisional_thresholds_v1.json": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+      "astrovision_spatial_v3.pt": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99"
+    }
+  }
+}

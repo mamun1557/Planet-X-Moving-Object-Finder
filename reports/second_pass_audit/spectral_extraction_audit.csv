@@ -1,0 +1,14 @@
+file_path,cal_type,detector,version,cwave_avail,cband_avail,wave_unit,band_unit,hdu_count,hdu_names,notes
+data/spherex/qr2/calibration/spectral_wcs_D1_spx_cal-wcs-v4-2025-254.fits,SPECTRAL_WCS,1,UNKNOWN,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 1 spectral mapping
+data/spherex/qr2/calibration/spectral_wcs_D2_spx_cal-wcs-v4-2025-254.fits,SPECTRAL_WCS,2,UNKNOWN,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 2 spectral mapping
+data/spherex/qr2/calibration/spectral_wcs_D3_spx_cal-wcs-v4-2025-254.fits,SPECTRAL_WCS,3,UNKNOWN,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 3 spectral mapping
+data/spherex/qr2/calibration/spectral_wcs_D4_spx_cal-wcs-v4-2025-254.fits,SPECTRAL_WCS,4,UNKNOWN,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 4 spectral mapping
+data/spherex/qr2/calibration/spectral_wcs_D5_spx_cal-wcs-v4-2025-254.fits,SPECTRAL_WCS,5,UNKNOWN,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 5 spectral mapping
+data/spherex/qr2/calibration/spectral_wcs_D6_spx_cal-wcs-v4-2025-254.fits,SPECTRAL_WCS,6,UNKNOWN,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 6 spectral mapping
+data/spherex/qr3/calibration/spectral_wcs_D1_spx_cal-swcs-v5-2026-191.fits,SPECTRAL_WCS,1,7.0.0b6.post2+g6b3a1a7,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 1 spectral mapping
+data/spherex/qr3/calibration/spectral_wcs_D2_spx_cal-swcs-v5-2026-191.fits,SPECTRAL_WCS,2,7.0.0b6.post2+g6b3a1a7,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 2 spectral mapping
+data/spherex/qr3/calibration/spectral_wcs_D3_spx_cal-swcs-v5-2026-191.fits,SPECTRAL_WCS,3,7.0.0b6.post2+g6b3a1a7,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 3 spectral mapping
+data/spherex/qr3/calibration/spectral_wcs_D4_spx_cal-swcs-v5-2026-191.fits,SPECTRAL_WCS,4,7.0.0b6.post2+g6b3a1a7,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 4 spectral mapping
+data/spherex/qr3/calibration/spectral_wcs_D5_spx_cal-swcs-v5-2026-191.fits,SPECTRAL_WCS,5,7.0.0b6.post2+g6b3a1a7,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 5 spectral mapping
+data/spherex/qr3/calibration/spectral_wcs_D6_spx_cal-swcs-v5-2026-191.fits,SPECTRAL_WCS,6,7.0.0b6.post2+g6b3a1a7,False,False,um,um,4,"PRIMARY, CWAVE, CBAND, WCS-WAVE",Detector 6 spectral mapping
+data/spherex/qr3/calibration/spectral_channels_spx_cal-sch-v2-2026-229.fits,SPECTRAL_CHANNELS,ALL,UNKNOWN,True,False,um,um,3,"PRIMARY, CHANNEL_MAP, SPECTRAL_CHANNELS",Contains 102 total spectral band definitions across detectors

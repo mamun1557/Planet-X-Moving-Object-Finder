@@ -1,0 +1,61 @@
+{
+  "task_id": "Phase 4, Task 4.19D",
+  "timestamp_utc": "2026-11-08T16:51:00Z",
+  "protected_production_assets": {
+    "checkpoints/astrovision_spatial_v3.pt": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+    "checkpoints/spectra_masked_ae_v2.pt": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+    "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848"
+  },
+  "audited_input_artifacts": {
+    "reports/phase4/task_4_19C/adaptive_masking_shadow_comparison.csv": "5FEE702489570E345E80D1C377A79C509FDF207F812D01C5DA7797841A786D60",
+    "reports/phase4/task_4_19C/false_positive_separation_analysis.csv": "C94FA0D4037B7D3AEAE0A6DD89A8B573302E32E259A7BFC84F57FC2197AD9BD3",
+    "reports/phase4/task_4_19C/null_control_separation_analysis.csv": "EB19DA0AA36F874B94C2060FC65D10A269D8AD10E34354D88CDF992FB9B56747",
+    "data/processed/pilot_results/astrovision_pilot_trial_results.csv": "4AFDDBB31D9F1B579D711712DA431BF1C19701D7A63D25E9A06995A71C9D523F"
+  },
+  "task_deliverables": {
+    "detector_generalization_analysis.csv": {
+      "size_bytes": 474,
+      "sha256": "F5E39308E81036E1FE28B48DB0F307FA855701C50BBE7DAA6F5BC02596A1402F"
+    },
+    "frozen_policy_manifest.json": {
+      "size_bytes": 3654,
+      "sha256": "85132C394DC4390113A376F46ABF6CDAF2F27A378BB2AEA08116A7E3E8110E82"
+    },
+    "holdout_cohort_provenance.csv": {
+      "size_bytes": 1156,
+      "sha256": "3BDB4372E1D985817F4D4FE923FA116A3CCA02BAFAB6E844854F30E0A79474A0"
+    },
+    "holdout_leakage_audit.md": {
+      "size_bytes": 5254,
+      "sha256": "C825319D32445830E27B10D43FED1A8EF7358274FC78319863DFC7C536D98B87"
+    },
+    "masking_safety_analysis.csv": {
+      "size_bytes": 683,
+      "sha256": "A7FC588CDA4C715167D4CD74DB5686E58473D58EDDE7B83D69E9CA23A80DF7B1"
+    },
+    "paired_shadow_results.csv": {
+      "size_bytes": 42013,
+      "sha256": "6D46AC6F018B82A15BE7A0723DE8EDAA9B687D02E51F70CAAADE0DAE13DBE517"
+    },
+    "pointing_generalization_analysis.csv": {
+      "size_bytes": 471,
+      "sha256": "37FDF78525C12C5762A0C3F7A5B925A8CDB5E6FD50DB6CD4EB96F402F2FDDC6A"
+    },
+    "reproducibility_instructions.md": {
+      "size_bytes": 1399,
+      "sha256": "07630D63606CCE1CEA0A56AD786FCBA69DC017DC5F9C5D0AB94C6EA2E8A355A2"
+    },
+    "scientific_limitations.md": {
+      "size_bytes": 3473,
+      "sha256": "EFAA5926EDD41BD133712BB06EAD12CADD957DFD20DDF5C9BDF347AF94BA9CDC"
+    },
+    "statistical_comparison.json": {
+      "size_bytes": 1560,
+      "sha256": "5C80BA51495ED04B2341225F9D275880A893E17165A6CC9350D58F8A0E84864A"
+    },
+    "task_4_19D_closeout_report.md": {
+      "size_bytes": 14636,
+      "sha256": "78D3AF0B18D186670F09C3F106E58BC649CE513A5EF004F429156DFF81402C32"
+    }
+  }
+}

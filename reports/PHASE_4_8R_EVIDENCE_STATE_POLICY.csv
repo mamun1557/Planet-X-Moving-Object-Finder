@@ -1,0 +1,13 @@
+raw_classifier_state,cohort_role,pointing_id,policy_action,final_evidence_state,color_excess_detected,limitation_code_required,candidate_indication_flag,justification
+POSSIBLE_INFRARED_EXCESS,Calibration/Control,P0008,PERMIT_CONFIRMATORY_EXCESS,POSSIBLE_INFRARED_EXCESS,True,None,False,Authorized calibration field with verified bare stellar photospheric locus.
+POSSIBLE_INFRARED_EXCESS,Blind Evaluation,"P0002, P0009, P0010",FAIL_CLOSED_VETO_PROMOTION,UNVERIFIABLE,False,BLIND_COHORT_UNVERIFIED_BASELINE,True,Unverified baseline cannot support confirmed excess; candidate indication preserved for independent follow-up.
+SUPPORTED_PHOTOSPHERIC_CONSISTENCY,Calibration/Control,P0008,PERMIT_CONSISTENCY_DECISION,SUPPORTED_PHOTOSPHERIC_CONSISTENCY,False,None,False,Authorized calibration field with verified baseline model matching observed photometry within 3-sigma.
+SUPPORTED_PHOTOSPHERIC_CONSISTENCY,Blind Evaluation,"P0002, P0009, P0010",FAIL_CLOSED_VETO_CONSISTENCY,UNVERIFIABLE,False,BLIND_COHORT_UNVERIFIED_BASELINE,False,Apparent consistency on blind fields cannot be certified without field-specific crowding and extinction validation.
+QUALITY_FLAGGED,Calibration/Control,P0008,PRESERVE_NON_CONFIRMATORY,QUALITY_FLAGGED,False,None,False,"Fatal catalog quality flag, diffraction spike, or upper limit."
+QUALITY_FLAGGED,Blind Evaluation,"P0002, P0009, P0010",PRESERVE_NON_CONFIRMATORY,QUALITY_FLAGGED,False,BLIND_COHORT_UNVERIFIED_BASELINE,False,Fatal catalog quality flag; blind baseline restriction attached.
+INSUFFICIENT_PHOTOMETRY,Calibration/Control,P0008,PRESERVE_NON_CONFIRMATORY,INSUFFICIENT_PHOTOMETRY,False,None,False,Missing near-IR anchor or mid-IR detection bands.
+INSUFFICIENT_PHOTOMETRY,Blind Evaluation,"P0002, P0009, P0010",PRESERVE_NON_CONFIRMATORY,INSUFFICIENT_PHOTOMETRY,False,BLIND_COHORT_UNVERIFIED_BASELINE,False,Missing required bands; blind baseline restriction attached.
+AMBIGUOUS_COUNTERPART,Calibration/Control,P0008,PRESERVE_NON_CONFIRMATORY,AMBIGUOUS_COUNTERPART,False,None,False,Multiple competing counterparts within spatial cross-match beam.
+AMBIGUOUS_COUNTERPART,Blind Evaluation,"P0002, P0009, P0010",PRESERVE_NON_CONFIRMATORY,AMBIGUOUS_COUNTERPART,False,BLIND_COHORT_UNVERIFIED_BASELINE,False,Multiple competing counterparts; blind baseline restriction attached.
+UNVERIFIABLE,Calibration/Control,P0008,PRESERVE_NON_CONFIRMATORY,UNVERIFIABLE,False,None,False,Photometry present but insufficient signal-to-noise or baseline certainty.
+UNVERIFIABLE,Blind Evaluation,"P0002, P0009, P0010",PRESERVE_NON_CONFIRMATORY,UNVERIFIABLE,False,BLIND_COHORT_UNVERIFIED_BASELINE,False,Unverified baseline prevents confirmation; default safe representation.

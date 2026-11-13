@@ -1,0 +1,158 @@
+{
+  "audit_metadata": {
+    "task_id": "Phase 4, Task 4.5R",
+    "title": "Network-Enabled Controlled External Catalog Acquisition Retry Audit",
+    "pipeline_build": "l2b-v27-2026-222",
+    "timestamp_utc": "2026-11-07T17:36:52Z",
+    "audit_type": "CONTROLLED_NETWORK_ENABLED_SCIENTIFIC_DATA_ACQUISITION",
+    "governance": "STRICT_PROVENANCE_COHORT_ISOLATION_READ_ONLY_FROZEN_ASSETS",
+    "final_verdict": "PARTIAL_ACQUISITION"
+  },
+  "environment_verification": {
+    "environment_root": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation",
+    "interpreter_path": "C:\\Users\\blues\\OneDrive\\Desktop\\New folder (7)\\SPECTRA-X\\.venv_validation\\Scripts\\python.exe",
+    "python_version": "3.12.10",
+    "pyvenv_cfg_include_system_site_packages": false,
+    "isolation_state": "STRICT_ISOLATION_VERIFIED",
+    "disk_space_free_gb": 204.7,
+    "installed_core_packages": {
+      "astropy": "8.0.2",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "urllib3": "2.8.0",
+      "torch": "2.15.0+cu132",
+      "torchvision": "0.29.2+cu132",
+      "pytest": "9.2.0"
+    }
+  },
+  "connectivity_preflight_audit": {
+    "gaia_tap": {
+      "capabilities_url": "https://gea.esac.esa.int/tap-server/tap/capabilities",
+      "status": "PASS",
+      "http_code": 200,
+      "dns_ip": "193.147.152.106"
+    },
+    "irsa_tap": {
+      "capabilities_url": "https://irsa.ipac.caltech.edu/TAP/capabilities",
+      "status": "PASS",
+      "http_code": 200,
+      "dns_ip": "134.4.54.42"
+    },
+    "gaia_datalink": {
+      "capabilities_url": "https://gea.esac.esa.int/data-server/datalink/capabilities",
+      "status": "FAILED",
+      "http_code": 503,
+      "reason": "Service Unavailable"
+    }
+  },
+  "pilot_acquisition_metrics": {
+    "target_cohort": "P0008 Calibration Subset",
+    "target_count": 25,
+    "gaia_dr3": {
+      "records_retrieved": 25,
+      "coverage_pct": 100.0,
+      "astrometry_complete": true,
+      "photometry_complete": true,
+      "xp_flag_continuous_true_count": 12,
+      "protocol": "IVOA_TAP_ASYNC"
+    },
+    "twomass": {
+      "records_retrieved": 21,
+      "coverage_pct": 84.0,
+      "faint_dropouts_count": 4,
+      "median_separation_arcsec": 0.2835,
+      "protocol": "IVOA_TAP_SYNC"
+    },
+    "allwise": {
+      "records_retrieved": 24,
+      "coverage_pct": 96.0,
+      "faint_dropouts_count": 1,
+      "median_separation_arcsec": 0.1155,
+      "protocol": "IVOA_TAP_SYNC"
+    },
+    "gaia_xp_spectra": {
+      "records_retrieved": 0,
+      "coverage_pct": 0.0,
+      "eligible_count": 12,
+      "blocker": "HTTP_503_SERVICE_UNAVAILABLE"
+    }
+  },
+  "evidence_classification_audit": {
+    "SUPPORTED_PHOTOSPHERIC_CONSISTENCY": 15,
+    "QUALITY_FLAGGED": 6,
+    "INSUFFICIENT_PHOTOMETRY": 4,
+    "POSSIBLE_INFRARED_EXCESS": 0,
+    "UNVERIFIABLE": 0,
+    "total": 25
+  },
+  "cohort_firewall_audit": {
+    "blind_cohorts": ["P0002", "P0009", "P0010"],
+    "blind_cohorts_accessed": false,
+    "isolation_status": "PRISTINE_FIREWALLED"
+  },
+  "protected_asset_integrity": {
+    "verification_timestamp_utc": "2026-11-07T17:36:52Z",
+    "assets": [
+      {
+        "file_path": "checkpoints/spectra_masked_ae_v2.pt",
+        "expected_sha256": "6ECADA80BA30EC803AF2CF21BA58D72E8209789B4F5DA68A22E60134A3B5A938",
+        "status": "PRISTINE_MATCH"
+      },
+      {
+        "file_path": "data/processed/spectra/spectra_v2_provisional_thresholds_v1.json",
+        "expected_sha256": "D40292972AAFB9D3948249BD402A178EEADB20DE5E37C02C227AC841974AB848",
+        "status": "PRISTINE_MATCH"
+      },
+      {
+        "file_path": "checkpoints/astrovision_spatial_v3.pt",
+        "expected_sha256": "3B608E496F43C2648C9DC8236E1A7F5B5ED4B7906CF900468C65C67016042D99",
+        "status": "PRISTINE_MATCH"
+      }
+    ]
+  },
+  "regression_testing": {
+    "command": ".\\.venv_validation\\Scripts\\python.exe -m pytest tests/ -q",
+    "total_tests": 166,
+    "passed": 166,
+    "failed": 0,
+    "verdict": "ZERO_REGRESSIONS"
+  },
+  "deliverables_manifest": [
+    {
+      "name": "PHASE_4_5R_NETWORK_ACQUISITION.md",
+      "path": "reports/PHASE_4_5R_NETWORK_ACQUISITION.md",
+      "type": "NARRATIVE_AUDIT_REPORT"
+    },
+    {
+      "name": "PHASE_4_5R_CATALOG_COVERAGE.csv",
+      "path": "reports/PHASE_4_5R_CATALOG_COVERAGE.csv",
+      "type": "COVERAGE_LEDGER"
+    },
+    {
+      "name": "PHASE_4_5R_MATCH_RELIABILITY.csv",
+      "path": "reports/PHASE_4_5R_MATCH_RELIABILITY.csv",
+      "type": "MATCH_RELIABILITY_LEDGER"
+    },
+    {
+      "name": "PHASE_4_5R_PHOTOMETRY_QUALITY.csv",
+      "path": "reports/PHASE_4_5R_PHOTOMETRY_QUALITY.csv",
+      "type": "PHOTOMETRY_QUALITY_LEDGER"
+    },
+    {
+      "name": "PHASE_4_5R_IR_EXCESS_EVIDENCE.csv",
+      "path": "reports/PHASE_4_5R_IR_EXCESS_EVIDENCE.csv",
+      "type": "PILOT_EVIDENCE_LEDGER"
+    },
+    {
+      "name": "PHASE_4_5R_DATA_PROVENANCE.json",
+      "path": "reports/PHASE_4_5R_DATA_PROVENANCE.json",
+      "type": "PROVENANCE_RECORD"
+    },
+    {
+      "name": "PHASE_4_5R_AUDIT.json",
+      "path": "reports/PHASE_4_5R_AUDIT.json",
+      "type": "MACHINE_READABLE_AUDIT"
+    }
+  ]
+}
+

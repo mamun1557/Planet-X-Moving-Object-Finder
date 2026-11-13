@@ -1,0 +1,511 @@
+{
+  "pointing": "0009",
+  "total_sources_in_catalogue": 7500,
+  "n_exposures_evaluated": 24,
+  "detector_exposures": {
+    "D1_dither1": {
+      "fits_file": "level2_2026W30_1B_0009_1D1_spx_l2b-v27-2026-222.fits",
+      "detector": "D1",
+      "dither": 1,
+      "n_sources_on_array": 1779,
+      "n_sources_in_active_margin": 1575,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 923,
+        "BLENDED_CROWDED": 483,
+        "SATURATED_OR_CONTAMINATED": 10,
+        "EXTENDED": 33,
+        "UNCERTAIN_OR_LOW_QUALITY": 330
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 132323.9,
+      "usable_pixels_approx": 3631276.1,
+      "usable_fraction": 0.8726,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 146.19
+    },
+    "D2_dither1": {
+      "fits_file": "level2_2026W30_1B_0009_1D2_spx_l2b-v27-2026-222.fits",
+      "detector": "D2",
+      "dither": 1,
+      "n_sources_on_array": 1777,
+      "n_sources_in_active_margin": 1565,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 917,
+        "BLENDED_CROWDED": 502,
+        "SATURATED_OR_CONTAMINATED": 9,
+        "EXTENDED": 36,
+        "UNCERTAIN_OR_LOW_QUALITY": 313
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 133596.2,
+      "usable_pixels_approx": 3630003.8,
+      "usable_fraction": 0.8723,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 146.03
+    },
+    "D3_dither1": {
+      "fits_file": "level2_2026W30_1B_0009_1D3_spx_l2b-v27-2026-222.fits",
+      "detector": "D3",
+      "dither": 1,
+      "n_sources_on_array": 900,
+      "n_sources_in_active_margin": 879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 414,
+        "BLENDED_CROWDED": 186,
+        "SATURATED_OR_CONTAMINATED": 12,
+        "EXTENDED": 16,
+        "UNCERTAIN_OR_LOW_QUALITY": 272
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 77980.6,
+      "usable_pixels_approx": 3685619.4,
+      "usable_fraction": 0.8856,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 73.96
+    },
+    "D4_dither1": {
+      "fits_file": "level2_2026W30_1B_0009_1D4_spx_l2b-v27-2026-222.fits",
+      "detector": "D4",
+      "dither": 1,
+      "n_sources_on_array": 1825,
+      "n_sources_in_active_margin": 1572,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 949,
+        "BLENDED_CROWDED": 504,
+        "SATURATED_OR_CONTAMINATED": 10,
+        "EXTENDED": 33,
+        "UNCERTAIN_OR_LOW_QUALITY": 329
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 135434.1,
+      "usable_pixels_approx": 3628165.9,
+      "usable_fraction": 0.8718,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 149.97
+    },
+    "D5_dither1": {
+      "fits_file": "level2_2026W30_1B_0009_1D5_spx_l2b-v27-2026-222.fits",
+      "detector": "D5",
+      "dither": 1,
+      "n_sources_on_array": 1776,
+      "n_sources_in_active_margin": 1551,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 914,
+        "BLENDED_CROWDED": 501,
+        "SATURATED_OR_CONTAMINATED": 9,
+        "EXTENDED": 36,
+        "UNCERTAIN_OR_LOW_QUALITY": 316
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 133398.3,
+      "usable_pixels_approx": 3630201.7,
+      "usable_fraction": 0.8723,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 145.95
+    },
+    "D6_dither1": {
+      "fits_file": "level2_2026W30_1B_0009_1D6_spx_l2b-v27-2026-222.fits",
+      "detector": "D6",
+      "dither": 1,
+      "n_sources_on_array": 903,
+      "n_sources_in_active_margin": 879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 415,
+        "BLENDED_CROWDED": 188,
+        "SATURATED_OR_CONTAMINATED": 12,
+        "EXTENDED": 16,
+        "UNCERTAIN_OR_LOW_QUALITY": 272
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 78235.1,
+      "usable_pixels_approx": 3685364.9,
+      "usable_fraction": 0.8856,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 74.21
+    },
+    "D1_dither2": {
+      "fits_file": "level2_2026W30_1B_0009_2D1_spx_l2b-v27-2026-222.fits",
+      "detector": "D1",
+      "dither": 2,
+      "n_sources_on_array": 2462,
+      "n_sources_in_active_margin": 2022,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 1191,
+        "BLENDED_CROWDED": 709,
+        "SATURATED_OR_CONTAMINATED": 14,
+        "EXTENDED": 48,
+        "UNCERTAIN_OR_LOW_QUALITY": 500
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 187374.0,
+      "usable_pixels_approx": 3576226.0,
+      "usable_fraction": 0.8593,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 202.32
+    },
+    "D2_dither2": {
+      "fits_file": "level2_2026W30_1B_0009_2D2_spx_l2b-v27-2026-222.fits",
+      "detector": "D2",
+      "dither": 2,
+      "n_sources_on_array": 1775,
+      "n_sources_in_active_margin": 1570,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 916,
+        "BLENDED_CROWDED": 502,
+        "SATURATED_OR_CONTAMINATED": 9,
+        "EXTENDED": 36,
+        "UNCERTAIN_OR_LOW_QUALITY": 312
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 133568.0,
+      "usable_pixels_approx": 3630032.0,
+      "usable_fraction": 0.8723,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 145.86
+    },
+    "D3_dither2": {
+      "fits_file": "level2_2026W30_1B_0009_2D3_spx_l2b-v27-2026-222.fits",
+      "detector": "D3",
+      "dither": 2,
+      "n_sources_on_array": 899,
+      "n_sources_in_active_margin": 879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 414,
+        "BLENDED_CROWDED": 186,
+        "SATURATED_OR_CONTAMINATED": 12,
+        "EXTENDED": 16,
+        "UNCERTAIN_OR_LOW_QUALITY": 271
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 77980.6,
+      "usable_pixels_approx": 3685619.4,
+      "usable_fraction": 0.8856,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 73.88
+    },
+    "D4_dither2": {
+      "fits_file": "level2_2026W30_1B_0009_2D4_spx_l2b-v27-2026-222.fits",
+      "detector": "D4",
+      "dither": 2,
+      "n_sources_on_array": 2488,
+      "n_sources_in_active_margin": 2114,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 1201,
+        "BLENDED_CROWDED": 716,
+        "SATURATED_OR_CONTAMINATED": 14,
+        "EXTENDED": 50,
+        "UNCERTAIN_OR_LOW_QUALITY": 507
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 189862.2,
+      "usable_pixels_approx": 3573737.8,
+      "usable_fraction": 0.8587,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 204.46
+    },
+    "D5_dither2": {
+      "fits_file": "level2_2026W30_1B_0009_2D5_spx_l2b-v27-2026-222.fits",
+      "detector": "D5",
+      "dither": 2,
+      "n_sources_on_array": 1775,
+      "n_sources_in_active_margin": 1548,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 914,
+        "BLENDED_CROWDED": 502,
+        "SATURATED_OR_CONTAMINATED": 9,
+        "EXTENDED": 36,
+        "UNCERTAIN_OR_LOW_QUALITY": 314
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 133511.4,
+      "usable_pixels_approx": 3630088.6,
+      "usable_fraction": 0.8723,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 145.86
+    },
+    "D6_dither2": {
+      "fits_file": "level2_2026W30_1B_0009_2D6_spx_l2b-v27-2026-222.fits",
+      "detector": "D6",
+      "dither": 2,
+      "n_sources_on_array": 900,
+      "n_sources_in_active_margin": 879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 414,
+        "BLENDED_CROWDED": 186,
+        "SATURATED_OR_CONTAMINATED": 12,
+        "EXTENDED": 16,
+        "UNCERTAIN_OR_LOW_QUALITY": 272
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 77980.6,
+      "usable_pixels_approx": 3685619.4,
+      "usable_fraction": 0.8856,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 73.96
+    },
+    "D1_dither3": {
+      "fits_file": "level2_2026W30_1B_0009_3D1_spx_l2b-v27-2026-222.fits",
+      "detector": "D1",
+      "dither": 3,
+      "n_sources_on_array": 2898,
+      "n_sources_in_active_margin": 2551,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 1324,
+        "BLENDED_CROWDED": 822,
+        "SATURATED_OR_CONTAMINATED": 20,
+        "EXTENDED": 56,
+        "UNCERTAIN_OR_LOW_QUALITY": 676
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 226534.0,
+      "usable_pixels_approx": 3537066.0,
+      "usable_fraction": 0.8499,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 238.15
+    },
+    "D2_dither3": {
+      "fits_file": "level2_2026W30_1B_0009_3D2_spx_l2b-v27-2026-222.fits",
+      "detector": "D2",
+      "dither": 3,
+      "n_sources_on_array": 1659,
+      "n_sources_in_active_margin": 1317,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 883,
+        "BLENDED_CROWDED": 473,
+        "SATURATED_OR_CONTAMINATED": 7,
+        "EXTENDED": 34,
+        "UNCERTAIN_OR_LOW_QUALITY": 262
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 122286.5,
+      "usable_pixels_approx": 3641313.5,
+      "usable_fraction": 0.875,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 136.33
+    },
+    "D3_dither3": {
+      "fits_file": "level2_2026W30_1B_0009_3D3_spx_l2b-v27-2026-222.fits",
+      "detector": "D3",
+      "dither": 3,
+      "n_sources_on_array": 897,
+      "n_sources_in_active_margin": 879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 413,
+        "BLENDED_CROWDED": 186,
+        "SATURATED_OR_CONTAMINATED": 12,
+        "EXTENDED": 16,
+        "UNCERTAIN_OR_LOW_QUALITY": 270
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 77952.3,
+      "usable_pixels_approx": 3685647.7,
+      "usable_fraction": 0.8856,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 73.71
+    },
+    "D4_dither3": {
+      "fits_file": "level2_2026W30_1B_0009_3D4_spx_l2b-v27-2026-222.fits",
+      "detector": "D4",
+      "dither": 3,
+      "n_sources_on_array": 2922,
+      "n_sources_in_active_margin": 2619,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 1330,
+        "BLENDED_CROWDED": 834,
+        "SATURATED_OR_CONTAMINATED": 20,
+        "EXTENDED": 57,
+        "UNCERTAIN_OR_LOW_QUALITY": 681
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 228767.6,
+      "usable_pixels_approx": 3534832.4,
+      "usable_fraction": 0.8494,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 240.12
+    },
+    "D5_dither3": {
+      "fits_file": "level2_2026W30_1B_0009_3D5_spx_l2b-v27-2026-222.fits",
+      "detector": "D5",
+      "dither": 3,
+      "n_sources_on_array": 1648,
+      "n_sources_in_active_margin": 1277,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 874,
+        "BLENDED_CROWDED": 470,
+        "SATURATED_OR_CONTAMINATED": 8,
+        "EXTENDED": 34,
+        "UNCERTAIN_OR_LOW_QUALITY": 262
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 124520.2,
+      "usable_pixels_approx": 3639079.8,
+      "usable_fraction": 0.8744,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 135.43
+    },
+    "D6_dither3": {
+      "fits_file": "level2_2026W30_1B_0009_3D6_spx_l2b-v27-2026-222.fits",
+      "detector": "D6",
+      "dither": 3,
+      "n_sources_on_array": 899,
+      "n_sources_in_active_margin": 879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 414,
+        "BLENDED_CROWDED": 186,
+        "SATURATED_OR_CONTAMINATED": 12,
+        "EXTENDED": 16,
+        "UNCERTAIN_OR_LOW_QUALITY": 271
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 77980.6,
+      "usable_pixels_approx": 3685619.4,
+      "usable_fraction": 0.8856,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 73.88
+    },
+    "D1_dither4": {
+      "fits_file": "level2_2026W30_1B_0009_4D1_spx_l2b-v27-2026-222.fits",
+      "detector": "D1",
+      "dither": 4,
+      "n_sources_on_array": 3131,
+      "n_sources_in_active_margin": 2855,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 1480,
+        "BLENDED_CROWDED": 879,
+        "SATURATED_OR_CONTAMINATED": 20,
+        "EXTENDED": 61,
+        "UNCERTAIN_OR_LOW_QUALITY": 691
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 240925.6,
+      "usable_pixels_approx": 3522674.4,
+      "usable_fraction": 0.8465,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 257.29
+    },
+    "D2_dither4": {
+      "fits_file": "level2_2026W30_1B_0009_4D2_spx_l2b-v27-2026-222.fits",
+      "detector": "D2",
+      "dither": 4,
+      "n_sources_on_array": 1137,
+      "n_sources_in_active_margin": 822,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 596,
+        "BLENDED_CROWDED": 339,
+        "SATURATED_OR_CONTAMINATED": 5,
+        "EXTENDED": 31,
+        "UNCERTAIN_OR_LOW_QUALITY": 166
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 91241.3,
+      "usable_pixels_approx": 3672358.7,
+      "usable_fraction": 0.8824,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 93.43
+    },
+    "D3_dither4": {
+      "fits_file": "level2_2026W30_1B_0009_4D3_spx_l2b-v27-2026-222.fits",
+      "detector": "D3",
+      "dither": 4,
+      "n_sources_on_array": 897,
+      "n_sources_in_active_margin": 879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 413,
+        "BLENDED_CROWDED": 186,
+        "SATURATED_OR_CONTAMINATED": 12,
+        "EXTENDED": 16,
+        "UNCERTAIN_OR_LOW_QUALITY": 270
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 77952.3,
+      "usable_pixels_approx": 3685647.7,
+      "usable_fraction": 0.8856,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 73.71
+    },
+    "D4_dither4": {
+      "fits_file": "level2_2026W30_1B_0009_4D4_spx_l2b-v27-2026-222.fits",
+      "detector": "D4",
+      "dither": 4,
+      "n_sources_on_array": 3128,
+      "n_sources_in_active_margin": 2879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 1481,
+        "BLENDED_CROWDED": 876,
+        "SATURATED_OR_CONTAMINATED": 20,
+        "EXTENDED": 61,
+        "UNCERTAIN_OR_LOW_QUALITY": 690
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 240614.6,
+      "usable_pixels_approx": 3522985.4,
+      "usable_fraction": 0.8465,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 257.05
+    },
+    "D5_dither4": {
+      "fits_file": "level2_2026W30_1B_0009_4D5_spx_l2b-v27-2026-222.fits",
+      "detector": "D5",
+      "dither": 4,
+      "n_sources_on_array": 1117,
+      "n_sources_in_active_margin": 805,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 583,
+        "BLENDED_CROWDED": 333,
+        "SATURATED_OR_CONTAMINATED": 6,
+        "EXTENDED": 31,
+        "UNCERTAIN_OR_LOW_QUALITY": 164
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 93022.6,
+      "usable_pixels_approx": 3670577.4,
+      "usable_fraction": 0.882,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 91.79
+    },
+    "D6_dither4": {
+      "fits_file": "level2_2026W30_1B_0009_4D6_spx_l2b-v27-2026-222.fits",
+      "detector": "D6",
+      "dither": 4,
+      "n_sources_on_array": 897,
+      "n_sources_in_active_margin": 879,
+      "category_counts": {
+        "RELIABLE_ISOLATED_POINT_SOURCE": 413,
+        "BLENDED_CROWDED": 186,
+        "SATURATED_OR_CONTAMINATED": 12,
+        "EXTENDED": 16,
+        "UNCERTAIN_OR_LOW_QUALITY": 270
+      },
+      "total_pixels": 4161600,
+      "margin_pixels": 398000,
+      "source_masked_pixels_approx": 77952.3,
+      "usable_pixels_approx": 3685647.7,
+      "usable_fraction": 0.8856,
+      "fov_deg2": 12.1689,
+      "source_density_deg2": 73.71
+    }
+  }
+}
